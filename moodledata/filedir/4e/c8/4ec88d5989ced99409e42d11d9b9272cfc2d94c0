@@ -1,0 +1,95 @@
+<div style="text-align:center;padding-bottom:0.5em;" >##edit####delete##</div>
+<div id="projectoverview" >
+    <div id="title" >
+        <div id="myheader">
+            <h3>Project Overview</h3>
+        </div>
+        <div id="blankheader" ></div>
+    </div>
+    <div id="projectcontent">
+        <div id="projectstats" >
+            <h4>Coupon:  </h4><p>[[Project Name]]</p><br />
+            <h4>Process:  </h4><p id="processName" >[[Process]]</p><br />
+            <h4>Material:  </h4><p>[[Material]]</p><br /><br />
+
+            <h4>Environment:  </h4><p>[[Environment]]</p><br />
+            <h4>Polarity:  </h4><p>[[Polarity]]</p><br />
+            <h4>Volts:  </h4><p>[[Volts]]</p><br />
+        </div>
+    </div>
+    <div id="projectprogress" >
+        <div id="progressbar1">
+             <h4>[[Project Name]] Mastery</h4>
+             <div class="progress-bar red" >
+                    <span id="mastery1bar"><p id="mastery1">[[Mastery 1]]</p></span>
+             </div>
+        </div>
+        <div id="progressbar2">
+             <h4>[[Process]] Mastery</h4>
+             <div class="progress-bar red" >
+                    <span id="mastery2bar"><p id="mastery2">[[Mastery 2]]</p></span>
+             </div>
+        </div>
+        <div id="bendprogress">
+             <div id="bendicon">
+                    <img src="/theme/vrsim/pix_plugins/mod/vrlesson/Lesson_NotPassed_Icon.png" title="Bends not passed" />
+                    <p id="bendOutcomeText" ></p>
+             </div>
+        </div>
+    </div>
+    <div id="projectscore">
+        <h4>Total Score</h4>
+         <div id="box">
+               <span><p>[[Score]]</p></span>
+         </div>
+    </div>
+</div>
+<br />
+<!-- /////////// Process Overview //////////////// -->
+<div id="processoverview" >
+    <div id="title" >
+        <div id="myheader">
+            <h3>Process History</h3>
+        </div>
+        <div id="blankheader" ></div>
+    </div>
+    <div id="processWidget" >
+         <ul>
+            <li><a href="#passes">Passes</a></li>
+            <li><a href="#bends">Bend Test</a></li>
+        </ul>
+        <div>
+             <div id="passes">
+                 <div id="passbuttons" ></div>
+                 <div id="passcontent" ></div>
+                 <div id="passDBcontent" style="display:none;" >[[Passes]]</div>
+                 <div id="achieveDBcontent" style="display:none;" >[[Project Achievements]]</div>
+             </div>
+             <div id="bends">
+                 <div id="bendbuttons" ></div>
+                 <div id="bendcontent" ></div>
+                 <div id="bendDBcontent" style="display:none;" >[[Bend Tests]]</div>
+             </div>
+         </div>
+    </div>
+</div>
+<script type="text/javascript" >
+//<![CDATA[ 
+
+     window.onload = function ()  {
+           createPassContent();
+           createPassButtons();
+           createBendContent();
+           createBendButtons();
+
+           drawAllPassRadar();
+           drawAllBendsRadar();
+      
+           setProgressBar('progressbar1');
+           setProgressBar('progressbar2');
+           setScoreBoxes();
+           setBendText();
+     }
+         
+//]]>
+</script>

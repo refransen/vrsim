@@ -1,0 +1,10 @@
+name,A,
+
+session runtime,553862,start date,8:28:2013,start time,14:22:28,
+
+Project0,
+coupon name,HorzLAPOE,end time,14:31:41,environment,IMAGE_Envir1,process,GMAW,project runtime,541312,start time,14:22:40,type,Short,
+
+Pass0,
+amperage,0.000000,black soot,0,blow through,0,concave bead,0,convex bead,0,excessive spatter,0,fillet size,0,gas mixture,90% Argon/10% CO2,incomplete fusion,0,overall,94,pass number,0,pass runtime,77475,placement,0,polarity,DC+,porosity,0,position,93,slag entrapment,0,tip to work,88,travel angle,100,travel speed,90,undercut,0,vc_aim_on,51989,vc_ctw_on,52538,vc_ta_on,52272,vc_ts_on,51738,voltage,0.000000,weld angle,100,
+

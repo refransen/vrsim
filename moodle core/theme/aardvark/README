@@ -1,0 +1,29 @@
+Aardvark 2.4 BETA for Moodle
+Codename: Magpie
+Status: BETA
+Icons: Fatcow Hosting
+
+WHAT'S NEW?
+-----------------------
+
+More customisation in setting including…
+
+- Choose if menu is shown or hidden before login or to guest users
+- Add the date to the frontage
+
+Many fixes for Moodle 2.4 and in general including…
+
+- Layout changes to gradebook
+- Fixes to footer
+
+
+WHAT'S TO DO?
+-----------------------
+
+- Icons need to be reproduced as SVG
+- Currently rewriting the entire code as pure PHP
+
+WHAT'S WRONG?
+-----------------------
+
+Currently no known issues (touch wood)

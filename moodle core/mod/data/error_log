@@ -1,0 +1,17 @@
+[10-Mar-2013 04:48:42 America/Denver] Default exception handler: Incorrect data ID Debug: 
+Error code: invalidid
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 71 of /mod/data/view.php: call to print_error()
+
+[10-Mar-2013 09:45:34 America/Denver] PHP Notice:  Array to string conversion in /home/vrsimlms/public_html/lib/pear/HTML/QuickForm/static.php on line 130
+[10-Mar-2013 09:46:22 America/Denver] PHP Notice:  Array to string conversion in /home/vrsimlms/public_html/lib/pear/HTML/QuickForm/static.php on line 130
+[09-Apr-2013 10:32:42 America/Denver] Default exception handler: Incorrect data ID Debug: 
+Error code: invalidid
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 71 of /mod/data/view.php: call to print_error()
+
+[09-Apr-2013 10:33:07 America/Denver] Default exception handler: Incorrect data ID Debug: 
+Error code: invalidid
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 71 of /mod/data/view.php: call to print_error()
+

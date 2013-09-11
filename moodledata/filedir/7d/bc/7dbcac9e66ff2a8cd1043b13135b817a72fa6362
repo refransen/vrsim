@@ -1,0 +1,746 @@
+/*********** VARIABLES **********************/
+var summPos = 0;
+var summTA = 0;
+var summWA = 0;
+var summSpd = 0;
+var summCtwd = 0;
+
+var projectDate = new String();
+var projectTime = new String();
+
+var numOfPasses = 0;
+var totalNumBends = 4;
+var numOfBends = 0;
+var techniqueArray = new Array();
+var defectArray = new Array();
+
+var bendLetter = new Array();
+var bendType= new Array();
+
+/************************* LESSON PAGE SEE MORE *******************/
+
+function drawAllReqCharts()
+{
+     var myCharts = document.getElementsByClassName("requirementchart");
+     for(var i = 0; i < myCharts.length; i++)
+     {
+           var chartName = "reqscorechart" + i;
+           var innerString = '<h3>Required Scores</h3><canvas id="' + chartName + '" width="300" height="250" style="">[No canvas support]</canvas>';
+           myCharts[i].innerHTML = innerString;
+
+           var radar3 = new RGraph.Radar(chartName, [70, 70, 70, 70, 70]); 
+                   radar3.Set('chart.labels.offset', 18);
+                   radar3.Set('chart.ymax', 100);
+                   radar3.Set('chart.gutter.right', 30);
+
+                  radar3.Set('chart.background.circles.color', ['#6e6e6e']); 
+                  radar3.Set('chart.strokestyle', ['black']);
+                  radar3.Set('chart.highlights', true);
+
+                 radar3.Set('chart.labels', ['Position', 'CTWD', 'Travel Angle','Work Angle','Speed']);
+                 radar3.Set('chart.text.color', '#b20700'); 
+                 radar3.Set('chart.tooltips', [70, 70, 70, 70, 70]);
+                 radar3.Set('chart.colors', ['Gradient(blue:rgba(254,198,0,255):rgba(84,244,0,255))']);
+                 radar3.Set('chart.colors.alpha',0.9); 
+
+                 radar3.Set('chart.labels.axes', 'n');
+                 radar3.Set('chart.labels.axes.boxed', [false,false,false,false,false]);
+                 radar3.Set('chart.labels.axes.boxed.zero', false);
+                 radar3.Set('chart.labels.axes.bold.zero',true);
+                 radar3.Set('chart.labels.axes.bold', [true,true,true,true,true]);
+                 RGraph.Effects.Radar.Grow(radar3);  
+
+     }           
+}
+
+function showHideRequirements(myelement)
+{
+             var allBoxes = document.getElementsByClassName("box");
+             for(var i = 0; i < allBoxes.length; i++)
+             {
+                   var myBox = allBoxes[i].getElementsByClassName("showmore")[0];
+                   if(myBox !== myelement)
+                   {  allBoxes[i].style.background = "transparent";  }
+                   else
+                   {  allBoxes[i].style.background = "#cdcdcd ";  }
+             }
+
+            var reqInfo = myelement.getElementsByClassName("requirements")[0];
+             if(reqInfo.style.display == "inline-block")
+             {  
+                     reqInfo.style.display = "none"; 
+             }
+             else
+             {  
+                   reqInfo.style.display = "inline-block"; 
+             }            
+}
+
+/*******************************  TAB BOX ************************/
+YUI().use('tabview', function(Y) {
+    var tabview = new Y.TabView({
+        srcNode: '#processWidget'
+    });
+
+    tabview.render();
+});
+
+function createPassContent()
+{
+     if(document.getElementById("passDBcontent"))
+     {
+         var allPassContent  = document.getElementById("passDBcontent").innerHTML;
+         var passesArray = allPassContent.split("\n");
+         numOfPasses = passesArray.length - 1;
+
+         var summaryContent = passesArray[0];
+
+         var content = document.getElementById("passcontent");
+         var contentstring = new String();
+         contentstring = '<div id="summarycontent">' + createSummInfo(summaryContent) +  '</div>';
+
+         for(var i = 0; i < numOfPasses; i++)
+         {
+              var chartName = 'passradarchart' + i; 
+              contentstring += '<div class="singlepasscontent" >';
+            
+              var chartName = 'passradarchart' + i; 
+              contentstring += createPassRadar(chartName);
+              contentstring += createPassInfo(passesArray[i + 1]);
+              contentstring += '</div>';
+         }
+    
+         content.innerHTML = contentstring;
+     }
+}
+
+function createPassButtons()
+{
+     var buttonsection = document.getElementById("passbuttons");
+     var buttonstring = new String();
+     buttonstring = '<ul>';
+     buttonstring += '<li><a href="#" onclick="showsummary(this); return false;" class="redbutton" >Summary</a></li>'; 
+
+     for(var i =0; i< numOfPasses; i++)
+     {
+         buttonstring += '<li><a href="#" onclick="showpass(this); return false;" class="graybutton">Pass ' + i + '</a></li>'; 
+     }
+
+     buttonstring += '</ul>';
+     if(buttonsection)
+     {    buttonsection.innerHTML = buttonstring;    }
+}
+
+function createBendButtons()
+{
+     var buttonsection = document.getElementById("bendbuttons");
+     var buttonstring = new String();
+     buttonstring = '<ul>';
+
+     for(var i =0; i< numOfBends; i++)
+     {
+          var newButtonName = bendType[i] + ' ' + bendLetter[i];
+          var className = 'graybutton';
+          if(i == 0)  
+          {    className  = "redbutton";   }
+
+          buttonstring += '<li><a href="#" onclick="showBend(this); return false;" class="' + className + '">' + newButtonName  + '</a></li>'; 
+     }
+
+     buttonstring += '</ul>';
+     if(buttonsection)
+     {    buttonsection.innerHTML = buttonstring;   }
+}
+function createBendContent()
+{
+     if(document.getElementById("bendDBcontent"))  {
+
+         var allBendContent  = document.getElementById("bendDBcontent").innerHTML;
+         var content = document.getElementById("bendcontent");
+         var contentstring = new String();
+
+         if(allBendContent === 'Bends not uploaded')
+         {
+              content.innerHTML = '<p style="display:block;margin:2em;">No bend tests have been uploaded</p>';
+              return;  
+         }
+
+         var bendsArray = allBendContent.split("\n");
+         numOfBends = bendsArray.length;
+
+         for(var i = 0; i < numOfBends; i++)
+         {
+              var chartName = 'bendradarchart' + i; 
+
+              var showContent = 'block';
+              if(i > 0)
+              {  showContent = 'none'; }
+              contentstring += '<div class="singlebendcontent" style="display:' + showContent + ';" >';
+            
+              var chartName = 'bendradarchart' + i; 
+              contentstring += createBendRadar(chartName);
+              contentstring += createBendInfo(bendsArray[i]);
+              contentstring += '</div>';
+          }
+    
+         content.innerHTML = contentstring;
+    }
+}
+
+/********************** SUMMARY INFORMATION ********************/
+function createSummRadar()
+{
+     var contentstring = '<div id="radar" ><h3 style="text-align:center;" >Averaged Scores</h3>';
+     contentstring += '<canvas id="radarchart" width="300" height="250" >[No canvas support]</canvas></div>';
+     return contentstring;
+}
+function drawTechniqueRadar(chartName, pos, ctwd, ta, wa, speed)
+{
+        var radar1 = new RGraph.Radar(chartName, [pos, ctwd, ta, wa, speed]);
+        radar1.Set('chart.labels.offset', 18);
+        radar1.Set('chart.ymax', 100);
+
+        radar1.Set('chart.gutter.right', 30);
+
+        radar1.Set('chart.background.circles.color', ['#6e6e6e']); 
+        radar1.Set('chart.strokestyle', ['black']);
+        radar1.Set('chart.highlights', true);
+
+        radar1.Set('chart.labels', ['Position', 'CTWD', 'Travel Angle','Work Angle','Speed']);
+        radar1.Set('chart.text.color', '#b20700'); 
+        radar1.Set('chart.tooltips', [pos, ctwd, ta, wa, speed]);
+
+        radar1.Set('chart.colors', ['Gradient(blue:rgba(254,198,0,255):rgba(84,244,0,255))']);
+        radar1.Set('chart.colors.alpha',0.9); 
+
+       radar1.Set('chart.labels.axes', 'n');
+       radar1.Set('chart.labels.axes.boxed', [false,false,false,false,false]);
+       radar1.Set('chart.labels.axes.boxed.zero', false);
+       radar1.Set('chart.labels.axes.bold.zero',true);
+       radar1.Set('chart.labels.axes.bold', [true,true,true,true,true]);
+
+       RGraph.Effects.Radar.Grow(radar1);
+
+}
+
+function createSummInfo(summaryContent)
+{ 
+     var contentstring = new String();
+    contentstring = createSummRadar();
+
+     if(document.getElementById("processName"))  {
+          var myProcessName = document.getElementById("processName").innerHTML;
+         contentstring += '<div id="summaryinfo">';
+         contentstring += '<h3>Process Name: <span style="color:black;" >' + myProcessName  + '</span></h3>';
+
+         if(summaryContent == "Project not uploaded")
+         {
+          contentstring += '<p style="display:block;margin-top:0.5em;" >This project has not been uploaded</p>';
+         }
+
+         /*  Parse summary pass data from the DB  */
+         var summaryArray = summaryContent.split(";");
+         for(var i=1; i < summaryArray.length; i++)
+         {
+              var tempArray = summaryArray[i].split(": ");
+              switch(tempArray[0])
+              {
+                  case 'Position':  {
+                       summPos = parseInt(tempArray[1]);
+                  } break;
+                   case 'CTWD':  {
+                       summCtwd = parseInt(tempArray[1]);
+                   } break;
+                   case 'Travel Angle':  {
+                       summTA = parseInt(tempArray[1]);
+                   } break;
+                   case 'Work Angle':  {
+                       summWA = parseInt(tempArray[1]);
+                   } break;
+                   case 'Speed':  {
+                       summSpd = parseInt(tempArray[1]);
+                   } break;
+                   case 'Date':  {
+                       projectDate = tempArray[1];
+                       contentstring += '<h4>Date: </h4><p>' + tempArray[1] + '</p><br />';
+                    }
+                    break;
+                    case 'Time':  {
+                       projectTime = tempArray[1];
+                       contentstring += '<h4>Time Completed: </h4><p>' + tempArray[1] + '</p><br />';
+                    } break;
+              }
+         }
+
+         contentstring += createAchievements();
+         contentstring += '</div>';
+     }
+
+    return contentstring;
+}    
+
+function createAchievements()
+{
+     var contentstring = new String();
+     contentstring = '<div class="achievements">';
+     contentstring += '<h3>Achievements</h3><p></p>';
+
+     if(document.getElementById("achieveDBcontent"))  {
+         var dbAchieve = document.getElementById("achieveDBcontent").innerHTML;
+         if(dbAchieve === 'None')
+         {  
+              contentstring += '<p style="display:block;margin-top:1em;" >No achievements have been earned yet</p>';   
+              return contentstring;
+         }
+         var achievements = dbAchieve.split(",");
+        if(achievements[0])
+        {
+            contentstring += '<div class="achievementtopic"><img src="/theme/vrsim/pix/achievements/Achievement1_Icon.png">';
+            contentstring += '<p><strong><span style="color:#b20700;" >Perfect Speed</span></strong>';
+            contentstring += '<br />Keep a constant speed without making mistakes</p></div>';
+         }
+         if(achievements[1])
+         {
+             contentstring += '<div class="achievementtopic"><img src="/theme/vrsim/pix/achievements/Achievement2_Icon.png">';
+             contentstring += '<p><strong><span style="color:#b20700;" >The Right Angle</span></strong>';
+             contentstring += '<br />Maintain the perfect welding angle for an entire pass</p></div>';
+         }
+         if(achievements[2])
+        {
+             contentstring += '<div class="achievementtopic"><img src="/theme/vrsim/pix/achievements/Achievement3_Icon.png">';
+             contentstring += '<p><strong><span style="color:#b20700;" >Passing Along</span></strong>';
+             contentstring += '<br />All passes completed with no defects</p></div>';
+             contentstring += '</div>';
+        }
+    }
+
+     return contentstring;
+}
+
+/********************** PASS INFORMATION ********************/
+function createPassRadar(chartName)
+{
+     var contentstring = '<div id="passradar" ><h3 style="text-align:center;" >Technique Scores</h3>';
+     contentstring += '<canvas id="' + chartName + '" width="300" height="250" >[No canvas support]</canvas></div>';
+     return contentstring;
+}
+
+function createPassInfo(myPassContent)
+{
+    var contentstring = new String();
+    var scoreString = new String();
+    var bestString = new String();
+    var worstString = new String();    
+
+    var passNum = 0;
+    var posNum = 0;
+    var ctwdNum = 0;
+    var taNum = 0;
+    var waNum = 0;
+    var speedNum = 0;
+
+     contentstring += '<div id="passinfo">';
+
+     var myPassArray = myPassContent.split(";");
+     for(var i=0; i < myPassArray.length; i++)
+     {
+          var tempArray = myPassArray[i].split(": ");
+          switch(tempArray[0])
+          {
+               case 'Pass':  {
+                    passNum = tempArray[1];
+                    contentstring += '<h3>Pass: <span style="color:black;" >' + passNum + '</span></h3>';
+               } break;
+               case 'Position':  {
+                    posNum = tempArray[1];
+               } break;
+               case 'CTWD':  {
+                    ctwdNum = tempArray[1];
+               } break;
+               case 'Travel Angle':  {
+                    taNum = tempArray[1];
+               } break;
+               case 'Work Angle':  {
+                    waNum = tempArray[1];
+               } break;
+               case 'Speed':  {
+                    speedNum = tempArray[1];
+               }
+               break;
+               case 'Amperage':  {
+                     contentstring += '<h4>Amperage: </h4><p>' + tempArray[1] + '</p><br />';
+               } break;
+               case 'Gas Mixture':  {
+                      contentstring += '<h4>Gas Mixture: </h4><p>' + tempArray[1] + '</p><br />';
+               } break;
+               case 'Cues used':  {
+                       contentstring += '<br /><h4>Cues Used: </h4><p>' + tempArray[1] + '</p><br />';
+               } break;
+               case 'Weaves Passed':  {
+                       contentstring += '<h4>Weaves Passed: </h4><p>' + tempArray[1] + '</p><br />';
+               } break;
+               case 'Whips Passed':  {
+                       contentstring += '<h4>Whips Passed: </h4><p>' + tempArray[1] + '</p><br /><br />';
+               }
+               break;
+               case 'Best Technique':  {
+                       var techniqueStr = tempArray[1].split(",");
+
+                        var showBar = true;
+                        var extraSpace = '<br />' ;
+                        if(techniqueStr[0] === "None")
+                       {   
+                             showBar = false;   
+                       }                           
+                       var barText = 'Best Technique: <span style="color:black;" >' + techniqueStr[0] + '</span>';   
+                       var barName = 'techniquebar' + passNum.toString();
+                       bestString = createProgressBar(barText, techniqueStr[1], barName, showBar);
+                       bestString += extraSpace;
+                      
+               } break;
+               case 'Needs Improvement':  {
+                       var techniqueStr = tempArray[1].split(",");
+                       
+                        var showBar = true;
+                        if(techniqueStr[0] === "None")
+                       {   showBar = false;    } 
+                       var barName = 'improvementbar' + passNum.toString();
+                       var barText = 'Needs Improvement: <span style="color:black;" >' + techniqueStr[0] + '</span>';   
+                       worstString = createProgressBar(barText, techniqueStr[1], barName, showBar);
+                       
+               } break;
+               case 'Pass Score':  {
+                       scoreString = '<div id="passscore"><h4>Score</h4><div id="box">';
+                       if(parseInt(tempArray[1]) > 70)
+                       {  scoreString += '<span class="greenScoreBox">'; }
+                       else
+                       {  scoreString += '<span>'; }
+                        scoreString += '<p>' + tempArray[1] + '</p></span></div></div>';
+               } break;
+          }
+    }
+
+    contentstring += bestString + worstString + '</div>';
+    contentstring += scoreString;
+    contentstring += '</div>';
+ 
+    // Position, CTWD, TA, WA, Speed
+    var myTechString = posNum + ',' + ctwdNum  + ',' + taNum + ',' + waNum + ',' + speedNum;
+    techniqueArray.push(myTechString); 
+
+    return contentstring;
+}    
+
+function drawAllPassRadar()
+{
+     drawTechniqueRadar('radarchart', summPos,summCtwd,summTA, summWA,summSpd);
+
+      for(var i = 0; i < numOfPasses; i++)
+      {
+          var chartName = 'passradarchart' + i;
+          var techsString = techniqueArray[i].split(",");
+          drawTechniqueRadar(chartName, techsString[0] ,techsString[1],techsString[2],techsString[3],techsString[4]); 
+      }
+}
+
+function createProgressBar(mytitle, mywidth, idname, showBar)
+{
+     var contentstring = new String();
+     contentstring = '<div id="' + idname.toString() + '"><h4>' + mytitle + '</h4>';
+     if(showBar == true )
+     {    
+            var newWidth = new String();
+            newWidth = mywidth.toString() + "%"; 
+            
+             if(parseInt(mywidth,10) < 1)
+             {
+                   newWidth = "0%";
+                   contentstring += '<div class="progress-bar red">';
+                   contentstring += '<span style="width: 10%;background:transparent;border:0px;display:inline;" >';
+                   contentstring += '<p style="color:black;text-align:left;" >' + newWidth + '</p></span></div>';   
+             }
+             else
+             {
+                   if(parseInt(mywidth,10) <= 100)  {
+                         contentstring += '<div class="progress-bar-complete green">';
+                   }
+                   else  {
+                         contentstring += '<div class="progress-bar red">';
+                   }
+
+                   contentstring += '<span style="width:' + parseInt(mywidth,10) + '%;" >';
+                   contentstring += '<p>' + newWidth + '</p></span></div>';   
+             }
+     }
+     contentstring += '</div>';
+
+     return contentstring;
+}
+
+function showsummary(myelement)
+{
+     myelement.focus();
+     myelement.className = "redbutton";
+     document.getElementById('summarycontent').style.display="block"; 
+
+     var passElements =  document.getElementsByClassName("singlepasscontent");
+     var myPassButtons = document.getElementById('passbuttons').getElementsByTagName('a');
+
+     for(var i=0; i< passElements.length; i++)    {
+          passElements[i].style.display='none';
+     }
+
+     for(var i=1; i< myPassButtons.length; i++)  {
+          myPassButtons[i].className = 'graybutton';
+     }
+}
+
+function showpass(myelement)
+{
+     myelement.focus();
+     myelement.className = 'redbutton';
+
+     document.getElementById('summarycontent').style.display="none"; 
+     document.getElementById('passbuttons').getElementsByTagName('a')[0].className = 'graybutton';
+     
+     var myPassButtons = document.getElementById('passbuttons').getElementsByTagName('a');
+     var passElements =  document.getElementsByClassName("singlepasscontent");
+
+     for(var i=0; i < myPassButtons.length; i++)
+     {
+          if(i !== 0)
+          {
+              if(myPassButtons[i] !== myelement)
+              {
+                   myPassButtons[i].className = 'graybutton';
+                   passElements[i -1].style.display = 'none';
+               }
+              else
+              {
+                   passElements[i - 1].style.display='block'; 
+              }
+          }
+     }
+} 
+
+/************************************ BEND CONTENT ********************************/
+function showBend(myelement)
+{
+     myelement.focus();
+     myelement.className = 'redbutton';
+     
+     var myBendButtons = document.getElementById('bendbuttons').getElementsByTagName('a');
+     var bendElements =  document.getElementsByClassName("singlebendcontent");
+
+     for(var i=0; i < myBendButtons.length; i++)
+     {
+              if(myBendButtons[i] !== myelement)
+              {
+                   myBendButtons[i].className = 'graybutton';
+                   bendElements[i].style.display = 'none';
+               }
+              else
+              {
+                   bendElements[i].style.display='block'; 
+              }
+     }
+} 
+
+function createBendInfo(myBendContent)
+{
+    var contentstring = new String();    
+
+    var bendNum = 0;
+    var fusNum = 0;
+    var porNum = 0;
+    var slagNum = 0;
+
+    var reason = new String();
+
+     var myBendArray = myBendContent.split(";");
+     for(var i=0; i < myBendArray.length; i++)
+     {
+          var tempArray = myBendArray[i].split(": ");
+          switch(tempArray[0])
+          {
+               case 'Bend Number':  {
+                    bendNum = tempArray[1];
+               } break;
+               case 'Bend Letter':  {
+                   bendLetter.push(tempArray[1]);
+               } break;
+               case 'Bend Type':  {
+                   bendType.push(tempArray[1]);
+               } break;
+               case 'Fusion':  {
+                   fusNum = parseInt(tempArray[1]);
+               } break;
+               case 'Porosity':  {
+                   porNum = parseInt(tempArray[1]);
+               } break;
+               case 'Slag':  {
+                   slagNum = parseInt(tempArray[1]);
+               } break;
+               case 'Reason':  {
+                   reason = tempArray[1].replace(/(<([^>]+)>)/ig,"");
+               } break;
+          }
+    }
+
+    var myDefectString = fusNum + ',' + porNum + ',' + slagNum;
+    var bendsRemain = totalNumBends - numOfBends;
+
+    // See if user passed the bend
+    var scoreCap = 18;
+    var defectAmount = fusNum + porNum + slagNum;
+    var outcome = "Failed";
+    if(parseInt(defectAmount) < scoreCap)  {
+        outcome = "Passed";
+    }
+    var bendScore = (scoreCap - defectAmount) / scoreCap;
+    var finalScore = parseInt(bendScore * 100);
+
+     contentstring += '<div id="bendinfo">';
+     contentstring +=  '<h3>Bend Results: <span style="color:green;" >' + outcome + '<span style="font-family:verdana;" > (' + finalScore + '%)</span></span></h3>';
+     contentstring += '<h4>Side: </h4><p>' + bendType[bendNum] + '</p><br />';
+     contentstring += '<h4>Section: </h4><p>' + bendLetter[bendNum] + '</p><br />';
+     contentstring += '<h4>Failure Reason: </h4><p>' + reason + '</p><br /><br />';  
+     contentstring += '<h4><strong>Time Completed: </strong></h4><p>' + projectTime + '</p><br />';
+     contentstring += '<h4><strong>Date: </strong></h4><p>' + projectDate + '</p><br />';
+     contentstring += '<br />';
+     contentstring += '<h4><strong>Bend Tests Remaining: </strong></h4><p>' + bendsRemain + '</p><br />';
+     contentstring += '</div>';
+
+    defectArray.push(myDefectString); 
+
+    return contentstring;
+}    
+
+function createBendRadar(chartName)
+{
+     var contentstring = '<div id="bendradar" ><h3 style="text-align:center;" >Allowed Defects</h3>';
+     contentstring += '<canvas id="' + chartName + '" width="300" height="250" >[No canvas support]</canvas></div>';
+     return contentstring;
+}
+
+function drawAllBendsRadar()
+{
+     for(var i = 0; i < numOfBends; i++)
+      {
+          var chartName = 'bendradarchart' + i;
+          var defectsstring = defectArray[i].split(",");
+          drawBendRadar(chartName, defectsstring[0] ,defectsstring[1],defectsstring[2]); 
+      }
+}
+
+function drawBendRadar(chartName, fus, por, slag)
+{
+        var radar1 = new RGraph.Radar(chartName, [fus, por, slag]); 
+        radar1.Set('chart.labels.offset', 18);
+        radar1.Set('chart.ymax', 6);
+
+        radar1.Set('chart.gutter.right', 30);
+
+        radar1.Set('chart.background.circles.color', ['#6e6e6e']); 
+        radar1.Set('chart.strokestyle', ['black']);
+        radar1.Set('chart.highlights', true);
+
+        radar1.Set('chart.labels', ['Fusion', 'Porosity', 'Slag']);
+        radar1.Set('chart.text.color', '#b20700'); 
+        radar1.Set('chart.tooltips', [fus, por, slag]);
+
+        radar1.Set('chart.colors', ['Gradient(rgba(84,244,0,255):rgba(254,198,0,255):red)']);
+        radar1.Set('chart.colors.alpha',0.9); 
+
+       radar1.Set('chart.labels.axes', 'n');
+       radar1.Set('chart.labels.axes.boxed', [false,false,false,false,false]);
+       radar1.Set('chart.labels.axes.boxed.zero', false);
+       radar1.Set('chart.labels.axes.bold.zero',true);
+       radar1.Set('chart.labels.axes.bold', [true,true,true,true,true]);
+
+       RGraph.Effects.Radar.Grow(radar1);
+}
+
+/************ Project Overview Functions ***********************/
+
+function setProgressBar(idname)
+{
+     var percent = document.getElementById(idname).getElementsByTagName('p')[0];
+     var bar = document.getElementById(idname).getElementsByTagName('span')[0];
+
+    if(parseInt(percent.innerHTML) >= 100)
+    {
+        document.getElementById(idname).className = "progress-bar-complete green";
+    }
+    if(parseInt(percent.innerHTML) <= 10)
+    {
+        percent.style.color = "black";
+    }
+
+     bar.style.width = percent.innerHTML + '%';
+     percent.innerHTML += '%'; 
+}
+function setScoreBoxes()
+{
+     var projScoreBox = document.getElementById("box").getElementsByTagName('span')[0];
+     var percent = projScoreBox.getElementsByTagName('p')[0].innerHTML;
+
+     if(parseInt(percent) > 70)
+     {  projScoreBox.className= "greenScoreBox";  }
+}
+
+function setBendText()
+{
+     var bendText = document.getElementById("bendOutcomeText");
+     var bendIconTitle = "Bends not passed";
+     var myIcon = document.getElementById("bendicon");
+
+     if(myIcon.getElementsByTagName('img')[0])
+     {  
+         bendIconTitle = myIcon.getElementsByTagName('img')[0].title;
+     }
+
+     bendText.innerHTML = bendIconTitle;
+}
+
+/**** Calculate amount of lesson progress *********/
+function setLessonProgress()
+{
+    var percent = 0;
+    var entries = document.getElementsByClassName("projectScore");
+    var totalProjects = entries.length;
+    if(entries && totalProjects > 0)   {
+        var projectComplete = 0;
+        for(var i = 0; i < totalProjects; i++)
+        {
+              var entryScore = parseInt(entries[i].innerHTML);
+              if(entryScore > 70)
+              {   projectComplete++;  }
+         }
+
+        percent = (projectComplete / totalProjects) * 100;
+        percent = parseInt(percent);
+    }
+
+    document.getElementById("lessonprogressbar").getElementsByTagName('p')[0].innerHTML = percent.toString();
+    if(percent < 10)   {
+         document.getElementById("lessonprogressbar").getElementsByTagName('p')[0].style.color = "black";
+    }
+}
+
+function setLessonProgressIcon()
+{
+        var totalProjScore = document.getElementsByClassName("projectScore");
+        var totalIcons = document.getElementsByClassName("thumb");
+
+         for(var i=0; i < totalProjScore.length; i++)
+         {
+              var newProgressURl = '/theme/vrsim/pix_plugins/mod/vrlesson/Lesson_NotPassed_Icon.png';
+              var tempScore = parseInt(totalProjScore[i].innerHTML);
+
+              if(tempScore >= 70)  {
+                       newProgressURl = '/theme/vrsim/pix_plugins/mod/vrlesson/Lesson_Passed_Icon.png';
+              }
+             totalIcons[i].getElementsByTagName('img')[0].src = newProgressURl;
+         }
+ }

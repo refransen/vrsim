@@ -1,0 +1,2 @@
+[27-Mar-2013 03:06:27 America/Denver] PHP Warning:  Creating default object from empty value in /home/vrsimlms/public_html/report/log/graph.php on line 133
+[27-Mar-2013 03:06:27 America/Denver] PHP Fatal error:  Call to undefined function ImageTTFBBox() in /home/vrsimlms/public_html/lib/graphlib.php on line 1344

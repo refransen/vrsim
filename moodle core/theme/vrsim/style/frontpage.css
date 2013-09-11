@@ -1,0 +1,233 @@
+/***********************  2 Column Style  *****************************/ 
+.colmask 
+{
+    position:relative;    /* This fixes the IE7 overflow hidden bug */
+    clear:both;
+    float:left;
+    width:100%;            /* width of whole page */
+    overflow:hidden;        /* This chops off any overhanging divs */      
+}
+
+/* common column settings */
+.colright,
+.colmid,
+.colleft {
+    float:left;
+    width:100%;
+    position:relative;
+}
+
+.col1,
+.col2,
+.col3 {
+    float:left;
+    position:relative;
+    padding:0 0 1em 0;
+    overflow:hidden;
+}
+
+/* 2 Column (right menu) settings */
+.rightmenu .colleft {
+    right:60%;            /* right column width */
+}
+
+/*  column with the avatar */
+.rightmenu .col1 
+{
+    width:38%;	           /* left column content width (left column width minus left and right padding) */
+    left:61%;		   /* (right column width) plus (left column left padding) */ 
+    border-left: 2px solid red;
+    padding-left: 1em;  
+}   
+/* column with the grade info*/
+.rightmenu .col2 
+{
+	width:58%;	/* right column content width (right column width minus left and right padding) */
+	left:63%;	/* (right column width) plus (left column left and right padding) plus (right column left padding) */
+    
+    /* padding: 1.5em 0em 1em 0.5em; */ 
+}
+/************************ Avatar Widget Styling ***********************/
+.avatarwidget
+{
+    text-align:center; 
+    position:relative;
+}
+.avatarwidget .avatarbg
+{
+    position:relative;
+    width: 97%;
+    height:420px;
+}
+.defaultavatar
+{
+    display: inline-block;
+}
+.defaultavatar #helmet
+{
+    position: absolute;
+    width: 55px;
+    top: 26px;
+    left: 159px;
+}
+.defaultavatar #shirt
+{
+    position: absolute;
+    width: 161px;
+    top: 76px;
+    left: 113px;
+}
+.defaultavatar #gloves
+{
+    position: absolute;
+    width: 162px;
+    top: 163px;
+    left: 110px;
+}
+.defaultavatar #pants
+{
+    position: absolute;
+    width: 142px;
+    top: 194px;
+    left: 116px;
+}
+.defaultavatar #shoes
+{
+    position: absolute;
+    width: 124px;
+    top: 360px;
+    left: 144px;
+}
+/*********************** Avatar image slider *************************/
+.clothingslider
+{ 
+    position:relative;
+    width: 100%;
+    display:inline-block;
+}
+.clothingslider img
+{
+    cursor:pointer;
+    display:inline;
+    width:50px;
+    height:50px;
+    border:3px ridge #f21429;
+    -webkit-box-shadow: 0px 3px 10px gray;
+    -moz-box-shadow: 0px 3px 10px gray;
+    -o-box-shadow: 0px 3px 10px gray;
+    box-shadow: 0px 3px 10px gray;
+}
+#helmetchoices,
+#shirtchoices,
+#glovechoices,
+#pantchoices,
+#shoechoices
+{
+    display:none;
+}
+#helmetchoices img,
+#shirtchoices img,
+#glovechoices img,
+#pantchoices img,
+#shoechoices img
+{
+    width:60px;
+    height:60px;
+}
+/************************ Class Information ***************************/
+.studentinfo
+{
+    display:inline-table;
+}
+.container h3,
+.container p
+{   
+    font-family: promethean !important;
+    color: #b50909;
+}
+.container h3
+{
+    font-size:1.1em;
+    margin-bottom:0.2em;
+    margin-top:0.5em;
+}
+.avatarbutton
+{
+    position: relative;
+    vertical-align:middle;
+    padding:6px 24px;
+    display:inline;
+    float:right; 
+
+    -moz-box-shadow:inset 0px 1px 0px 0px #efefef;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #efefef;
+    box-shadow:inset 0px 1px 0px 0px #efefef;
+
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #bababa), color-stop(0.75, #ffffff) );
+    background:-moz-linear-gradient( center top, #bababa 5%, #ffffff 75% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bababa', endColorstr='#ffffff');     
+    background-color:#bababa;
+
+    border: 1px outset #bababa;
+}
+.avatarbutton:hover
+{
+    -moz-box-shadow:inset 0px 1px 0px 0px #f29c93;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #f29c93;
+    box-shadow:inset 0px 1px 0px 0px #f29c93;
+
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f21429), color-stop(1, #a60000) );
+    background:-moz-linear-gradient( center top, #f21429 5%, #a60000 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f21429', endColorstr='#a60000');
+    background-color:#fe1a00;
+}
+.avatarbutton:hover a
+{
+    color:white;
+}
+.classinfo,
+.lessoncompleted,
+.currlesson,
+.currproject,
+.achievements
+{
+    width:80%;
+}
+/*************** Current Lesson *********************/
+.currlesson,
+.currproject,
+.achievements
+{
+    border-top:1px solid #f21429;
+    margin-top:1.8em;
+}
+.currlesson .avatarbutton
+{
+    margin-top:-1%;
+}
+.currproject .avatarbutton
+{
+    margin-top:-5%;
+}
+/*************** Achievements ***********************/
+.achievementtopic  {
+    padding-bottom:0.3em;
+}
+.achievementtopic img
+{
+     position:relative;
+     width:40px;
+     height:40px;
+     background:green;
+     display:inline-block;
+     vertical-align:top;
+
+    -webkit-box-shadow: 0px 3px 10px gray;
+    -moz-box-shadow: 0px 3px 10px gray;
+    -o-box-shadow: 0px 3px 10px gray;
+    box-shadow: 0px 3px 10px gray;
+}
+.achievementtopic p
+{
+    display: inline-block;
+}

@@ -1,0 +1,48 @@
+.block_groups .footer  {
+    margin-top: 5px;
+}
+.block_groups #existingClasses  
+{
+    text-align:center;
+    margin-bottom:0.5em;
+}
+.block_groups #classlink  {
+    margin-top: 1em;
+    text-align:center;
+}
+.block_groups #classlink a  {
+    text-decoration:underline;
+    color: [[setting:menuhovercolor]];
+}
+.block_groups #existingClasses  img,
+.block_groups #classlist img
+{
+    position:relative;
+    display:inline-block;
+    vertical-align:middle;
+    padding:0.2em 0.5em 0.2em 0.2em;
+}
+.block_groups #classlist img  {
+    width:20px;
+}
+.block_groups #classlist p  {
+    font-family:promethean;
+    margin-bottom: 0px;
+}
+#region-pre .block_groups .title h2 {
+    width: 98% !important;
+}
+#region-pre .block_groups .title h2:after {
+    left: 82% !important;
+}
+.block.list_block .unlist > li > .column  {
+   width:100%;
+}
+.block_groups .content {
+    padding: 0;
+    background: white;
+    border: 1px solid #a60000;
+}
+.block_groups .header .block_action  {
+    display: none;
+}

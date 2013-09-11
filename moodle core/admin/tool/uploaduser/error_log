@@ -1,0 +1,210 @@
+[11-Apr-2013 03:40:04 America/Denver] Default exception handler: Access denied Debug: 
+Error code: accessdenied
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 6160 of /lib/adminlib.php: call to print_error()
+* line 42 of /admin/tool/uploaduser/index.php: call to admin_externalpage_setup()
+
+[11-Apr-2013 05:58:19 America/Denver] Default exception handler: Access denied Debug: 
+Error code: accessdenied
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 6160 of /lib/adminlib.php: call to print_error()
+* line 42 of /admin/tool/uploaduser/index.php: call to admin_externalpage_setup()
+
+[11-Apr-2013 05:58:36 America/Denver] Default exception handler: Access denied Debug: 
+Error code: accessdenied
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 6160 of /lib/adminlib.php: call to print_error()
+* line 42 of /admin/tool/uploaduser/index.php: call to admin_externalpage_setup()
+
+[11-Apr-2013 06:04:02 America/Denver] Default exception handler: Access denied Debug: 
+Error code: accessdenied
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 6160 of /lib/adminlib.php: call to print_error()
+* line 42 of /admin/tool/uploaduser/index.php: call to admin_externalpage_setup()
+
+[11-Apr-2013 06:10:43 America/Denver] Default exception handler: Access denied Debug: 
+Error code: accessdenied
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 6160 of /lib/adminlib.php: call to print_error()
+* line 42 of /admin/tool/uploaduser/index.php: call to admin_externalpage_setup()
+
+[11-Apr-2013 06:11:26 America/Denver] Default exception handler: Access denied Debug: 
+Error code: accessdenied
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 6160 of /lib/adminlib.php: call to print_error()
+* line 42 of /admin/tool/uploaduser/index.php: call to admin_externalpage_setup()
+
+[11-Apr-2013 06:16:22 America/Denver] Default exception handler: Access denied Debug: 
+Error code: accessdenied
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 6160 of /lib/adminlib.php: call to print_error()
+* line 42 of /admin/tool/uploaduser/index.php: call to admin_externalpage_setup()
+
+[11-Apr-2013 06:22:53 America/Denver] Default exception handler: Access denied Debug: 
+Error code: accessdenied
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 6160 of /lib/adminlib.php: call to print_error()
+* line 42 of /admin/tool/uploaduser/index.php: call to admin_externalpage_setup()
+
+[11-Apr-2013 06:25:33 America/Denver] Default exception handler: Access denied Debug: 
+Error code: accessdenied
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 6160 of /lib/adminlib.php: call to print_error()
+* line 42 of /admin/tool/uploaduser/index.php: call to admin_externalpage_setup()
+
+[11-Apr-2013 06:34:47 America/Denver] Default exception handler: Access denied Debug: 
+Error code: accessdenied
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 6161 of /lib/adminlib.php: call to print_error()
+* line 42 of /admin/tool/uploaduser/index.php: call to admin_externalpage_setup()
+
+[11-Apr-2013 06:35:04 America/Denver] Default exception handler: Access denied Debug: 
+Error code: accessdenied
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 6161 of /lib/adminlib.php: call to print_error()
+* line 42 of /admin/tool/uploaduser/index.php: call to admin_externalpage_setup()
+
+[11-Apr-2013 06:38:22 America/Denver] Default exception handler: Access denied Debug: 
+Error code: accessdenied
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 6160 of /lib/adminlib.php: call to print_error()
+* line 42 of /admin/tool/uploaduser/index.php: call to admin_externalpage_setup()
+
+[11-Apr-2013 06:41:37 America/Denver] Default exception handler: Access denied Debug: 
+Error code: accessdenied
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 6160 of /lib/adminlib.php: call to print_error()
+* line 42 of /admin/tool/uploaduser/index.php: call to admin_externalpage_setup()
+
+[11-Apr-2013 06:42:42 America/Denver] Default exception handler: Access denied Debug: 
+Error code: accessdenied
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 6160 of /lib/adminlib.php: call to print_error()
+* line 42 of /admin/tool/uploaduser/index.php: call to admin_externalpage_setup()
+
+[11-Apr-2013 06:43:29 America/Denver] PHP Warning:  Missing argument 1 for context_course::instance(), called in /home/vrsimlms/public_html/lib/adminlib.php on line 6157 and defined in /home/vrsimlms/public_html/lib/accesslib.php on line 6533
+[11-Apr-2013 06:43:29 America/Denver] PHP Notice:  Undefined variable: instanceid in /home/vrsimlms/public_html/lib/accesslib.php on line 6536
+[11-Apr-2013 06:43:29 America/Denver] PHP Notice:  Undefined variable: instanceid in /home/vrsimlms/public_html/lib/accesslib.php on line 6540
+[11-Apr-2013 06:43:29 America/Denver] PHP Notice:  Undefined variable: instanceid in /home/vrsimlms/public_html/lib/accesslib.php on line 6541
+[11-Apr-2013 06:43:29 America/Denver] Default exception handler: Can not find data record in database table course. Debug: SELECT id,category FROM {course} WHERE id IS NULL
+[array (
+)]
+Error code: invalidrecord
+* line 1357 of /lib/dml/moodle_database.php: dml_missing_record_exception thrown
+* line 1333 of /lib/dml/moodle_database.php: call to moodle_database->get_record_select()
+* line 6541 of /lib/accesslib.php: call to moodle_database->get_record()
+* line 6157 of /lib/adminlib.php: call to context_course::instance()
+* line 42 of /admin/tool/uploaduser/index.php: call to admin_externalpage_setup()
+
+[11-Apr-2013 06:44:33 America/Denver] PHP Warning:  Missing argument 1 for context_course::instance(), called in /home/vrsimlms/public_html/lib/adminlib.php on line 6157 and defined in /home/vrsimlms/public_html/lib/accesslib.php on line 6533
+[11-Apr-2013 06:44:33 America/Denver] PHP Notice:  Undefined variable: instanceid in /home/vrsimlms/public_html/lib/accesslib.php on line 6536
+[11-Apr-2013 06:44:33 America/Denver] PHP Notice:  Undefined variable: instanceid in /home/vrsimlms/public_html/lib/accesslib.php on line 6540
+[11-Apr-2013 06:44:33 America/Denver] PHP Notice:  Undefined variable: instanceid in /home/vrsimlms/public_html/lib/accesslib.php on line 6541
+[11-Apr-2013 06:44:33 America/Denver] Default exception handler: Can not find data record in database table course. Debug: SELECT id,category FROM {course} WHERE id IS NULL
+[array (
+)]
+Error code: invalidrecord
+* line 1357 of /lib/dml/moodle_database.php: dml_missing_record_exception thrown
+* line 1333 of /lib/dml/moodle_database.php: call to moodle_database->get_record_select()
+* line 6541 of /lib/accesslib.php: call to moodle_database->get_record()
+* line 6157 of /lib/adminlib.php: call to context_course::instance()
+* line 42 of /admin/tool/uploaduser/index.php: call to admin_externalpage_setup()
+
+[11-Apr-2013 06:45:00 America/Denver] Default exception handler: Access denied Debug: 
+Error code: accessdenied
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 6160 of /lib/adminlib.php: call to print_error()
+* line 42 of /admin/tool/uploaduser/index.php: call to admin_externalpage_setup()
+
+[11-Apr-2013 06:56:40 America/Denver] Default exception handler: Sorry, but you do not currently have permissions to do that (Upload new users from file) Debug: 
+Error code: nopermissions
+* line 704 of /lib/accesslib.php: required_capability_exception thrown
+* line 43 of /admin/tool/uploaduser/index.php: call to require_capability()
+
+[11-Apr-2013 06:59:22 America/Denver] Default exception handler: Access denied Debug: 
+Error code: accessdenied
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 6160 of /lib/adminlib.php: call to print_error()
+* line 42 of /admin/tool/uploaduser/index.php: call to admin_externalpage_setup()
+
+[12-Apr-2013 04:12:04 America/Denver] Default exception handler: Access denied Debug: 
+Error code: accessdenied
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 6277 of /lib/adminlib.php: call to print_error()
+* line 42 of /admin/tool/uploaduser/teacher_index.php: call to teacher_externalpage_setup()
+
+[12-Apr-2013 04:14:14 America/Denver] Default exception handler: Access denied Debug: 
+Error code: accessdenied
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 6277 of /lib/adminlib.php: call to print_error()
+* line 42 of /admin/tool/uploaduser/teacher_index.php: call to teacher_externalpage_setup()
+
+[12-Apr-2013 04:15:05 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/lib/adminlib.php on line 6292
+[12-Apr-2013 04:15:05 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/lib/adminlib.php on line 6312
+[12-Apr-2013 04:15:05 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/lib/adminlib.php on line 6327
+[12-Apr-2013 04:15:05 America/Denver] PHP Warning:  array_reverse() expects parameter 1 to be array, null given in /home/vrsimlms/public_html/lib/adminlib.php on line 6327
+[12-Apr-2013 04:15:05 America/Denver] PHP Warning:  implode(): Invalid arguments passed in /home/vrsimlms/public_html/lib/adminlib.php on line 6340
+[12-Apr-2013 04:16:19 America/Denver] Default exception handler: Access denied Debug: 
+Error code: accessdenied
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 6277 of /lib/adminlib.php: call to print_error()
+* line 42 of /admin/tool/uploaduser/teacher_index.php: call to teacher_externalpage_setup()
+
+[12-Apr-2013 04:17:07 America/Denver] Default exception handler: Access denied Debug: 
+Error code: accessdenied
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 6277 of /lib/adminlib.php: call to print_error()
+* line 42 of /admin/tool/uploaduser/teacher_index.php: call to teacher_externalpage_setup()
+
+[12-Apr-2013 04:25:15 America/Denver] Default exception handler: Coding error detected, it must be fixed by a programmer: Invalid state passed to moodle_page::set_state. We are in state 2 and state 1 was requested. Debug: 
+Error code: codingerror
+* line 824 of /lib/pagelib.php: coding_exception thrown
+* line 729 of /lib/outputrenderers.php: call to moodle_page->set_state()
+* line 139 of /admin/tool/uploaduser/teacher_index.php: call to core_renderer->header()
+
+[12-Apr-2013 04:27:58 America/Denver] Default exception handler: Coding error detected, it must be fixed by a programmer: Invalid parameter $url, has to be full url or in shortened form starting with /. Debug: 
+Error code: codingerror
+* line 1158 of /lib/pagelib.php: coding_exception thrown
+* line 6271 of /lib/adminlib.php: call to moodle_page->set_url()
+* line 42 of /admin/tool/uploaduser/teacher_index.php: call to teacher_externalpage_setup()
+
+[12-Apr-2013 04:30:48 America/Denver] Default exception handler: Sorry, but you do not currently have permissions to do that (Upload new users from file) Debug: 
+Error code: nopermissions
+* line 704 of /lib/accesslib.php: required_capability_exception thrown
+* line 43 of /admin/tool/uploaduser/teacher_index.php: call to require_capability()
+
+[12-Apr-2013 07:01:50 America/Denver] PHP Notice:  Undefined property: stdClass::$name in /home/vrsimlms/public_html/admin/tool/uploaduser/user_form.php on line 72
+[13-Apr-2013 01:00:27 America/Denver] PHP Parse error:  syntax error, unexpected ' ' (T_STRING) in /home/vrsimlms/public_html/admin/tool/uploaduser/teacher_index.php on line 156
+[13-Apr-2013 01:01:19 America/Denver] PHP Parse error:  syntax error, unexpected ' ' (T_STRING) in /home/vrsimlms/public_html/admin/tool/uploaduser/teacher_index.php on line 157
+[13-Apr-2013 01:02:07 America/Denver] PHP Parse error:  syntax error, unexpected ' ' (T_STRING) in /home/vrsimlms/public_html/admin/tool/uploaduser/teacher_index.php on line 157
+[13-Apr-2013 01:06:42 America/Denver] PHP Fatal error:  Cannot use object of type stdClass as array in /home/vrsimlms/public_html/admin/tool/uploaduser/teacher_index.php on line 118
+[13-Apr-2013 02:19:12 America/Denver] Default exception handler: Access denied Debug: 
+Error code: accessdenied
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 6160 of /lib/adminlib.php: call to print_error()
+* line 42 of /admin/tool/uploaduser/index.php: call to admin_externalpage_setup()
+
+[13-Apr-2013 02:29:00 America/Denver] PHP Notice:  Undefined variable: generateName in /home/vrsimlms/public_html/admin/tool/uploaduser/teacher_index.php on line 1027
+[13-Apr-2013 02:57:35 America/Denver] Default exception handler: Error occur during loading CSV file! Debug: 
+Error code: csvloaderror
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 128 of /admin/tool/uploaduser/teacher_index.php: call to print_error()
+
+[13-Apr-2013 02:58:20 America/Denver] Default exception handler: Error occur during loading CSV file! Debug: 
+Error code: csvloaderror
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 128 of /admin/tool/uploaduser/teacher_index.php: call to print_error()
+
+[13-Apr-2013 03:12:23 America/Denver] PHP Notice:  Undefined variable: i in /home/vrsimlms/public_html/admin/tool/uploaduser/teacher_index.php on line 860
+[13-Apr-2013 03:12:23 America/Denver] PHP Notice:  Undefined variable: i in /home/vrsimlms/public_html/admin/tool/uploaduser/teacher_index.php on line 869
+[13-Apr-2013 03:12:23 America/Denver] PHP Notice:  Undefined variable: i in /home/vrsimlms/public_html/admin/tool/uploaduser/teacher_index.php on line 888
+[13-Apr-2013 03:12:23 America/Denver] PHP Notice:  Undefined variable: i in /home/vrsimlms/public_html/admin/tool/uploaduser/teacher_index.php on line 907
+[13-Apr-2013 03:16:56 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/admin/tool/uploaduser/teacher_index.php on line 825
+[13-Apr-2013 03:20:46 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/admin/tool/uploaduser/teacher_index.php on line 826
+[13-Apr-2013 03:30:36 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/admin/tool/uploaduser/teacher_index.php on line 828
+[13-Apr-2013 03:35:46 America/Denver] Default exception handler: Error reading temporary file Debug: 
+Error code: cannotreadtmpfile
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 174 of /admin/tool/uploaduser/locallib.php: call to print_error()
+* line 147 of /admin/tool/uploaduser/teacher_index.php: call to uu_validate_user_upload_columns()
+

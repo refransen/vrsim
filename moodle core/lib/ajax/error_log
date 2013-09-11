@@ -1,0 +1,96 @@
+[01-Apr-2013 13:47:36 America/Denver] Default exception handler: Incorrect sesskey submitted, form not accepted! Debug: 
+Error code: invalidsesskey
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 33 of /lib/ajax/setuserpref.php: call to print_error()
+
+[29-Aug-2013 03:01:35 America/Denver] Can not obtain session lock
+[29-Aug-2013 03:01:35 America/Denver] Default exception handler: Timed out while waiting for session lock.<br />Wait for your current requests to finish and try again later. Debug: 
+Error code: sessionwaiterr
+* line 1448 of /lib/dml/mysqli_native_moodle_database.php: dml_sessionwait_exception thrown
+* line 609 of /lib/sessionlib.php: call to mysqli_native_moodle_database->get_session_lock()
+* line ? of unknownfile: call to database_session->handler_read()
+* line 190 of /lib/sessionlib.php: call to session_start()
+* line 482 of /lib/sessionlib.php: call to session_stub->__construct()
+* line 66 of /lib/sessionlib.php: call to database_session->__construct()
+* line 703 of /lib/setup.php: call to session_get_instance()
+* line 33 of /config.php: call to require_once()
+* line 29 of /lib/ajax/setuserpref.php: call to require_once()
+
+[29-Aug-2013 03:43:40 America/Denver] Can not obtain session lock
+[29-Aug-2013 03:43:40 America/Denver] Default exception handler: Timed out while waiting for session lock.<br />Wait for your current requests to finish and try again later. Debug: 
+Error code: sessionwaiterr
+* line 1448 of /lib/dml/mysqli_native_moodle_database.php: dml_sessionwait_exception thrown
+* line 609 of /lib/sessionlib.php: call to mysqli_native_moodle_database->get_session_lock()
+* line ? of unknownfile: call to database_session->handler_read()
+* line 190 of /lib/sessionlib.php: call to session_start()
+* line 482 of /lib/sessionlib.php: call to session_stub->__construct()
+* line 66 of /lib/sessionlib.php: call to database_session->__construct()
+* line 703 of /lib/setup.php: call to session_get_instance()
+* line 33 of /config.php: call to require_once()
+* line 29 of /lib/ajax/setuserpref.php: call to require_once()
+
+[29-Aug-2013 03:52:10 America/Denver] Can not obtain session lock
+[29-Aug-2013 03:52:10 America/Denver] Default exception handler: Timed out while waiting for session lock.<br />Wait for your current requests to finish and try again later. Debug: 
+Error code: sessionwaiterr
+* line 1448 of /lib/dml/mysqli_native_moodle_database.php: dml_sessionwait_exception thrown
+* line 609 of /lib/sessionlib.php: call to mysqli_native_moodle_database->get_session_lock()
+* line ? of unknownfile: call to database_session->handler_read()
+* line 190 of /lib/sessionlib.php: call to session_start()
+* line 482 of /lib/sessionlib.php: call to session_stub->__construct()
+* line 66 of /lib/sessionlib.php: call to database_session->__construct()
+* line 703 of /lib/setup.php: call to session_get_instance()
+* line 33 of /config.php: call to require_once()
+* line 29 of /lib/ajax/setuserpref.php: call to require_once()
+
+[29-Aug-2013 03:52:18 America/Denver] Can not obtain session lock
+[29-Aug-2013 03:52:18 America/Denver] Default exception handler: Timed out while waiting for session lock.<br />Wait for your current requests to finish and try again later. Debug: 
+Error code: sessionwaiterr
+* line 1448 of /lib/dml/mysqli_native_moodle_database.php: dml_sessionwait_exception thrown
+* line 609 of /lib/sessionlib.php: call to mysqli_native_moodle_database->get_session_lock()
+* line ? of unknownfile: call to database_session->handler_read()
+* line 190 of /lib/sessionlib.php: call to session_start()
+* line 482 of /lib/sessionlib.php: call to session_stub->__construct()
+* line 66 of /lib/sessionlib.php: call to database_session->__construct()
+* line 703 of /lib/setup.php: call to session_get_instance()
+* line 33 of /config.php: call to require_once()
+* line 29 of /lib/ajax/setuserpref.php: call to require_once()
+
+[29-Aug-2013 03:52:20 America/Denver] Can not obtain session lock
+[29-Aug-2013 03:52:20 America/Denver] Default exception handler: Timed out while waiting for session lock.<br />Wait for your current requests to finish and try again later. Debug: 
+Error code: sessionwaiterr
+* line 1448 of /lib/dml/mysqli_native_moodle_database.php: dml_sessionwait_exception thrown
+* line 609 of /lib/sessionlib.php: call to mysqli_native_moodle_database->get_session_lock()
+* line ? of unknownfile: call to database_session->handler_read()
+* line 190 of /lib/sessionlib.php: call to session_start()
+* line 482 of /lib/sessionlib.php: call to session_stub->__construct()
+* line 66 of /lib/sessionlib.php: call to database_session->__construct()
+* line 703 of /lib/setup.php: call to session_get_instance()
+* line 33 of /config.php: call to require_once()
+* line 29 of /lib/ajax/setuserpref.php: call to require_once()
+
+[29-Aug-2013 04:17:51 America/Denver] Can not obtain session lock
+[29-Aug-2013 04:17:51 America/Denver] Default exception handler: Timed out while waiting for session lock.<br />Wait for your current requests to finish and try again later. Debug: 
+Error code: sessionwaiterr
+* line 1448 of /lib/dml/mysqli_native_moodle_database.php: dml_sessionwait_exception thrown
+* line 609 of /lib/sessionlib.php: call to mysqli_native_moodle_database->get_session_lock()
+* line ? of unknownfile: call to database_session->handler_read()
+* line 190 of /lib/sessionlib.php: call to session_start()
+* line 482 of /lib/sessionlib.php: call to session_stub->__construct()
+* line 66 of /lib/sessionlib.php: call to database_session->__construct()
+* line 703 of /lib/setup.php: call to session_get_instance()
+* line 33 of /config.php: call to require_once()
+* line 29 of /lib/ajax/setuserpref.php: call to require_once()
+
+[29-Aug-2013 05:19:23 America/Denver] Can not obtain session lock
+[29-Aug-2013 05:19:23 America/Denver] Default exception handler: Timed out while waiting for session lock.<br />Wait for your current requests to finish and try again later. Debug: 
+Error code: sessionwaiterr
+* line 1448 of /lib/dml/mysqli_native_moodle_database.php: dml_sessionwait_exception thrown
+* line 609 of /lib/sessionlib.php: call to mysqli_native_moodle_database->get_session_lock()
+* line ? of unknownfile: call to database_session->handler_read()
+* line 190 of /lib/sessionlib.php: call to session_start()
+* line 482 of /lib/sessionlib.php: call to session_stub->__construct()
+* line 66 of /lib/sessionlib.php: call to database_session->__construct()
+* line 703 of /lib/setup.php: call to session_get_instance()
+* line 33 of /config.php: call to require_once()
+* line 29 of /lib/ajax/setuserpref.php: call to require_once()
+

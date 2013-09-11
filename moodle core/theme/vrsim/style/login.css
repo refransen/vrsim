@@ -1,0 +1,99 @@
+#page-content 
+{
+    background:white !important;
+}
+
+.loginbox.onecolumn
+{
+    width:400px;
+    margin: 0 auto;
+    margin-bottom: 3em;
+    padding: 1em 0em 1em 0em;
+    border: 1px solid black;
+}
+
+.loginbox.onecolumn .clearer
+{
+    clear:right;
+}
+
+.loginbox .loginpanel h2,
+.loginbox .signuppanel h2,
+.loginbox .subcontent,
+.loginbox .subcontent p
+{
+    text-align:center;
+    font-family: Verdana, Geneva, sans-serif; 
+}
+
+.loginbox .loginform .form-label 
+{
+    position:relative;
+    width:38% !important;
+    float: none !important;
+    text-align: left;
+    display: inline-block !important;
+    width: 5em;
+    padding-bottom:1em;
+}
+
+.loginbox .loginform .form-input 
+{
+    float: none !important;
+    display: inline !important;
+}
+
+.loginbox .loginform .form-input input
+{
+    width:10em !important;
+}
+
+.loginbox .loginform .form-input #loginbtn,
+.loginbox .signuppanel .subcontent .signupform #signup input
+{
+    position: relative;
+    vertical-align:middle;
+    text-align:center;
+    display:block !important;
+    margin: 0 auto;
+    padding:6px 24px;
+
+    -moz-box-shadow:inset 0px 1px 0px 0px #f29c93;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #f29c93;
+    box-shadow:inset 0px 1px 0px 0px #f29c93;
+
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #a60000), color-stop(1, #f21429) );
+    background:-moz-linear-gradient( center top, #a60000 5%, #f21429 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a60000', endColorstr='#f21429');     
+    background-color:#a60000;
+
+    border:1px solid #d83526;
+    color:#ffffff;
+    font-family: Verdana, Geneva, sans-serif; 
+    text-shadow:1px 1px 0px #b23e35;
+}
+
+.loginbox .loginform .form-input #loginbtn:hover,
+.loginbox .signuppanel .subcontent .signupform #signup input:hover
+{
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f21429), color-stop(1, #a60000) );
+    background:-moz-linear-gradient( center top, #f21429 5%, #a60000 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f21429', endColorstr='#a60000');
+    background-color:#fe1a00;
+}
+
+div.rememberpass
+{
+   margin-top: 1em;
+   margin-bottom: 0.5em;
+}
+
+div.forgetpass, 
+div.centeredcookies 
+{
+   text-align:center;
+}
+div.forgetpass a 
+{
+    text-decoration:underline;
+}

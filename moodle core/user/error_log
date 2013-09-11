@@ -1,0 +1,10 @@
+[12-Jul-2013 07:28:39 America/Denver] Default exception handler: Can not find data record in database table course. Debug: SELECT * FROM {course} WHERE id = ?
+[array (
+  0 => 0,
+)]
+Error code: invalidrecord
+* line 1357 of /lib/dml/moodle_database.php: dml_missing_record_exception thrown
+* line 1333 of /lib/dml/moodle_database.php: call to moodle_database->get_record_select()
+* line 43 of /user/index.php: call to moodle_database->get_record()
+
+[17-Jul-2013 09:47:22 America/Denver] PHP Notice:  Undefined variable: rolestring in /home/vrsimlms/public_html/user/profile.php on line 292

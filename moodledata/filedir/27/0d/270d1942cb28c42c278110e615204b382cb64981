@@ -1,0 +1,40 @@
+name,Qwert,
+
+session runtime,194201,start date,9:6:2013,start time,16:8:43,
+
+Project0,
+coupon name,HorzLAPOE,end time,16:9:25,environment,IMAGE_Envir1,process,GMAW,project runtime,26515,start time,16:8:59,type,Short,
+
+Pass0,
+amperage,0.000000,black soot,0,blow through,0,concave bead,0,convex bead,0,excessive spatter,0,fillet size,0,gas mixture,75% Argon/25% CO2,incomplete fusion,0,overall,64,pass number,0,pass runtime,21281,placement,0,polarity,DC+,porosity,0,position,100,slag entrapment,0,tip to work,0,travel angle,100,travel speed,42,undercut,0,voltage,0.000000,weld angle,80,
+
+Project1,
+coupon name,HorzLAPOE,end time,16:10:1,environment,IMAGE_Envir1,process,GMAW,project runtime,35586,start time,16:9:25,type,Short,
+
+Pass0,
+amperage,0.000000,black soot,0,blow through,0,concave bead,0,convex bead,0,excessive spatter,0,fillet size,0,gas mixture,75% Argon/25% CO2,incomplete fusion,0,overall,0,pass number,0,pass runtime,22931,placement,0,polarity,DC+,porosity,0,position,0,slag entrapment,0,tip to work,0,travel angle,0,travel speed,0,undercut,0,voltage,0.000000,weld angle,0,
+
+Project2,
+coupon name,HorzLAPOE,end time,16:10:23,environment,IMAGE_Envir1,process,GMAW,project runtime,22388,start time,16:10:1,type,Short,
+
+Pass0,
+amperage,0.000000,black soot,0,blow through,0,concave bead,0,convex bead,0,excessive spatter,0,fillet size,0,gas mixture,75% Argon/25% CO2,incomplete fusion,87,overall,31,pass number,0,pass runtime,17741,placement,91,polarity,DC+,porosity,0,position,54,slag entrapment,0,tip to work,0,travel angle,54,travel speed,50,undercut,87,voltage,0.000000,weld angle,0,
+
+Project3,
+coupon name,HorzLAPOE,end time,16:10:28,environment,IMAGE_Envir1,process,GMAW,project runtime,4661,start time,16:10:23,type,Short,
+
+Pass0,
+amperage,0.000000,black soot,0,blow through,0,concave bead,0,convex bead,0,excessive spatter,0,fillet size,0,gas mixture,75% Argon/25% CO2,incomplete fusion,0,overall,0,pass number,0,pass runtime,3505,placement,0,polarity,DC+,porosity,0,position,0,slag entrapment,0,tip to work,0,travel angle,0,travel speed,0,undercut,0,voltage,0.000000,weld angle,0,
+
+Project4,
+coupon name,HorzLAPOE,end time,16:10:53,environment,IMAGE_Envir1,process,GMAW,project runtime,24999,start time,16:10:28,type,Short,
+
+Pass0,
+amperage,0.000000,black soot,0,blow through,0,concave bead,0,convex bead,89,excessive spatter,6,fillet size,89,gas mixture,75% Argon/25% CO2,incomplete fusion,0,overall,58,pass number,0,pass runtime,20481,placement,0,polarity,DC+,porosity,6,position,84,slag entrapment,0,tip to work,73,travel angle,0,travel speed,54,undercut,4,voltage,0.000000,weld angle,83,
+
+Project5,
+coupon name,HorzLAPOE,end time,16:11:53,environment,IMAGE_Envir1,process,GMAW,project runtime,60254,start time,16:10:53,type,Short,
+
+Pass0,
+amperage,0.000000,black soot,0,blow through,0,concave bead,0,convex bead,0,excessive spatter,0,fillet size,0,gas mixture,75% Argon/25% CO2,incomplete fusion,0,overall,81,pass number,0,pass runtime,46510,placement,0,polarity,DC+,porosity,0,position,83,slag entrapment,0,tip to work,89,travel angle,86,travel speed,86,undercut,0,voltage,0.000000,weld angle,63,
+

@@ -1,0 +1,189 @@
+<preset>
+
+<settings>
+<intro>&lt;div id=&quot;lessonintro&quot; &gt;
+    &lt;div id=&quot;title&quot; &gt;
+        &lt;div id=&quot;myheader&quot; &gt;
+             &lt;h3&gt;Lesson Overview&lt;/h3&gt;
+        &lt;/div&gt;
+        &lt;div id=&quot;blankheader&quot; &gt;&lt;/div&gt;
+        &lt;div id=&quot;titleinfo&quot; &gt;
+            &lt;h4&gt;Name:        &lt;/h4&gt;&lt;p&gt;Short Arc on Tees I&lt;/p&gt;&lt;br /&gt;
+            &lt;h4&gt;Started:     &lt;/h4&gt;&lt;p&gt;March 5, 2013&lt;/p&gt;&lt;br /&gt;
+            &lt;h4&gt;Completed: &lt;/h4&gt;&lt;p&gt;--&lt;/p&gt;&lt;br /&gt;
+        &lt;/div&gt;
+        &lt;div id=&quot;progressbar&quot; &gt;
+             &lt;h4&gt;Overall Progress&lt;/h4&gt;
+             &lt;div class=&quot;progress-bar red&quot; id=&quot;lessonprogressbar&quot;&gt;
+                    &lt;span&gt;&lt;p&gt;100&lt;/p&gt;&lt;/span&gt;
+             &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Lesson Description --&gt;
+    &lt;div id=&quot;description&quot;&gt;
+        &lt;div id=&quot;myheader&quot; &gt;
+             &lt;h3&gt;Lesson Description&lt;/h3&gt;
+        &lt;/div&gt;
+        &lt;div id=&quot;blankheader&quot; &gt;&lt;/div&gt;
+        &lt;div id=&quot;descinfo&quot; &gt;
+            &lt;p&gt;This lesson will serve to improve your technique on Tees using the Short Arc process.  You will perform Short Arc welds in three different positions while attempting to maintain good scores and minimizing defects.&lt;/p&gt;&lt;br /&gt;&lt;br /&gt;
+            &lt;h4&gt;Prerequisites:   &lt;/h4&gt;&lt;p&gt;None&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div id=&quot;score&quot; &gt;
+             &lt;h4&gt;Required Score&lt;/h4&gt;
+             &lt;div id=&quot;box&quot;&gt;
+                    &lt;span&gt;&lt;p&gt;70&lt;/p&gt;&lt;/span&gt;
+             &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</intro>
+<comments>1</comments>
+<requiredentries>3</requiredentries>
+<requiredentriestoview>0</requiredentriestoview>
+<maxentries>0</maxentries>
+<rssarticles>5</rssarticles>
+<approval>0</approval>
+<defaultsortdir>0</defaultsortdir>
+<defaultnumentries>3</defaultnumentries>
+<defaultsort>0</defaultsort>
+</settings>
+
+<field>
+<type>text</type>
+<name>Project Name</name>
+<description>The name or title of this project</description>
+</field>
+
+<field>
+<type>textarea</type>
+<name>Project Description</name>
+<description>The detailed description of this project</description>
+<param2>80</param2>
+<param3>15</param3>
+<param4>1</param4>
+<param5>0</param5>
+</field>
+
+<field>
+<type>text</type>
+<name>Process</name>
+<description>The process name of this project</description>
+</field>
+
+<field>
+<type>text</type>
+<name>Environment</name>
+<description>The virtual environment where this project took place</description>
+</field>
+
+<field>
+<type>text</type>
+<name>Polarity</name>
+<description>The polarity used on this project</description>
+</field>
+
+<field>
+<type>number</type>
+<name>Volts</name>
+<description>The voltage number used</description>
+</field>
+
+<field>
+<type>number</type>
+<name>Score</name>
+<description>The highest score received on this project</description>
+</field>
+
+<field>
+<type>number</type>
+<name>Mastery 1</name>
+<description>Number to record project mastery of first technique</description>
+</field>
+
+<field>
+<type>number</type>
+<name>Mastery 2</name>
+<description>Number to record project master of second technique</description>
+</field>
+
+<field>
+<type>picture</type>
+<name>Progress Icon</name>
+<description>An icon that displays the progress of the project</description>
+<param1>50</param1>
+<param2>50</param2>
+<param3>2097152</param3>
+<param4>50</param4>
+<param5>50</param5>
+</field>
+
+<field>
+<type>bendicon</type>
+<name>Bend Test Icon</name>
+<description>Icon that displays pass or fail of the bend test</description>
+<param1>30</param1>
+<param2>30</param2>
+<param3>2097152</param3>
+<param4>30</param4>
+<param5>30</param5>
+</field>
+
+<field>
+<type>textarea</type>
+<name>Passes</name>
+<description>Text-array of all pass information</description>
+<param2>60</param2>
+<param3>35</param3>
+<param4>1</param4>
+<param5>0</param5>
+</field>
+
+<field>
+<type>textarea</type>
+<name>Bend Tests</name>
+<description>Text-array of all bend test information</description>
+<param2>60</param2>
+<param3>35</param3>
+<param4>1</param4>
+<param5>0</param5>
+</field>
+
+<field>
+<type>number</type>
+<name>Total Attempts</name>
+<description>Number of attempts made on this project</description>
+</field>
+
+<field>
+<type>text</type>
+<name>Material</name>
+<description>The type of material used</description>
+</field>
+
+<field>
+<type>textarea</type>
+<name>Project Achievements</name>
+<description>Any achievements obtained for this project</description>
+<param2>60</param2>
+<param3>35</param3>
+<param4>1</param4>
+<param5>0</param5>
+</field>
+
+<field>
+<type>text</type>
+<name>Lesson Group Name</name>
+<description>Used as topic name on lesson navigation page</description>
+</field>
+
+<field>
+<type>menu</type>
+<name>Name Menu</name>
+<description>Menu of pre-selected project names</description>
+<param1>Horizontal Tee
+Vertical Tee
+Overhead Tee</param1>
+</field>
+
+</preset>

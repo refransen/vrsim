@@ -1,0 +1,10 @@
+</div>
+<script type="text/javascript" >
+//<![CDATA[ 
+       setLessonProgress();
+       setProgressBar('lessonprogressbar');
+       setLessonProgressIcon();
+       drawAllReqCharts();
+         
+//]]>
+</script>

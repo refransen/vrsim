@@ -1,0 +1,264 @@
+[09-Aug-2013 02:42:52 America/Denver] PHP Notice:  Undefined variable: userid in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 46
+[09-Aug-2013 03:29:31 America/Denver] Default exception handler: A required parameter (id) was missing Debug: 
+Error code: missingparam
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 523 of /lib/moodlelib.php: call to print_error()
+* line 14 of /local/simbuild/teacher/progressreport.php: call to required_param()
+
+[09-Aug-2013 03:34:09 America/Denver] Default exception handler: A required parameter (id) was missing Debug: 
+Error code: missingparam
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 523 of /lib/moodlelib.php: call to print_error()
+* line 14 of /local/simbuild/teacher/progressreport.php: call to required_param()
+
+[09-Aug-2013 03:34:09 America/Denver] PHP Parse error:  syntax error, unexpected ';' in /home/vrsimlms/public_html/theme/simbuild/renderers.php on line 29
+[09-Aug-2013 03:34:25 America/Denver] Default exception handler: A required parameter (id) was missing Debug: 
+Error code: missingparam
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 523 of /lib/moodlelib.php: call to print_error()
+* line 14 of /local/simbuild/teacher/progressreport.php: call to required_param()
+
+[09-Aug-2013 03:58:27 America/Denver] PHP Notice:  Undefined variable: user in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 93
+[09-Aug-2013 03:58:27 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 93
+[09-Aug-2013 03:58:27 America/Denver] PHP Notice:  Undefined variable: user in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 93
+[09-Aug-2013 03:58:27 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 93
+[09-Aug-2013 03:58:27 America/Denver] PHP Notice:  Undefined variable: user in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 93
+[09-Aug-2013 03:58:27 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 93
+[09-Aug-2013 03:58:27 America/Denver] PHP Notice:  Undefined variable: user in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 93
+[09-Aug-2013 03:58:27 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 93
+[09-Aug-2013 03:58:50 America/Denver] PHP Notice:  Undefined property: stdClass::$firstname in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 93
+[09-Aug-2013 03:58:50 America/Denver] PHP Notice:  Undefined property: stdClass::$lastname in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 93
+[09-Aug-2013 03:58:50 America/Denver] PHP Notice:  Undefined property: stdClass::$firstname in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 93
+[09-Aug-2013 03:58:50 America/Denver] PHP Notice:  Undefined property: stdClass::$lastname in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 93
+[09-Aug-2013 04:11:35 America/Denver] Default exception handler: Coding error detected, it must be fixed by a programmer: Unknown property require of $PAGE. Debug: 
+Error code: codingerror
+* line 719 of /lib/pagelib.php: coding_exception thrown
+* line 12 of /local/simbuild/teacher/progressreport.php: call to moodle_page->__get()
+
+[09-Aug-2013 04:11:57 America/Denver] Default exception handler: Coding error detected, it must be fixed by a programmer: Invalid JS url, it has to be shortened url starting with / or moodle_url instance. Debug: local/simbuild/teacher/progressreport.js
+Error code: codingerror
+* line 358 of /lib/outputrequirementslib.php: coding_exception thrown
+* line 303 of /lib/outputrequirementslib.php: call to page_requirements_manager->js_fix_url()
+* line 12 of /local/simbuild/teacher/progressreport.php: call to page_requirements_manager->js()
+
+[12-Aug-2013 01:45:40 America/Denver] PHP Notice:  Undefined variable: reportType in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 153
+[12-Aug-2013 01:45:40 America/Denver] PHP Notice:  Undefined variable: reportType in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 158
+[12-Aug-2013 01:45:40 America/Denver] PHP Notice:  Undefined variable: reportType in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 161
+[12-Aug-2013 01:45:40 America/Denver] PHP Notice:  Undefined variable: reportType in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 165
+[12-Aug-2013 01:46:43 America/Denver] PHP Warning:  include(/local/simbuild/teacher/overviewreport.php): failed to open stream: No such file or directory in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 155
+[12-Aug-2013 01:46:43 America/Denver] PHP Warning:  include(): Failed opening '/local/simbuild/teacher/overviewreport.php' for inclusion (include_path='/home/vrsimlms/public_html/lib/zend:/home/vrsimlms/public_html/lib/pear:.:/usr/lib/php:/usr/local/lib/php') in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 155
+[12-Aug-2013 01:47:44 America/Denver] PHP Warning:  include(/local/simbuild/teacher/overviewreport.php): failed to open stream: No such file or directory in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 155
+[12-Aug-2013 01:47:44 America/Denver] PHP Warning:  include(): Failed opening '/local/simbuild/teacher/overviewreport.php' for inclusion (include_path='/home/vrsimlms/public_html/lib/zend:/home/vrsimlms/public_html/lib/pear:.:/usr/lib/php:/usr/local/lib/php') in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 155
+[12-Aug-2013 01:51:16 America/Denver] PHP Warning:  include(/local/simbuild/teacher/overviewreport.php): failed to open stream: No such file or directory in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 155
+[12-Aug-2013 01:51:16 America/Denver] PHP Warning:  include(): Failed opening '/local/simbuild/teacher/overviewreport.php' for inclusion (include_path='/home/vrsimlms/public_html/lib/zend:/home/vrsimlms/public_html/lib/pear:.:/usr/lib/php:/usr/local/lib/php') in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 155
+[12-Aug-2013 06:56:13 America/Denver] PHP Parse error:  syntax error, unexpected 'as' (T_AS), expecting ';' in /home/vrsimlms/public_html/local/simbuild/teacher/overviewreport.php on line 39
+[12-Aug-2013 06:56:43 America/Denver] PHP Parse error:  syntax error, unexpected 'as' (T_AS), expecting ';' in /home/vrsimlms/public_html/local/simbuild/teacher/overviewreport.php on line 39
+[12-Aug-2013 06:56:50 America/Denver] PHP Parse error:  syntax error, unexpected 'as' (T_AS), expecting ';' in /home/vrsimlms/public_html/local/simbuild/teacher/overviewreport.php on line 39
+[12-Aug-2013 06:57:18 America/Denver] PHP Parse error:  syntax error, unexpected 'as' (T_AS), expecting ';' in /home/vrsimlms/public_html/local/simbuild/teacher/overviewreport.php on line 39
+[12-Aug-2013 06:57:47 America/Denver] PHP Warning:  Missing argument 3 for optional_param(), called in /home/vrsimlms/public_html/local/simbuild/teacher/overviewreport.php on line 10 and defined in /home/vrsimlms/public_html/lib/moodlelib.php on line 595
+[12-Aug-2013 06:57:47 America/Denver] Default exception handler: Coding error detected, it must be fixed by a programmer: optional_param() requires $parname, $default and $type to be specified (parameter: id) Debug: 
+Error code: codingerror
+* line 597 of /lib/moodlelib.php: coding_exception thrown
+* line 10 of /local/simbuild/teacher/overviewreport.php: call to optional_param()
+* line 155 of /local/simbuild/teacher/progressreport.php: call to include()
+* line 190 of /local/simbuild/teacher/progressreport.php: call to show_report_content()
+
+[12-Aug-2013 06:58:32 America/Denver] PHP Fatal error:  Call to undefined function html_table() in /home/vrsimlms/public_html/local/simbuild/teacher/overviewreport.php on line 27
+[12-Aug-2013 07:06:14 America/Denver] PHP Fatal error:  Call to undefined function html_table() in /home/vrsimlms/public_html/local/simbuild/teacher/overviewreport.php on line 29
+[12-Aug-2013 07:06:56 America/Denver] PHP Notice:  Undefined variable: students in /home/vrsimlms/public_html/local/simbuild/teacher/overviewreport.php on line 10
+[12-Aug-2013 07:06:56 America/Denver] PHP Fatal error:  Call to undefined function html_table() in /home/vrsimlms/public_html/local/simbuild/teacher/overviewreport.php on line 26
+[12-Aug-2013 07:08:08 America/Denver] PHP Notice:  Undefined variable: id in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 155
+[12-Aug-2013 07:08:08 America/Denver] PHP Notice:  Undefined variable: studentOptions in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 155
+[12-Aug-2013 07:08:08 America/Denver] PHP Warning:  include(overviewreport.php?id=&amp;students=): failed to open stream: No such file or directory in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 155
+[12-Aug-2013 07:08:08 America/Denver] PHP Warning:  include(): Failed opening 'overviewreport.php?id=&amp;students=' for inclusion (include_path='/home/vrsimlms/public_html/lib/zend:/home/vrsimlms/public_html/lib/pear:.:/usr/lib/php:/usr/local/lib/php') in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 155
+[12-Aug-2013 07:08:59 America/Denver] PHP Notice:  Undefined variable: id in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 155
+[12-Aug-2013 07:08:59 America/Denver] PHP Notice:  Undefined variable: studentOptions in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 155
+[12-Aug-2013 07:08:59 America/Denver] PHP Warning:  include(overviewreport.php?id=&amp;students=): failed to open stream: No such file or directory in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 155
+[12-Aug-2013 07:08:59 America/Denver] PHP Warning:  include(): Failed opening 'overviewreport.php?id=&amp;students=' for inclusion (include_path='/home/vrsimlms/public_html/lib/zend:/home/vrsimlms/public_html/lib/pear:.:/usr/lib/php:/usr/local/lib/php') in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 155
+[12-Aug-2013 07:14:15 America/Denver] PHP Notice:  Undefined variable: id in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 155
+[12-Aug-2013 07:14:15 America/Denver] PHP Notice:  Undefined variable: studentOptions in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 155
+[12-Aug-2013 07:14:15 America/Denver] PHP Warning:  include(overviewreport.php?id=&amp;students=): failed to open stream: No such file or directory in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 155
+[12-Aug-2013 07:14:15 America/Denver] PHP Warning:  include(): Failed opening 'overviewreport.php?id=&amp;students=' for inclusion (include_path='/home/vrsimlms/public_html/lib/zend:/home/vrsimlms/public_html/lib/pear:.:/usr/lib/php:/usr/local/lib/php') in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 155
+[12-Aug-2013 07:14:45 America/Denver] PHP Warning:  include(/lib/outputcomponents.php): failed to open stream: No such file or directory in /home/vrsimlms/public_html/local/simbuild/teacher/overviewreport.php on line 9
+[12-Aug-2013 07:14:45 America/Denver] PHP Warning:  include(): Failed opening '/lib/outputcomponents.php' for inclusion (include_path='/home/vrsimlms/public_html/lib/zend:/home/vrsimlms/public_html/lib/pear:.:/usr/lib/php:/usr/local/lib/php') in /home/vrsimlms/public_html/local/simbuild/teacher/overviewreport.php on line 9
+[12-Aug-2013 07:14:45 America/Denver] PHP Fatal error:  Call to undefined function html_table() in /home/vrsimlms/public_html/local/simbuild/teacher/overviewreport.php on line 25
+[12-Aug-2013 07:18:35 America/Denver] PHP Notice:  Undefined variable: CGF in /home/vrsimlms/public_html/local/simbuild/teacher/overviewreport.php on line 9
+[12-Aug-2013 07:18:35 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/local/simbuild/teacher/overviewreport.php on line 9
+[12-Aug-2013 07:18:35 America/Denver] PHP Warning:  include(/lib/outputcomponents.php): failed to open stream: No such file or directory in /home/vrsimlms/public_html/local/simbuild/teacher/overviewreport.php on line 9
+[12-Aug-2013 07:18:35 America/Denver] PHP Warning:  include(): Failed opening '/lib/outputcomponents.php' for inclusion (include_path='/home/vrsimlms/public_html/lib/zend:/home/vrsimlms/public_html/lib/pear:.:/usr/lib/php:/usr/local/lib/php') in /home/vrsimlms/public_html/local/simbuild/teacher/overviewreport.php on line 9
+[12-Aug-2013 07:18:35 America/Denver] PHP Fatal error:  Call to undefined function html_table() in /home/vrsimlms/public_html/local/simbuild/teacher/overviewreport.php on line 25
+[12-Aug-2013 07:19:05 America/Denver] PHP Notice:  Undefined variable: CGF in /home/vrsimlms/public_html/local/simbuild/teacher/overviewreport.php on line 11
+[12-Aug-2013 07:19:05 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/local/simbuild/teacher/overviewreport.php on line 11
+[12-Aug-2013 07:19:05 America/Denver] PHP Warning:  include(/lib/outputcomponents.php): failed to open stream: No such file or directory in /home/vrsimlms/public_html/local/simbuild/teacher/overviewreport.php on line 11
+[12-Aug-2013 07:19:05 America/Denver] PHP Warning:  include(): Failed opening '/lib/outputcomponents.php' for inclusion (include_path='/home/vrsimlms/public_html/lib/zend:/home/vrsimlms/public_html/lib/pear:.:/usr/lib/php:/usr/local/lib/php') in /home/vrsimlms/public_html/local/simbuild/teacher/overviewreport.php on line 11
+[12-Aug-2013 07:19:05 America/Denver] PHP Fatal error:  Call to undefined function html_table() in /home/vrsimlms/public_html/local/simbuild/teacher/overviewreport.php on line 27
+[12-Aug-2013 07:19:40 America/Denver] PHP Warning:  include(../lib/outputcomponents.php): failed to open stream: No such file or directory in /home/vrsimlms/public_html/local/simbuild/teacher/overviewreport.php on line 11
+[12-Aug-2013 07:19:40 America/Denver] PHP Warning:  include(): Failed opening '../lib/outputcomponents.php' for inclusion (include_path='/home/vrsimlms/public_html/lib/zend:/home/vrsimlms/public_html/lib/pear:.:/usr/lib/php:/usr/local/lib/php') in /home/vrsimlms/public_html/local/simbuild/teacher/overviewreport.php on line 11
+[12-Aug-2013 07:19:40 America/Denver] PHP Fatal error:  Call to undefined function html_table() in /home/vrsimlms/public_html/local/simbuild/teacher/overviewreport.php on line 27
+[12-Aug-2013 07:20:28 America/Denver] PHP Warning:  require_once(/home/vrsimlms/public_html/local/simbuild/teacher/../lib/outputcomponents.php): failed to open stream: No such file or directory in /home/vrsimlms/public_html/local/simbuild/teacher/overviewreport.php on line 9
+[12-Aug-2013 07:21:37 America/Denver] PHP Fatal error:  Call to undefined function html_table() in /home/vrsimlms/public_html/local/simbuild/teacher/overviewreport.php on line 23
+[12-Aug-2013 07:26:28 America/Denver] PHP Notice:  Undefined variable: studentOptions in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 155
+[12-Aug-2013 07:26:28 America/Denver] PHP Warning:  include(overviewreport.php?studentlist=): failed to open stream: No such file or directory in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 155
+[12-Aug-2013 07:26:28 America/Denver] PHP Warning:  include(): Failed opening 'overviewreport.php?studentlist=' for inclusion (include_path='/home/vrsimlms/public_html/lib/zend:/home/vrsimlms/public_html/lib/pear:.:/usr/lib/php:/usr/local/lib/php') in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 155
+[12-Aug-2013 07:28:16 America/Denver] PHP Warning:  require(/home/vrsimlms/public_html/local/simbuild/teacher/../config.php): failed to open stream: No such file or directory in /home/vrsimlms/public_html/local/simbuild/teacher/overviewreport.php on line 8
+[12-Aug-2013 07:30:45 America/Denver] PHP Fatal error:  Call to undefined function html_table() in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 155
+[12-Aug-2013 07:44:37 America/Denver] PHP Parse error:  syntax error, unexpected 'skills' (T_STRING), expecting ',' or ';' in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 178
+[12-Aug-2013 07:45:07 America/Denver] PHP Notice:  Undefined variable: studentOptions in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 160
+[12-Aug-2013 07:45:07 America/Denver] PHP Warning:  Invalid argument supplied for foreach() in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 160
+[14-Aug-2013 04:54:06 America/Denver] PHP Parse error:  syntax error, unexpected '$graphLabels' (T_VARIABLE), expecting ',' or ';' in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 254
+[14-Aug-2013 05:10:35 America/Denver] PHP Notice:  Array to string conversion in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 275
+[14-Aug-2013 05:10:35 America/Denver] PHP Notice:  Array to string conversion in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 275
+[14-Aug-2013 05:23:05 America/Denver] PHP Parse error:  syntax error, unexpected '{' in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 241
+[14-Aug-2013 05:23:22 America/Denver] PHP Notice:  Use of undefined constant length - assumed 'length' in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 238
+[14-Aug-2013 05:23:22 America/Denver] PHP Notice:  Array to string conversion in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 238
+[14-Aug-2013 05:27:08 America/Denver] PHP Notice:  Undefined variable: myLabel in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 252
+[14-Aug-2013 05:27:08 America/Denver] PHP Notice:  Undefined variable: myLabel in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 252
+[14-Aug-2013 05:27:08 America/Denver] PHP Notice:  Undefined variable: myLabel in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 252
+[14-Aug-2013 05:27:08 America/Denver] PHP Notice:  Undefined variable: myLabel in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 252
+[14-Aug-2013 05:27:08 America/Denver] PHP Notice:  Undefined variable: myLabel in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 252
+[14-Aug-2013 05:27:08 America/Denver] PHP Notice:  Undefined variable: myLabel in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 252
+[14-Aug-2013 05:27:08 America/Denver] PHP Notice:  Undefined variable: myLabel in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 252
+[14-Aug-2013 05:27:08 America/Denver] PHP Notice:  Undefined variable: myLabel in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 252
+[14-Aug-2013 05:27:08 America/Denver] PHP Notice:  Undefined variable: myLabel in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 252
+[14-Aug-2013 05:27:08 America/Denver] PHP Notice:  Undefined variable: myLabel in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 252
+[14-Aug-2013 05:27:08 America/Denver] PHP Notice:  Undefined variable: myLabel in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 252
+[14-Aug-2013 05:27:08 America/Denver] PHP Notice:  Undefined variable: myLabel in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 252
+[14-Aug-2013 05:27:08 America/Denver] PHP Notice:  Undefined variable: myLabel in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 252
+[14-Aug-2013 05:27:08 America/Denver] PHP Notice:  Undefined variable: myLabel in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 252
+[14-Aug-2013 05:30:17 America/Denver] PHP Parse error:  syntax error, unexpected '','' (T_CONSTANT_ENCAPSED_STRING) in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 246
+[14-Aug-2013 07:05:59 America/Denver] PHP Notice:  Array to string conversion in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 289
+[14-Aug-2013 07:08:52 America/Denver] PHP Notice:  Array to string conversion in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 289
+[14-Aug-2013 07:08:52 America/Denver] PHP Notice:  Array to string conversion in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 289
+[14-Aug-2013 07:12:46 America/Denver] PHP Notice:  Array to string conversion in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 289
+[14-Aug-2013 07:12:46 America/Denver] PHP Notice:  Array to string conversion in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 289
+[14-Aug-2013 07:17:46 America/Denver] PHP Parse error:  syntax error, unexpected '$labelString' (T_VARIABLE), expecting ',' or ';' in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 287
+[14-Aug-2013 07:18:13 America/Denver] PHP Notice:  Array to string conversion in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 284
+[14-Aug-2013 07:18:13 America/Denver] PHP Notice:  Array to string conversion in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 284
+[14-Aug-2013 07:18:13 America/Denver] PHP Notice:  Array to string conversion in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 290
+[14-Aug-2013 07:18:13 America/Denver] PHP Notice:  Array to string conversion in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 290
+[14-Aug-2013 07:34:18 America/Denver] PHP Parse error:  syntax error, unexpected '$datastring' (T_VARIABLE), expecting ',' or ';' in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 284
+[14-Aug-2013 13:40:20 America/Denver] PHP Fatal error:  Using $this when not in object context in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 267
+[14-Aug-2013 13:42:05 America/Denver] PHP Notice:  Undefined variable: OUTPUT in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 268
+[14-Aug-2013 13:42:05 America/Denver] PHP Fatal error:  Call to a member function user_picture() on a non-object in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 268
+[14-Aug-2013 13:48:12 America/Denver] PHP Notice:  Undefined variable: USER in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 270
+[14-Aug-2013 13:48:12 America/Denver] PHP Notice:  Undefined variable: course in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 270
+[14-Aug-2013 13:48:12 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 270
+[14-Aug-2013 13:48:12 America/Denver] Default exception handler: Coding error detected, it must be fixed by a programmer: PHP catchable fatal error Debug: Argument 1 passed to core_renderer::user_picture() must be an instance of stdClass, null given, called in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 270 and defined
+Error code: codingerror
+* line 397 of /lib/setuplib.php: coding_exception thrown
+* line 2056 of /lib/outputrenderers.php: call to default_error_handler()
+* line 270 of /local/simbuild/teacher/progressreport.php: call to core_renderer->user_picture()
+* line 183 of /local/simbuild/teacher/progressreport.php: call to show_report_content()
+
+[14-Aug-2013 13:48:41 America/Denver] PHP Notice:  Undefined variable: course in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 270
+[14-Aug-2013 13:48:41 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 270
+[14-Aug-2013 13:49:10 America/Denver] PHP Fatal error:  Using $this when not in object context in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 270
+[15-Aug-2013 03:41:24 America/Denver] PHP Parse error:  syntax error, unexpected '}' in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 316
+[15-Aug-2013 03:42:15 America/Denver] Default exception handler: Coding error detected, it must be fixed by a programmer: PHP catchable fatal error Debug: Argument 1 passed to core_renderer::user_picture() must be an instance of stdClass, boolean given, called in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 273 and defined
+Error code: codingerror
+* line 397 of /lib/setuplib.php: coding_exception thrown
+* line 2056 of /lib/outputrenderers.php: call to default_error_handler()
+* line 273 of /local/simbuild/teacher/progressreport.php: call to core_renderer->user_picture()
+
+[15-Aug-2013 03:43:22 America/Denver] PHP Warning:  key() expects parameter 1 to be array, string given in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 122
+[15-Aug-2013 03:46:32 America/Denver] Default exception handler: Coding error detected, it must be fixed by a programmer: PHP catchable fatal error Debug: Argument 1 passed to core_renderer::user_picture() must be an instance of stdClass, boolean given, called in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 272 and defined
+Error code: codingerror
+* line 397 of /lib/setuplib.php: coding_exception thrown
+* line 2056 of /lib/outputrenderers.php: call to default_error_handler()
+* line 272 of /local/simbuild/teacher/progressreport.php: call to core_renderer->user_picture()
+
+[15-Aug-2013 03:46:59 America/Denver] Default exception handler: Coding error detected, it must be fixed by a programmer: PHP catchable fatal error Debug: Argument 1 passed to core_renderer::user_picture() must be an instance of stdClass, boolean given, called in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 272 and defined
+Error code: codingerror
+* line 397 of /lib/setuplib.php: coding_exception thrown
+* line 2056 of /lib/outputrenderers.php: call to default_error_handler()
+* line 272 of /local/simbuild/teacher/progressreport.php: call to core_renderer->user_picture()
+
+[15-Aug-2013 03:47:25 America/Denver] Default exception handler: Coding error detected, it must be fixed by a programmer: PHP catchable fatal error Debug: Argument 1 passed to core_renderer::user_picture() must be an instance of stdClass, boolean given, called in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 271 and defined
+Error code: codingerror
+* line 397 of /lib/setuplib.php: coding_exception thrown
+* line 2056 of /lib/outputrenderers.php: call to default_error_handler()
+* line 271 of /local/simbuild/teacher/progressreport.php: call to core_renderer->user_picture()
+
+[15-Aug-2013 03:47:51 America/Denver] Default exception handler: Coding error detected, it must be fixed by a programmer: PHP catchable fatal error Debug: Argument 1 passed to core_renderer::user_picture() must be an instance of stdClass, boolean given, called in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 271 and defined
+Error code: codingerror
+* line 397 of /lib/setuplib.php: coding_exception thrown
+* line 2056 of /lib/outputrenderers.php: call to default_error_handler()
+* line 271 of /local/simbuild/teacher/progressreport.php: call to core_renderer->user_picture()
+
+[15-Aug-2013 03:49:11 America/Denver] Default exception handler: Coding error detected, it must be fixed by a programmer: PHP catchable fatal error Debug: Argument 1 passed to core_renderer::user_picture() must be an instance of stdClass, boolean given, called in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 272 and defined
+Error code: codingerror
+* line 397 of /lib/setuplib.php: coding_exception thrown
+* line 2056 of /lib/outputrenderers.php: call to default_error_handler()
+* line 272 of /local/simbuild/teacher/progressreport.php: call to core_renderer->user_picture()
+
+[15-Aug-2013 03:50:41 America/Denver] Default exception handler: Coding error detected, it must be fixed by a programmer: PHP catchable fatal error Debug: Argument 1 passed to core_renderer::user_picture() must be an instance of stdClass, boolean given, called in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 274 and defined
+Error code: codingerror
+* line 397 of /lib/setuplib.php: coding_exception thrown
+* line 2056 of /lib/outputrenderers.php: call to default_error_handler()
+* line 274 of /local/simbuild/teacher/progressreport.php: call to core_renderer->user_picture()
+
+[15-Aug-2013 03:50:53 America/Denver] Default exception handler: Coding error detected, it must be fixed by a programmer: PHP catchable fatal error Debug: Argument 1 passed to core_renderer::user_picture() must be an instance of stdClass, boolean given, called in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 274 and defined
+Error code: codingerror
+* line 397 of /lib/setuplib.php: coding_exception thrown
+* line 2056 of /lib/outputrenderers.php: call to default_error_handler()
+* line 274 of /local/simbuild/teacher/progressreport.php: call to core_renderer->user_picture()
+
+[15-Aug-2013 03:51:15 America/Denver] Default exception handler: Coding error detected, it must be fixed by a programmer: PHP catchable fatal error Debug: Argument 1 passed to core_renderer::user_picture() must be an instance of stdClass, boolean given, called in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 274 and defined
+Error code: codingerror
+* line 397 of /lib/setuplib.php: coding_exception thrown
+* line 2056 of /lib/outputrenderers.php: call to default_error_handler()
+* line 274 of /local/simbuild/teacher/progressreport.php: call to core_renderer->user_picture()
+
+[15-Aug-2013 03:51:19 America/Denver] Default exception handler: A required parameter (id) was missing Debug: 
+Error code: missingparam
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 523 of /lib/moodlelib.php: call to print_error()
+* line 15 of /local/simbuild/teacher/progressreport.php: call to required_param()
+
+[15-Aug-2013 03:51:47 America/Denver] Default exception handler: Coding error detected, it must be fixed by a programmer: PHP catchable fatal error Debug: Argument 1 passed to core_renderer::user_picture() must be an instance of stdClass, boolean given, called in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 274 and defined
+Error code: codingerror
+* line 397 of /lib/setuplib.php: coding_exception thrown
+* line 2056 of /lib/outputrenderers.php: call to default_error_handler()
+* line 274 of /local/simbuild/teacher/progressreport.php: call to core_renderer->user_picture()
+
+[15-Aug-2013 03:53:51 America/Denver] PHP Notice:  Undefined variable: studentName in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 76
+[15-Aug-2013 03:53:51 America/Denver] PHP Notice:  Undefined variable: studentName in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 84
+[15-Aug-2013 03:53:51 America/Denver] PHP Notice:  Undefined variable: studentName in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 118
+[15-Aug-2013 03:53:51 America/Denver] PHP Notice:  Undefined variable: studentName in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 118
+[15-Aug-2013 03:53:51 America/Denver] Default exception handler: Coding error detected, it must be fixed by a programmer: PHP catchable fatal error Debug: Argument 1 passed to core_renderer::user_picture() must be an instance of stdClass, boolean given, called in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 276 and defined
+Error code: codingerror
+* line 397 of /lib/setuplib.php: coding_exception thrown
+* line 2056 of /lib/outputrenderers.php: call to default_error_handler()
+* line 276 of /local/simbuild/teacher/progressreport.php: call to core_renderer->user_picture()
+
+[15-Aug-2013 03:54:04 America/Denver] PHP Notice:  Undefined variable: studentName in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 76
+[15-Aug-2013 03:54:04 America/Denver] PHP Notice:  Undefined variable: studentName in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 84
+[15-Aug-2013 03:54:04 America/Denver] PHP Notice:  Undefined variable: studentName in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 118
+[15-Aug-2013 03:54:04 America/Denver] PHP Notice:  Undefined variable: studentName in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 118
+[15-Aug-2013 04:17:48 America/Denver] PHP Notice:  Undefined variable: studentName in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 82
+[15-Aug-2013 04:17:48 America/Denver] PHP Notice:  Undefined variable: studentName in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 82
+[15-Aug-2013 04:19:37 America/Denver] PHP Parse error:  syntax error, unexpected '$selectedStudentID' (T_VARIABLE), expecting ',' or ';' in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 87
+[15-Aug-2013 04:22:21 America/Denver] PHP Parse error:  syntax error, unexpected ')', expecting :: (T_PAAMAYIM_NEKUDOTAYIM) in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 81
+[15-Aug-2013 08:58:00 America/Denver] PHP Notice:  Undefined variable: progressBarArr in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 505
+[15-Aug-2013 08:58:00 America/Denver] PHP Warning:  Invalid argument supplied for foreach() in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 505
+[15-Aug-2013 09:03:07 America/Denver] PHP Notice:  Undefined variable: progressBarArr in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 505
+[15-Aug-2013 09:03:07 America/Denver] PHP Warning:  Invalid argument supplied for foreach() in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 505
+[19-Aug-2013 02:28:23 America/Denver] PHP Parse error:  syntax error, unexpected 'leftcolumn' (T_STRING), expecting ',' or ';' in /home/vrsimlms/public_html/local/simbuild/teacher/progressreport.php on line 358
+[28-Aug-2013 04:35:59 America/Denver] Default exception handler: A required parameter (id) was missing Debug: 
+Error code: missingparam
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 523 of /lib/moodlelib.php: call to print_error()
+* line 17 of /local/simbuild/teacher/progressreport.php: call to required_param()
+
+[28-Aug-2013 06:59:59 America/Denver] Default exception handler: A required parameter (id) was missing Debug: 
+Error code: missingparam
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 523 of /lib/moodlelib.php: call to print_error()
+* line 17 of /local/simbuild/teacher/progressreport.php: call to required_param()
+
+[28-Aug-2013 07:00:06 America/Denver] Default exception handler: A required parameter (id) was missing Debug: 
+Error code: missingparam
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 523 of /lib/moodlelib.php: call to print_error()
+* line 17 of /local/simbuild/teacher/progressreport.php: call to required_param()
+

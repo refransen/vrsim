@@ -1,0 +1,46 @@
+[28-Aug-2013 06:17:28 America/Denver] PHP Notice:  Undefined variable: sysID in /home/vrsimlms/public_html/local/simbuild/student/multilevel/system_drywall.php on line 41
+[28-Aug-2013 06:17:28 America/Denver] Default exception handler: Error reading from database Debug: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE order.Row = '0' AND order.System_idSystem = NULL' at line 1
+SELECT DISTINCT * FROM workorder order WHERE order.Row = ? AND order.System_idSystem = ?
+[array (
+  0 => 0,
+  1 => NULL,
+)]
+Error code: dmlreadexception
+* line 426 of /lib/dml/moodle_database.php: dml_read_exception thrown
+* line 1023 of /lib/dml/mysqli_native_moodle_database.php: call to moodle_database->query_end()
+* line 1382 of /lib/dml/moodle_database.php: call to mysqli_native_moodle_database->get_records_sql()
+* line 41 of /local/simbuild/student/multilevel/system_drywall.php: call to moodle_database->get_record_sql()
+
+[28-Aug-2013 06:18:02 America/Denver] Default exception handler: Error reading from database Debug: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE order.Row = '0' AND order.System_idSystem = '47'' at line 1
+SELECT DISTINCT * FROM workorder order WHERE order.Row = ? AND order.System_idSystem = ?
+[array (
+  0 => 0,
+  1 => '47',
+)]
+Error code: dmlreadexception
+* line 426 of /lib/dml/moodle_database.php: dml_read_exception thrown
+* line 1023 of /lib/dml/mysqli_native_moodle_database.php: call to moodle_database->query_end()
+* line 1382 of /lib/dml/moodle_database.php: call to mysqli_native_moodle_database->get_records_sql()
+* line 41 of /local/simbuild/student/multilevel/system_drywall.php: call to moodle_database->get_record_sql()
+
+[28-Aug-2013 06:19:02 America/Denver] Default exception handler: Error reading from database Debug: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE order.Row = '0' AND order.System_idSystem = '47'' at line 1
+SELECT DISTINCT * FROM workorder order WHERE order.Row = ? AND order.System_idSystem = ?
+[array (
+  0 => 0,
+  1 => '47',
+)]
+Error code: dmlreadexception
+* line 426 of /lib/dml/moodle_database.php: dml_read_exception thrown
+* line 1023 of /lib/dml/mysqli_native_moodle_database.php: call to moodle_database->query_end()
+* line 41 of /local/simbuild/student/multilevel/system_drywall.php: call to mysqli_native_moodle_database->get_records_sql()
+
+[28-Aug-2013 06:19:57 America/Denver] Default exception handler: Error reading from database Debug: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE order.Row = '0'' at line 1
+SELECT DISTINCT * FROM workorder order WHERE order.Row = ? 
+[array (
+  0 => 0,
+)]
+Error code: dmlreadexception
+* line 426 of /lib/dml/moodle_database.php: dml_read_exception thrown
+* line 1023 of /lib/dml/mysqli_native_moodle_database.php: call to moodle_database->query_end()
+* line 41 of /local/simbuild/student/multilevel/system_drywall.php: call to mysqli_native_moodle_database->get_records_sql()
+

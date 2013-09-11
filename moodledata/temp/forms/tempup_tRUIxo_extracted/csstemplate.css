@@ -1,0 +1,66 @@
+/*////////////////////    List View Settings   //////////////////// */
+#gallery 
+{
+	background: transparent;
+	width: 100%;
+	margin: 0 auto;
+}
+
+#gallery .box
+{
+    width:100%;
+    display: inline-block;
+    display: -moz-inline-box;
+    -moz-box-orient: vertical;
+    padding: 0.5em 0.7em 0.5em 0.7em;
+    vertical-align: top;
+    color: black;
+} 
+#gallery .box:hover
+{ 
+     background: #cdcdcd;
+}
+#gallery .thumb
+{
+        float:left;
+	display: inline-block;
+       padding: 0.5em;
+}
+#gallery .thumb img
+{
+       position:relative;
+      -webkit-box-shadow: 0 8px 6px -6px black;
+      -moz-box-shadow: 0 8px 6px -6px black;
+      box-shadow: 0 8px 6px -6px black;
+      behavior: url(http://www.move-e-learning.com/local/javascript/PIE/PIE.htc);
+}
+#gallery .caption
+{
+       text-align:left;
+       padding: 0.6em 0.5em 0.5em 0.5em;
+       word-wrap: break-word;
+}
+
+#gallery .caption p
+{
+       width: 80%;
+       display: inline-block;
+       font-size: 12px;
+       word-wrap: break-word;
+}
+#gallery .caption .showmore
+{
+       display: inline-block;
+       text-align: right;
+       color: #b20700;
+       font-size: 12px;
+       text-decoration: underline;
+       cursor:pointer;
+}
+
+#gallery .caption h3
+{
+       font-size: 14px;
+       font-weight: bold;
+       word-wrap: break-word;
+}

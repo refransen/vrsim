@@ -1,0 +1,397 @@
+/**************************   PAGE STYLE   **********************************/
+#ordercontent  {
+    display:block;
+}
+.no-overflow  {
+    overflow:hidden;
+    margin-top: 1em;
+}
+/**************************   FILTERS STYLE   **********************************/
+.filterBox {
+    display: inline-block;
+    margin-top: 1.5em;
+    padding-right: 2em;
+}
+.filterBox .singleselect  {
+    margin:0;
+    text-align:left;
+    width:100%;
+}
+/**************************   BLOCK STYLE   **********************************/
+.classoverview  {
+    padding:0px !important;
+    border:0 !important;
+    margin-top:1em;
+}
+.classoverview .block-hider-show  {
+    display:block;
+}
+.classoverview .block-hider-show  {
+    display:none;
+}
+.classoverview .header  {
+     background: #2e1094;
+     padding: 0.5em 0.5em 0.5em 2em !important;
+}
+.classoverview .header h2 {
+     color:white;
+}
+.classoverview .content {
+    display:block;
+    background: white !important;
+    border: 2px solid #a6a6a6;
+    padding: 0.5em 2em 0.8em 2em !important;
+}
+.classoverview h3  {
+    color:#333;
+    font-weight:bold;
+    padding-top:0.7em;
+}
+#reportcontent  {
+    display:block;
+}
+/******************************  OVERVIEW REPORT  ************************************/
+.overviewtable  {
+    border:1px solid #333;
+    width:100%;
+}
+.overviewtable td,
+.overviewtable th  {
+    position:relative;
+    border:1px solid #333;
+    height:25px;
+}
+.overviewtable th {
+    vertical-align: top;
+}
+.downarrow {
+    width: 0; 
+    height: 0; 
+    display:inline-block;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #2e1094;
+}
+.uparrow  {
+    width: 0; 
+    height: 0; 
+    display:inline-block;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #2e1094;
+}
+.overviewtable .progressth  {
+    width:27%;
+}
+.overviewtable td  {
+    padding:0;
+}
+
+.overviewtable .studentname {
+     margin:0;
+     padding-left:0.5em;
+}
+.overviewtable .siteprogress,
+.overviewtable .learnprogress  {
+    width:100%;
+    height:100%;
+    margin:0;
+    background-color: #85d52f;
+}
+.overviewtable .timeworked  {
+     text-align:center;
+     margin:0;
+}
+.overviewtable .chartbox  {
+    position:relative;
+    width:100%;
+    height:100%;
+    background-color: darkgray;
+}
+.overviewtable .sitestripes {
+    position:absolute;
+    top:0;
+    width: 100%;
+    height:100%;
+
+    background-image: linear-gradient(90deg, white 2px, transparent 1px);
+    background-size: 35% 35%;
+    background-position: 50% 50%;
+}
+.overviewtable .learnstripes  {
+    position:absolute;
+    top: 5px;
+    width: 100%;
+    height: 50%;
+
+    background-image: linear-gradient(90deg, white 1px, transparent 1px);
+    background-size: 25px 25px;
+    background-position: 0px -2px;
+}
+.overviewtable  img  {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+}
+.shed   {
+    width: 25px;
+    height: 30px;
+    display:inline-block;
+    vertical-align:text-top;
+    background-image: url('/theme/simbuild/pix/charts/ShedIcon.png');
+    background-size: 20px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    padding:0 0.5em 0 0.5em;
+}
+.ranch {
+    width: 40px;
+    height: 30px;
+    display:inline-block;
+    vertical-align:text-top;
+    background-image: url('/theme/simbuild/pix/charts/HouseIcon.png');
+    background-size: 40px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    padding:0 0.5em 0 0.5em;
+}
+.multilevel  {
+    width: 35px;
+    height: 30px;
+    display:inline-block;
+    vertical-align:text-top;
+    background-image: url('/theme/simbuild/pix/charts/MultiLevelHouseIcon.png');
+    background-size: 30px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    padding:0 0.5em 0 0.5em;
+}
+
+/********** Overview Chart ****************/
+.topoverview,
+.bottomoverview  {
+     position:relative;
+     display:inline-block;
+     width:100%;
+}
+.studentinfo,
+.progressinfo  {
+    display:inline-block;
+    vertical-align: top;
+}
+.studentinfo  { width: 40%; }
+.progressinfo { width:55%; }
+.progressinfo .progress-bar {  width:100%; }
+
+.studentinfo .button  {
+    display:inline-block;
+    padding: 0em 1.5em 0em 1.5em;
+    background: #2e1094;
+}
+.studentinfo .button:hover  {
+    cursor:pointer;
+}
+.studentinfo .button h3  {
+     font-weight:normal;
+     color: #ced0cf;
+}
+.studentinfo .button:hover h3  {
+     color:white;
+     text-decoration: underline;
+}
+
+/****  Bottom graph section *****/
+.bottomoverview {
+    margin-top: 1.5em;
+}
+.bottomoverview .title {
+    text-align: center;
+    margin-bottom:0.1em;
+}
+.bottomoverview .canvasdiv {
+    position:relative;
+    display:block;
+    vertical-align:top;
+    width: 100%;
+}
+.bottomoverview #axes  {
+    position: absolute; 
+    top: 0px; 
+    left: 0px; 
+    z-index: 3; 
+}
+.bottomoverview .chartdiv  {
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 90%;
+    margin-left: 4.4em;
+}
+.bottomoverview #overallstudent {
+    padding-bottom: 0.8em;
+}
+.bottomoverview .chartbuttons  {
+    width:100%;
+    display:block;
+    margin: 1.5em 0 1em 0;
+    text-align:center;
+    vertical-align:middle;
+}
+.bottomoverview .button  {
+     padding: 0.3em 2em 0.3em 2em;
+     display:inline-block;
+     border: 2px solid gray;
+     background:white;
+}
+.bottomoverview .button h3 {
+     color: #6c6c6c;
+}
+.bottomoverview .button:hover,
+.bottomoverview .chartbuttons .selected  {
+     background: #2e1094;
+     cursor:pointer;
+}
+.bottomoverview .button:hover h3,
+.bottomoverview .chartbuttons .selected h3 {
+     color:white;
+}
+
+/******************************** CONSTRUCTION/Academic STANDARDS REPORT ****************************/
+.orderinfo,
+.activityinfo  {
+    position:relative;
+    display:block;
+    margin-top:2em;
+    width:100%;
+    text-align:center;
+}
+.orderinfo .activities {
+    display: inline-block;
+    text-align: left;
+    width: 34%;
+}
+.activities .titles {
+    padding-top: 0.5em;
+}
+.activities p {
+    line-height: 2;
+    font-size: 12px;
+}
+.passedboxes, 
+.masteredboxes {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    width: 10%;
+}
+.checkboxes {
+    /* padding-top: 0.5em; */
+}
+.passedboxes .checkboxes p, 
+.masteredboxes .checkboxes p {
+    line-height: 1;
+    font-size: 30px;
+    margin-bottom: 0.2em;
+}
+
+/******************************** ACADEMIC STANDARDS REPORT ****************************/
+.activityinfo .activities {
+    display: inline-block;
+    text-align: left;
+    width: 25%;
+}
+.activityinfo .passedBars  {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    width: 25%;
+    margin-right: 2em;
+}
+.activityinfo .progress-bar  {
+    width:90%;
+    margin-bottom: 1em;
+}
+.activityinfo .progress-bar span  {
+    color:#333;
+    text-align:center;
+}
+
+/****************************** CLASS SKILLS REPORT  *****************************************/
+.leftcolumn,
+.rightcolumn {
+    position:relative;
+    width:48%;
+    display:inline-block;
+    text-align:center;
+}
+.topskills,
+.bottomskills  {
+    position:relative;
+    display:block;
+    text-align:center;
+}
+.bottomskills {
+    margin-top:2em;
+}
+.charttitle  {
+    position:relative;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+.charttitle .titletext,
+.charttitle .chartkey  {
+    display:inline-block;
+    vertical-align:top;
+}
+.charttitle .titletext {
+    width:220px;
+    text-align:left;
+}
+.charttitle .titletext p  {
+    margin-bottom:0;
+}
+.charttitle .chartbox  {
+    padding: 0.5em;
+    text-align:left;
+    border:1px solid black;
+    background-color:white;
+}
+.chartbox p  {
+    display: inline;
+    vertical-align: middle;
+}
+.chartbox .icon .lineicon {
+    width: 16px;
+    height: 3px;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #911fa9;
+}
+.chartbox .icon .baricon  {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #b848d0;
+}
+
+.rightcolumn .chartbox .icon .lineicon {
+    background-color: #1a6aa5;
+}
+.rightcolumn .icon .baricon  {
+    background-color: #4796d1;
+}
+
+.bottomskills .charttitle .titletext  {
+    width:75%;
+}
+.bottomskills .chartbox .icon .lineicon {
+    background-color: #ad4918;
+}
+.bottomskills .icon .baricon  {
+    background-color: #f58323;
+}
+
+
+

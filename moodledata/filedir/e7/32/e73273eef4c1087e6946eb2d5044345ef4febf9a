@@ -1,0 +1,35 @@
+<div class="box" > 
+        <div class="thumb" id="listProgressIcon" >[[Progress Icon]]</div>
+    <a href="##moreurl##" >
+        <div class="caption">
+            <h3>[[Project Name]]</h3>
+            <p>[[Project Description]]</p>
+            <div class="projectScore" id="projectScore" style="display:none;">[[Score]]</div>
+    </a>
+            <div class="showmore" onclick="showHideRequirements(this);" >##edit####delete##<a href="#" style="display:inline;" onclick="return false;" >Show More</a>
+                <div class="requirements" >
+                    <div class="requirementchart" ></div>
+                    <div class="requirementtext" >
+                        <h3>Difficulty: <span>Medium</span></h3><br />
+                        <h3>Defects Allowed</h3>
+                        <h4>3&nbsp;&nbsp;&nbsp;&nbsp;<span>Convex</span></h4><br />
+                        <h4>3&nbsp;&nbsp;&nbsp;&nbsp;<span>Concave</span></h4><br />
+                        <h4>3&nbsp;&nbsp;&nbsp;&nbsp;<span>Porosity</span></h4><br />
+                        <h4>3&nbsp;&nbsp;&nbsp;&nbsp;<span>Undercut</span></h4><br />
+                        <h4>3&nbsp;&nbsp;&nbsp;&nbsp;<span>Excess Spatter</span></h4><br />
+                        <h4>3&nbsp;&nbsp;&nbsp;&nbsp;<span>Wrong Weld Size</span></h4><br />
+                        <h4>3&nbsp;&nbsp;&nbsp;&nbsp;<span>Incomplete Fusion</span></h4><br />
+                        <h4>3&nbsp;&nbsp;&nbsp;&nbsp;<span>Poor Bead Placement</span></h4><br />
+                    </div>
+                    <div class="cuetext" >
+                        <h3>Cues Allowed:</h3>
+                       <h4><img src="/theme/vrsim/pix_plugins/mod/vrlesson/greencheckmark_icon.png" /><span>Whip Cue</span></h4><br />
+                       <h4><img src="/theme/vrsim/pix_plugins/mod/vrlesson/greencheckmark_icon.png" /><span>Weave Cue</span></h4><br />
+                       <h4><img src="/theme/vrsim/pix_plugins/mod/vrlesson/greencheckmark_icon.png" /><span>Weave Cue</span></h4><br />
+                       <h4><img src="/theme/vrsim/pix_plugins/mod/vrlesson/greencheckmark_icon.png" /><span>Travel Angle Cue</span></h4><br />
+                       <h4><img src="/theme/vrsim/pix_plugins/mod/vrlesson/greencheckmark_icon.png" /><span>Tip to Work Distance Cue</span></h4><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>

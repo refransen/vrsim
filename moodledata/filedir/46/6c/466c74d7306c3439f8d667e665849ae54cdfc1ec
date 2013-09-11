@@ -1,0 +1,447 @@
+/*////////////////////    List Intro Settings   //////////////////// */
+#intro {
+    margin:0px;
+}
+#intro.generalbox {
+     position:relative;
+     margin-top: 10px;
+     margin-left: 1em;
+     padding: 5px;
+     padding-left: 1em;
+     border-left: 2px solid #f21429;
+}
+.groupselector,
+h2.main {
+     display:none;
+}
+#lessonintro {
+    position:relative;
+    width: 100%;
+    text-align:left;
+    margin:0px;
+    padding:0px;
+}
+#mainpadder h3  {
+   text-align: left;
+   color: #b20700;
+}
+#mainpadder h4   {
+    text-align: left;
+    font-size: 14px;
+    font-weight:normal;
+    color: #b20700;
+    display:inline;
+}
+#mainpadder #bendcontent h4 
+{
+    font-weight:bold;
+}
+#mainpadder p {
+    display:inline;
+    font-size:12px;
+}
+#myheader 
+{
+    position:relative;
+    display: inline-block;
+    width: 25%;
+    height: 18px;
+    border-bottom: 1px solid #f21429;
+    border-right: 1px solid #f21429;
+    -webkit-transform: skew(-30deg);
+    -ms-transform: skew(-30deg); /* IE 9 */
+}
+#myheader h3 
+{
+     position:relative;
+    -webkit-transform: skew(30deg);
+    -ms-transform: skew(30deg); /* IE 9 */
+}
+#blankheader 
+{
+     position:relative;
+    width: 74%;
+    display: inline-block;
+    padding-bottom: 12px;
+    margin-left: 4px;
+    border-top: 1px solid #f21429;
+}
+#lessonintro #title,
+#lessonintro #description  {
+     position:relative;
+    display:inline-block;
+    width: 100%;
+}
+#lessonintro #title  {
+     margin-bottom: 2em;
+}
+#lessonintro #title #titleinfo,
+#lessonintro #description #descinfo  {
+    position:relative;
+    width:30%;
+    display:inline-table !important;
+}
+#lessonintro #description #descinfo {
+    margin-top:0.5em;
+}
+#lessonintro #progressbar  {
+     position:relative;
+     width:40%;
+     display:inline-block !important;
+}
+#lessonintro #progressbar #lessonprogressbar  {
+   display:block !important;
+   width:80% !important;
+}
+#lessonintro #description #descinfo{
+    width: 65%;
+    margin-right: 1.5em;
+}
+#lessonintro #score,
+#projectoverview #projectscore  {
+    display:inline-table;
+    text-align:center;
+}
+#lessonintro #score #box,
+#projectoverview #projectscore #box  {
+     position:relative;
+}
+#lessonintro #score #box span,
+#projectoverview #projectscore #box span,
+#processWidget #passcontent #passscore #box span {
+    position:relative;
+    display: inline-block;
+    padding: 1em;
+    min-width: 30px;
+
+     -webkit-box-shadow: 0 8px 6px -6px black;
+     -moz-box-shadow: 0 8px 6px -6px black;
+     box-shadow: 0 8px 6px -6px black;
+	 
+    border: 2px solid #a10101;         
+    background: white;
+}
+#lessonintro #score #box span p,
+#projectoverview #projectscore #box span p,
+#processWidget #passcontent #passscore #box span p  {
+    font-family: Verdana, Geneva, sans-serif;
+    color:black;
+    font-size:24px;
+}
+/****************** LIST VIEW - SHOW MORE ************************/
+.box .requirements  {
+    position: relative;
+    width: 96%;
+    text-align:left;
+    display:none;
+    overflow-y: auto;
+    background: white;
+    border: 2px solid #d6d6d6;
+}
+.box .requirements .requirementchart  {
+    padding: 1em 4em 0em 4em;
+    display: inline-block;
+    vertical-align: top;
+}
+.box .requirements .requirementchart h3 {
+   text-align:center !important;
+}
+.box .requirements h3 span,
+.box .requirements h4 span  {
+    font-family: Verdana, Geneva, sans-serif;
+    color:black !important;
+    font-size:14px !important;
+}
+.box .requirements .requirementtext h4,
+.box .requirements .cuetext h4
+{
+    font-size: 16px !important;
+    font-family: Verdana, Geneva, sans-serif;
+}
+.box .requirements .requirementtext,
+.box .requirements .cuetext  {
+    padding: 1em 1em 0em 2em;
+    width:25%;
+    display: inline-block;
+    vertical-align: top;
+}
+.box .requirements .requirementtext h3,
+.box .requirements .cuetext  h3  {
+       border-bottom: 2px solid;
+}
+.box .requirements .cuetext  {
+    width:18%;
+}
+/*******************  CHANGE SCORE BOX TO GREEN *********************/
+#projectoverview #projectscore #box .greenScoreBox,
+#processWidget #passcontent #passscore #box .greenScoreBox
+{
+    border: 2px solid #31ab15 !important;
+}
+.greenScoreBox
+{
+    position:relative;
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #31ab15), color-stop(1, #66fc65)) !important;
+    background: -moz-linear-gradient( center top, #31ab15 5%, #66fc65 100% ) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#31ab15', endColorstr='#66fc65') !important;
+   -pie-background: linear-gradient( linear, left top, left bottom, color-stop(0.05, #31ab15), color-stop(1, #66fc65)) !important;
+    background-color: #31ab15 !important;
+   behavior: url(http://vrsimlms.com/local/pie/PIE.htc);
+}
+.greenScoreBox p  {
+    text-shadow: #3e3e3e 0.05em 0.05em 0.1em;
+    color:white !important;
+}
+
+/*////////////////////    List View Settings   //////////////////// */
+#gallery {
+	background: transparent;
+	width: 100%;
+	margin: 0 auto;
+        border-left: 2px solid #f21429;
+        margin-left: 1.1em;
+}
+#gallery .box {
+    width:100%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0.5em 0.7em 0.5em 0.7em;
+    color: black;
+    border: 1px solid #d6d6d6;
+} 
+#gallery .box:hover{ 
+     background: #cdcdcd !important;
+}
+#gallery h4 {
+    font-size: 12px;
+    font-weight:normal;
+    color: #b20700;
+    margin-left: 1em;
+}
+#gallery .thumb {
+        float:left;
+	display: inline-block;
+       padding: 0.5em;
+}
+#gallery .thumb img {
+       position:relative;
+       width: 50px;
+      -webkit-box-shadow: 0 8px 6px -6px black;
+      -moz-box-shadow: 0 8px 6px -6px black;
+      box-shadow: 0 8px 6px -6px black;
+      behavior: url(http://vrsimlms.com/local/pie/PIE.htc);
+}
+#gallery .caption {
+       text-align:left;
+       padding: 0.6em 0.5em 0.5em 0.5em;
+       word-wrap: break-word;
+}
+#gallery .caption p {
+       width: 80%;
+       display: inline-block;
+       font-size: 12px;
+       word-wrap: break-word;
+}
+#gallery .caption .showmore  {
+       display: inline;
+       text-align: right;
+}
+#gallery .caption .showmore a  {
+       color: #b20700;
+       font-size: 12px;
+       text-decoration: underline;
+}
+#gallery .caption h3 {
+       font-size: 14px;
+       font-weight: bold;
+       word-wrap: break-word;
+}
+/******************* SINGLE VIEW **************/
+#projectoverview p
+{
+      text-transform: capitalize;
+}
+#projectoverview #blankheader,
+#processoverview #blankheader {  
+    margin:0px; 
+}
+#projectoverview #myheader,
+#processoverview #myheader {  
+    width:20%;
+}
+#projectoverview #projectcontent,
+#projectoverview #projectprogress
+{
+     position:relative;
+     display:inline-block;
+     width:30%;
+}
+#projectoverview #projectscore  {
+    position:relative;
+    display: inline-block;
+    vertical-align: top;
+}
+#projectoverview #projectstats  {
+     font-size:14px;
+}
+#projectoverview #projectcontent {
+     padding-top:0.5em;
+}
+#projectoverview #progressbar1,
+#projectoverview #progressbar2   {
+    padding-bottom:1em;
+}
+.progress-bar  {
+     width:250px;
+}
+#projectoverview #projectprogress h4 {
+     display: block;
+     padding-top: 0px;
+     margin-bottom: 0px;
+}
+#projectoverview #bendprogress img
+{
+    vertical-align:middle;
+}
+/***************** Tab Styling *****************/
+#processoverview #processWidget {
+    padding-top:1em;
+    width:95%;
+}
+.yui3-skin-sam .yui3-tab-selected .yui3-tab-label, 
+.yui3-skin-sam .yui3-tab-selected .yui3-tab-label:focus, 
+.yui3-skin-sam .yui3-tab-selected .yui3-tab-label:hover {
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f21429 ), color-stop(1, #a60000) );
+}
+.yui3-skin-sam .yui3-tab-selected .yui3-tab-label,
+.yui3-skin-sam .yui3-tabview-list {
+     border-color: #a60000;
+}
+.yui3-skin-sam .yui3-tabview-panel {
+     border-top-color: #a60000;
+     background-color: #b3b2b2;
+     padding:0px;
+}
+
+/************* Buttons ******************/
+#processWidget #passbuttons,
+#processWidget #bendbuttons
+{
+     position:relative;
+     padding: 0.5em;
+     background: -webkit-gradient( linear, left top, left bottom, color-stop(1, #b3b2b2), color-stop(0, #f4f4f4) );
+}
+#processWidget #passbuttons ul,
+#processWidget #bendbuttons ul
+{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#processWidget #passbuttons ul li,
+#processWidget #bendbuttons ul li { 
+    display: inline; 
+    padding: 0.6em;
+}
+#processWidget #passbuttons ul li a,
+#processWidget #bendbuttons ul li a  {
+     text-decoration: none;
+     padding: .2em 1em;
+}
+#processWidget #passbuttons ul li .graybutton,
+#processWidget #bendbuttons ul li .graybutton  {
+     color: black;
+     background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #b3b2b2), color-stop(0.80, #f4f4f4) );
+     background:-moz-linear-gradient( center top, #b3b2b2 5%, #f4f4f4 80% );
+     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3b2b2', endColorstr='#f4f4f4');     
+     background-color:#b3b2b2;
+}
+#processWidget #passbuttons ul li .redbutton,
+#processWidget #bendbuttons ul li .redbutton,
+#processWidget #passbuttons ul li a:focus,
+#processWidget #bendbuttons ul li a:focus  {
+     color: #fff;
+     background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f21429 ), color-stop(1, #a60000) );
+}
+#processWidget #passbuttons ul li a:hover,
+#processWidget #bendbuttons ul li a:hover  {
+    color: #fff;
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #a60000 ), color-stop(1, #f21429) );
+}
+/**************  Pass Content *****************/
+#processWidget #passcontent,
+#processWidget #bendcontent  {
+     position: relative;
+     background: white;
+     border: 2px inset #b3b2b2;
+     min-height:260px;
+}
+#processWidget #passcontent #summarycontent  {
+     display:block;
+}
+#processWidget #passcontent .singlepasscontent {
+     display:none;
+}
+#processWidget #passcontent #radar,
+#processWidget #bendcontent #radar
+{
+    position:relative;
+    margin: 1.5em 4em 0em 2em;
+    display: inline-block;
+}
+#processWidget #passcontent #passradar,
+#processWidget #bendcontent #bendradar
+{
+    position:relative;
+    display: inline-block;
+    margin: 1.5em 4em 0em 2em;
+}
+#processWidget #passcontent #summaryinfo,
+#processWidget #passcontent #passinfo,
+#processWidget #bendcontent #bendinfo
+{
+    margin: 1.5em 1em 0em 2em;
+    display: inline-block;
+    vertical-align: top;
+}
+#processWidget #passcontent #passinfo,
+#processWidget #bendcontent #bendinfo   {
+    width: 38%;
+}
+#processWidget #passcontent #passscore {
+     display: inline-block;
+     text-align: center;
+     vertical-align: top;
+     margin: 1.5em 0em 0em 2em;
+}
+
+/*************** Achievements ***********************/
+#processWidget #passcontent #summarycontent .achievements  {
+    margin-top:1.5em;
+}
+#processWidget #passcontent #summarycontent .achievementtopic  {
+    padding-bottom:0.5em;
+}
+#processWidget #passcontent #summarycontent .achievementtopic img
+{
+     position:relative;
+     width:40px;
+     height:40px;
+     background:green;
+     display:inline-block;
+     vertical-align:top;
+}
+#processWidget #passcontent #summarycontent .achievementtopic p
+{
+    display: inline-block;
+    margin-left: 0.5em;
+}
+/************************** NOTIFICATIONS *********************/
+.notifyproblem {
+    color: #b20700;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 2em;
+}

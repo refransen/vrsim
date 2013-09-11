@@ -1,0 +1,331 @@
+/********************************   PAGE STYLES  *********************************/
+#ordercontent  {
+    display:block;
+}
+.no-overflow  {
+    overflow:hidden;
+}
+.sitefilterbox {
+    display: inline-block;
+    margin-top: 1.5em;
+}
+.sitefilterbox .singleselect  {
+    margin:0;
+}
+#sitecontent,
+#systemcontent  {
+    display:block;
+}
+.classoverview .block-hider-show  {
+    display:block;
+}
+.classoverview .block-hider-show  {
+    display:none;
+}
+
+/********************************   BLOCK STYLES  *********************************/
+.siteoverview,
+.workorder
+{
+    padding:0px !important;
+    border:0 !important;
+    margin-top:1em;
+}
+.workorder  {
+    margin-top:2em;
+}
+.siteoverview .header,
+.workorder .header  {
+     background: #2e1094;
+     padding: 0.5em 0.5em 0.5em 2em !important;
+}
+.siteoverview .header h2,
+.workorder .header h2  {
+     color:white;
+}
+.siteoverview .content,
+.workorder .content   {
+    background: white !important;
+    border: 2px solid #a6a6a6;
+    padding: 0.5em 2em 0.8em 2em !important;
+}
+.siteoverview h3,
+.workorder h3  {
+    color:#333;
+    font-weight:bold;
+    padding-top:0.7em;
+}
+
+.topinfo  {
+    position:relative;
+    width:100%;
+    display:block;
+}
+.topinfo img  {
+    display: inline;
+    vertical-align: top;
+    width: 15%;
+}
+.topinfo .titles  {
+    display: inline-block;
+    width: 16%;
+}
+.topinfo .descriptions {
+    display: inline-block;
+    width: 67%;
+}
+.topinfo .descriptions .progress-bar  {
+    width:80%;
+}
+.bottominfo  {
+    position:relative;
+    width:100%; 
+    margin-top:1em;
+    overflow-x:auto;
+}
+.siteoverview .bottominfo {
+    background-image: url('/theme/simbuild/pix/progressreport/grayline.png');
+    background-repeat: no-repeat;
+    background-size: 90% 60%;
+    background-position: 90% 0%;
+}
+.bottominfo table  {
+    width:100%;
+}
+.bottominfo .chartbox  {
+    position:relative;
+    height:45px;
+    vertical-align:top;
+    text-align:left;
+    background: #ebebeb;
+    border: 2px solid #a4a4a4;
+}
+.bottominfo .selected,
+.bottominfo .chartbox:hover  {
+    border: 2px solid #2e1094;
+    cursor:pointer;
+}
+.bottominfo .selected h3,
+.bottominfo .chartbox:hover h3  {
+    color: #333 !important;
+}
+.bottominfo .chartbox .boxprogress  {
+    background: #94e241;
+    height:100%;
+}
+.bottominfo .chartbox .boxtitle    {
+    width: 118px;
+    text-align: center;
+}
+.bottominfo .chartbox .boxtitle img  {
+    width:15px;
+    height:auto;
+    display:inline-block;
+    vertical-align:middle;
+}
+.bottominfo .chartbox h3  {
+    display:inline-block;
+    vertical-align:middle;
+    text-align:center;
+    color: #6c6c6c;
+    width: 70%;
+}
+.bottominfo .spacer  {
+    width:15px;
+    display:none;
+}
+.boxpadding  {
+    height:100%;
+    /* padding:0; */
+    vertical-align:top;
+}
+.locked  {
+   background: #828282;
+}
+/************************** SECOND BLOCK  *****************************/
+
+.ordergrid  {
+    width:100%;
+    /* height:250px; */
+    background-color: #f2f2f2;
+    background-image: linear-gradient(transparent 2px, transparent 2px), linear-gradient(90deg, transparent 2px, transparent 2px), linear-gradient(rgba(166,166,166,.3) 1px, transparent 1px), linear-gradient(90deg, rgba(166,166,166,.3) 1px, transparent 1px);
+    background-size: 16px 16px;
+    border: 1px solid #f2f2f2;
+}
+.hidden {
+    display:none !important;
+}
+.ordercontainer {
+    width:100%;
+   /* height:100%; */
+    margin:0.5em;
+}
+.ordercontainer tbody  {
+    vertical-align:top;
+}
+.ordercontainer tr  {
+    height:100px;
+}
+.workorderunit {
+    position:relative;
+    width:35%;
+    padding-bottom: 0;
+}
+.ordertext  {
+    width:75%;
+    min-width:205px;
+    max-width:225px;
+    display:inline-block;
+    vertical-align:middle;
+    text-align:center;
+    padding-bottom:0.2em;
+    background: #509ed8;
+    border: 2px solid white;
+}
+.ordertext:hover,
+.ordertext.selected  {
+    border: 2px solid #2e1094;
+    color:white;
+    cursor:pointer;
+}
+.ordertext:hover h3,
+.ordertext:hover .checkmark,
+.ordertext.selected h3   {
+    color:white
+}
+.orderlocked  {
+     background: #d3d3d3 !important;
+}
+.orderlocked h3  {
+    color: #6c6c6c !important;
+}
+.orderlocked span  {
+    font-style:italic !important;
+}
+.ordertext h3  {
+   color: #e2e2e2;
+   display:inline-block;
+   margin-bottom: 0;
+}
+.ordertext hr  {
+    color:white;
+    margin:0.2em;
+}
+.ordertext img  {
+   display:inline-block;
+   vertical-align:middle;
+}
+.ordertext .checkmark  {
+    color: #e2e2e2;
+    font-size:20px;
+}
+.arrow  {
+    position:relative;
+    width:22%;
+    display:inline-block;
+    vertical-align: middle;
+    /* margin-left: -8px; */
+}
+.arrowsingle  {
+    display:block;
+    width: 50%;
+    float: right;
+}
+.arrowRightCorner  {
+    position: absolute;
+    left: 240px;
+    top: 43%;
+    float: right;
+}
+.lineRightCorner  {
+    width: 30px;
+    height: 40px;
+    padding-top: 55px;
+    display:inline-block;
+    vertical-align: middle;
+    border-left: 5px solid #a4a4a4;
+    border-bottom: 5px solid #a4a4a4;
+}
+.arrow .linehor {
+    width: 79%;
+    height: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    background: #a4a4a4;
+}
+.arrowsingle .linever {
+    width: 5px;
+    height: 40px;
+    display: block;
+    vertical-align: middle;
+    background: #a4a4a4;
+}
+.arrow .triangleright  {
+    width: 0px;
+    height: 0px;
+    display: inline-block;
+    vertical-align: middle;
+    border-style: solid;
+    border-width: 8px 0 8px 12px;
+    border-color: transparent transparent transparent #a4a4a4;
+}
+.arrow .triangledown  {
+    width: 0px;
+    height: 0px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: -5px;
+    margin-top: -9px;
+    border-style: solid;
+    border-width: 12px 8px 0 8px;
+    border-color: #a4a4a4 transparent transparent transparent;
+}
+.arrowRightCorner .triangleright {
+    position: absolute;
+    top: 90%;
+    left: 30px;
+}
+.workorder .bottominfo  {
+    text-align:center;
+}
+.workorder .bottominfo h3  {
+    font-size:13px;
+}
+.bottominfo .activities {
+    display:inline-block;
+    text-align:left;
+    width:34%;
+}
+.activities .titles  {
+    padding-top: 0.5em;
+}
+.bottominfo .activities p  {
+   line-height: 2.8;
+   font-size: 13px;
+}
+.bottominfo .passedboxes,
+.bottominfo .masteredboxes {
+    display:inline-block;
+    text-align: center;
+    vertical-align: top;
+    width:10%;
+}
+.checkboxes  {
+    padding-top: 0.5em;
+}
+.passedboxes .checkboxes p,
+.masteredboxes .checkboxes p  {
+     line-height: 1;
+     font-size: 30px;
+     margin-bottom: 0.6em;
+}
+.bottominfo .badges  {
+    display:inline-block;
+    vertical-align:top;
+    text-align:left;
+    margin-left: 5em;
+}
+.badges .iconrow img  {
+    margin-right:1em; 
+    width:40px;  
+}

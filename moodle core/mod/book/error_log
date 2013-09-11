@@ -1,0 +1,6 @@
+[20-Aug-2013 04:58:54 America/Denver] Default exception handler: A required parameter (cmid) was missing Debug: 
+Error code: missingparam
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 523 of /lib/moodlelib.php: call to print_error()
+* line 29 of /mod/book/edit.php: call to required_param()
+

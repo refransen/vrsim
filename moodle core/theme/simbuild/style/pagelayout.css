@@ -1,0 +1,132 @@
+/*********************************************************************************************
+
+	left column: 250px
+	right column: 250px
+	padding left/right column: 10px
+	padding center column: 30px
+
+**********************************************************************************************/
+
+body {
+	margin: auto 0px;
+	width: auto;
+}
+
+#page {
+	width: 100%;
+	overflow: hidden;
+}
+
+#page-header {
+	float: left;
+	width: 100%;
+}
+
+#page-content {
+	clear: both;
+	float: left;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+#page-content #region-main-box {
+	float: left;
+	margin-left: 0;
+	position: relative;
+	width: 200%;
+	right: 100%;
+}
+
+#page-content #region-post-box {
+	float: left;
+	width: 100%;
+}
+
+#page-content #region-main-wrap {
+	float: left;
+	width: 50%;
+}
+
+#page-content #region-main {
+	overflow: hidden;
+	position: relative;
+	left: 100%;
+        margin-left: 330px;
+}
+
+#page-content #region-post {
+	float: right;
+	position: relative;
+}
+
+/*  RF - Added space for left-hand blocks  */
+#page-content #region-pre {
+	float: left;
+	position: relative;
+}
+
+#page-content #region-main .region-content {
+	overflow: hidden;
+	padding: 0em 0.5em 1.3em 0em;
+}
+
+#page-content #region-post .region-content,
+#page-content #region-pre .region-content {
+	overflow: hidden;
+	padding: 20px 0px 5px 0px;
+}
+
+#page-footer {
+	clear: both;
+	float: left;
+	width: 100%;
+}
+
+
+.has_dock.side-post-only .page-middle #region-main-box #region-post-box #region-main-wrap #region-main {
+	margin-left: 200px;
+}
+
+/** No blocks whatsoever **/
+
+.content-only #page-content #region-main-box {
+	margin-left: 0px;
+}
+
+.content-only #page-content #region-post-box{
+	margin-left: 0px;
+}
+
+.content-only #page-content #region-main {
+	margin-left: 0px;
+}
+
+.content-only #page-content #region-pre {
+	width: 0px;
+}
+
+.content-only #page-content #region-post,
+.content-only #page-content #region-pre {
+	width: 0px;
+}
+
+#page-content #region-post {
+	left: 250px;
+	width: 250px;
+}
+
+#page-content #region-pre {
+	width: 300px;
+}
+
+.pagelayout-report #page-content #region-main {overflow:auto;}
+.pagelayout-report #page-content #region-main .region-content {overflow:visible;}
+
+/**************************  Hide blocks from the VRTEXT  ******************************/
+
+#page-content .block_course_outline,
+#page-content .block_html.block.importDataBlock
+{
+     display: none;
+}

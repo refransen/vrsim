@@ -1,0 +1,52 @@
+<div class="defaulttemplate"><table class="mod-data-default-template">
+<tbody><tr class="r0">
+<td class="template-field cell c0" style="">Project Name: </td>
+<td class="template-token cell c1 lastcol" style="">[[Project Name]]</td>
+</tr>
+<tr class="r1">
+<td class="template-field cell c0" style="">Project Description: </td>
+<td class="template-token cell c1 lastcol" style="">[[Project Description]]</td>
+</tr>
+<tr class="r0">
+<td class="template-field cell c0" style="">Process: </td>
+<td class="template-token cell c1 lastcol" style="">[[Process]]</td>
+</tr>
+<tr class="r1">
+<td class="template-field cell c0" style="">Environment: </td>
+<td class="template-token cell c1 lastcol" style="">[[Environment]]</td>
+</tr>
+<tr class="r0">
+<td class="template-field cell c0" style="">Polarity: </td>
+<td class="template-token cell c1 lastcol" style="">[[Polarity]]</td>
+</tr>
+<tr class="r1">
+<td class="template-field cell c0" style="">Volts: </td>
+<td class="template-token cell c1 lastcol" style="">[[Volts]]</td>
+</tr>
+<tr class="r0">
+<td class="template-field cell c0" style="">Wirefeed Speed: </td>
+<td class="template-token cell c1 lastcol" style="">[[Wirefeed Speed]]</td>
+</tr>
+<tr class="r1">
+<td class="template-field cell c0" style="">Score: </td>
+<td class="template-token cell c1 lastcol" style="">[[Score]]</td>
+</tr>
+<tr class="r0">
+<td class="template-field cell c0" style="">Mastery 1: </td>
+<td class="template-token cell c1 lastcol" style="">[[Mastery 1]]</td>
+</tr>
+<tr class="r1">
+<td class="template-field cell c0" style="">Mastery 2: </td>
+<td class="template-token cell c1 lastcol" style="">[[Mastery 2]]</td>
+</tr>
+<tr class="searchcontrols r0">
+<td class="template-field cell c0" style="">Author first name: </td>
+<td class="template-token cell c1 lastcol" style="">##firstname##</td>
+</tr>
+<tr class="searchcontrols r1 lastrow">
+<td class="template-field cell c0" style="">Author surname: </td>
+<td class="template-token cell c1 lastcol" style="">##lastname##</td>
+</tr>
+</tbody>
+</table>
+</div>
