@@ -34,7 +34,7 @@ $siteID = $mySite->idworksite;
 // Get the Systems
 //////////////////////////////////////
 $mySite = $SBC_DB->get_record_sql("SELECT * FROM {worksite} site WHERE site.Desc = ? AND site.GUID = ?", array($siteName, $siteGUID));
-                        array($sysName, $siteID));
+//                        array($sysName, $siteID));
 $systemID = $mySystem->idsystem;
 
 //////////////////////////////////////
