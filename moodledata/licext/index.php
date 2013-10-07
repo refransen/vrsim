@@ -1,5 +1,4 @@
 <?php 
-require_once("config.php");
 require_once("lic_api.php")
 ?>
 <head>
@@ -24,6 +23,7 @@ echo(md5($data));
 <li>License <?php  echo $file;?> validity: <?php echo lic_IsValid($file) ? "OK" : "Not ok";?>
 <li>License date: <?php echo lic_LicenseDate($file)?>
 <li>License ID: <?php echo lic_LicenseID($file);?>
+<li>Application ID: <?php echo lic_ApplicationID($file);?>
 <li>License expiration date: <?php echo lic_LimitDate($file);?>
 <li>License max client: <?php echo lic_NbMaxClient($file);?>
 <li>License max class: <?php echo lic_NbMaxClass($file);?>
