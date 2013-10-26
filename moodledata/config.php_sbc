@@ -22,7 +22,7 @@ $CFG->sbc_dbName = "mydb";
 $CFG->sbc_dbUser = "root";
 $CFG->sbc_dbPass = "odessa0102;";
 
-$CFG->wwwroot   = 'http://localhost:8080/moodle';
+$CFG->wwwroot   = 'http://localhost:81/moodle';
 $CFG->dataroot  = 'c:/sbcserv/htdocs/moodledata';
 $CFG->admin     = 'admin';
 
