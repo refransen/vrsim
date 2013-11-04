@@ -1,0 +1,20 @@
+[30-Oct-2013 09:08:44 America/Denver] Default exception handler: Error reading from database Debug: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'NULLAND u.theme='simbuild'' at line 4
+SELECT COUNT(1) FROM mdl_user u
+            LEFT JOIN mdl_user_enrolments ue ON (ue.userid = u.id AND ue.enrolid = ?)
+                WHERE u.id <> ? AND u.deleted = 0 AND u.confirmed = 1
+                      AND ue.id IS NULLAND u.theme=?
+[array (
+  0 => 5,
+  1 => '1',
+  2 => 'simbuild',
+)]
+Error code: dmlreadexception
+* line 426 of /lib/dml/moodle_database.php: dml_read_exception thrown
+* line 1023 of /lib/dml/mysqli_native_moodle_database.php: call to moodle_database->query_end()
+* line 1382 of /lib/dml/moodle_database.php: call to mysqli_native_moodle_database->get_records_sql()
+* line 1455 of /lib/dml/moodle_database.php: call to moodle_database->get_record_sql()
+* line 1626 of /lib/dml/moodle_database.php: call to moodle_database->get_field_sql()
+* line 331 of /enrol/locallib.php: call to moodle_database->count_records_sql()
+* line 369 of /enrol/locallib.php: call to course_enrolment_manager->execute_search_queries()
+* line 70 of /enrol/manual/ajax.php: call to course_enrolment_manager->get_potential_users()
+

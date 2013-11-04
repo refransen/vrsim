@@ -251,6 +251,7 @@ $displaylist = array();
 $parentlist = array();
 
 $displaylist[0] = get_string('top');
+
 make_categories_list($displaylist, $parentlist);
 
 echo '<table class="generaltable editcourse boxaligncenter"><tr class="header">';

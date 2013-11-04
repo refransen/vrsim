@@ -449,3 +449,105 @@ Error code: sessionwaiterr
 * line 26 of /admin/purgecaches.php: call to require_once()
 
 [06-Sep-2013 08:41:15 America/Denver] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 46526 bytes) in /home/vrsimlms/public_html/course/lib.php on line 2091
+[24-Sep-2013 04:48:48 America/Denver] Default exception handler: Access denied Debug: 
+Error code: accessdenied
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 6160 of /lib/adminlib.php: call to print_error()
+* line 20 of /admin/user.php: call to admin_externalpage_setup()
+
+[24-Sep-2013 07:19:05 America/Denver] Default exception handler: Section error! Debug: 
+Error code: sectionerror
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 22 of /admin/settings.php: call to print_error()
+
+[24-Sep-2013 07:19:34 America/Denver] Default exception handler: A required parameter (section) was missing Debug: 
+Error code: missingparam
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 523 of /lib/moodlelib.php: call to print_error()
+* line 6 of /admin/settings.php: call to required_param()
+
+[26-Sep-2013 05:57:11 America/Denver] PHP Fatal error:  Cannot redeclare class block_sbc_activity in /home/vrsimlms/public_html/blocks/sbc_badges/block_sbc_badges.php on line 87
+[26-Sep-2013 05:57:33 America/Denver] Default exception handler: Error writing to database Debug: Duplicate entry 'block/sbc_activity:addinstance' for key 'mdl_capa_nam_uix'
+INSERT INTO mdl_capabilities (name,captype,contextlevel,component,riskbitmask) VALUES(?,?,?,?,?)
+[array (
+  0 => 'block/sbc_activity:addinstance',
+  1 => 'write',
+  2 => 80,
+  3 => 'block_sbc_badges',
+  4 => 20,
+)]
+Error code: dmlwriteexception
+* line 429 of /lib/dml/moodle_database.php: dml_write_exception thrown
+* line 1107 of /lib/dml/mysqli_native_moodle_database.php: call to moodle_database->query_end()
+* line 1149 of /lib/dml/mysqli_native_moodle_database.php: call to mysqli_native_moodle_database->insert_record_raw()
+* line 2539 of /lib/accesslib.php: call to mysqli_native_moodle_database->insert_record()
+* line 797 of /lib/upgradelib.php: call to update_capabilities()
+* line 362 of /lib/upgradelib.php: call to upgrade_plugins_blocks()
+* line 1544 of /lib/upgradelib.php: call to upgrade_plugins()
+* line 349 of /admin/index.php: call to upgrade_noncore()
+
+[26-Sep-2013 06:03:38 America/Denver] Default exception handler: Cannot downgrade theme_simbuild from 2013032800 to 2012112900. Debug: 
+Error code: cannotdowngrade
+* line 499 of /lib/upgradelib.php: downgrade_exception thrown
+* line 1544 of /lib/upgradelib.php: call to upgrade_plugins()
+* line 349 of /admin/index.php: call to upgrade_noncore()
+
+[28-Sep-2013 04:45:54 America/Denver] Default exception handler: Section error! Debug: 
+Error code: sectionerror
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 22 of /admin/settings.php: call to print_error()
+
+[28-Sep-2013 04:49:16 America/Denver] Default exception handler: Sorry, but you do not currently have permissions to do that (Change site configuration) Debug: 
+Error code: nopermissions
+* line 704 of /lib/accesslib.php: required_capability_exception thrown
+* line 410 of /admin/index.php: call to require_capability()
+
+[28-Sep-2013 04:54:19 America/Denver] Default exception handler: A required parameter (section) was missing Debug: 
+Error code: missingparam
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 523 of /lib/moodlelib.php: call to print_error()
+* line 6 of /admin/settings.php: call to required_param()
+
+[29-Sep-2013 03:26:45 America/Denver] Default exception handler: Error writing to database Debug: Duplicate entry 'block/sbc_activity:addinstance' for key 'mdl_capa_nam_uix'
+INSERT INTO mdl_capabilities (name,captype,contextlevel,component,riskbitmask) VALUES(?,?,?,?,?)
+[array (
+  0 => 'block/sbc_activity:addinstance',
+  1 => 'write',
+  2 => 80,
+  3 => 'block_sbc_resources',
+  4 => 20,
+)]
+Error code: dmlwriteexception
+* line 429 of /lib/dml/moodle_database.php: dml_write_exception thrown
+* line 1107 of /lib/dml/mysqli_native_moodle_database.php: call to moodle_database->query_end()
+* line 1149 of /lib/dml/mysqli_native_moodle_database.php: call to mysqli_native_moodle_database->insert_record_raw()
+* line 2539 of /lib/accesslib.php: call to mysqli_native_moodle_database->insert_record()
+* line 797 of /lib/upgradelib.php: call to update_capabilities()
+* line 362 of /lib/upgradelib.php: call to upgrade_plugins_blocks()
+* line 1544 of /lib/upgradelib.php: call to upgrade_plugins()
+* line 349 of /admin/index.php: call to upgrade_noncore()
+
+[29-Sep-2013 03:33:36 America/Denver] Default exception handler: Cannot downgrade theme_simbuild from 2013032800 to 2012112900. Debug: 
+Error code: cannotdowngrade
+* line 499 of /lib/upgradelib.php: downgrade_exception thrown
+* line 1544 of /lib/upgradelib.php: call to upgrade_plugins()
+* line 349 of /admin/index.php: call to upgrade_noncore()
+
+[30-Sep-2013 08:01:03 America/Denver] Default exception handler: Access denied Debug: 
+Error code: accessdenied
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 6160 of /lib/adminlib.php: call to print_error()
+* line 20 of /admin/user.php: call to admin_externalpage_setup()
+
+[30-Sep-2013 08:33:26 America/Denver] Default exception handler: Access denied Debug: 
+Error code: accessdenied
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 6160 of /lib/adminlib.php: call to print_error()
+* line 20 of /admin/user.php: call to admin_externalpage_setup()
+
+[24-Oct-2013 07:47:40 America/Denver] Default exception handler: Section error! Debug: 
+Error code: sectionerror
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 22 of /admin/settings.php: call to print_error()
+
+[30-Oct-2013 15:30:03 America/Denver] PHP Warning:  mysqli::mysqli(): (08004/1040): Too many connections in /home/vrsimlms/public_html/lib/dml/mysqli_native_moodle_database.php on line 381

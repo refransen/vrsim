@@ -80,6 +80,10 @@ td {
     vertical-align: top;
 }
 
+table#message-list td {
+    font-weight: normal;
+}
+
 ol li {
     margin-top: 20px;
 }
@@ -352,4 +356,9 @@ h1,
 h2,
 h3 {
     text-shadow: 1px 1px 2px #ccc;
+}
+
+span#byline {
+    position: relative;
+    top: -15px;
 }

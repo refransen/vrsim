@@ -10,14 +10,34 @@ div.block_sbcprofile.hidden div.header h2
 {
     display:block;
 }
-.block_sbcprofile img.profilepicture 
+.block_sbcprofile .profilepicture {
+    float:right;
+}
+.block_sbcprofile .profilepicture img,
+.block_sbcprofile .sbcavatar 
 { 
-    height:70px; 
-    width:70px;
+    position:relative;
+    height:70px !important; 
+    width:70px !important;
     vertical-align:text-top;
     float:right;
     margin-right: 5px;
     border: 2px solid #dadada;
+	z-index:1;
+}
+.block_sbcprofile .teacherpicture img {
+    height:50px; 
+    width:50px;
+    vertical-align:text-top;
+    margin-right: 5px;
+    border: 2px solid #dadada;
+}
+
+.block_sbcprofile .sbcavatar .avatarimg{
+    display: inline-block;
+    width: 288px;
+    height: inherit;
+    background-position: 100% 6%;
 }
 
 .block_sbcprofile .myprofileitem.fullname 
@@ -79,4 +99,34 @@ div.block_sbcprofile.hidden div.header h2
 .block_sbcprofile .myprofileitem.logoutbttn a:hover
 {
     color:white;
+}
+/********************** For logging in as another user ********************/
+.block_sbcprofile .loginasinfo {
+    width:95%;
+    margin-top:1em;
+    margin-bottom: 2em;
+}
+.block_sbcprofile .teacherpicture,
+.block_sbcprofile .loginasinfo {
+    display:inline-block;
+    text-align:center;
+}
+.block_sbcprofile .teacherpicture,
+.block_sbcprofile .logintitle {
+    vertical-align:text-top;
+}
+.block_sbcprofile .logintitle  {
+    display:inline-block;
+    text-align:left;
+}
+.block_sbcprofile .logintitle p {
+    margin-bottom: 0;
+}
+.block_sbcprofile .logintitle h3 {
+    padding-top: 0;
+}
+.block_sbcprofile .logintitle a {
+    font-size:12px;
+    color:#2e1094;
+    text-decoration:underline;
 }

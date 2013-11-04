@@ -40,6 +40,11 @@ require_once($CFG->dirroot . '/tag/lib.php');
 require_once($CFG->dirroot . '/user/profile/lib.php');
 require_once($CFG->libdir.'/filelib.php');
 
+global $SBC_DB;
+$db_class = get_class($DB);
+$SBC_DB= new $db_class(); // instantiate a new object of the same class as the original $DB
+$SBC_DB->connect($CFG->sbc_dbhost, $CFG->sbc_dbUser, $CFG->sbc_dbPass, $CFG->sbc_dbName, false);
+
 $userid = optional_param('id', 0, PARAM_INT);
 $edit   = optional_param('edit', null, PARAM_BOOL);    // Turn editing on and off
 
@@ -95,7 +100,7 @@ if (!$currentpage = my_get_page($userid, MY_PAGE_PUBLIC)) {
 if (!$currentpage->userid) {
     $context = context_system::instance();  // A trick so that we even see non-sticky blocks
 }
-
+     
 $PAGE->set_context($context);
 $PAGE->set_pagelayout('mydashboard');
 $PAGE->set_pagetype('user-profile');
@@ -208,19 +213,19 @@ if($currentuser)
     $hardcodedtext= '<table id="profilelinks" align="center" cellpadding="20">
     <tbody>
     <tr valign="bottom" align="center">
-      <td valign="center"><a href="/user/edit.php" >
-      <img src="/theme/vrsim/pix/profile/profile_new.png" width="32" height="32" title="Edit Profile" /><br />Edit Profile</a></td>
+      <td valign="center"><a href=" '.$CFG->wwwroot.'/user/edit.php" >
+      <img src="'.$CFG->wwwroot.'/theme/vrsim/pix/profile/profile_new.png" width="32" height="32" title="Edit Profile" /><br />Edit Profile</a></td>';
                 
-      <td valign="center"><a href="/login/change_password.php" >
-      <img src="/theme/vrsim/pix/profile/editprofile_new.png" width="32" height="32" title="Change Password" /><br />Change password</a></td>
+      /*<td valign="center"><a href="/login/change_password.php" >
+      <img src="/theme/vrsim/pix/profile/editprofile_new.png" width="32" height="32" title="Change Password" /><br />Change password</a></td>*/
 		
-      <td valign="center"><a href="/message/index.php" >
-      <img src="/theme/vrsim/pix/profile/email_new.png" width="32" height="32" title="Messages" /><br />Messages</a></td>
+      $hardcodedtext .= '<td valign="center"><a href="'.$CFG->wwwroot.'/message/index.php" >
+      <img src="'.$CFG->wwwroot.'/theme/vrsim/pix/profile/email_new.png" width="32" height="32" title="Messages" /><br />Messages</a></td>
     </tr>
     </tbody>
     </table>';
 
-    echo $hardcodedtext;
+   echo $hardcodedtext;
 }
 
 echo '<div class="userprofile">';
@@ -245,8 +250,26 @@ if (is_mnet_remote_user($user)) {
     echo $OUTPUT->box(get_string('remoteuserinfo', 'mnet', $a), 'remoteuserinfo');
 }
 
-echo '<div class="userprofilebox clearfix"><div class="profilepicture">';
-echo $OUTPUT->user_picture($user, array('size'=>100));
+echo '<div class="userprofilebox clearfix">';
+// Rachel Fransen - Oct 2, 2013
+// Allow SBC users to see their avatar pictures from the ED
+$sql = "SELECT Avatar FROM {people} person WHERE person.idPeople=?";
+if($result = $SBC_DB->get_record_sql($sql, array($user->idnumber)) ) {
+   if($result->avatar == null) {
+       echo '<div class="profilepicture">';
+       echo $OUTPUT->user_picture($user, array('size'=>100));
+   }
+   else if(!is_siteadmin($user)) {
+       $img = $CFG->wwwroot.'/vrsim/dbapi.php?getAvatar&id='.$user->idnumber;
+        echo '<div class="sbcavatar" ><div class="avatarimg" style="background-image: url('.$img.');"></div>';
+       // echo '<img src="'.$img.'" /> ';
+    }
+}
+else {
+    echo '<div class="profilepicture">';
+    echo $OUTPUT->user_picture($user, array('size'=>100));
+}
+
 echo '</div>';
 
 echo '<div class="descriptionbox"><div class="description">';
@@ -270,7 +293,7 @@ echo '<table class="list" summary="">';
 
 // RF - July 2013
 // Show roles in this course
-if(is_siteadmin())
+if(is_siteadmin($user))
 {
     print_row(get_string('roles').':', 'Administrator'); 
 }

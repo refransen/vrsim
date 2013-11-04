@@ -1,0 +1,2 @@
+[29-Oct-2013 11:55:15 America/Denver] PHP Warning:  mysqli::mysqli(): (HY000/1040): Too many connections in /home/vrsimlms/public_html/lib/dml/mysqli_native_moodle_database.php on line 381
+[29-Oct-2013 11:55:15 America/Denver] PHP Warning:  mysqli::mysqli(): (08004/1040): Too many connections in /home/vrsimlms/public_html/lib/dml/mysqli_native_moodle_database.php on line 381

@@ -27,6 +27,10 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+// Need the licensing API
+//$licenseUrl = new moodle_url($CFG->dataroot.'/licext/lic_api.php');
+//require_once($licenseUrl); 
+
 /**
  * This class provides a targeted tied together means of interfacing the enrolment
  * tasks together with a course.
@@ -347,7 +351,7 @@ class course_enrolment_manager {
      * @return array Array(totalusers => int, users => array)
      */
     public function get_potential_users($enrolid, $search='', $searchanywhere=false, $page=0, $perpage=25) {
-        global $DB;
+        global $DB, $USER;
 
         list($ufields, $params, $wherecondition) = $this->get_basic_search_conditions($search, $searchanywhere);
 
@@ -358,6 +362,16 @@ class course_enrolment_manager {
                 WHERE $wherecondition
                       AND ue.id IS NULL";
         $params['enrolid'] = $enrolid;
+
+        // Rachel Fransen - Oct 30, 2013
+        // You can only enroll users that belong to your theme
+        if(!is_siteadmin($USER)) {
+             $sql .= " AND u.theme=:utheme";
+             $params['utheme'] = $USER->theme;
+             
+             // Get the customerID number
+             // 
+        }
 
         return $this->execute_search_queries($search, $fields, $countfields, $sql, $params, $page, $perpage);
     }

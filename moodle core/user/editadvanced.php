@@ -62,8 +62,15 @@ if ($id == -1) {
     $user->auth = 'manual';
     $user->confirmed = 1;
     $user->deleted = 0;
-    require_capability('moodle/user:create', $systemcontext);
-    admin_externalpage_setup('addnewuser', '', array('id' => -1));
+
+    // Rachel Fransen - Sept 30, 2013
+    // Allow teachers to add new users too
+    if(has_capability('moodle/grade:manage', $coursecontext) ) {    
+        teacher_addUser_setup('addnewuser', '', array('id' => -1));
+    }
+    else if(has_capability('moodle/user:create', $systemcontext)) {
+        admin_externalpage_setup('addnewuser', '', array('id' => -1));
+    }
 } else {
     // editing existing user
     require_capability('moodle/user:update', $systemcontext);
@@ -84,7 +91,8 @@ if ($user->id != -1 and is_mnet_remote_user($user)) {
     redirect($CFG->wwwroot . "/user/view.php?id=$id&course={$course->id}");
 }
 
-if ($user->id != $USER->id and is_siteadmin($user) and !is_siteadmin($USER)) {  // Only admins may edit other admins
+// Only admins may edit other admins
+if ($user->id != $USER->id and is_siteadmin($user) and !is_siteadmin($USER)) {  
     print_error('useradmineditadmin');
 }
 
@@ -256,7 +264,13 @@ if ($usernew = $userform->get_data()) {
         }
     } else {
         session_gc(); // remove stale sessions
-        redirect("$CFG->wwwroot/$CFG->admin/user.php");
+        
+        // Added capability for the teachers
+        if(has_capability('moodle/grade:manage', $coursecontext) ) {
+            redirect("$CFG->wwwroot/course/view.php?id=$course->id");
+        }
+        else {
+        redirect("$CFG->wwwroot/$CFG->admin/user.php"); }
     }
     //never reached
 }
@@ -305,4 +319,3 @@ $userform->display();
 
 /// and proper footer
 echo $OUTPUT->footer();
-

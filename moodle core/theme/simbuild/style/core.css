@@ -104,6 +104,7 @@ html, body {
     letter-spacing: -1px;
 }
 #loggedinas {
+    display:none;  /*  Since the language menu is now hidden... */
     min-width: 300px;
     height: 65px !important;
     margin-top:2em;
@@ -329,26 +330,31 @@ div.block.hidden div.header {
     padding: 1em 2em 1em 2em;
     border: 2px solid #a6a6a6;
 }
-.userprofile .profilepicture  {
-    float:none;
+.userprofile .profilepicture,
+.userprofile .sbcavatar  {
     display:inline-block;
-    width: 30%;
     vertical-align: top;
-
-    /*  RF - Added the blueprint background */
+}
+.userprofile .sbcavatar {
+    width: 250px;
+    height: 450px;
     background-color:#f2f2f2;
     background-image: linear-gradient(transparent 2px, transparent 2px),
         linear-gradient(90deg, transparent 2px, transparent 2px),
         linear-gradient(rgba(166,166,166,.3) 1px, transparent 1px),
         linear-gradient(90deg, rgba(166,166,166,.3) 1px, transparent 1px);
-background-size: 16px 16px;
-border:1px solid #f2f2f2;
+    background-size: 16px 16px;
+    border:1px solid #f2f2f2;
+}
+.userprofile .sbcavatar .avatarimg{
+    display: inline-block;
+    width: 300px;
+    height: inherit;
+    padding-left: 1em;
+    background-position: 65% 30%;
 }
 .userprofile .profilepicture img  {
-    float:none;
     display:block;
-    content:url('/theme/simbuild/pix/AvatarFemale.png');
-    width:200px;
     height:auto;
     margin-right:auto;
     margin-left:auto;
@@ -356,7 +362,8 @@ border:1px solid #f2f2f2;
 .userprofile .descriptionbox  {
     margin-left: 0px;
     display: inline-block;
-    width: 64%;
+    vertical-align:top;
+    /*width: 64%;*/
 }
 
 .userprofile .list img
@@ -425,6 +432,12 @@ border:1px solid #f2f2f2;
 span.completionprogress {
     font-size: 11px;
     color: #666666;
+}
+/* For single-item view, I don't want to show section links */
+.course-content .single-section .section-navigation .mdl-right,
+.course-content .single-section .section-navigation .mdl-left,
+.course-content .single-section .section-navigation.mdl-bottom {
+    display:none !important;
 }
 
 /******************************* PROGRESS BARS *****************************/
@@ -698,4 +711,51 @@ body.has_dock {
 
 .logininfo a {
     color: #333;
+}
+/***************************** Glossary Changes *****************************/
+.path-mod-glossary .glossarypost td.entry {
+    width:100%;
+}
+.mediaplugin_youtube iframe {
+    width:500px !important;
+}
+/**** Embedding Resources ****/
+.path-mod-resource .resourcecontent object {
+    height:600px !important;
+}
+/******************** Changes for the "groups" page *************************/
+#page-group-index .groupmanagementtable.boxaligncenter select  {
+     width:100%;
+}
+/********************* Changes for the add user page ************************/
+#page-user-editadvanced .mform .helplink img,
+#page-user-editadvanced .mform .fcheckbox input  {
+    vertical-align:middle;
+}
+#page-user-editadvanced .mform .fitem .fitemtitle {
+    width:25% !important;
+    margin-right: 1em;
+}
+#page-user-editadvanced .mform .ffilemanager .fp-viewbar {
+    width:auto !important;
+}
+/***************** Changes for the enroll user page *******************/
+#page-enrol-users .userenrolment .col_role {
+    width: 150px;
+}
+#page-enrol-users .singleselect {
+    display:none;
+}
+#page-enrol-users .enrol_user_buttons {
+    position:relative;
+    float:none;
+}
+#page-enrol-users .enrol_user_buttons .enrolusersbutton {
+    width:100%;
+    display:initial;
+    margin-right:auto;
+    margin-left:auto;
+}
+#page-enrol-users .enrol_user_buttons .enrolusersbutton input {
+    padding: 0.3em 1em;
 }

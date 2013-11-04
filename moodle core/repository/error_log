@@ -110,3 +110,43 @@ Error code: sessionwaiterr
 [29-Aug-2013 06:42:42 America/Denver] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 8388608 bytes) in /home/vrsimlms/public_html/cache/classes/loaders.php on line 513
 [30-Aug-2013 04:03:07 America/Denver] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 8388608 bytes) in /home/vrsimlms/public_html/cache/classes/loaders.php on line 513
 [30-Aug-2013 09:11:30 America/Denver] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 8388608 bytes) in /home/vrsimlms/public_html/cache/classes/loaders.php on line 513
+[28-Sep-2013 06:47:36 America/Denver] PHP Warning:  POST Content-Length of 15089937 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[28-Sep-2013 06:47:37 America/Denver] Default exception handler: A required parameter (sesskey) was missing Debug: 
+Error code: missingparam
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 523 of /lib/moodlelib.php: call to print_error()
+* line 1033 of /lib/sessionlib.php: call to required_param()
+* line 68 of /repository/repository_ajax.php: call to confirm_sesskey()
+
+[28-Sep-2013 06:48:06 America/Denver] PHP Warning:  POST Content-Length of 15089937 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[28-Sep-2013 06:48:06 America/Denver] Default exception handler: A required parameter (sesskey) was missing Debug: 
+Error code: missingparam
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 523 of /lib/moodlelib.php: call to print_error()
+* line 1033 of /lib/sessionlib.php: call to required_param()
+* line 68 of /repository/repository_ajax.php: call to confirm_sesskey()
+
+[28-Sep-2013 06:48:08 America/Denver] PHP Warning:  POST Content-Length of 15089937 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[28-Sep-2013 06:48:08 America/Denver] Default exception handler: A required parameter (sesskey) was missing Debug: 
+Error code: missingparam
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 523 of /lib/moodlelib.php: call to print_error()
+* line 1033 of /lib/sessionlib.php: call to required_param()
+* line 68 of /repository/repository_ajax.php: call to confirm_sesskey()
+
+[28-Sep-2013 06:48:47 America/Denver] PHP Warning:  POST Content-Length of 15089937 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[28-Sep-2013 06:48:47 America/Denver] Default exception handler: A required parameter (sesskey) was missing Debug: 
+Error code: missingparam
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 523 of /lib/moodlelib.php: call to print_error()
+* line 1033 of /lib/sessionlib.php: call to required_param()
+* line 68 of /repository/repository_ajax.php: call to confirm_sesskey()
+
+[28-Sep-2013 06:49:25 America/Denver] PHP Warning:  POST Content-Length of 15089937 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[28-Sep-2013 06:49:26 America/Denver] Default exception handler: A required parameter (sesskey) was missing Debug: 
+Error code: missingparam
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 523 of /lib/moodlelib.php: call to print_error()
+* line 1033 of /lib/sessionlib.php: call to required_param()
+* line 68 of /repository/repository_ajax.php: call to confirm_sesskey()
+

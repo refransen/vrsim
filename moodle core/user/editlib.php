@@ -164,71 +164,76 @@ function useredit_shared_definition(&$mform, $editoroptions = null, $filemanager
     $mform->addElement('select', 'maildisplay', get_string('emaildisplay'), $choices);
     $mform->setDefault('maildisplay', 2);
 
-    $choices = array();
-    $choices['0'] = get_string('textformat');
-    $choices['1'] = get_string('htmlformat');
-    $mform->addElement('select', 'mailformat', get_string('emailformat'), $choices);
-    $mform->setDefault('mailformat', 1);
-
-    if (!empty($CFG->allowusermailcharset)) {
+    // Rachel Fransen - Sept 30, 2013
+    // Don't need fancy options for normal users
+    if(is_siteadmin()) {
         $choices = array();
-        $charsets = get_list_of_charsets();
-        if (!empty($CFG->sitemailcharset)) {
-            $choices['0'] = get_string('site').' ('.$CFG->sitemailcharset.')';
-        } else {
-            $choices['0'] = get_string('site').' (UTF-8)';
+        $choices['0'] = get_string('textformat');
+        $choices['1'] = get_string('htmlformat');
+        $mform->addElement('select', 'mailformat', get_string('emailformat'), $choices);
+        $mform->setDefault('mailformat', 1);
+
+        if (!empty($CFG->allowusermailcharset)) {
+            $choices = array();
+            $charsets = get_list_of_charsets();
+            if (!empty($CFG->sitemailcharset)) {
+                $choices['0'] = get_string('site').' ('.$CFG->sitemailcharset.')';
+            } else {
+                $choices['0'] = get_string('site').' (UTF-8)';
+            }
+            $choices = array_merge($choices, $charsets);
+            $mform->addElement('select', 'preference_mailcharset', get_string('emailcharset'), $choices);
         }
-        $choices = array_merge($choices, $charsets);
-        $mform->addElement('select', 'preference_mailcharset', get_string('emailcharset'), $choices);
-    }
 
-    $choices = array();
-    $choices['0'] = get_string('emaildigestoff');
-    $choices['1'] = get_string('emaildigestcomplete');
-    $choices['2'] = get_string('emaildigestsubjects');
-    $mform->addElement('select', 'maildigest', get_string('emaildigest'), $choices);
-    $mform->setDefault('maildigest', 0);
-
-    $choices = array();
-    $choices['1'] = get_string('autosubscribeyes');
-    $choices['0'] = get_string('autosubscribeno');
-    $mform->addElement('select', 'autosubscribe', get_string('autosubscribe'), $choices);
-    $mform->setDefault('autosubscribe', 1);
-
-    if (!empty($CFG->forum_trackreadposts)) {
         $choices = array();
-        $choices['0'] = get_string('trackforumsno');
-        $choices['1'] = get_string('trackforumsyes');
-        $mform->addElement('select', 'trackforums', get_string('trackforums'), $choices);
-        $mform->setDefault('trackforums', 0);
-    }
+        $choices['0'] = get_string('emaildigestoff');
+        $choices['1'] = get_string('emaildigestcomplete');
+        $choices['2'] = get_string('emaildigestsubjects');
+        $mform->addElement('select', 'maildigest', get_string('emaildigest'), $choices);
+        $mform->setDefault('maildigest', 0);
 
-    $editors = editors_get_enabled();
-    if (count($editors) > 1) {
         $choices = array();
-        $choices['0'] = get_string('texteditor');
-        $choices['1'] = get_string('htmleditor');
-        $mform->addElement('select', 'htmleditor', get_string('textediting'), $choices);
-        $mform->setDefault('htmleditor', 1);
-    } else {
-        $mform->addElement('hidden', 'htmleditor');
-        $mform->setDefault('htmleditor', 1);
-        $mform->setType('htmleditor', PARAM_INT);
-    }
+        $choices['1'] = get_string('autosubscribeyes');
+        $choices['0'] = get_string('autosubscribeno');
+        $mform->addElement('select', 'autosubscribe', get_string('autosubscribe'), $choices);
+        $mform->setDefault('autosubscribe', 1);
 
-    $mform->addElement('text', 'city', get_string('city'), 'maxlength="120" size="21"');
-    $mform->setType('city', PARAM_TEXT);
-    $mform->addRule('city', $strrequired, 'required', null, 'client');
-    if (!empty($CFG->defaultcity)) {
-        $mform->setDefault('city', $CFG->defaultcity);
-    }
+        if (!empty($CFG->forum_trackreadposts)) {
+            $choices = array();
+            $choices['0'] = get_string('trackforumsno');
+            $choices['1'] = get_string('trackforumsyes');
+            $mform->addElement('select', 'trackforums', get_string('trackforums'), $choices);
+            $mform->setDefault('trackforums', 0);
+        }
 
-    $choices = get_string_manager()->get_list_of_countries();
-    $choices= array(''=>get_string('selectacountry').'...') + $choices;
-    $mform->addElement('select', 'country', get_string('selectacountry'), $choices);
-    $mform->addRule('country', $strrequired, 'required', null, 'client');
-    if (!empty($CFG->country)) {
-        $mform->setDefault('country', $CFG->country);
+        $editors = editors_get_enabled();
+        if (count($editors) > 1) {
+            $choices = array();
+            $choices['0'] = get_string('texteditor');
+            $choices['1'] = get_string('htmleditor');
+            $mform->addElement('select', 'htmleditor', get_string('textediting'), $choices);
+            $mform->setDefault('htmleditor', 1);
+        } else {
+            $mform->addElement('hidden', 'htmleditor');
+            $mform->setDefault('htmleditor', 1);
+            $mform->setType('htmleditor', PARAM_INT);
+        }
+    
+
+        $mform->addElement('text', 'city', get_string('city'), 'maxlength="120" size="21"');
+        $mform->setType('city', PARAM_TEXT);
+        $mform->addRule('city', $strrequired, 'required', null, 'client');
+        if (!empty($CFG->defaultcity)) {
+            $mform->setDefault('city', $CFG->defaultcity);
+        }
+
+        $choices = get_string_manager()->get_list_of_countries();
+        $choices= array(''=>get_string('selectacountry').'...') + $choices;
+        $mform->addElement('select', 'country', get_string('selectacountry'), $choices);
+        $mform->addRule('country', $strrequired, 'required', null, 'client');
+        if (!empty($CFG->country)) {
+            $mform->setDefault('country', $CFG->country);
+        }
     }
 
     $choices = get_list_of_timezones();
@@ -245,21 +250,34 @@ function useredit_shared_definition(&$mform, $editoroptions = null, $filemanager
 
     // RF - July 2013
     // Only show the preferred theme box to the admin user
-    if (!empty($CFG->allowuserthemes) && is_siteadmin()) {
+    if (!empty($CFG->allowuserthemes)) {
         $choices = array();
+        $userChoices = array();
         $choices[''] = get_string('default');
         $themes = get_list_of_themes();
         foreach ($themes as $key=>$theme) {
             if (empty($theme->hidefromselector)) {
                 $choices[$key] = get_string('pluginname', 'theme_'.$theme->name);
+                if(!is_siteadmin() && $theme->name == $USER->theme) {
+                    $userChoices[$key] = $choices[$key];   
+                }
             }
         }
-        $mform->addElement('select', 'theme', get_string('preferredtheme'), $choices);
+        if(is_siteadmin()) {
+            $mform->addElement('select', 'theme', get_string('preferredtheme'), $choices);
+        } 
+        else {
+            $mform->addElement('select', 'theme', get_string('preferredtheme'), $userChoices);
+        }
     }
 
-    $mform->addElement('editor', 'description_editor', get_string('userdescription'), null, $editoroptions);
-    $mform->setType('description_editor', PARAM_CLEANHTML);
-    $mform->addHelpButton('description_editor', 'userdescription');
+    // Rachel Fransen - Sept 30, 2013
+    // Hide description box from normal users
+    if(is_siteadmin()) {
+        $mform->addElement('editor', 'description_editor', get_string('userdescription'), null, $editoroptions);
+        $mform->setType('description_editor', PARAM_CLEANHTML);
+        $mform->addHelpButton('description_editor', 'userdescription');
+    }
 
     if (!empty($CFG->gdversion) and empty($USER->newadminuser)) {
         $mform->addElement('header', 'moodle_picture', get_string('pictureofuser'));
@@ -288,44 +306,45 @@ function useredit_shared_definition(&$mform, $editoroptions = null, $filemanager
     }
 
     /// Moodle optional fields
-    $mform->addElement('header', 'moodle_optional', get_string('optional', 'form'));
+    if(is_siteadmin()) {
+        $mform->addElement('header', 'moodle_optional', get_string('optional', 'form'));
 
-    $mform->addElement('text', 'url', get_string('webpage'), 'maxlength="255" size="50"');
-    $mform->setType('url', PARAM_URL);
+        $mform->addElement('text', 'url', get_string('webpage'), 'maxlength="255" size="50"');
+        $mform->setType('url', PARAM_URL);
 
-    $mform->addElement('text', 'icq', get_string('icqnumber'), 'maxlength="15" size="25"');
-    $mform->setType('icq', PARAM_NOTAGS);
+        $mform->addElement('text', 'icq', get_string('icqnumber'), 'maxlength="15" size="25"');
+        $mform->setType('icq', PARAM_NOTAGS);
 
-    $mform->addElement('text', 'skype', get_string('skypeid'), 'maxlength="50" size="25"');
-    $mform->setType('skype', PARAM_NOTAGS);
+        $mform->addElement('text', 'skype', get_string('skypeid'), 'maxlength="50" size="25"');
+        $mform->setType('skype', PARAM_NOTAGS);
 
-    $mform->addElement('text', 'aim', get_string('aimid'), 'maxlength="50" size="25"');
-    $mform->setType('aim', PARAM_NOTAGS);
+        $mform->addElement('text', 'aim', get_string('aimid'), 'maxlength="50" size="25"');
+        $mform->setType('aim', PARAM_NOTAGS);
 
-    $mform->addElement('text', 'yahoo', get_string('yahooid'), 'maxlength="50" size="25"');
-    $mform->setType('yahoo', PARAM_NOTAGS);
+        $mform->addElement('text', 'yahoo', get_string('yahooid'), 'maxlength="50" size="25"');
+        $mform->setType('yahoo', PARAM_NOTAGS);
 
-    $mform->addElement('text', 'msn', get_string('msnid'), 'maxlength="50" size="25"');
-    $mform->setType('msn', PARAM_NOTAGS);
+        $mform->addElement('text', 'msn', get_string('msnid'), 'maxlength="50" size="25"');
+        $mform->setType('msn', PARAM_NOTAGS);
 
-    $mform->addElement('text', 'idnumber', get_string('idnumber'), 'maxlength="255" size="25"');
-    $mform->setType('idnumber', PARAM_NOTAGS);
+        $mform->addElement('text', 'idnumber', get_string('idnumber'), 'maxlength="255" size="25"');
+        $mform->setType('idnumber', PARAM_NOTAGS);
 
-    $mform->addElement('text', 'institution', get_string('institution'), 'maxlength="40" size="25"');
-    $mform->setType('institution', PARAM_TEXT);
+        $mform->addElement('text', 'institution', get_string('institution'), 'maxlength="40" size="25"');
+        $mform->setType('institution', PARAM_TEXT);
 
-    $mform->addElement('text', 'department', get_string('department'), 'maxlength="30" size="25"');
-    $mform->setType('department', PARAM_TEXT);
+        $mform->addElement('text', 'department', get_string('department'), 'maxlength="30" size="25"');
+        $mform->setType('department', PARAM_TEXT);
 
-    $mform->addElement('text', 'phone1', get_string('phone'), 'maxlength="20" size="25"');
-    $mform->setType('phone1', PARAM_NOTAGS);
+        $mform->addElement('text', 'phone1', get_string('phone'), 'maxlength="20" size="25"');
+        $mform->setType('phone1', PARAM_NOTAGS);
 
-    $mform->addElement('text', 'phone2', get_string('phone2'), 'maxlength="20" size="25"');
-    $mform->setType('phone2', PARAM_NOTAGS);
+        $mform->addElement('text', 'phone2', get_string('phone2'), 'maxlength="20" size="25"');
+        $mform->setType('phone2', PARAM_NOTAGS);
 
-    $mform->addElement('text', 'address', get_string('address'), 'maxlength="70" size="25"');
-    $mform->setType('address', PARAM_TEXT);
+        $mform->addElement('text', 'address', get_string('address'), 'maxlength="70" size="25"');
+        $mform->setType('address', PARAM_TEXT);
+    }
 
 
 }
-

@@ -216,13 +216,19 @@ if ($frm and isset($frm->username)) {                             // Login WITH 
         // If the url to go to is the same as the site page, check for default homepage.
         if ($urltogo == ($CFG->wwwroot . '/')) 
         {
-            $home_page = $CFG->wwwroot . '/';  //get_home_page();
+            $home_page = get_home_page();   //$CFG->wwwroot . '/'; 
 
             // Go to my-moodle page instead of site homepage if defaulthomepage set to homepage_my
             if ($home_page == HOMEPAGE_MY && !is_siteadmin() && !isguestuser()) {
                 if ($urltogo == $CFG->wwwroot or $urltogo == $CFG->wwwroot.'/' or $urltogo == $CFG->wwwroot.'/index.php') 
                 {
                      $urltogo = $CFG->wwwroot.'/my/';
+                     
+                     // Add some custom logic for the themes I want
+                     $customThemes = array("simbuild", "vrsim");
+                     if(in_array($user->theme, $customThemes)) {
+                         $urltogo = $CFG->wwwroot.'/';
+                     }
 
 		    // Rachel Fransen - March 17, 2013
                     // I set up the page to redirect teachers to the 'my' page. 
@@ -231,8 +237,18 @@ if ($frm and isset($frm->username)) {                             // Login WITH 
 		    if ($courses = enrol_get_my_courses(NULL, 'visible DESC, fullname ASC')) 
 		    {
 		        foreach($courses as $course){
-                            $urltogo = $CFG->wwwroot.'/course/view.php?id='.$course->id;
-                            break;
+		            // Check user role in course
+			    $rolestring =  strip_tags(get_user_roles_in_course($user->id, $course->id));
+			    $studentRole = 'Student';
+			    if($rolestring == $studentRole)
+			    {
+			        $urltogo = $CFG->wwwroot.'/';
+                                break;
+			    }
+			    else {
+                               $urltogo = $CFG->wwwroot.'/course/view.php?id='.$course->id;
+                               break;
+                            }
                         }
                     }
                 }

@@ -1,0 +1,33 @@
+.block_sbc_badges .activitydate,
+.block_sbc_badges .activityhead {text-align:center;}
+.block_sbc_badges .unlist li {margin-bottom:1em;}
+.block_sbc_badges li .head .date  {float:right;}
+
+.dir-rtl .block_sbc_badges .content h3 {text-align: right;}
+
+.block_sbc_badges .badgesContent {
+    position:relative;
+    padding: 1em 0.5em 0em 0.5em;
+}
+.block_sbc_badges .progress-bar {
+    width:100%;
+}
+.block_sbc_badges .progress-bar span p  {
+    color: black;
+    font-weight:normal;
+    font-size:11px;
+    width:275px;
+    text-align:center;
+}
+.block_sbc_badges .toptitle  {
+    padding-bottom:0.5em;
+}
+.block_sbc_badges .toptitle span  {
+    font-weight:bold;
+}
+.block_sbc_badges .icons img{
+    display:inline-block;
+    vertical-algin:text-top;
+    width:50px;
+    height:50px;
+}

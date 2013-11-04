@@ -27,11 +27,6 @@ $string['region-side-post'] = 'Right';
 $string['region-side-pre'] = 'Left';
 $string['region-center'] = 'Center';
 
-// Language Strings
-$string['progresslink'] = 'Tätigkeitsbericht';
-$string['knowledgelink'] = 'Wissen Zentrum';
-$string['resourcelink'] = 'Ressourcen';
-
 //readme
 $string['choosereadme'] = '<div class="clearfix">
 
@@ -89,3 +84,34 @@ $string['maincolorlinkdesc'] = 'Link color for menu bar and block titles.';
 
 $string['headingcolor'] = 'headingcolor';
 $string['headingcolordesc'] = 'This is the heading color for large headings (site news, my courses) and other headings.';
+
+
+/////////////////////////////////// Menu Options  //////////////////////////////////
+$string['progresslink'] = 'Tätigkeitsbericht';
+$string['knowledgelink'] = 'Wissen Zentrum';
+$string['resourcelink'] = 'Ressourcen';
+
+///////////////////////////////////  Translations for SBC Dashboard //////////////////////////////////
+/*** Overview Block ***/
+$string['overviewtitle']	= 'Simbuild Overview';
+$string['classrank'] 		= 'Klasse Rang';
+$string['overallsiteprog'] 	= 'Insgesamt Site Fortschritt:';
+$string['ordercomplete'] 	= 'Aufträge abzuschließen';
+$string['actpassed'] 		= 'Aktivitäten Bestanden';
+$string['toolspassed'] 		= 'Werkzeuge Entriegelte'; 
+$string['tooltippassed'] 	= 'Tooltips Entriegelte';
+
+/*** Construction Block ***/
+$string['systitle']		= 'Systeme Fortschritt';
+$string['sitesyscomplete']	= 'Worksite kompletten Systemen';
+
+/*** Academic Block ***/
+$string['acadtitle']		='Akademischen Fähigkeiten Fortschritt';
+$string['accomplete']		='Lehre Komplette';
+$string['momtimetitle']		='Lernen Momentum über Zeit';
+$string['math']			='Mathe';
+$string['read']			='Lesen';
+$string['know']			='Wissen';
+$string['prob']			='Problemlösung';
+
+

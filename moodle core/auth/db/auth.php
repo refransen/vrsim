@@ -397,6 +397,10 @@ class auth_plugin_db extends auth_plugin_base {
                 $user->confirmed  = 1;
                 $user->auth       = $this->authtype;
                 $user->mnethostid = $CFG->mnet_localhost_id;
+                // Rachel Fransen - October 2, 2013
+                // Added support for user theme
+                $user->theme = $this->config->usertheme;
+                
                 if (empty($user->lang)) {
                     $user->lang = $CFG->lang;
                 }
@@ -748,6 +752,12 @@ class auth_plugin_db extends auth_plugin_base {
         if (!isset($config->debugauthdb)) {
             $config->debugauthdb = 0;
         }
+        // Rachel Fransen - October 2, 2013
+        // Add support for user theme
+        if (!isset($config->usertheme)) {
+            $config->usertheme = 'simbuild';
+        }
+
         if (!isset($config->removeuser)) {
             $config->removeuser = AUTH_REMOVEUSER_KEEP;
         }
@@ -770,6 +780,9 @@ class auth_plugin_db extends auth_plugin_base {
         set_config('setupsql',      trim($config->setupsql),'auth/db');
         set_config('debugauthdb',   $config->debugauthdb,   'auth/db');
         set_config('removeuser',    $config->removeuser,    'auth/db');
+        // Rachel Fransen - October 2, 2013
+        // Added support for user theme
+        set_config('usertheme',     $config->usertheme,    'auth/db');
         set_config('changepasswordurl', trim($config->changepasswordurl), 'auth/db');
 
         return true;
@@ -786,5 +799,3 @@ class auth_plugin_db extends auth_plugin_base {
         return $text;
     }
 }
-
-

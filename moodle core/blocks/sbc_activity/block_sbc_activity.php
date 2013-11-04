@@ -9,7 +9,7 @@ class block_sbc_activity extends block_base {
 
     function get_content() 
     {        
-        global $USER, $DB;
+        global $USER, $DB, $CFG;
         
         if ($this->content !== NULL) {
             return $this->content;
@@ -25,12 +25,12 @@ class block_sbc_activity extends block_base {
         $this->content->footer = '';
  
         $timestart = round(time() - COURSE_MAX_RECENT_PERIOD, -2); // better db caching for guests - 100 seconds
-        
+        $activityArr = array();
+
         if($USER->theme == "simbuild")
         {
            if($mycourses = enrol_get_my_courses(NULL, 'visible DESC, fullname ASC'))
            { 
-               $activityArr = array();
                foreach($mycourses as $course)  
                {  
                    $modinfo = get_fast_modinfo($course->id);
@@ -44,10 +44,9 @@ class block_sbc_activity extends block_base {
                    
                        //$singleMod->id = $log->cmid
                        $modName = $DB->get_record('modules', array('id'=>$singleMod->module));
-                       $logs = $DB->get_records_select('log', "time > ? AND course = ? AND cmid = ? AND
-                            module = ? AND (action = 'view')",
-                            array($timestart, $course->id, $singleMod->id, $modName->name), "id ASC");
-                            
+                       $sql = "SELECT * FROM {log} WHERE time > ? AND course = ? AND cmid = ? AND module = ? AND (action = 'view') 
+                       		AND userid = ? ORDER BY id ASC";
+                       $logs = $DB->get_records_sql($sql, array($timestart, $course->id, $singleMod->id, $modName->name, $USER->id));
 	               $modActivity ['name'] = $myModName;
 	               $modActivity ['count'] = count($logs);
 	               
@@ -63,32 +62,34 @@ class block_sbc_activity extends block_base {
             //-----------------------
             $myContent = '<div class="activitycontent">';
             foreach($activityArr as $myActivity)  
-            {        
-                $myContent .= '<div class="activitySection">
-                <div class="toptitle" >';
-                
+            {                        
                  switch($myActivity['name'])
                  {
-	          case 'Vocabulary':
-	          {
-	              $myContent .= '<img src="/theme/simbuild/pix/activityblock/glossary_Icon_here.png" />';
-	          }break;
-	          case 'Materials':
-	          {
-	               $myContent .= '<img src="/theme/simbuild/pix/activityblock/Wood-icon.png" />';
-	          }break;
-	          case 'Skill Videos':
-	          {
-	              $myContent .= '<img src="/theme/simbuild/pix/activityblock/video-icon.png" />';
-	          }break;
+	              case 'Vocabulary':
+	             {
+	                 $myContent .= '<div class="activitySection"><div class="toptitle" >';
+	                 $myContent .= '<img src="'.$CFG->wwwroot.'/theme/simbuild/pix/activityblock/glossary_Icon_here.png" />';
+	                 $myContent .= '<span>'.$myActivity['count'].'</span></div>';
+	                 $myContent .= '<div class="bottitle" ><p>'.$myActivity['name'].' '.get_string("reviewed", "block_sbc_activity");
+	                 $myContent .= '</p></div></div>';
+	             }break;
+	             case 'Materials':
+	             {
+	                 $myContent .= '<div class="activitySection"><div class="toptitle" >';
+	                 $myContent .= '<img src="'.$CFG->wwwroot.'/theme/simbuild/pix/activityblock/Wood-icon.png" />';
+	                 $myContent .= '<span>'.$myActivity['count'].'</span></div>';
+	                 $myContent .= '<div class="bottitle" ><p>'.$myActivity['name'].' '.get_string("reviewed", "block_sbc_activity");
+	                 $myContent .= '</p></div></div>';
+	             }break;
+	             case 'Skill Videos':
+	             {
+	                 $myContent .= '<div class="activitySection"><div class="toptitle" >';
+	                 $myContent .= '<img src="'.$CFG->wwwroot.'/theme/simbuild/pix/activityblock/video-icon.png" />';
+	                 $myContent .= '<span>'.$myActivity['count'].'</span></div>';
+	                 $myContent .= '<div class="bottitle" ><p>'.$myActivity['name'].' '.get_string("reviewed", "block_sbc_activity");
+	                 $myContent .= '</p></div></div>';
+	             }break;
                  }
-             
-                 $myContent .= '<span>'.$myActivity['count'].'</span>
-                   </div>
-                    <div class="bottitle" >
-                        <p>'.$myActivity['name'].' Reviewed</p>
-                    </div>
-                </div>';
             }
             $myContent .= '</div>';
             $this->content->text = $myContent;

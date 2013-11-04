@@ -94,3 +94,13 @@ Error code: sessionwaiterr
 * line 33 of /config.php: call to require_once()
 * line 29 of /lib/ajax/setuserpref.php: call to require_once()
 
+[30-Sep-2013 06:51:28 America/Denver] Default exception handler: Incorrect sesskey submitted, form not accepted! Debug: 
+Error code: invalidsesskey
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 33 of /lib/ajax/setuserpref.php: call to print_error()
+
+[30-Sep-2013 08:19:44 America/Denver] Default exception handler: Incorrect sesskey submitted, form not accepted! Debug: 
+Error code: invalidsesskey
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 33 of /lib/ajax/setuserpref.php: call to print_error()
+

@@ -6,8 +6,10 @@
     overflow:hidden;
 }
 .sitefilterbox {
+    position:relative;
     display: inline-block;
     margin-top: 1.5em;
+	z-index:10;
 }
 .sitefilterbox .singleselect  {
     margin:0;
@@ -68,11 +70,11 @@
 }
 .topinfo .titles  {
     display: inline-block;
-    width: 16%;
+    width: 20%;
 }
 .topinfo .descriptions {
     display: inline-block;
-    width: 67%;
+    width: 63%;
 }
 .topinfo .descriptions .progress-bar  {
     width:80%;
@@ -81,13 +83,14 @@
     position:relative;
     width:100%; 
     margin-top:1em;
-    overflow-x:auto;
+    overflow:hidden;
 }
 .siteoverview .bottominfo {
     background-image: url('/theme/simbuild/pix/progressreport/grayline.png');
     background-repeat: no-repeat;
     background-size: 90% 60%;
     background-position: 90% 0%;
+    overflow-x:auto !important;
 }
 .bottominfo table  {
     width:100%;
@@ -104,6 +107,7 @@
 .bottominfo .chartbox:hover  {
     border: 2px solid #2e1094;
     cursor:pointer;
+    cursor: hand;
 }
 .bottominfo .selected h3,
 .bottominfo .chartbox:hover h3  {
@@ -175,6 +179,7 @@
     width:75%;
     min-width:205px;
     max-width:225px;
+    min-height: 62px;
     display:inline-block;
     vertical-align:middle;
     text-align:center;
@@ -187,6 +192,7 @@
     border: 2px solid #2e1094;
     color:white;
     cursor:pointer;
+    cursor: hand;
 }
 .ordertext:hover h3,
 .ordertext:hover .checkmark,
@@ -303,21 +309,37 @@
    line-height: 2.8;
    font-size: 13px;
 }
-.bottominfo .passedboxes,
+.bottominfo .passedboxes, 
 .bottominfo .masteredboxes {
-    display:inline-block;
+    display: inline-block;
     text-align: center;
     vertical-align: top;
-    width:10%;
+    width: 10%;
 }
-.checkboxes  {
-    padding-top: 0.5em;
+.bottominfo .checkboxes {
+    padding-top: 0.6em;
 }
-.passedboxes .checkboxes p,
-.masteredboxes .checkboxes p  {
-     line-height: 1;
-     font-size: 30px;
-     margin-bottom: 0.6em;
+.bottominfo .passedboxes .checkboxes p, 
+.bottominfo .masteredboxes .checkboxes p {
+    line-height: 1.3;
+    font-size: 30px;
+    margin-bottom: 0.3em;
+    display:inline-block;
+}
+.greenBoxes {
+    line-height: 1 !important;
+    position:relative;
+    width: 23px;
+    height: 23px;
+    font-size:23px !important;
+    font-weight:bold;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0.3em !important;
+    margin-bottom: 0.5em !important;
+    color: white;
+    background: #55a202;
+    border:2px solid #1a3c00;
 }
 .bottominfo .badges  {
     display:inline-block;
@@ -325,7 +347,22 @@
     text-align:left;
     margin-left: 5em;
 }
+.bottominfo .badges .badgeicons  {
+    margin-top: 1em;
+}
 .badges .iconrow img  {
     margin-right:1em; 
     width:40px;  
+    height:40px;
+}
+.badges .iconrow {
+    margin-bottom: 0.4em;
+}
+.badges .hiddenbadge  {
+    display:inline-block;
+    vertical-align:top;
+    text-align:left;
+    margin-right:1em; 
+    width:40px;  
+    height:40px;
 }

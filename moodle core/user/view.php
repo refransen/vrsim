@@ -172,17 +172,17 @@ echo $OUTPUT->header();
 //------------------------------
 if($currentuser)
 {
-    $hardcodedtext= '<table id="profilelinks" align="center" cellpadding="20">
+    $hardcodedtext = '<table id="profilelinks" align="center" cellpadding="20">
     <tbody>
     <tr valign="bottom" align="center">
-      <td valign="center"><a href="/user/edit.php" >
-      <img src="/theme/vrsim/pix/profile/profile_new.png" width="32" height="32" title="Edit Profile" /><br />Edit Profile</a></td>
+      <td valign="center"><a href="'.$CFG->wwwroot.'/user/edit.php" >
+      <img src="'.$CFG->wwwroot.'/theme/vrsim/pix/profile/profile_new.png" width="32" height="32" title="Edit Profile" /><br />Edit Profile</a></td>';
                 
-      <td valign="center"><a href="/login/change_password.php" >
-      <img src="/theme/vrsim/pix/profile/editprofile_new.png" width="32" height="32" title="Change Password" /><br />Change password</a></td>
+     /* <td valign="center"><a href="/login/change_password.php" >
+      <img src="/theme/vrsim/pix/profile/editprofile_new.png" width="32" height="32" title="Change Password" /><br />Change password</a></td>*/
 		
-      <td valign="center"><a href="/message/index.php" >
-      <img src="/theme/vrsim/pix/profile/email_new.png" width="32" height="32" title="Messages" /><br />Messages</a></td>
+      $hardcodedtext .= '<td valign="center"><a href="'.$CFG->wwwroot.'/message/index.php" >
+      <img src="'.$CFG->wwwroot.'/theme/vrsim/pix/profile/email_new.png" width="32" height="32" title="Messages" /><br />Messages</a></td>
     </tr>
     </tbody>
     </table>';
@@ -227,8 +227,26 @@ if (is_mnet_remote_user($user)) {
     echo $OUTPUT->box(get_string('remoteuserinfo', 'mnet', $a), 'remoteuserinfo');
 }
 
-echo '<div class="userprofilebox clearfix"><div class="profilepicture">';
-echo $OUTPUT->user_picture($user, array('size'=>100));
+echo '<div class="userprofilebox clearfix">';
+// Rachel Fransen - Oct 2, 2013
+// Allow SBC users to see their avatar pictures from the ED
+$sql = "SELECT Avatar FROM {people} person WHERE person.idPeople=?";
+if($result = $SBC_DB->get_record_sql($sql, array($user->idnumber)) ) {
+   if($result->avatar == null) {
+       echo '<div class="profilepicture">';
+       echo $OUTPUT->user_picture($user, array('size'=>100));
+   }
+   else if(!is_siteadmin($user)) {
+       $img = $CFG->wwwroot.'/vrsim/dbapi.php?getAvatar&id='.$user->idnumber;
+        echo '<div class="sbcavatar" ><div class="avatarimg" style="background-image: url('.$img.');"></div>';
+       // echo '<img src="'.$img.'" /> ';
+    }
+}
+else {
+    echo '<div class="profilepicture">';
+    echo $OUTPUT->user_picture($user, array('size'=>100));
+}
+
 echo '</div>';
 
 // Print the description
@@ -382,4 +400,3 @@ echo $OUTPUT->footer();
 function print_row($left, $right) {
     echo "\n<tr><th class=\"label c0\">$left</th><td class=\"info c1\">$right</td></tr>\n";
 }
-

@@ -67,3 +67,7 @@ $string['auth_dbusernotexist'] = 'Cannot update non-existent user: {$a}';
 $string['auth_dbuserstoadd'] = 'User entries to add: {$a}';
 $string['auth_dbuserstoremove'] = 'User entries to remove: {$a}';
 $string['pluginname'] = 'External database';
+
+/***** Changes by Rachel Fransen ***************/
+$string['usertheme'] = 'User Theme';
+$string['userthemedec'] = 'Please select the theme for users coming from external database.';

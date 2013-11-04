@@ -52,7 +52,7 @@ class block_sbcprofile extends block_base {
      * @return object
      */
     public function get_content() {
-        global $CFG, $USER, $DB, $OUTPUT, $PAGE;
+        global $CFG, $USER, $DB, $SBC_DB, $OUTPUT, $PAGE;
 
         if ($this->content !== NULL) {
             return $this->content;
@@ -68,13 +68,36 @@ class block_sbcprofile extends block_base {
         $this->content->footer = '';
 
         $course = $this->page->course;
+        
+        $db_class = get_class($DB);
+	$SBC_DB = new $db_class(); // instantiate a new object of the same class as the original $DB
+	$SBC_DB->connect($CFG->sbc_dbhost, $CFG->sbc_dbUser, $CFG->sbc_dbPass, $CFG->sbc_dbName, false);
 
-        if (!isset($this->config->display_picture) || $this->config->display_picture == 1) {
+        // Rachel Fransen - Oct 2, 2013
+	// Allow SBC users to see their avatar pictures from the ED
+	$sql = "SELECT Avatar FROM {people} person WHERE person.idPeople=?";
+	if($result = $SBC_DB->get_record_sql($sql, array($user->idnumber)) ) {
+	   if($result->avatar == null) {
+	       $this->content->text .= '<div class="myprofileitem picture">';
+	       $this->content->text .= $OUTPUT->user_picture($user, array('size'=>100));
+	   }
+	   else if(!is_siteadmin($user)) {
+	       $img = $CFG->wwwroot.'/vrsim/dbapi.php?getAvatar&id='.$user->idnumber;
+	        $this->content->text .= '<div class="sbcavatar" ><div class="avatarimg" style="background-image: url('.$img.');"></div>';
+	    }
+	}
+	else {
+	    $this->content->text .= '<div class="profilepicture">';
+	    $this->content->text .= $OUTPUT->user_picture($user, array('size'=>100));
+	}	
+	$this->content->text .= '</div>';
+	
+        /*if (!isset($this->config->display_picture) || $this->config->display_picture == 1) {
             $this->content->text .= '<div class="myprofileitem picture">';
             $this->content->text .= $OUTPUT->user_picture($USER, array('courseid'=>$course->id, 'size'=>'100',
                  'class'=>'profilepicture'));  // The new class makes CSS easier
             $this->content->text .= '</div>';
-        }
+        } */   
 
         $this->content->text .= '<div class="myprofileitem fullname">'.fullname($USER).'</div>';
 
@@ -149,14 +172,53 @@ class block_sbcprofile extends block_base {
         }
         
         $this->content->text .= '<div class="myprofileitem profileicon">';
-        $this->content->text .= '<img src="/theme/simbuild/pix/profile/profile_new.png" title="'.get_string('viewprofile').'" />';
+        $this->content->text .= '<img src="'.$CFG->wwwroot.'/theme/simbuild/pix/profile/profile_new.png" title="'.get_string('viewprofile','block_sbcprofile').'" />';
         $this->content->text .= '<a href="/user/profile.php" >'.get_string('viewprofile','block_sbcprofile').'</a>';
         $this->content->text .= '</div>';
         
         $this->content->text .= '<div class="myprofileitem messageicon">';
-        $this->content->text .= '<img src="/theme/simbuild/pix/profile/email_new.png" title="'.get_string('viewmessages').'" />';
+        $this->content->text .= '<img src="'.$CFG->wwwroot.'/theme/simbuild/pix/profile/email_new.png" title="'.get_string('viewmessages','block_sbcprofile').'" />';
         $this->content->text .= '<a href="/message/index.php">'.get_string('viewmessages', 'block_sbcprofile').'</a>';
         $this->content->text .= '</div>';
+        
+        $delimiter = '<a href="';
+        $newLoginArr = explode($delimiter,$OUTPUT->login_info());
+        $finalUrlArr = array();
+        $finalUserName = "";
+        $counter = 0;
+        foreach($newLoginArr as $singleLogin) {
+            $tempURL = explode('">', $singleLogin);            
+            if($counter > 0)  { 
+                $finalUrlArr[] = $tempURL[0];                
+                $userName = explode(']', $tempURL[1]); 
+                if($finalUserName == "" ) {$finalUserName = strip_tags($userName[0]); }
+            }
+            $counter ++;
+        }
+        
+        // If logged in as another user, show a button
+        // that lets you log back in as yourself
+        if(count($finalUrlArr) > 2)
+        {
+           $userName = explode(" ", $finalUserName);
+           $sql = "SELECT * FROM {user} WHERE firstname LIKE ? AND lastname LIKE ?";
+           $oldUser = $DB->get_record_sql($sql, array($userName[0], $userName[1]));
+
+	   $returnUrl = $finalUrlArr[0]; 
+           if($oldUser) {
+               $this->content->text .= '<div class="loginasinfo" ><div class="myprofileitem teacherpicture">';
+               $this->content->text .= $OUTPUT->user_picture($oldUser, array('courseid'=>$course->id, 'size'=>'100',
+                 'class'=>'profilepicture'));  // The new class makes CSS easier
+               $this->content->text .= '</div>';
+               
+               //$siteID = 1; 
+               //$sessionKey = explode("sesskey=",$returnUrl);
+               //$returnUrl = $CFG->wwwroot.'/course/loginas.php?id='.$siteID.'&amp;user='.$oldUser->id.'&amp;sesskey='.$sessionKey[1];
+           }
+	        
+           $this->content->text .= '<div class="logintitle" ><p>Logged in as: </p><h3>'.fullname($USER).'</h3>';
+           $this->content->text .= '<a href="'.$returnUrl.'" >Return to your own profile?</a></div></div>';
+        }
         
         $this->content->text .= '<div class="myprofileitem logoutbttn">';
         $logouturl = new moodle_url('/login/logout.php', array('sesskey'=>sesskey()));

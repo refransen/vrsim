@@ -23,6 +23,7 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pluginname'] = 'SBC activity';
-$string['displayname'] = 'My Activity';
-$string['sbc_activity:addinstance'] = 'Add a new SBC activity block';
+$string['pluginname'] 			= 'SBC activity';
+$string['displayname'] 			= 'My Activity';
+$string['sbc_activity:addinstance'] 	= 'Add a new SBC activity block';
+$string['reviewed']			= 'Reviewed';

@@ -1,0 +1,383 @@
+/*********************** SBC Overview Block - Dashboard ***********************/
+.sbcOverview
+{
+    padding:0px !important;
+    border:0 !important;
+    margin-top: 2em;
+}
+.sbcOverview .header  {
+     background: #2e1094;
+     padding: 0.5em 0.5em 0.5em 2em !important;
+}
+.sbcOverview .header h2  {
+     color:white;
+}
+.sbcOverview .content  {
+    background: white !important;
+    border: 2px solid #a6a6a6;
+    padding: 0.5em 2em 0.8em 2em !important;
+}
+.sbcOverview .topinfo  {
+    position:relative;
+    width:100%;
+    height:80px;
+}
+.sbcOverview .classrank  {
+    text-align:center;
+    display:inline-block;
+    background: #F2F2F2;
+    width:13%;;
+    height:90%;
+    border:2px solid #55a202;
+}
+.sbcOverview .numberClass  {
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: bolder;
+    line-height: 1;
+}
+.sbcOverview h3  {
+    color:#333;
+    font-weight:bold;
+    padding-top:0.7em;
+}
+.sbcOverview .classrank p  {
+    text-align: center;
+    font-size: 30px;
+}
+.sbcOverview .overallprogress   {
+    position:relative;
+    width: 82%;
+    display: inline-block;
+    vertical-align: top;
+    padding-left:0.5em;
+}
+.sbcOverview .overallprogress h3  {
+    padding-top: 0;
+    font-weight: normal;
+    font-size: 13px;
+    margin-bottom:0;
+}
+.sbcOverview .overallprogress .progress-bar   {
+   width: 97%;
+   margin: 1.4em 1em 0em 1em;
+}
+.sbcOverview .overallprogress span  {
+    font-size: 15px;
+    font-weight:normal;
+}
+.sbcOverview .circle,
+.sbcOverview .circleSmall  {
+    position:absolute;
+    z-index:1;
+    width: 4em; 
+    height: 4em; 
+    -webkit-border-radius: 5em; 
+    -moz-border-radius: 5em;
+    border-radius:5em;
+}
+.sbcOverview .circleSmall  {
+   width:3em;
+   height:3em;
+}
+.sbcOverview .circle.green,
+.sbcOverview .circleSmall.green  {
+    background-color: #98e743;
+    border: 2px solid #55a202;
+}
+.sbcOverview .circle.gray,
+.sbcOverview .circleSmall.gray  {
+    background-color: #f2f2f2;
+    border: 2px solid #a6a6a6;;
+}
+.sbcOverview .star  {
+    background-size:30px;
+    background-position:50% 50%;
+    background-repeat: no-repeat;
+    margin-top: 0.6em;
+}
+.sbcOverview .shed,
+.sbcOverview .shedgray  {
+    background-size:25px;
+    background-position:50% 50%;
+    background-repeat: no-repeat;
+    margin-left: 24%;
+}
+.sbcOverview .ranch,
+.sbcOverview .ranchgray  {
+    background-size:45px;
+    background-position:50% 50%;
+    background-repeat: no-repeat;
+    margin-left: 58%;
+}
+.sbcOverview .multilevel,
+.sbcOverview .multilevelgray  {
+    background-size:40px;
+    background-position:50% 50%;
+    background-repeat: no-repeat;
+    right:0px;
+}
+.sbcOverview .bottominfo  {
+    position:relative;
+    text-align:center;
+    margin-top: 1em;
+}
+.sbcOverview .bottomBox {
+    display:inline-block;
+    width:24%;
+}
+.sbcOverview .boxpadding  {
+    width:85%;
+    margin-right:auto;
+    margin-left:auto;
+}
+.sbcOverview .bottomBox .stats  {
+    padding: 0.5em 1em 1em 1em;
+    text-align: center;
+}
+.sbcOverview .bottomBox .stats img  {
+   width:35px;
+   height:auto;
+}
+.sbcOverview .bottomBox .stats span  {
+    font-size:50px;
+}
+.sbcOverview .bottomBox .statsTitle  {
+    position:relative;
+    background: #ffe32f;
+    text-align:center;
+    font-size:12px;
+    padding: 0.3em;
+    -webkit-box-shadow: 0 8px 6px -6px gray;
+    -moz-box-shadow: 0 8px 6px -6px gray;
+    box-shadow: 0 8px 6px -6px gray;
+}
+.sbcOverview .bottomBox .statsTitle:after  {
+	bottom: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+}
+.sbcOverview .bottomBox .statsTitle:after {
+	border-color: rgba(255, 227, 47, 0);
+	border-bottom-color: #ffe32f;
+	border-width: 14px;
+	left: 50%;
+	margin-left: -14px;
+}
+/******************************* CONSTRUCTION SYSTEMS BLOCK ***************************/
+.sbcSystemsProgress  {
+    padding: 0px !important;
+    border: 0 !important;
+    margin-top:1.5em;
+}
+.sbcSystemsProgress .header  {
+    background: #2e1094;
+    padding: 0.5em 0.5em 0.5em 2em !important;
+}
+.sbcSystemsProgress .header h2  {
+    color:white;
+}
+.sbcSystemsProgress .content {
+    background: white !important;
+    border: 2px solid #a6a6a6;
+    padding: 0.5em 2em 0.5em 2em !important;
+}
+.sbcSystemsProgress .content .no-overflow   {
+    overflow:hidden;
+}
+.sbcSystemsProgress .numberClass {
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: bolder;
+    line-height: 1;
+}
+.sbcSystemsProgress .toptitle   {
+    position:relative;
+    display:block;
+}
+.sbcSystemsProgress .toptitle img  {
+    width: 60px;
+    height:auto;
+    display:inline-block;
+    vertical-align:top;
+}
+.sbcSystemsProgress .toptitle span  {
+    color:#f58323;
+    font-size: 35px;
+    display:inline-block;
+    vertical-align:text-top;
+    line-height: 1;
+    padding: 0 0.2em 0 0.2em;
+}
+.sbcSystemsProgress .toptitle h3  {
+    font-size:13px;
+    font-weight:normal;
+    display:inline-block;
+    vertical-align: bottom;
+}
+/******************************* ACADEMIC SYSTEMS BLOCK ***************************/
+.sbcAcademicProgress  {
+    padding:0 !important;
+    margin:0 !important;
+    margin-top:1.5em;
+}
+.sbcAcademicProgress .header  {
+    background: #2e1094;
+    padding: 0.5em 0.5em 0.5em 2em !important;
+}
+.sbcAcademicProgress .header h2  {
+    color:white;
+}
+.sbcAcademicProgress .content   {
+    position:relative;
+    background: white !important;
+    border: 2px solid #a6a6a6;
+    padding: 0.5em 2em 1em 2em !important;
+}
+.sbcAcademicProgress .no-overflow {
+   /* overflow-x: auto; */
+    overflow-y: hidden;
+}
+.sbcAcademicProgress .numberClass {
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: bolder;
+    line-height: 1;
+}
+.sbcAcademicProgress .leftcolumn   {
+    /* width:80%; */
+    width:100%;
+    /*height: 100%;*/
+    display: inline-block;
+    vertical-align: top;
+}
+.sbcAcademicProgress .rightcolumn   {
+    width: 18%;
+    height: 100%;
+    display: inline-block;
+    margin-top:1.9em;
+}
+.sbcAcademicProgress .toptitle {
+    position: relative;
+    display:inline-block;
+}
+.sbcAcademicProgress .toptitle img {
+    width: 35px;
+    height: auto;
+    display: inline-block;
+    vertical-align: top;
+}
+.sbcAcademicProgress .toptitle span {
+    color: #4e9dd8;
+    font-size: 35px;
+    display: inline-block;
+    vertical-align: text-top;
+    line-height: 1;
+    padding: 0 0.2em 0 0.2em;
+}
+.sbcAcademicProgress .toptitle h3,
+.sbcAcademicProgress .bottomtitle h3 {
+    font-size: 13px;
+    font-weight: normal;
+    display: inline-block;
+    vertical-align: bottom;
+}
+.sbcAcademicProgress .bottomtitle  {
+    clear:both;
+    display:block;
+    padding-top:0.5em;
+    text-align: center;
+}
+.sbcAcademicProgress .canvasdiv {
+    position:relative;
+    float:left;
+    vertical-align:top;
+    width: 98%;
+}
+.sbcAcademicProgress #axes  {
+    position: absolute; 
+    top: 0px; 
+    left: 0px; 
+    z-index: 3; 
+}
+.sbcAcademicProgress .chartdiv  {
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+    text-align:center;
+}
+.sbcAcademicProgress .chartkey  {
+    display:inline-block;
+    vertical-align:top;
+}
+.sbcAcademicProgress .chartbox  {
+    padding: 0.5em;
+    text-align:left;
+    border:1px solid black;
+    background-color:white;
+}
+.sbcAcademicProgress .chartbox p  {
+    display: inline;
+    vertical-align: middle;
+}
+.sbcAcademicProgress .chartbox .icon .lineicon {
+    width: 16px;
+    height: 3px;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #1a6aa5;
+}
+.sbcAcademicProgress .chartbox .icon .baricon  {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #4796d1;
+}
+
+.sbcAcademicProgress #linechart {
+    padding-bottom: 0.8em;
+}
+
+.sbcAcademicProgress .chartbutton  {
+    display:inline-block;
+    width: 100%;
+    height: 50px;
+    border:1px solid #adadad;
+    margin-bottom:0.7em;
+}
+.blueborder,
+.sbcAcademicProgress .chartbutton:hover  {
+    border:1px solid #2e1094 !important;
+    color: #2e1094 !important;
+    cursor:pointer;
+}
+.sbcAcademicProgress .chartbutton:hover .leftbutton {
+    background: #2e1094 !important;
+}
+.bluehighlight {
+    background: #56a1d9 !important;
+}
+.redhighlight {
+    background: #c73e3e !important;
+}
+.greenhighlight {
+    background: #58967b !important;
+}
+.purplehighlight {
+    background: #975eac !important;
+}
+.sbcAcademicProgress .chartbutton  .leftbutton  {
+    width:25px;
+    height:100%;
+    background: #c9c9c9;
+    display: inline-block;
+    vertical-align: top;
+}
+.sbcAcademicProgress .chartbutton h3  {
+   color: #8d8d8d; 
+   display:inline-block;
+}
+.sbcAcademicProgress .chartbutton .selected  {
+    color: #333333 !important;
+}

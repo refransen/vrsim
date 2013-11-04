@@ -315,3 +315,300 @@ Error code: codingerror
 
 [06-Sep-2013 08:40:16 America/Denver] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 48097 bytes) in /home/vrsimlms/public_html/course/lib.php on line 2091
 [06-Sep-2013 08:41:02 America/Denver] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 47889 bytes) in /home/vrsimlms/public_html/course/lib.php on line 2091
+[13-Sep-2013 02:49:36 America/Denver] Default exception handler: Can not find data record in database table course_categories. Debug: SELECT * FROM {course_categories} WHERE id = ?
+[array (
+  0 => 1,
+)]
+Error code: invalidrecord
+* line 1357 of /lib/dml/moodle_database.php: dml_missing_record_exception thrown
+* line 1333 of /lib/dml/moodle_database.php: call to moodle_database->get_record_select()
+* line 57 of /course/edit.php: call to moodle_database->get_record()
+
+[13-Sep-2013 02:49:48 America/Denver] PHP Notice:  Undefined offset: 2 in /home/vrsimlms/public_html/lib/navigationlib.php on line 1620
+[13-Sep-2013 02:49:48 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/lib/navigationlib.php on line 1621
+[13-Sep-2013 02:49:48 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/lib/navigationlib.php on line 1625
+[13-Sep-2013 02:49:48 America/Denver] Default exception handler: Coding error detected, it must be fixed by a programmer: Category path order is incorrect and/or there are missing categories Debug: 
+Error code: codingerror
+* line 1633 of /lib/navigationlib.php: coding_exception thrown
+* line 1100 of /lib/navigationlib.php: call to global_navigation->load_all_categories()
+* line 2918 of /lib/navigationlib.php: call to global_navigation->initialise()
+* line 766 of /lib/pagelib.php: call to navbar->has_items()
+* line 5 of /theme/simbuild/layout/general.php: call to moodle_page->has_navbar()
+* line 804 of /lib/outputrenderers.php: call to include()
+* line 734 of /lib/outputrenderers.php: call to core_renderer->render_page_layout()
+* line 167 of /course/edit.php: call to core_renderer->header()
+
+[13-Sep-2013 02:49:55 America/Denver] Default exception handler: Can not find data record in database table course_categories. Debug: SELECT * FROM {course_categories} WHERE id = ?
+[array (
+  0 => 3,
+)]
+Error code: invalidrecord
+* line 1357 of /lib/dml/moodle_database.php: dml_missing_record_exception thrown
+* line 1333 of /lib/dml/moodle_database.php: call to moodle_database->get_record_select()
+* line 57 of /course/edit.php: call to moodle_database->get_record()
+
+[13-Sep-2013 02:50:06 America/Denver] Default exception handler: Can not find data record in database table course_categories. Debug: SELECT * FROM {course_categories} WHERE id = ?
+[array (
+  0 => 4,
+)]
+Error code: invalidrecord
+* line 1357 of /lib/dml/moodle_database.php: dml_missing_record_exception thrown
+* line 1333 of /lib/dml/moodle_database.php: call to moodle_database->get_record_select()
+* line 57 of /course/edit.php: call to moodle_database->get_record()
+
+[13-Sep-2013 02:51:58 America/Denver] Default exception handler: Can not find data record in database table course_categories. Debug: SELECT * FROM {course_categories} WHERE id = ?
+[array (
+  0 => 4,
+)]
+Error code: invalidrecord
+* line 1357 of /lib/dml/moodle_database.php: dml_missing_record_exception thrown
+* line 1333 of /lib/dml/moodle_database.php: call to moodle_database->get_record_select()
+* line 57 of /course/edit.php: call to moodle_database->get_record()
+
+[13-Sep-2013 03:49:57 America/Denver] PHP Notice:  Undefined offset: 2 in /home/vrsimlms/public_html/lib/navigationlib.php on line 1620
+[13-Sep-2013 03:49:57 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/lib/navigationlib.php on line 1621
+[13-Sep-2013 03:49:57 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/lib/navigationlib.php on line 1625
+[13-Sep-2013 03:49:57 America/Denver] Default exception handler: Coding error detected, it must be fixed by a programmer: Category path order is incorrect and/or there are missing categories Debug: 
+Error code: codingerror
+* line 1633 of /lib/navigationlib.php: coding_exception thrown
+* line 1100 of /lib/navigationlib.php: call to global_navigation->load_all_categories()
+* line 2918 of /lib/navigationlib.php: call to global_navigation->initialise()
+* line 766 of /lib/pagelib.php: call to navbar->has_items()
+* line 5 of /theme/simbuild/layout/general.php: call to moodle_page->has_navbar()
+* line 804 of /lib/outputrenderers.php: call to include()
+* line 734 of /lib/outputrenderers.php: call to core_renderer->render_page_layout()
+* line 167 of /course/edit.php: call to core_renderer->header()
+
+[13-Sep-2013 04:04:19 America/Denver] PHP Notice:  Undefined offset: 2 in /home/vrsimlms/public_html/lib/navigationlib.php on line 1620
+[13-Sep-2013 04:04:19 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/lib/navigationlib.php on line 1621
+[13-Sep-2013 04:04:19 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/lib/navigationlib.php on line 1625
+[13-Sep-2013 04:04:19 America/Denver] Default exception handler: Coding error detected, it must be fixed by a programmer: Category path order is incorrect and/or there are missing categories Debug: 
+Error code: codingerror
+* line 1633 of /lib/navigationlib.php: coding_exception thrown
+* line 1100 of /lib/navigationlib.php: call to global_navigation->load_all_categories()
+* line 3114 of /lib/navigationlib.php: call to global_navigation->initialise()
+* line 700 of /lib/pagelib.php: call to settings_navigation->__construct()
+* line 717 of /lib/pagelib.php: call to moodle_page->magic_get_settingsnav()
+* line 133 of /blocks/settings/block_settings.php: call to moodle_page->__get()
+* line 284 of /blocks/moodleblock.class.php: call to block_settings->get_content()
+* line 232 of /blocks/moodleblock.class.php: call to block_base->formatted_contents()
+* line 954 of /lib/blocklib.php: call to block_base->get_content_for_output()
+* line 1006 of /lib/blocklib.php: call to block_manager->create_block_contents()
+* line 354 of /lib/blocklib.php: call to block_manager->ensure_content_created()
+* line 8 of /theme/simbuild/layout/general.php: call to block_manager->region_has_content()
+* line 804 of /lib/outputrenderers.php: call to include()
+* line 734 of /lib/outputrenderers.php: call to core_renderer->render_page_layout()
+* line 167 of /course/edit.php: call to core_renderer->header()
+
+[13-Sep-2013 04:04:36 America/Denver] Default exception handler: Either course id or category must be specified Debug: 
+Error code: needcoursecategroyid
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 64 of /course/edit.php: call to print_error()
+
+[13-Sep-2013 04:05:25 America/Denver] PHP Notice:  Undefined offset: 2 in /home/vrsimlms/public_html/lib/navigationlib.php on line 1620
+[13-Sep-2013 04:05:25 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/lib/navigationlib.php on line 1621
+[13-Sep-2013 04:05:25 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/lib/navigationlib.php on line 1625
+[13-Sep-2013 04:05:25 America/Denver] Default exception handler: Coding error detected, it must be fixed by a programmer: Category path order is incorrect and/or there are missing categories Debug: 
+Error code: codingerror
+* line 1633 of /lib/navigationlib.php: coding_exception thrown
+* line 1100 of /lib/navigationlib.php: call to global_navigation->load_all_categories()
+* line 3114 of /lib/navigationlib.php: call to global_navigation->initialise()
+* line 700 of /lib/pagelib.php: call to settings_navigation->__construct()
+* line 717 of /lib/pagelib.php: call to moodle_page->magic_get_settingsnav()
+* line 6196 of /lib/adminlib.php: call to moodle_page->__get()
+* line 197 of /course/category.php: call to admin_externalpage_setup()
+
+[13-Sep-2013 04:07:19 America/Denver] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 52647 bytes) in /home/vrsimlms/public_html/course/lib.php on line 2091
+[24-Sep-2013 04:32:00 America/Denver] Default exception handler: Incorrect sesskey submitted, form not accepted! Debug: 
+Error code: invalidsesskey
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 1045 of /lib/sessionlib.php: call to print_error()
+* line 34 of /course/loginas.php: call to require_sesskey()
+
+[24-Sep-2013 05:28:25 America/Denver] Default exception handler: Incorrect sesskey submitted, form not accepted! Debug: 
+Error code: invalidsesskey
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 1045 of /lib/sessionlib.php: call to print_error()
+* line 11 of /course/loginas.php: call to require_sesskey()
+
+[24-Sep-2013 06:17:50 America/Denver] Default exception handler: Incorrect sesskey submitted, form not accepted! Debug: 
+Error code: invalidsesskey
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 1045 of /lib/sessionlib.php: call to print_error()
+* line 11 of /course/loginas.php: call to require_sesskey()
+
+[24-Sep-2013 06:18:14 America/Denver] Default exception handler: Incorrect sesskey submitted, form not accepted! Debug: 
+Error code: invalidsesskey
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 1045 of /lib/sessionlib.php: call to print_error()
+* line 11 of /course/loginas.php: call to require_sesskey()
+
+[24-Sep-2013 06:44:22 America/Denver] Default exception handler: Incorrect sesskey submitted, form not accepted! Debug: 
+Error code: invalidsesskey
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 1045 of /lib/sessionlib.php: call to print_error()
+* line 11 of /course/loginas.php: call to require_sesskey()
+
+[24-Sep-2013 06:52:00 America/Denver] Cannot read session record
+[24-Sep-2013 06:52:00 America/Denver] Default exception handler: A required parameter (user) was missing Debug: 
+Error code: missingparam
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 523 of /lib/moodlelib.php: call to print_error()
+* line 26 of /course/loginas.php: call to required_param()
+
+[24-Sep-2013 06:57:33 America/Denver] Default exception handler: Incorrect sesskey submitted, form not accepted! Debug: 
+Error code: invalidsesskey
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 1045 of /lib/sessionlib.php: call to print_error()
+* line 34 of /course/loginas.php: call to require_sesskey()
+
+[24-Sep-2013 06:59:31 America/Denver] Default exception handler: Incorrect sesskey submitted, form not accepted! Debug: 
+Error code: invalidsesskey
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 1045 of /lib/sessionlib.php: call to print_error()
+* line 34 of /course/loginas.php: call to require_sesskey()
+
+[24-Sep-2013 07:05:09 America/Denver] Default exception handler: Incorrect sesskey submitted, form not accepted! Debug: 
+Error code: invalidsesskey
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 1045 of /lib/sessionlib.php: call to print_error()
+* line 34 of /course/loginas.php: call to require_sesskey()
+
+[24-Sep-2013 07:05:57 America/Denver] PHP Notice:  Undefined offset: 1 in /home/vrsimlms/public_html/blocks/sbcprofile/block_sbcprofile.php on line 181
+[24-Sep-2013 08:03:57 America/Denver] Default exception handler: Incorrect sesskey submitted, form not accepted! Debug: 
+Error code: invalidsesskey
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 1045 of /lib/sessionlib.php: call to print_error()
+* line 34 of /course/loginas.php: call to require_sesskey()
+
+[25-Sep-2013 07:33:17 America/Denver] Default exception handler: Sorry, but you do not currently have permissions to do that (Login as other users) Debug: 
+Error code: nopermissions
+* line 704 of /lib/accesslib.php: required_capability_exception thrown
+* line 52 of /course/loginas.php: call to require_capability()
+
+[25-Sep-2013 13:21:35 America/Denver] Default exception handler: Incorrect sesskey submitted, form not accepted! Debug: 
+Error code: invalidsesskey
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 1045 of /lib/sessionlib.php: call to print_error()
+* line 11 of /course/loginas.php: call to require_sesskey()
+
+[26-Sep-2013 12:49:33 America/Denver] Default exception handler: Sorry, but you do not currently have permissions to do that (Login as other users) Debug: 
+Error code: nopermissions
+* line 704 of /lib/accesslib.php: required_capability_exception thrown
+* line 52 of /course/loginas.php: call to require_capability()
+
+[29-Sep-2013 16:53:44 America/Denver] Default exception handler: Sorry, but you do not currently have permissions to do that (Login as other users) Debug: 
+Error code: nopermissions
+* line 704 of /lib/accesslib.php: required_capability_exception thrown
+* line 52 of /course/loginas.php: call to require_capability()
+
+[02-Oct-2013 06:25:55 America/Denver] Default exception handler: Incorrect sesskey submitted, form not accepted! Debug: 
+Error code: invalidsesskey
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 1045 of /lib/sessionlib.php: call to print_error()
+* line 34 of /course/loginas.php: call to require_sesskey()
+
+[03-Oct-2013 04:17:41 America/Denver] Default exception handler: Sorry, but you do not currently have permissions to do that (Login as other users) Debug: 
+Error code: nopermissions
+* line 704 of /lib/accesslib.php: required_capability_exception thrown
+* line 52 of /course/loginas.php: call to require_capability()
+
+[03-Oct-2013 07:11:29 America/Denver] Default exception handler: Sorry, but you do not currently have permissions to do that (Login as other users) Debug: 
+Error code: nopermissions
+* line 704 of /lib/accesslib.php: required_capability_exception thrown
+* line 52 of /course/loginas.php: call to require_capability()
+
+[03-Oct-2013 07:14:47 America/Denver] Default exception handler: Sorry, but you do not currently have permissions to do that (Login as other users) Debug: 
+Error code: nopermissions
+* line 704 of /lib/accesslib.php: required_capability_exception thrown
+* line 52 of /course/loginas.php: call to require_capability()
+
+[03-Oct-2013 07:15:53 America/Denver] Default exception handler: Sorry, but you do not currently have permissions to do that (Login as other users) Debug: 
+Error code: nopermissions
+* line 704 of /lib/accesslib.php: required_capability_exception thrown
+* line 52 of /course/loginas.php: call to require_capability()
+
+[15-Oct-2013 02:49:05 America/Denver] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 45385 bytes) in /home/vrsimlms/public_html/course/lib.php on line 2094
+[15-Oct-2013 02:54:35 America/Denver] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 44559 bytes) in /home/vrsimlms/public_html/course/lib.php on line 2092
+[15-Oct-2013 02:55:33 America/Denver] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 46568 bytes) in /home/vrsimlms/public_html/course/lib.php on line 2092
+[15-Oct-2013 02:57:02 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/course/lib.php on line 2086
+[15-Oct-2013 02:57:02 America/Denver] Default exception handler: Can not find data record in database table course_categories. Debug: SELECT id,parent FROM {course_categories} WHERE id IS NULL
+[array (
+)]
+Error code: invalidrecord
+* line 1357 of /lib/dml/moodle_database.php: dml_missing_record_exception thrown
+* line 1333 of /lib/dml/moodle_database.php: call to moodle_database->get_record_select()
+* line 6295 of /lib/accesslib.php: call to moodle_database->get_record()
+* line 2086 of /course/lib.php: call to context_coursecat::instance()
+* line 254 of /course/index.php: call to make_categories_list()
+
+[15-Oct-2013 02:59:07 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/course/lib.php on line 2087
+[15-Oct-2013 02:59:07 America/Denver] Default exception handler: Can not find data record in database table course_categories. Debug: SELECT id,parent FROM {course_categories} WHERE id IS NULL
+[array (
+)]
+Error code: invalidrecord
+* line 1357 of /lib/dml/moodle_database.php: dml_missing_record_exception thrown
+* line 1333 of /lib/dml/moodle_database.php: call to moodle_database->get_record_select()
+* line 6295 of /lib/accesslib.php: call to moodle_database->get_record()
+* line 2087 of /course/lib.php: call to context_coursecat::instance()
+* line 254 of /course/index.php: call to make_categories_list()
+
+[15-Oct-2013 03:01:10 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/course/lib.php on line 2086
+[15-Oct-2013 03:01:10 America/Denver] Default exception handler: Can not find data record in database table course_categories. Debug: SELECT id,parent FROM {course_categories} WHERE id IS NULL
+[array (
+)]
+Error code: invalidrecord
+* line 1357 of /lib/dml/moodle_database.php: dml_missing_record_exception thrown
+* line 1333 of /lib/dml/moodle_database.php: call to moodle_database->get_record_select()
+* line 6295 of /lib/accesslib.php: call to moodle_database->get_record()
+* line 2086 of /course/lib.php: call to context_coursecat::instance()
+* line 254 of /course/index.php: call to make_categories_list()
+
+[15-Oct-2013 03:02:28 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/course/lib.php on line 2086
+[15-Oct-2013 03:02:28 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/course/lib.php on line 2088
+[15-Oct-2013 03:02:28 America/Denver] Default exception handler: Can not find data record in database table course_categories. Debug: SELECT id,parent FROM {course_categories} WHERE id IS NULL
+[array (
+)]
+Error code: invalidrecord
+* line 1357 of /lib/dml/moodle_database.php: dml_missing_record_exception thrown
+* line 1333 of /lib/dml/moodle_database.php: call to moodle_database->get_record_select()
+* line 6295 of /lib/accesslib.php: call to moodle_database->get_record()
+* line 2088 of /course/lib.php: call to context_coursecat::instance()
+* line 254 of /course/index.php: call to make_categories_list()
+
+[15-Oct-2013 03:07:40 America/Denver] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 46764 bytes) in /home/vrsimlms/public_html/course/lib.php on line 2091
+[15-Oct-2013 06:38:30 America/Denver] PHP Parse error:  syntax error, unexpected ';' in /home/vrsimlms/public_html/theme/simbuild/renderers.php on line 29
+[25-Oct-2013 05:50:06 America/Denver] instantiating backup controller 0b17f2f23ab4d7ad44bb6d455658b515
+[25-Oct-2013 05:50:07 America/Denver] setting controller status to 100
+[25-Oct-2013 05:50:07 America/Denver] loading controller plan
+[25-Oct-2013 05:50:07 America/Denver] setting controller status to 300
+[25-Oct-2013 05:50:07 America/Denver] applying plan defaults
+[25-Oct-2013 05:50:07 America/Denver] setting controller status to 400
+[25-Oct-2013 05:50:07 America/Denver] checking plan security
+[25-Oct-2013 05:50:07 America/Denver] setting controller status to 700
+[25-Oct-2013 05:50:07 America/Denver] saving controller to db
+[25-Oct-2013 05:50:07 America/Denver] calculating controller checksum d8e027e500baf0d78a9ca7d524b9c345
+[25-Oct-2013 05:50:07 America/Denver] loading controller from db
+[25-Oct-2013 05:50:07 America/Denver] notifying plan about excluded activities by type
+[25-Oct-2013 05:50:07 America/Denver] setting controller status to 800
+[25-Oct-2013 05:50:08 America/Denver] setting controller status to 1000
+[25-Oct-2013 05:50:08 America/Denver] saving controller to db
+[25-Oct-2013 05:50:08 America/Denver] instantiating restore controller 50ff5d2cf4f847aad962991a35ddc490
+[25-Oct-2013 05:50:08 America/Denver] setting controller status to 100
+[25-Oct-2013 05:50:08 America/Denver] loading backup info
+[25-Oct-2013 05:50:08 America/Denver] loading controller plan
+[25-Oct-2013 05:50:08 America/Denver] setting controller status to 300
+[25-Oct-2013 05:50:08 America/Denver] checking plan security
+[25-Oct-2013 05:50:08 America/Denver] setting controller status to 600
+[25-Oct-2013 05:50:08 America/Denver] saving controller to db
+[25-Oct-2013 05:50:08 America/Denver] calculating controller checksum 90aa0e647725ef56c679874e9eb94510
+[25-Oct-2013 05:50:08 America/Denver] loading controller from db
+[25-Oct-2013 05:50:09 America/Denver] setting controller status to 700
+[25-Oct-2013 05:50:09 America/Denver] saving controller to db
+[25-Oct-2013 05:50:09 America/Denver] calculating controller checksum 7bf2789c691c98e01607f5a4cc860c06
+[25-Oct-2013 05:50:09 America/Denver] loading controller from db
+[25-Oct-2013 05:50:09 America/Denver] notifying plan about excluded activities by type
+[25-Oct-2013 05:50:09 America/Denver] setting controller status to 800
+[25-Oct-2013 05:50:10 America/Denver] processing file aliases queue
+[25-Oct-2013 05:50:10 America/Denver] setting controller status to 1000
+[25-Oct-2013 05:50:10 America/Denver] saving controller to db

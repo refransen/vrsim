@@ -6274,6 +6274,58 @@ function teacher_uploadUsers_setup($section, $extrabutton = '', array $extraurlp
     $PAGE->navigation->clear_cache();
 }
 
+////////////////////////////////////////////////////////////////////////////////////////
+// Rachel Fransen - Sept 30, 2013
+// Allows this function to be accessed by teacher role
+// Specifically allows access to the "Add a user"
+//
+// @global moodle_page $PAGE
+// 
+// @param string $section name of page
+// @param string $extrabutton extra HTML that is added after the blocks editing on/off button.
+// @param array $extraurlparams an array paramname => paramvalue, or parameters that need to be
+//      added to the turn blocks editing on/off form, so this page reloads correctly.
+// @param string $actualurl if the actual page being viewed is not the normal one for this
+//       page (e.g. admin/roles/allow.php, instead of admin/roles/manage.php, you can pass the alternate URL here.
+// @param array $options Additional options that can be specified for page setup.
+//      pagelayout - This option can be used to set a specific pagelyaout, admin is default.
+////////////////////////////////////////////////////////////////////////////////////////
+function teacher_addUser_setup($section, $extrabutton = '', array $extraurlparams = null, $actualurl = '', array $options = array()) {
+    global $CFG, $PAGE, $USER, $SITE, $OUTPUT;
+
+    $PAGE->set_context(null); // hack - set context to something, by default to system context
+
+    $site = get_site();
+    require_login();
+
+    if (!empty($options['pagelayout'])) {
+        // A specific page layout has been requested.
+        $PAGE->set_pagelayout($options['pagelayout']);
+    } else if ($section === 'upgradesettings') {
+        $PAGE->set_pagelayout('maintenance');
+    } else {
+        $PAGE->set_pagelayout('admin');
+    }
+
+    if (empty($SITE->fullname) || empty($SITE->shortname)) {
+        // During initial install.
+        $strinstallation = get_string('installation', 'install');
+        $strsettings = get_string('settings');
+        $PAGE->navbar->add($strsettings);
+        $PAGE->set_title($strinstallation);
+        $PAGE->set_heading($strinstallation);
+        $pageURL = new moodle_url('/user/editadvanced.php');
+        $PAGE->set_url($pageURL, $extraurlparams);
+
+        $PAGE->set_cacheable(false);
+        return;
+    }
+
+    // prevent caching in nav block
+    $PAGE->navigation->clear_cache();
+}
+
+
 /**
  * Returns the reference to admin tree root
  *

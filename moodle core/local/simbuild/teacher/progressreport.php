@@ -6,10 +6,12 @@
 // the SBC TEACHER page 
 /////////////////////////////////////////////////////////////////////
 require_once('../../../config.php');
+require_once('../lib.php');
 
 //CSS
 $PAGE->requires->css('/local/simbuild/teacher/progressreport.css');
 $PAGE->requires->js('/local/simbuild/teacher/progressreport.js');
+$PAGE->requires->js('/local/spin.js');
 
 //--------------------
 //   CREATE LOGIN
@@ -41,9 +43,11 @@ $PAGE->set_url($CFG->wwwroot.'/local/simbuild/teacher/progressreport.php');
 //--------------------
 //  FILTER ACTIONS
 //--------------------
-$reportType = optional_param('report', 'overview', PARAM_ALPHA);    // which report to display
-$viewType = optional_param('view', 'class', PARAM_ALPHA);            // which view to show, class or student
-$className = optional_param('class', '0', PARAM_INT);            // which class to show
+$reportType = optional_param('report', 'overview', PARAM_ALPHA);    	// which report to display
+$academicType = optional_param('academic', '0', PARAM_INT);		// Which academic skill to display (construction / academic skills only)
+$constructType = optional_param('construction', '0', PARAM_INT);	// Which construction skill to display (construction / academic skills only)
+$viewType = optional_param('view', 'class', PARAM_ALPHA);            	// which view to show, class or student
+$className = optional_param('class', '0', PARAM_INT);            	// which class to show
 
 //  EXTRA VARIABLES
 $worksite = optional_param('worksite', 'shed', PARAM_ALPHA);
@@ -55,8 +59,8 @@ $studentOptions = array();
 if ($className == 0) 
 { 
     $sqlUsers = "SELECT ra.userid as id 
-               FROM {$CFG->prefix}role_assignments AS ra 
-         INNER JOIN {$CFG->prefix}context AS ctx 
+    	     FROM {$CFG->prefix}role_assignments AS ra 
+    	     INNER JOIN {$CFG->prefix}context AS ctx 
                  ON ra.contextid = ctx.id 
               WHERE ra.roleid = 5 
                 AND ctx.instanceid = ".$course->id." 
@@ -78,6 +82,7 @@ else
         }
     }            
 }    
+
 //--------------------
 // Create last filter option for single student
 //--------------------
@@ -97,13 +102,13 @@ foreach($studentOptions as $key=>$value)
 // Echo extra javascripts for the graphs
 //--------------------
 echo '
-<script src="/local/RGraph/libraries/RGraph.common.core.js "></script>
-<script src="/local/RGraph/libraries/RGraph.common.dynamic.js "></script>
-<script src="/local/RGraph/libraries/RGraph.common.effects.js "></script>
-<script src="/local/RGraph/libraries/RGraph.common.tooltips.js "></script>
-<script src="/local/RGraph/libraries/RGraph.drawing.yaxis.js "></script>
-<script src="/local/RGraph/libraries/RGraph.line.js "></script>
-<script src="/local/RGraph/libraries/RGraph.bar.js "></script>
+<script src="'.$CFG->wwwroot.'/local/RGraph/libraries/RGraph.common.core.js "></script>
+<script src="'.$CFG->wwwroot.'/local/RGraph/libraries/RGraph.common.dynamic.js "></script>
+<script src="'.$CFG->wwwroot.'/local/RGraph/libraries/RGraph.common.effects.js "></script>
+<script src="'.$CFG->wwwroot.'/local/RGraph/libraries/RGraph.common.tooltips.js "></script>
+<script src="'.$CFG->wwwroot.'/local/RGraph/libraries/RGraph.drawing.yaxis.js "></script>
+<script src="'.$CFG->wwwroot.'/local/RGraph/libraries/RGraph.line.js "></script>
+<script src="'.$CFG->wwwroot.'/local/RGraph/libraries/RGraph.bar.js "></script>
 ';
 
 echo $OUTPUT->header();
@@ -120,11 +125,46 @@ else if($reportType !== 'overview')
 $reportOptions = array(
    'overview' => 'Overview',
    'skills' => 'Class Skills', 
-   'construction' => 'Construction Standards',
-   'academic' => 'Academic Standards'
+   'construction' => 'Construction Skills',
+   'academic' => 'Academic Skills'
 );
 $reportForm = 'Choose Report: ' . $OUTPUT->single_select(new moodle_url('/local/simbuild/teacher/progressreport.php', 
-          array('id'=>$id, 'class'=>$className, 'view'=>$viewType)), 'report', $reportOptions, $selected = $reportType, '', $formid = 'fnreport');
+          array('id'=>$id, 'class'=>$className, 'student'=>$studentID)), 'report', $reportOptions, 
+          $selected = $reportType, '', $formid = 'fnreport');
+
+//--------------------
+// Get the skills
+//--------------------
+$constructOptions = array();
+$constructIDs = array();
+$myType = "Building";
+if($results = $SBC_DB->get_records_sql("SELECT * FROM {skill} myskill WHERE myskill.Type = ?", array($myType)))
+{
+    foreach($results as $singleResult)  {
+    	//FIX: Evetually remove concrete forms from the db
+    	if($singleResult->desc !== "Concrete Forms")  {
+            $constructOptions[] = get_string($singleResult->desc, "theme_simbuild");
+            $constructIDs[] = $singleResult->idskill;
+        }
+    }
+}
+$constructForm = 'Choose Skill: '.$OUTPUT->single_select(new moodle_url('/local/simbuild/teacher/progressreport.php',
+	array('id'=>$id, 'construction'=>$constructType, 'report'=>$reportType, 'class'=>$className, 'student'=>$studentID)), 'construction', 
+	$constructOptions, $selected=$constructType, '', $formid='fnconstruct');
+
+$academicOptions = array();
+$academicIDs = array();
+$myType = "Academic";
+if($results = $SBC_DB->get_records_sql("SELECT * FROM {skill} myskill WHERE myskill.Type = ?", array($myType)))
+{
+    foreach($results as $singleResult)  {    	
+        $academicOptions[] = get_string($singleResult->desc, "theme_simbuild");
+        $academicIDs[] = $singleResult->idskill; 
+    }
+}
+$academicForm = 'Choose Skill: '.$OUTPUT->single_select(new moodle_url('/local/simbuild/teacher/progressreport.php',
+	array('id'=>$id, 'academic'=>$academicType, 'report'=>$reportType, 'class'=>$className, 'student'=>$studentID)), 'academic', 
+	$academicOptions, $selected=$academicType, '', $formid='fnacademic');
 
 //--------------------
 // Get all the classes (groups)
@@ -137,7 +177,7 @@ if ($groups = $DB->get_records('groups', array('courseid'=>$course->id))){
     }        
 }
 $classForm = 'Choose Class: ' . $OUTPUT->single_select(new moodle_url('/local/simbuild/teacher/progressreport.php', 
-          array('id'=>$id, 'report'=>$reportType, 'view'=>$viewType, 'student'=>$studentID)), 'class', 
+          array('id'=>$id, 'report'=>$reportType, 'student'=>$studentID)), 'class', 
           $classOptions, $selected = $className, '', $formid = 'fnclass');
 
 $viewOptions = array(
@@ -150,23 +190,26 @@ $viewForm = 'Choose View: ' . $OUTPUT->single_select(new moodle_url('/local/simb
 
 
 $studentForm = 'Choose Student: ' . $OUTPUT->single_select(new moodle_url('/local/simbuild/teacher/progressreport.php', 
-          array('id'=>$id, 'report'=>$reportType, 'class'=>$className, 'view'=>$viewType)), 'student', 
+          array('id'=>$id, 'report'=>$reportType, 'class'=>$className)), 'student', 
           $studentOptions, $selected = $studentID , '', $formid = 'fnstudent');
 
 ////////////////////////////////////////
-// Print the filter box
+// Print the filter boxes
 ////////////////////////////////////////
-echo '
-<div class="filterBox" >'.$reportForm.'</div>
-<div class="filterBox" >'.$classForm.'</div>';
-
-if($reportType === 'overview')  {
-    echo '<div class="filterBox" >'.$viewForm.'</div>';
-}
+echo '<div class="filterBox" >'.$classForm.'</div>';
 if($viewType == 'student')  {
     echo '<div class="filterBox" >'.$studentForm.'</div>';
 }
-
+/*
+if($reportType === 'overview')  {
+    echo '<div class="filterBox" >'.$viewForm.'</div>';
+}*/
+echo '<div class="filterBox" >'.$reportForm.'</div>';
+if($reportType === 'construction')  {
+    echo '<div class="filterBox">'.$constructForm.'</div>';
+}else if($reportType === 'academic') {
+    echo '<div class="filterBox">'.$academicForm.'</div>';
+}
 
 ////////////////////////////////////////
 // Get block info
@@ -189,11 +232,11 @@ switch($reportType)
     }break;
     case 'construction':
     {
-        $blotckTitle = 'Construction Standards Report';
+        $blockTitle = 'Construction Skills Report';
     }break;
     case 'academic':
     {
-        $blockTitle = 'Academic Standards Report';
+        $blockTitle = 'Academic Skills Report';
     }break;
 }
 
@@ -206,9 +249,9 @@ echo
         <div class="title">
             <div class="block_action" onclick="toggleBlock()">
             	<img class="block-hider-hide" id="hideblock" tabindex="0" alt="Hide Report" title="Hide Report" 
-            		src="/theme/simbuild/pix_core/t/switch_minus.png" />
+            		src="'.$CFG->wwwroot.'/theme/simbuild/pix_core/t/switch_minus.png" />
             	<img class="block-hider-show" id="showblock" tabindex="0" alt="Show Report" title="Show Report" 
-            		src="/theme/simbuild/pix_core/t/switch_plus.png" />
+            		src="'.$CFG->wwwroot.'/theme/simbuild/pix_core/t/switch_plus.png" />
             </div>
             <h2>'.$blockTitle.'</h2>
         </div>
@@ -225,32 +268,51 @@ echo
     	{
     	    if($viewType == 'class')  
     	    {
-		    echo '<table class="overviewtable">
+                $finalID = json_encode($course->id);
+                $finalSort = htmlspecialchars(json_encode('student'), ENT_COMPAT);
+                $finalProgSort = htmlspecialchars(json_encode('progress'), ENT_COMPAT);
+                $finalTimeSort = htmlspecialchars(json_encode('time'), ENT_COMPAT);
+                $finalLearnSort = htmlspecialchars(json_encode('learn'), ENT_COMPAT);
+                $finalClassName = htmlspecialchars(json_encode($className), ENT_COMPAT);
+                
+                $shedUrl = $CFG->wwwroot.'/theme/simbuild/pix/charts/ShedIcon.png';
+                $ranchUrl = $CFG->wwwroot.'/theme/simbuild/pix/charts/HouseIcon.png';
+                $multiUrl = $CFG->wwwroot.'/theme/simbuild/pix/charts/MultiLevelHouseIcon.png';
+		    echo '<table class="overviewtable" id="overviewtable">
 		    <tr>
-		        <th>Student Name <div class="downarrow"></div></th>
-		        <th class="progressth" >Site Progress
-		        <div class="downarrow"></div>
+		        <th>Student Name <div class="downarrow" onclick="sortStudents(this,'.$finalSort.','.$finalClassName.')" ></div></th>
+		        <th class="progressth" >Worksite Progress
+		        <div class="downarrow" onclick="sortStudents(this,'.$finalProgSort.','.$finalClassName.')"></div>
 		            <div class="siteimages" >   
-		                <div class="shed"></div>
-		                <div class="ranch"></div>
-		                <div class="multilevel"></div>
+		                <div class="shed" style="background-image: url('.$shedUrl.');" ></div>
+		                <div class="ranch" style="background-image: url('.$ranchUrl.');" ></div>
+		                <div class="multilevel" style="background-image: url('.$multiUrl.');" ></div>
 		            </div>
 		        </th>
-		        <th>Time Spent  <div class="downarrow"></div></th>
-		        <th>Learning Momentum  <div class="downarrow"></div></th>
+		        <th>Time Spent  <div class="downarrow" onclick="sortStudents(this,'.$finalTimeSort.','.$finalClassName.')"></div></th>
+		        <th>Learning Momentum  <div class="downarrow" onclick="sortStudents(this,'.$finalLearnSort.','.$finalClassName.')"></div></th>
 		    </tr>';
-		    foreach($studentOptions as $student)
+		    
+		    foreach($studentOptions as $key=>$value)
 		    {
+		    	$student = $value;
+		    	$studentID = $key;
+		    	
 		        echo '<tr><td><p class="studentname" >'.$student.'</p></td>';
 		        
-		        $siteOffset = 2;
-		        $siteProgress = 35 - $siteOffset;
-		        echo '<td><p class="siteprogress" style="width:'.$siteProgress.'%;"></p> <div class="sitestripes" ></div></td>
-		        <td><p class="timeworked" >';
-		        $time = '1 : 00 : 12'; 
-		        echo $time.'</p></td>';
+		        $siteProgress = calculate_siteprogress($studentID);
+		        echo '<td><p class="siteprogress" style="width:'.$siteProgress.'%;"></p>'; // <div class="sitestripes" ></div></td>
+		        echo '<td><p class="timeworked" >';
 		        
-		        $learnProgress = 20;
+		        $totalSeconds = calculate_totalTimeSpent($studentID);	
+		        $hours = floor($totalSeconds / 3600);
+			    $minutes = floor(($totalSeconds / 60) % 60);
+			    $seconds = $totalSeconds % 60;
+			    $newTime = sprintf("%2d : %02d : %02d", $hours, $minutes, $seconds);
+                echo $newTime.'</p></td>';
+		        
+		        $learnProgress = calculate_totalProfLearnMom($studentID); 
+		      
 		        $arrowProgress = $learnProgress - 5;
 		        $learnColor = '#85d52f';
 		        if($learnProgress <= 25)  {
@@ -260,8 +322,8 @@ echo
 		        }
 		        
 		        echo '
-		        <td><img src="/theme/simbuild/pix/progressreport/orange_arrow_up.png" style="margin-left:'.$arrowProgress.'%;" />
-		        <div class="chartbox" >
+		        <td><div class="chartbox" >
+		            <img src="'.$CFG->wwwroot.'/theme/simbuild/pix/progressreport/orange_arrow_up.png" style="left:'.$arrowProgress.'%;" />
 		            <div class="learnprogress" style="width:'.$learnProgress.'%;background-color:'.$learnColor.';"></div>
 		            <div class="learnstripes" ></div>
 			</div></td></tr>';
@@ -270,30 +332,69 @@ echo
 	    }
 	    else
 	    {
+	        // CURRENTLY NOT BEING USED
 	        // Get our single student
 	        $student = $DB->get_record('user', array('id'=>$selectedStudentID));
-	        $enrollmentDate = "July 15, 2013";
 	        
-	        $studentData = array(50, 40, 30, 50, 75, 75, 75, 50, 40, 30, 50, 75, 75, 75);
-	        $graphLabels = array('Mon','Tues','Wed','Thur','Fri','Sat','Sun', 'Mon','Tues','Wed','Thur','Fri','Sat','Sun');
-	        $studentProgress = 60;
+	        // Get User enrollmenut
+	        $studentEnroll = $DB->get_record('user_enrolments', array('userid'=>$selectedStudentID));
+            $enrollmentDate = date('F d, Y', $studentEnroll->timestart);
+            if(empty($enrollmentDate)) {$enrollmentDate = '--';}
+
+            // Create data for the daily report
+            $finalDailyData = createDailyOverall($selectedStudentID);
+            $dayData= $finalDailyData['data'];
+            $dayLabels = $finalDailyData['labels'];
+            $dayTitle = $finalDailyData['title'];
+
+            // Create data for the weekly report
+            $finalWeekData = createWeeklyOverall($selectedStudentID);
+            $weekData = $finalWeekData['data'];
+            $weekLabels = $finalWeekData['labels'];
+            $weekTitle = $finalWeekData['title'];
+
+            // Create data for the monthly report
+            $finalMonthData = createMonthlyOverall($selectedStudentID);
+            $monthData = $finalMonthData['data'];
+            $monthLabels = $finalMonthData['labels'];
+            $monthTitle = $finalMonthData['title'];
+                
+            $newDayData = json_encode($dayData);
+    		$newDayLabels = htmlspecialchars( json_encode($dayLabels), ENT_COMPAT);
+    		
+    		$newWeekData = json_encode($weekData);
+    		$newWeekLabels = htmlspecialchars( json_encode($weekLabels), ENT_COMPAT);
+    		
+    		$newMonthData = json_encode($monthData);
+    		$newMonthLabels = htmlspecialchars( json_encode($monthLabels), ENT_COMPAT);
+
+            // FIX: create hard-code data for SBC student
+            if($studentID == 22 )  { 
+                $dayTitle = 'September 01, 2013 - September 5, 2013';
+                $dayLabels = array('Mon - 01', 'Tues - 02', 'Wed - 03', 'Thur - 04', 'Fri - 05'); 
+                $newDayLabels = htmlspecialchars( json_encode($dayLabels), ENT_COMPAT);
+                $weekLabels = array('Week 1, Week 2');
+                $newWeekLabels = htmlspecialchars( json_encode($weekLabels), ENT_COMPAT);
+                $monthLabels = array('Sept 2013', 'Oct 2013');
+                $newMonthLabels = htmlspecialchars( json_encode($monthLabels), ENT_COMPAT);
+
+                $dayData = array(70, 50, 65, 30, 85);
+                $newDayData = json_encode($dayData);
+
+                $weekData = array(58,0);
+                $newWeekData = json_encode($weekData);
+
+                $monthData= array(40, 0);
+                $newMonthData = json_encode($monthData);
+            }
+	        // Get total SBC progress
+	        $studentProgress = calculate_siteprogress($selectedStudentID);
+	        if($selectedStudentID == 22 ) { $studentProgress = 33; }	
 	        
-	    	echo "
-	    	<script src='/local/simbuild/teacher/overviewreport.js' ></script>
-	    	<script>
-	    	window.onload = function ()
-		{
-		    DrawWeeklyChart(".json_encode($studentData).",".json_encode($graphLabels).");
-		    
-		    var yaxis = new RGraph.Drawing.YAxis('axes', 57)
-		    .Set('max', overallstudent.max)
-		    .Set('numticks', 2)
-		    .Set('colors', ['black'])
-		    .Set('numlabels', 3)
-		    .Set('labels.specific', ['Excellent','Good','Low'])
-		    .Draw();
-		}
-	    	</script>";
+	        $graphWidth = getGraphWidth(count($dayLabels));        
+	        
+	        // Create link for dashboard
+	        $loginURL = $CFG->wwwroot.'/course/loginas.php?id='.$course->id.'&amp;user='.$selectedStudentID.'&amp;sesskey='.$USER->sesskey;
 	    	echo '
 	    	<div class="topoverview">
 	    	    <div class="studentinfo">
@@ -302,9 +403,9 @@ echo
 		         echo '</div>
 		         <h3>'.$studentOptions[$selectedStudentID].'</h3>
 		         <h3>Enrolled: '.$enrollmentDate.'</h3>
-		         <div class="button" >
+		         <a href="'.$loginURL.'" ><div class="button" >
 		             <h3>View Dashboard</h3>
-		         </div>
+		         </div></a>
 	    	    </div>
 	    	    <div class="progressinfo">
 	    	        <h3>Overall Simbuild Progress: <span>'.$studentProgress.'%</span></h3>
@@ -314,22 +415,40 @@ echo
 	    	    </div>
 	    	</div>
 	    	
-	    	<div class="bottomoverview">
+	    	<div class="bottomoverview" >'; 
+	    	//echo "<script src='/local/simbuild/teacher/overviewreport.js' ></script>
+	    	echo "
+	    	<script>
+	    	window.onload = function ()
+		    {
+		    DrawOverallChart(".json_encode($dayData).",".json_encode($dayLabels).");
+		    
+		    var yaxis = new RGraph.Drawing.YAxis('axes', 57)
+		    .Set('max', overallstudent.max)
+		    .Set('numticks', 2)
+		    .Set('colors', ['black'])
+		    .Set('numlabels', 3)
+		    .Set('labels.specific', ['Excellent','Good','Low'])
+		    .Draw();
+		    }
+		
+	    	</script>"; echo '
 	    	    <h3 class="title">Learning Momentum over Time</h3>
-	    	    <div class="canvasdiv">
+	    	    <p class="title">'.$dayTitle.'</p>
+	    	    <div class="canvasdiv" >
         		<canvas id="axes" width="60" height="225" style=""></canvas>
-       			<div class="chartdiv">
-            		    <canvas id="overallstudent" width="1000" height="225" >[No canvas support]</canvas>
+       			<div class="chartdiv" id="chartdiv">
+            		    <canvas id="overallstudent" width="'.$graphWidth.'" height="225" >[No canvas support]</canvas>
         		</div>
     		    </div>
     		    <div class="chartbuttons">
-    		      	<div class="button" onclick="" >
+    		      	<div class="button selected" onclick="OnButtonClick(this,'.$newDayData .','.$newDayLabels.')" >
         		    <h3>Overall</h3>
     			</div>
-    			<div class="button" onclick="" >
+    			<div class="button" onclick="OnButtonClick(this,'.$newWeekData.','.$newWeekLabels.')" >
         		    <h3>Weekly</h3>
     			</div>
-    			<div class="button" onclick="" >
+    			<div class="button" onclick="OnButtonClick(this,'.$newMonthData.','.$newMonthLabels.')" >
         		    <h3>Monthly</h3>
     			</div>
     		    </div>
@@ -341,25 +460,133 @@ echo
 	
 	case 'skills':
 	{
-	    $academicData = array(60, 51, 40, 78);
-	    $academicLineData = array(72, 60, 30, 80);
-            $academicLabels = array('Reading','Knowledge','Math','Prob Solving');
+	    //Find all the academic skills
+	    $academicData = array();
+	    $academicLineData = array();
+	    $academicLabels = array();
+	    foreach($academicIDs as $skillID)  
+	    {
+	        $labelName = '';
+	        if($skillName= $SBC_DB->get_record_sql("SELECT * FROM {skill} myskill WHERE myskill.idSkill= ?", array($skillID)) ) {
+	            $labelName = $skillName->desc;
+	        }
+	        $academicLabels[] = get_string($labelName, "theme_simbuild"); 
+
+	        $totalProgress = 0;
+	        $totalLearn = 0;
+		    foreach($studentOptions as $key=>$value)
+		    {
+		        $studentID = $key;
+	            $studentData = findProfileSkillProgress($studentID, $skillID);
+	            $totalProgress += $studentData['progress'];   
+	            $totalLearn +=  $studentData['learning']; 
+	        }
+	        $totalStudents = count($studentOptions);
+	        $averageProgress = 0;
+	        $averageLearn  = 0;
+	        if($totalStudents > 0 ) {
+	            $averageProgress = (int)($totalProgress / $totalStudents);
+	            $averageLearn = (int)($totalLearn / $totalStudents );
+	        }
+	        
+	        $academicData [] = $averageProgress;
+	        $academicLineData[] = $averageLearn;
+	    } 
+	    if(count($academicIDs) == 0) {
+	        $academicData = array(0, 0, 0, 0);
+	        $academicLineData = array(0, 0, 0, 0);
+	        $academicLabels = array('','','','');
+	    }
+
+        $foundationData = array();
+        $foundationLineData = array();
+        $foundationLabels = array();
+        $foundationIDS= array();
+	    $myType = "Carpentry";
+	    if($results = $SBC_DB->get_records_sql("SELECT * FROM {skill} myskill WHERE myskill.Type = ?", array($myType)))  {
+		    foreach($results as $singleResult)  {
+		        $foundationIDS[] = $singleResult->idskill; 
+		    }
+	    }
+        foreach($foundationIDS as $skillID)  
+	    {
+	        $labelName = '';
+	    	if($skillName = $SBC_DB->get_record_sql("SELECT * FROM {skill} myskill WHERE myskill.idSkill= ?", array($skillID)) ) {
+	    	    $labelName = get_string($skillName->desc, "theme_simbuild");
+	    	}	    	
+	        $foundationLabels[] = $labelName;; 
+	        
+	        $totalProgress = 0;
+	        $totalLearn = 0;
+		    foreach($studentOptions as $key=>$value)
+		    {
+		        $studentID = $key;
+	            $studentData = findProfileSkillProgress($studentID, $skillID);
+	            $totalProgress += $studentData['progress'];   
+	            $totalLearn +=  $studentData['learning']; 
+	        }
+	        $totalStudents = count($studentOptions);
+	        $averageProgress = 0;
+	        $averageLearn  = 0;
+	        if($totalStudents > 0 ) {
+	            $averageProgress = (int)($totalProgress / $totalStudents);
+	            $averageLearn = (int)($totalLearn / $totalStudents );
+	        }
+	        
+	        $foundationData[] = $averageProgress;
+	        $foundationLineData[] = $averageLearn;
+	    }
+	    if(count($foundationIDS) == 0) {
+	        $foundationData = array(0,0,0,0);
+                $foundationLineData = array(0,0,0,0);
+                $foundationLabels = array('','','','');
+	    }
             
-            $foundationData = array(43, 52, 58, 65);
-            $foundationLineData = array(30, 58, 75, 50);
-            $foundationLabels = array('Blueprints','Safety','Tools','Materials');
-            
-            $buildingData = array(34, 49, 44, 40, 32, 29, 16);
-            $buildingLabels = array('Floor', 'Walls', 'Ceiling', 'Roof', 'Stairs', 'Windows & Doors', 'Drywall');
+        $buildingData = array();
+        $buildingLineData = array();
+        $buildingLabels = array();
+        foreach($constructIDs  as $skillID)  
+	    {
+	        $labelName = '';
+	        if($skillName= $SBC_DB->get_record_sql("SELECT * FROM {skill} myskill WHERE myskill.idSkill= ?", array($skillID)) ) {
+                    $tempLabel = str_replace("and", "&", $skillName->desc);
+                    $labelName = $tempLabel;
+            }
+	        $buildingLabels [] = get_string($labelName, "theme_simbuild");
+                
+	        $totalProgress = 0;
+	        $totalLearn = 0;
+		    foreach($studentOptions as $key=>$value)
+		    {
+		        $studentID = $key;
+	            $studentData = findProfileSkillProgress($studentID, $skillID);
+	            $totalProgress += $studentData['progress'];   
+	            $totalLearn +=  $studentData['learning']; 
+	        }
+	        $totalStudents = count($studentOptions);
+	        $averageProgress = 0;
+	        $averageLearn  = 0;
+	        if($totalStudents > 0 ) {
+	            $averageProgress = (int)($totalProgress / $totalStudents);
+	            $averageLearn = (int)($totalLearn / $totalStudents );
+	        }
+	        
+	        $buildingData [] = $averageProgress;
+	        $buildingLineData [] = $averageLearn;
+	    }
+	    if(count($constructIDs) == 0 ) {
+	        $buildingData = array(0,0,0,0);
+                $buildingLineData = array(0,0,0,0);
+                $buildingLabels = array('','','','');
+	    }
             
 	    echo "
-    	    <script src='/local/simbuild/teacher/classSkillsReport.js' ></script>
     	    <script>
     	    window.onload = function ()
 	    {
-	        DrawAcademicSkills(".json_encode($academicData).",".json_encode($academicLineData ).",".json_encode($academicLabels).");
+	        DrawAcademicSkills(".json_encode($academicData).",".json_encode($academicLineData).",".json_encode($academicLabels).");
 	        DrawFoundationSkills(".json_encode($foundationData).",".json_encode($foundationLineData).",".json_encode($foundationLabels).");
-	        DrawBuildingSkills(".json_encode($buildingData).",".json_encode($buildingLabels).");
+	        DrawBuildingSkills(".json_encode($buildingData).",".json_encode($buildingLineData).",".json_encode($buildingLabels).");
 	    }
     	    </script>";
     	   
@@ -384,7 +611,7 @@ echo
     	    	            </div>
     	    	        </div>
     	    	    </div>
-	    	    <canvas id="academicskills" width="375" height="200">[No canvas support]</canvas>
+	    	    <canvas id="academicskills" width="375" height="210">[No canvas support]</canvas>
 	    	</div>
 	    	<div class="rightcolumn" >
 	    	    <div class="charttitle" >
@@ -405,7 +632,7 @@ echo
     	    	            </div>
     	    	        </div>
     	    	    </div>
-	    	    <canvas id="foundationskills" width="375" height="200">[No canvas support]</canvas>
+	    	    <canvas id="foundationskills" width="375" height="210">[No canvas support]</canvas>
 	    	</div>
 	    </div>
     	    
@@ -437,21 +664,32 @@ echo
 	
 	case 'construction':
 	{
-	    //Get the selection from the left menu block
-	    $standardName = "Floor";
-    
-            // Get our single student
-            $student = $DB->get_record('user', array('id'=>$selectedStudentID));
-            $enrollmentDate = "July 15, 2013";
-        
-            $studentData = array(50, 40, 30, 50, 75, 75, 75, 50);
-            $graphLabels = array('S9','S10','S11','S12','R5','R6','M3', 'M3a');
-            $studentProgress = 40;
-        
-    	    echo "
-    	    <script src='/local/simbuild/teacher/constructionReport.js' ></script>
-    	    <script>
-    	    window.onload = function ()
+	    //Get the selection from the skill filter
+	    $standardName = $constructOptions[$constructType];
+	    $currSkillID = $constructIDs[$constructType];
+	    
+	    // Get our single student
+	    $student = $DB->get_record('user', array('id'=>$selectedStudentID));
+	        
+	    // Get User enrollmenut
+	    $studentEnroll = $DB->get_record('user_enrolments', array('userid'=>$selectedStudentID));
+        $enrollmentDate = date('F d, Y', $studentEnroll->timestart);
+        if(empty($enrollmentDate)) {$enrollmentDate = '--';}
+	    	    
+	    $finalDataArr = createConSkillReport($selectedStudentID, $currSkillID);
+	    $studentData = $finalDataArr['graphdata'];
+    	$graphLabels = $finalDataArr['graphlabels'];
+    	$orderNames = $finalDataArr['ordernames'];
+    	$ordersPassed = $finalDataArr['orderpassed'];
+    	$ordersMastered = $finalDataArr['ordermasterd'];
+    	$studentProgress = $finalDataArr['totalprogress'];
+            
+        // If there are too many orders, expand the graph width
+        $graphWidth = getGraphWidth(count($graphLabels), 600) * 1.2;
+            	                   
+    	echo "
+    	<script>
+    	window.onload = function ()
 	    {
 	        DrawConstructionReport(".json_encode($studentData).",".json_encode($graphLabels).");
 	    
@@ -463,7 +701,8 @@ echo
 	        .Set('labels.specific', ['Excellent','Good','Low'])
 	        .Draw();
 	    }
-    	    </script>";
+    	</script>";
+	     $loginURL = $CFG->wwwroot.'/course/loginas.php?id='.$course->id.'&amp;user='.$selectedStudentID.'&amp;sesskey='.$USER->sesskey;
     	    echo '
     	    <div class="topoverview">
     	        <div class="studentinfo">
@@ -472,9 +711,9 @@ echo
 	             echo '</div>
 	             <h3>'.$studentOptions[$selectedStudentID].'</h3>
 	             <h3>Enrolled: '.$enrollmentDate.'</h3>
-	             <div class="button" >
+	             <a href="'.$loginURL.'" ><div class="button" >
 	                 <h3>View Dashboard</h3>
-	             </div>
+	             </div></a>
     	        </div>
     	        <div class="progressinfo">
     	            <h3>'.$standardName.' Progress: <span>'.$studentProgress.'%</span></h3>
@@ -485,69 +724,109 @@ echo
     	    </div>
     	
     	    <div class="bottomoverview">
-    	        <h3 class="title">Construction Standard: '.$standardName.'</h3>
+    	        <h3 class="title">Construction Skill: '.$standardName.'</h3>
     	        <p class="title">Learning Momentum over Work Orders</p>
     	        <div class="canvasdiv">
 		    <canvas id="axes" width="60" height="225" style=""></canvas>
 		    <div class="chartdiv">
-    		        <canvas id="constructionStudent" width="1000" height="225" >[No canvas support]</canvas>
+    		        <canvas id="constructionStudent" width="'.$graphWidth.'" height="225" >[No canvas support]</canvas>
 		    </div>
 	        </div> 
+	        
     	    </div>
     	    
     	    <div class="orderinfo">
                 <div class="activities">
-                    <h3>Work Orders with this Standard</h3>
-	                <div class="titles">
-	                    <p>Activity Name</p>
-	                    <p>Activity Name</p>
-	                    <p>Activity Name</p>
-	                    <p>Activity Name</p>
-	                </div>
+                    <h3>Work Orders with this Skill</h3>
+	                <div class="titles">';
+	                
+	           // Now get the individual work ordrs for this skill
+	           $findShed = false;
+	           $findRanch = false;
+	           $findMulti = false;
+               $shedUrl = $CFG->wwwroot.'/theme/simbuild/pix/charts/ShedIcon.png';
+               $ranchUrl = $CFG->wwwroot.'/theme/simbuild/pix/charts/HouseIcon.png';
+               $multiUrl = $CFG->wwwroot.'/theme/simbuild/pix/charts/MultiLevelHouseIcon.png';
+               
+		       foreach($orderNames as $singleName)  {
+		            if($singleName[0] == 'S' )  {
+		                $className = "shed";          
+		                if(!$findShed) {$findShed = true; }
+		                else { $className .= " hidden";  }
+		                echo  '<div class="'.$className.'" style="background-image: url('.$shedUrl.');" ></div>';
+		            } 
+                    else if($singleName[0] == 'R' )  {
+		                $className = "ranch";        
+		                if(!$findRanch) { $findRanch= true; }
+		                else { $className .= " hidden";  }
+		                echo  '<div class="'.$className.'" style="background-image: url('.$ranchUrl.');" ></div>';
+		            }
+                    else if($singleName[0] == 'M' )  {
+		                $className = "multilevel";       
+		                if(!$findMulti) { $findMulti = true; }
+		                else { $className .= " hidden";  }
+		                echo  '<div class="'.$className.'" style="background-image: url('.$multiUrl.');"></div>';
+		            }
+		            echo '<p>'.$singleName.'</p><br />';
+		        }
+		echo '</div>
                </div>
             <div class="passedboxes">
                 <h3>Passed</h3>
-                <div class="checkboxes">
-                   <p>▢</p>
-                    <p>▢</p>
-                    <p>▢</p>
-                    <p>▢</p>
-                </div>
+                <div class="checkboxes">';
+                foreach ($orderNames as $key => $value)
+                {
+                   if(!$ordersPassed[$key]) 
+                   {  echo '<p>&#x25A1;</p>'; }
+                   else {  echo '<p class="greenBoxes" >&#x2713;</p>';  }                   
+                }                    
+          echo '</div>
             </div>
             <div class="masteredboxes">
                 <h3>Mastered</h3>
-                <div class="checkboxes">
-                    <p>▢</p>
-                    <p>▢</p>
-                    <p>▢</p>
-                    <p>▢</p>
-               </div>
+                <div class="checkboxes">';
+                foreach ($orderNames as $key => $value)
+                {
+                   if(!$ordersMastered[$key]) 
+                   {  echo '<p>&#x25A1;</p>'; }
+                   else {  echo '<p class="greenBoxes">&#x2713;</p>';  }                   
+                } 
+          echo '</div>
             </div>
-    	    	
         </div>';
 	}break;
 	
 	case 'academic':
 	{
 	    //Get the selection from the left menu block
-	    $standardName = "Math";
-    
-            // Get our single student
-            $student = $DB->get_record('user', array('id'=>$selectedStudentID));
-            $enrollmentDate = "July 15, 2013";
-        
-            $studentData = array(50, 40, 30, 50, 75, 75);
-            $graphLabels = array('Calculate it','Tape Reading','Measure & Cut','Marking Rafters','Quizzes','Review');
-            $studentProgress = 40;
+	    $standardName = $academicOptions[$academicType];
+	    $currSkillID = $academicIDs[$academicType];
+	    
+	    // Get our single student
+	    $student = $DB->get_record('user', array('id'=>$selectedStudentID));
+	        
+	    // Get User enrollmenut
+	    $studentEnroll = $DB->get_record('user_enrolments', array('userid'=>$selectedStudentID));
+        $enrollmentDate = date('F d, Y', $studentEnroll->timestart);
+        if(empty($enrollmentDate)) {$enrollmentDate = '--';}	
             
-            $progressBarArr = array(100, 60, 50, 40, 30, 0);
-        
-    	    echo "
-    	    <script src='/local/simbuild/teacher/academicReport.js' ></script>
-    	    <script>
-    	    window.onload = function ()
+        // Get the data for this chart
+        $finalDataArr = createActSkillReport($selectedStudentID, $currSkillID );
+        $graphData = $finalDataArr['graphdata'];
+    	$graphLabels = $finalDataArr['graphlabels'];
+    	$activitiesMastered = $finalDataArr['groupmastered'];
+    	$progressBarData = $finalDataArr['groupprogress'];
+    	$progressBarLabels = $finalDataArr['barlabels'];
+    	$studentProgress = $finalDataArr['totalprogress'];    
+	    
+        // If there are too many orders, expand the graph width
+        $graphWidth = getGraphWidth(count($graphLabels)); 
+    
+    	echo "
+    	<script>
+    	window.onload = function ()
 	    {
-	        DrawAcademicReport(".json_encode($studentData).",".json_encode($graphLabels).");
+	        DrawAcademicReport(".json_encode($graphData).",".json_encode($graphLabels).");
 	    
 	        var yaxis = new RGraph.Drawing.YAxis('axes', 57)
 	        .Set('max', academicStudent.max)
@@ -558,6 +837,7 @@ echo
 	        .Draw();
 	    }
     	    </script>";
+	     $loginURL = $CFG->wwwroot.'/course/loginas.php?id='.$course->id.'&amp;user='.$selectedStudentID.'&amp;sesskey='.$USER->sesskey;
     	    echo '
     	    <div class="topoverview">
     	        <div class="studentinfo">
@@ -566,9 +846,9 @@ echo
 	             echo '</div>
 	             <h3>'.$studentOptions[$selectedStudentID].'</h3>
 	             <h3>Enrolled: '.$enrollmentDate.'</h3>
-	             <div class="button" >
+	             <a href="'.$loginURL.'" ><div class="button" >
 	                 <h3>View Dashboard</h3>
-	             </div>
+	             </div></a>
     	        </div>
     	        <div class="progressinfo">
     	            <h3>'.$standardName.' Progress: <span>'.$studentProgress.'%</span></h3>
@@ -579,12 +859,12 @@ echo
     	    </div>
     	
     	    <div class="bottomoverview">
-    	        <h3 class="title">Academic Standard: '.$standardName.'</h3>
+    	        <h3 class="title">Academic Skill: '.$standardName.'</h3>
     	        <p class="title">Learning Momentum over Activity Groups</p>
     	        <div class="canvasdiv">
 		    <canvas id="axes" width="60" height="225" style=""></canvas>
 		    <div class="chartdiv">
-    		        <canvas id="academicStudent" width="1000" height="225" >[No canvas support]</canvas>
+    		        <canvas id="academicStudent" width="'.$graphWidth.'" height="225" >[No canvas support]</canvas>
 		    </div>
 	        </div> 
     	    </div>
@@ -592,21 +872,21 @@ echo
     	    <div class="activityinfo">
                 <div class="activities">
                     <h3>Activity Groups</h3>
-	                <div class="titles">
-	                    <p>Calculate It</p>
-	                    <p>Tape Reading</p>
-	                    <p>Measure & Cut</p>
-	                    <p>Marking Rafters</p>
-	                    <p>Quizzes</p>
-	                    <p>Review</p>
-	                </div>
+	                <div class="titles">';
+	                foreach($graphLabels as $singleName) {
+	                    echo '<p style="display:block;" >'.$singleName.'</p>';
+	                }
+	                    
+	          echo '</div>
                </div>
                <div class="passedBars" >
                    <h3>Passed</h3>
                    <div class="activitybars" >';
-                       foreach($progressBarArr as $singleProgress)
-                       {
-                           echo '<div class="progress-bar green"><span style="width:'.$singleProgress.'%;"></span></div>';
+                       $progressCounter = 0;
+                       foreach($progressBarData as $singleProgress)  {
+                           $progressText = $progressBarLabels[$progressCounter];
+                           echo '<div class="progress-bar green"><span style="width:'.$singleProgress.'%;"><p>'.$progressText.'</p></span></div>';
+                           $progressCounter++;
                        }
                    echo '    
                    </div>
@@ -614,14 +894,15 @@ echo
                
                 <div class="masteredboxes">
                     <h3>Mastered</h3>
-                    <div class="checkboxes">
-                       <p>▢</p>
-                       <p>▢</p>
-                       <p>▢</p>
-                       <p>▢</p>
-                       <p>▢</p>
-                       <p>▢</p>
-                   </div>
+                    <div class="checkboxes">';
+                       foreach($activitiesMastered as $singleMaster) {
+                           if(!$singleMaster) 
+                           {  echo '<p>&#x25A1;</p>'; }
+                   	   else 
+                   	   {  echo '<p class="greenBoxes">&#x2713;</p>';  } 
+                       }    
+                       
+                   echo '</div>
                 </div>
         </div>';
 	}break;

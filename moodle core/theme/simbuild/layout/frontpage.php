@@ -48,8 +48,10 @@ header("X-XSS-Protection: 0");
 
 <script src="<?php echo $CFG->wwwroot.'/local/RGraph/libraries/RGraph.bar.js' ?> "></script>
 <script src="<?php echo $CFG->wwwroot.'/local/RGraph/libraries/RGraph.line.js' ?> "></script>
-
 <!--[if lt IE 9]><script src="<?php echo $CFG->wwwroot.'/local/RGraph/excanvas/excanvas.js' ?> "></script><![endif]-->
+
+<link rel="stylesheet" type="text/css" href="<?php echo $CFG->wwwroot.'/theme/simbuild/style/sbc_dashboard.css' ?> ">
+<script type="text/javascript" src="<?php echo $CFG->wwwroot.'/theme/simbuild/javascript/sbc_dashboard.js' ?> "></script>
 
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
 
@@ -113,6 +115,9 @@ header("X-XSS-Protection: 0");
 	            	    	    <div id="region-main-wrap">
     	            	    	    <div id="region-main">
         	            	    	<div class="region-content">
+        	            	    	
+        	            	    	<?php include('sbc_dashboard.php'); ?>
+        	            	    	
             	            	    	<?php echo $OUTPUT->main_content() ?>
 
                                             <!--------- PRINT THE CENTER BLOCKS --------------->

@@ -46,6 +46,12 @@
     if (!isset($config->removeuser)) {
         $config->removeuser = AUTH_REMOVEUSER_KEEP;
     }
+    // Rachel Fransen - October 2, 2013
+    // define the usertheme
+    if (!isset($config->usertheme)) {
+        $config->usertheme ='simbuild';
+    }
+
 
     $yesno = array( get_string('no'), get_string('yes') );
 
@@ -244,6 +250,29 @@
     </td>
     <td><?php print_string('changepasswordhelp', 'auth') ?></td>
 </tr>
+
+<!-- Rachel Fransen - Adding usertheme  to the external database -->
+<?php
+    //getting the themes defined in the site
+    $choices = array();
+    $choices[''] = get_string('default');
+    $themes = get_list_of_themes();
+    foreach ($themes as $key=>$theme) {
+        if (empty($theme->hidefromselector)) {
+           $choices[$key] = get_string('pluginname', 'theme_'.$theme->name);
+        }
+    }  
+?>
+<tr valign="top" class="required">
+    <td align="right"><label for="usertheme"><?php echo get_string('usertheme','auth_db');?></label></td>
+    <td>
+       <?php   echo html_writer::select($choices, 'usertheme', $config->usertheme, false); ?>
+        
+   </td>
+   <td><?php echo get_string('userthemedec','auth_db'); ?></td>
+</tr>
+<!-- end of usertheme field in the external database -->
+
 
 <tr>
    <td colspan="2">

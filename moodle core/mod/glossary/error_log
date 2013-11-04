@@ -1,0 +1,21 @@
+[29-Sep-2013 08:23:11 America/Denver] Default exception handler: Invalid course module ID Debug: 
+Error code: invalidcoursemodule
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 26 of /mod/glossary/view.php: call to print_error()
+
+[29-Sep-2013 08:23:33 America/Denver] Default exception handler: You are trying to use an invalid course ID Debug: 
+Error code: invalidcourseid
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 16 of /mod/glossary/index.php: call to print_error()
+
+[29-Sep-2013 08:28:17 America/Denver] Default exception handler: Invalid course module ID Debug: 
+Error code: invalidcoursemodule
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 26 of /mod/glossary/view.php: call to print_error()
+
+[29-Sep-2013 08:36:15 America/Denver] Default exception handler: glossary/invalidid Debug: 
+Error code: invalidid
+$a contents: 
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 47 of /mod/glossary/view.php: call to print_error()
+

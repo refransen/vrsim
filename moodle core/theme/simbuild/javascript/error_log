@@ -1,0 +1,2 @@
+[24-Sep-2013 08:38:08 America/Denver] PHP Warning:  require(/home/vrsimlms/public_html/theme/simbuild/javascript/../../config.php): failed to open stream: No such file or directory in /home/vrsimlms/public_html/theme/simbuild/javascript/sbcOverviewBlock.php on line 7
+[24-Sep-2013 08:38:08 America/Denver] PHP Fatal error:  require(): Failed opening required '/home/vrsimlms/public_html/theme/simbuild/javascript/../../config.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/vrsimlms/public_html/theme/simbuild/javascript/sbcOverviewBlock.php on line 7

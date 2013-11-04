@@ -11,8 +11,10 @@ if (session_is_loggedinas()) {
     require_sesskey();
     require_logout();
 
-    if ($id and $id != SITEID) {
-        $SESSION->wantsurl = "$CFG->wwwroot/course/view.php?id=".$id;
+    // Rachel Fransen - Nov 3, 2013
+    // Only let the siteadmin arrive at the last page seen
+    if ($id and $id != SITEID && is_siteadmin()) {
+           $SESSION->wantsurl = "$CFG->wwwroot/course/view.php?id=".$id;
     } else {
         $SESSION->wantsurl = "$CFG->wwwroot/";
     }

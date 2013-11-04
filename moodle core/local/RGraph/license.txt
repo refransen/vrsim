@@ -25,9 +25,9 @@ licensing@rgraph.net
 
 
 
-o--------------------------------------------------------------------------------o
-| You may not redistribute, sublicense or sell this program. This software is    |
-| provided without warranty. You can read the full license here:                 |
-|                                                                                |
-|                          http://www.rgraph.net/license                         |
-o--------------------------------------------------------------------------------o
+o------------------------------------------------------------------------------------------o
+| You may not sublicense or sell this program. This software is provided without warranty. |
+| You can read the full license here:                                                      |
+|                                                                                          |
+|                          http://www.rgraph.net/license                                   |
+o------------------------------------------------------------------------------------------o
