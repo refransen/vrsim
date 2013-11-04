@@ -612,3 +612,15 @@ Error code: invalidrecord
 [25-Oct-2013 05:50:10 America/Denver] processing file aliases queue
 [25-Oct-2013 05:50:10 America/Denver] setting controller status to 1000
 [25-Oct-2013 05:50:10 America/Denver] saving controller to db
+[04-Nov-2013 05:25:06 America/Denver] Default exception handler: Incorrect sesskey submitted, form not accepted! Debug: 
+Error code: invalidsesskey
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 1045 of /lib/sessionlib.php: call to print_error()
+* line 11 of /course/loginas.php: call to require_sesskey()
+
+[04-Nov-2013 05:25:39 America/Denver] Default exception handler: Incorrect sesskey submitted, form not accepted! Debug: 
+Error code: invalidsesskey
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 1045 of /lib/sessionlib.php: call to print_error()
+* line 36 of /course/loginas.php: call to require_sesskey()
+

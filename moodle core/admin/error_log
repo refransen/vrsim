@@ -551,3 +551,13 @@ Error code: sectionerror
 * line 22 of /admin/settings.php: call to print_error()
 
 [30-Oct-2013 15:30:03 America/Denver] PHP Warning:  mysqli::mysqli(): (08004/1040): Too many connections in /home/vrsimlms/public_html/lib/dml/mysqli_native_moodle_database.php on line 381
+[04-Nov-2013 05:08:59 America/Denver] Default exception handler: Section error! Debug: 
+Error code: sectionerror
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 22 of /admin/settings.php: call to print_error()
+
+[04-Nov-2013 05:09:03 America/Denver] Default exception handler: Sorry, but you do not currently have permissions to do that (Change site configuration) Debug: 
+Error code: nopermissions
+* line 704 of /lib/accesslib.php: required_capability_exception thrown
+* line 410 of /admin/index.php: call to require_capability()
+

@@ -208,18 +208,18 @@ echo $OUTPUT->header();
 
 // Rachel Fransen -Added these icons to all user profile pages
 //------------------------------
-if($currentuser)
+if($currentuser && $USER->theme !== 'simbuild')
 {
     $hardcodedtext= '<table id="profilelinks" align="center" cellpadding="20">
     <tbody>
     <tr valign="bottom" align="center">
       <td valign="center"><a href=" '.$CFG->wwwroot.'/user/edit.php" >
-      <img src="'.$CFG->wwwroot.'/theme/vrsim/pix/profile/profile_new.png" width="32" height="32" title="Edit Profile" /><br />Edit Profile</a></td>';
+      <img src="'.$CFG->wwwroot.'/theme/vrsim/pix/profile/profile_new.png" width="32" height="32" title="Edit Profile" /><br />Edit Profile</a></td>
                 
-      /*<td valign="center"><a href="/login/change_password.php" >
-      <img src="/theme/vrsim/pix/profile/editprofile_new.png" width="32" height="32" title="Change Password" /><br />Change password</a></td>*/
+      <td valign="center"><a href="'.$CFG->wwwroot.'/login/change_password.php" >
+      <img src="'.$CFG->wwwroot.'/theme/vrsim/pix/profile/editprofile_new.png" width="32" height="32" title="Change Password" /><br />Change password</a></td>
 		
-      $hardcodedtext .= '<td valign="center"><a href="'.$CFG->wwwroot.'/message/index.php" >
+     <td valign="center"><a href="'.$CFG->wwwroot.'/message/index.php" >
       <img src="'.$CFG->wwwroot.'/theme/vrsim/pix/profile/email_new.png" width="32" height="32" title="Messages" /><br />Messages</a></td>
     </tr>
     </tbody>

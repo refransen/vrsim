@@ -6,7 +6,7 @@
 // the SBC student page 
 /////////////////////////////////////////////////////////////////////
 require_once('../../../config.php');   
-require_once('/siteoverview.php');     
+require_once('siteoverview.php');     
 
 //CSS        
 $PAGE->requires->css('/local/simbuild/student/progressreport.css');

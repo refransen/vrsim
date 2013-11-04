@@ -318,7 +318,7 @@ a{padding:0
 #custommenu .yui3-menuitem-active .yui3-menuitem-content,
 #custommenu .yui3-menu-horizontal .yui3-menu-label,
 #custommenu .yui3-menu-horizontal .yui3-menu-content{background-image:none;background-position:right center;background-repeat:no-repeat}#custommenu .yui3-menu-label,
-#custommenu .yui3-menu .yui3-menu .yui3-menu-label{background-image:url(/theme/image.php/simbuild/theme/1378476616/vertical-menu-submenu-indicator);padding-right:20px}#custommenu .yui3-menu .yui3-menu .yui3-menu-label-menuvisible{background-image:url(/theme/image.php/simbuild/theme/1378476616/horizontal-menu-submenu-indicator)}.smartselect{position:absolute}.smartselect
+#custommenu .yui3-menu .yui3-menu .yui3-menu-label{background-image:url(/theme/image.php/simbuild/theme/1383584031/vertical-menu-submenu-indicator);padding-right:20px}#custommenu .yui3-menu .yui3-menu .yui3-menu-label-menuvisible{background-image:url(/theme/image.php/simbuild/theme/1383584031/horizontal-menu-submenu-indicator)}.smartselect{position:absolute}.smartselect
 .smartselect_mask{background-color:#fff}.smartselect
 ul{padding:0;margin:0}.smartselect ul
 li{list-style:none}.smartselect
@@ -333,7 +333,7 @@ li{position:relative;padding:2px
 5px}.smartselect .smartselect_menu_content ul li
 a{color:#333;text-decoration:none}.smartselect .smartselect_menu_content ul li
 a.selectable{color:inherit}.smartselect
-.smartselect_submenuitem{background-image:url(/theme/image.php/simbuild/core/1378476616/t/collapsed);background-repeat:no-repeat;background-position:100%}.smartselect.spanningmenu
+.smartselect_submenuitem{background-image:url(/theme/image.php/simbuild/core/1383584031/t/collapsed);background-repeat:no-repeat;background-position:100%}.smartselect.spanningmenu
 .smartselect_submenu{position:absolute;top:-1px;left:100%}.smartselect.spanningmenu .smartselect_submenu
 a{white-space:nowrap;padding-right:16px}.smartselect.spanningmenu .smartselect_menu_content ul li a.selectable:hover{text-decoration:underline}.smartselect.compactmenu
 .smartselect_submenu{position:relative;margin:2px
@@ -428,7 +428,7 @@ object{height:15px;width:300px}audio.mediaplugin_html5audio{width:300px}.core_me
 .dir-rtl .ygtvok,
 .dir-rtl .ygtvok:hover,
 .dir-rtl .ygtvcancel,
-.dir-rtl .ygtvcancel:hover{width:18px;height:22px;background-image:url(/theme/image.php/simbuild/theme/1378476616/yui2-treeview-sprite-rtl);background-repeat:no-repeat;cursor:pointer}.dir-rtl
+.dir-rtl .ygtvcancel:hover{width:18px;height:22px;background-image:url(/theme/image.php/simbuild/theme/1383584031/yui2-treeview-sprite-rtl);background-repeat:no-repeat;cursor:pointer}.dir-rtl
 .ygtvtn{background-position:0 -5600px}.dir-rtl
 .ygtvtm{background-position:0 -4000px}.dir-rtl .ygtvtmh,
 .dir-rtl
@@ -957,7 +957,7 @@ solid #DDD;margin-top:5px;list-style:none}.course-content .section-summary .sect
 form.togglecompletion{position:absolute;top:0;right: .2em}.path-course-view li.activity span.autocompletion img,
 .path-course-view li.activity form.togglecompletion
 input{position:absolute;top: .25em;right:0px}.path-course-view li.activity form.togglecompletion
-.ajaxworking{position:absolute;right:22px;top:5px;width:16px;height:16px;background:url(/theme/image.php/simbuild/core/1378476616/i/ajaxloader) no-repeat}.path-course-view li.activity form.togglecompletion
+.ajaxworking{position:absolute;right:22px;top:5px;width:16px;height:16px;background:url(/theme/image.php/simbuild/core/1383584031/i/ajaxloader) no-repeat}.path-course-view li.activity form.togglecompletion
 div{display:inline}.dir-rtl.path-course-view li.activity form.togglecompletion,
 .dir-rtl.path-course-view li.activity
 span.autocompletion{left:1.7em;right:auto;padding:0px}.dir-rtl.path-course-view
@@ -1007,12 +1007,12 @@ img{vertical-align:text-bottom}.dir-rtl .categorylist .course
 .indentation{margin-left:24px}.course
 ul.section{margin:5px;padding:0}.weeks-format,.topics-format{margin-top:8px;min-width:763px}.categoryboxcontent{border-width:1px;border-style:solid}.course_category_tree
 .controls{visibility:hidden}.course_category_tree .controls
-div{display:inline;cursor:pointer}.course_category_tree .category.with_children>.category_label{background-image:url(/theme/image.php/simbuild/core/1378476616/t/expanded);background-repeat:no-repeat}.course_category_tree
+div{display:inline;cursor:pointer}.course_category_tree .category.with_children>.category_label{background-image:url(/theme/image.php/simbuild/core/1383584031/t/expanded);background-repeat:no-repeat}.course_category_tree
 .category_label{padding-left:13px}.course_category_tree .category
 .category{margin:5px
 0}.course_category_tree .category
 .courses{padding-left:16px}.course_category_tree .category .courses
-.course_link{display:block;background-image:url(/theme/image.php/simbuild/core/1378476616/i/course);background-repeat:no-repeat;padding-left:21px}.course_category_tree .category
+.course_link{display:block;background-image:url(/theme/image.php/simbuild/core/1383584031/i/course);background-repeat:no-repeat;padding-left:21px}.course_category_tree .category
 .course{position:relative}.course_category_tree .category
 .course_info{position:absolute;right:0;top:0}.dir-rtl .course_category_tree .category
 .course_info{position:static}.dir-rtl .course_category_tree .category .course_info a, .dir-rtl .course_category_tree .category .course_info
@@ -1021,7 +1021,7 @@ div{padding:7px}.course_category_tree .category .course_info
 img{margin-left: .45em}.dir-rtl .course_category_tree .category .course_info
 img{margin-right: .45em;margin-left:0}.jsenabled .course_category_tree
 .controls{visibility:visible}.jsenabled .course_category_tree .category.with_children.collapsed
-.category_label{background-image:url(/theme/image.php/simbuild/core/1378476616/t/collapsed)}.jsenabled .course_category_tree .category.with_children.collapsed .subcategories,
+.category_label{background-image:url(/theme/image.php/simbuild/core/1383584031/t/collapsed)}.jsenabled .course_category_tree .category.with_children.collapsed .subcategories,
 .jsenabled .course_category_tree .category.with_children.collapsed
 .courses{display:none}.path-course
 .clearfloat{float:none;clear:both;height:0px}#page-course-index .categorylist
@@ -1029,7 +1029,7 @@ img{margin-right: .45em;margin-left:0}.jsenabled .course_category_tree
 .info{float:right;text-align:right}.dir-rtl .coursebox
 .summary{text-align:right}.dir-rtl .course_category_tree .category.with_children>.category_label{background-position:center right;padding-right:18px}.dir-rtl .course_category_tree .category_label, .dir-rtl .course_category_tree .category
 .course{padding-right:18px}.dir-rtl.jsenabled .course_category_tree .category.with_children.collapsed
-.category_label{background-image:url(/theme/image.php/simbuild/core/1378476616/t/collapsed_rtl)}.dir-rtl .course_category_tree .category .courses
+.category_label{background-image:url(/theme/image.php/simbuild/core/1383584031/t/collapsed_rtl)}.dir-rtl .course_category_tree .category .courses
 .course_link{background-position:center right;padding-right:18px}.dir-rtl
 .clearfloat{float:none;clear:both;height:0px}.dir-rtl .categorylist .category .info,
 .dir-rtl .categorylist .category .indentation,
@@ -1346,14 +1346,14 @@ div{display:inline-block;padding:0px
 2px;padding-right:10px}.dir-rtl .fp-toolbar
 div{width:100px}.fp-toolbar
 img{vertical-align:-15%;margin-right:5px}.fp-toolbar .fp-tb-search{width:228px;height:14px}.fp-toolbar .fp-tb-search
-input{background:#FFF url('/theme/image.php/simbuild/core/1378476616/a/search') no-repeat 3px 3px;padding:2px
+input{background:#FFF url('/theme/image.php/simbuild/core/1383584031/a/search') no-repeat 3px 3px;padding:2px
 6px 1px 20px;width:200px;height:16px;border:1px
 solid #BBB}.fp-viewbar{float:right;width:69px;height:22px;margin-right:8px}.dir-rtl .fp-toolbar
-img{vertical-align:-35%}.dir-rtl .fp-viewbar{float:left;width:100px}.fp-vb-icons{background:url('/theme/image.php/simbuild/theme/1378476616/fp/view_icon_active') no-repeat 0 0;width:22px;height:22px;display:inline-block}.dir-rtl .fp-vb-icons{background:url('/theme/image.php/simbuild/theme/1378476616/fp/view_icon_active') no-repeat 0 0;display:block;float:left;margin-right:4px}.fp-vb-icons.checked{background:url('/theme/image.php/simbuild/theme/1378476616/fp/view_icon_selected')}.dir-rtl .fp-vb-icons.checked{background:url('/theme/image.php/simbuild/theme/1378476616/fp/view_icon_selected');display:block;float:left;margin-right:4px}.fp-viewbar.disabled .fp-vb-icons{background:url('/theme/image.php/simbuild/theme/1378476616/fp/view_icon_inactive')}.fp-vb-details{background:url('/theme/image.php/simbuild/theme/1378476616/fp/view_list_active') no-repeat 0px 0px;width:23px;height:22px;display:inline-block;margin-left:-4px}.dir-rtl .fp-vb-details{background:url('/theme/image.php/simbuild/theme/1378476616/fp/view_list_active') no-repeat 0px 0px;display:block;float:left;margin-right:4px}.fp-vb-details.checked{background:url('/theme/image.php/simbuild/theme/1378476616/fp/view_list_selected')}.dir-rtl .fp-vb-details.checked{background:url('/theme/image.php/simbuild/theme/1378476616/fp/view_list_selected');display:block;float:left;margin-right:4px}.fp-viewbar.disabled .fp-vb-details{background:url('/theme/image.php/simbuild/theme/1378476616/fp/view_list_inactive')}.fp-vb-tree{background:url('/theme/image.php/simbuild/theme/1378476616/fp/view_tree_active') no-repeat 0px 0px;width:23px;height:22px;display:inline-block;margin-left:-4px}.dir-rtl .fp-vb-tree{background:url('/theme/image.php/simbuild/theme/1378476616/fp/view_tree_active') no-repeat 0px 0px;display:block;float:left;margin-right:4px}.fp-vb-tree.checked{background:url('/theme/image.php/simbuild/theme/1378476616/fp/view_tree_selected')}.dir-rtl .fp-vb-tree.checked{background:url('/theme/image.php/simbuild/theme/1378476616/fp/view_tree_selected');display:block;float:left;margin-right:4px}.fp-viewbar.disabled .fp-vb-tree{background:url('/theme/image.php/simbuild/theme/1378476616/fp/view_tree_inactive')}.file-picker .fp-clear-left{clear:left}.dir-rtl .filemanager-toolbar .fp-vb-icons a:hover{background:url('/theme/image.php/simbuild/theme/1378476616/fp/view_icon_selected')}.dir-rtl .filemanager-toolbar .fp-vb-icons.checked a:hover{background:url('/theme/image.php/simbuild/theme/1378476616/fp/view_icon_active') no-repeat 0 0}.dir-rtl .fp-vb-details a:hover{background:none;border:20px
+img{vertical-align:-35%}.dir-rtl .fp-viewbar{float:left;width:100px}.fp-vb-icons{background:url('/theme/image.php/simbuild/theme/1383584031/fp/view_icon_active') no-repeat 0 0;width:22px;height:22px;display:inline-block}.dir-rtl .fp-vb-icons{background:url('/theme/image.php/simbuild/theme/1383584031/fp/view_icon_active') no-repeat 0 0;display:block;float:left;margin-right:4px}.fp-vb-icons.checked{background:url('/theme/image.php/simbuild/theme/1383584031/fp/view_icon_selected')}.dir-rtl .fp-vb-icons.checked{background:url('/theme/image.php/simbuild/theme/1383584031/fp/view_icon_selected');display:block;float:left;margin-right:4px}.fp-viewbar.disabled .fp-vb-icons{background:url('/theme/image.php/simbuild/theme/1383584031/fp/view_icon_inactive')}.fp-vb-details{background:url('/theme/image.php/simbuild/theme/1383584031/fp/view_list_active') no-repeat 0px 0px;width:23px;height:22px;display:inline-block;margin-left:-4px}.dir-rtl .fp-vb-details{background:url('/theme/image.php/simbuild/theme/1383584031/fp/view_list_active') no-repeat 0px 0px;display:block;float:left;margin-right:4px}.fp-vb-details.checked{background:url('/theme/image.php/simbuild/theme/1383584031/fp/view_list_selected')}.dir-rtl .fp-vb-details.checked{background:url('/theme/image.php/simbuild/theme/1383584031/fp/view_list_selected');display:block;float:left;margin-right:4px}.fp-viewbar.disabled .fp-vb-details{background:url('/theme/image.php/simbuild/theme/1383584031/fp/view_list_inactive')}.fp-vb-tree{background:url('/theme/image.php/simbuild/theme/1383584031/fp/view_tree_active') no-repeat 0px 0px;width:23px;height:22px;display:inline-block;margin-left:-4px}.dir-rtl .fp-vb-tree{background:url('/theme/image.php/simbuild/theme/1383584031/fp/view_tree_active') no-repeat 0px 0px;display:block;float:left;margin-right:4px}.fp-vb-tree.checked{background:url('/theme/image.php/simbuild/theme/1383584031/fp/view_tree_selected')}.dir-rtl .fp-vb-tree.checked{background:url('/theme/image.php/simbuild/theme/1383584031/fp/view_tree_selected');display:block;float:left;margin-right:4px}.fp-viewbar.disabled .fp-vb-tree{background:url('/theme/image.php/simbuild/theme/1383584031/fp/view_tree_inactive')}.file-picker .fp-clear-left{clear:left}.dir-rtl .filemanager-toolbar .fp-vb-icons a:hover{background:url('/theme/image.php/simbuild/theme/1383584031/fp/view_icon_selected')}.dir-rtl .filemanager-toolbar .fp-vb-icons.checked a:hover{background:url('/theme/image.php/simbuild/theme/1383584031/fp/view_icon_active') no-repeat 0 0}.dir-rtl .fp-vb-details a:hover{background:none;border:20px
 solid black}.dir-rtl .fp-vb-details.checked a:hover{background:none;border:40px
 solid black}.dir-rtl .fp-vb-tree a:hover{background:none;border:30px
 solid black}.dir-rtl .fp-vb-tree.checked a:hover{background:none;border:50px
-solid black}.file-picker .fp-pathbar{display:table-row}.fp-pathbar.empty{display:none}.fp-pathbar .fp-path-folder{background:url('/theme/image.php/simbuild/theme/1378476616/fp/path_folder') no-repeat 0 0;width:27px;height:12px;margin-left:4px}.dir-rtl .fp-pathbar .fp-path-folder{background:url('/theme/image.php/simbuild/theme/1378476616/fp/path_folder_rtl') no-repeat right top;width:auto;height:12px;margin-left:4px}.dir-rtl .fp-pathbar
+solid black}.file-picker .fp-pathbar{display:table-row}.fp-pathbar.empty{display:none}.fp-pathbar .fp-path-folder{background:url('/theme/image.php/simbuild/theme/1383584031/fp/path_folder') no-repeat 0 0;width:27px;height:12px;margin-left:4px}.dir-rtl .fp-pathbar .fp-path-folder{background:url('/theme/image.php/simbuild/theme/1383584031/fp/path_folder_rtl') no-repeat right top;width:auto;height:12px;margin-left:4px}.dir-rtl .fp-pathbar
 span{display:inline-block;float:right;margin-left:32px}.fp-pathbar .fp-path-folder-name{margin-left:32px;line-height:20px}.dir-rtl .fp-pathbar .fp-path-folder-name{margin-right:32px;line-height:20px}.fp-iconview .fp-file{float:left;text-align:center;position:relative;margin:10px
 10px 35px}.fp-iconview .fp-thumbnail{min-width:110px;min-height:110px;line-height:110px;text-align:center;border:1px
 solid #FFF;display:block}.fp-iconview .fp-thumbnail
@@ -1362,24 +1362,24 @@ solid #DDD;padding:3px;vertical-align:middle;-webkit-box-shadow:1px 1px 2px 0px 
 solid #DDD;-webkit-box-shadow:inset 0px 0px 10px 0px #CCC;-moz-box-shadow:inset 0px 0px 10px 0px #CCC;box-shadow:inset 0px 0px 10px 0px #CCC}.fp-iconview .fp-filename-field{height:33px;word-wrap:break-word;overflow:hidden;position:absolute}.fp-iconview .fp-filename-field:hover{overflow:visible;z-index:1000}.fp-iconview .fp-filename-field .fp-filename{background:#FFF;padding-top:5px;padding-bottom:12px;min-width:112px}.dir-rtl .fp-iconview .fp-file{float:right}.file-picker .yui3-datatable
 table{border:0px
 solid #BBB;width:100%}#filesskin .file-picker .yui3-datatable-header{background:#FFF;border-bottom:1px solid #CCC;border-left:0 solid #FFF;color:#555}#filesskin .file-picker .yui3-datatable-odd .yui3-datatable-cell{background-color:#F6F6F6;border-left:0px solid #F6F6F6}#filesskin .file-picker .yui3-datatable-even .yui3-datatable-cell{background-color:#FFF;border-left:0px solid #FFF}.dir-rtl .file-picker .yui3-datatable-header{text-align:right}.file-picker .ygtvtn, .filemanager
-.ygtvtn{background:url('/theme/image.php/simbuild/core/1378476616/y/tn') 0px 0px no-repeat;width:17px;height:22px}.dir-rtl .file-picker
-.ygtvtn{background:url('/theme/image.php/simbuild/core/1378476616/y/tn_rtl') 0px 0px no-repeat;width:17px;height:22px}.file-picker .ygtvtm, .filemanager
-.ygtvtm{background:url('/theme/image.php/simbuild/core/1378476616/y/tm') 0px 10px no-repeat;width:13px;height:12px;cursor:pointer}.file-picker .ygtvtmh, .filemanager
-.ygtvtmh{background:url('/theme/image.php/simbuild/core/1378476616/y/tm') 0px 10px no-repeat;width:13px;height:12px;cursor:pointer}.file-picker .ygtvtp, .filemanager
-.ygtvtp{background:url('/theme/image.php/simbuild/core/1378476616/y/tp') 0px 10px no-repeat;width:13px;height:12px;cursor:pointer}.dir-rtl .file-picker
-.ygtvtp{background:url('/theme/image.php/simbuild/core/1378476616/y/tp_rtl') 0px 10px no-repeat;width:13px;height:12px;cursor:pointer}.file-picker .ygtvtph, .filemanager
-.ygtvtph{background:url('/theme/image.php/simbuild/core/1378476616/y/tp') 0px 10px no-repeat;width:13px;height:22px;cursor:pointer}.dir-rtl .file-picker
-.ygtvtph{background:url('/theme/image.php/simbuild/core/1378476616/y/tp_rtl') 0px 10px no-repeat;width:13px;height:22px;cursor:pointer}.file-picker .ygtvln, .filemanager
-.ygtvln{background:url('/theme/image.php/simbuild/core/1378476616/y/ln') 0px 0px no-repeat;width:17px;height:22px}.dir-rtl .file-picker
-.ygtvln{background:url('/theme/image.php/simbuild/core/1378476616/y/ln_rtl') 0px 0px no-repeat;width:17px;height:22px}.file-picker .ygtvlm, .filemanager
-.ygtvlm{background:url('/theme/image.php/simbuild/core/1378476616/y/lm') 0px 10px no-repeat;width:13px;height:12px;cursor:pointer}.file-picker .ygtvlmh, .filemanager
-.ygtvlmh{background:url('/theme/image.php/simbuild/core/1378476616/y/lm') 0px 10px no-repeat;width:13px;height:12px;cursor:pointer}.file-picker .ygtvlp, .filemanager
-.ygtvlp{background:url('/theme/image.php/simbuild/core/1378476616/y/lp') 0px 10px no-repeat;width:13px;height:12px;cursor:pointer}.dir-rtl .file-picker
-.ygtvlp{background:url('/theme/image.php/simbuild/core/1378476616/y/lp_rtl') 0px 10px no-repeat;width:13px;height:12px;cursor:pointer}.file-picker .ygtvlph, .filemanager
-.ygtvlph{background:url('/theme/image.php/simbuild/core/1378476616/y/lp') 0px 10px no-repeat;width:13px;height:12px;cursor:pointer}.dir-rtl .file-picker
-.ygtvlph{background:url('/theme/image.php/simbuild/core/1378476616/y/lp_rtl') 0px 10px no-repeat;width:13px;height:12px;cursor:pointer}.file-picker .ygtvloading, .filemanager
-.ygtvloading{background:transparent url('/theme/image.php/simbuild/core/1378476616/y/loading') 0 0 no-repeat;width:16px;height:22px}.file-picker .ygtvdepthcell, .filemanager
-.ygtvdepthcell{background:url('/theme/image.php/simbuild/core/1378476616/y/vline') 0 0 no-repeat;width:17px;height:32px}.file-picker .ygtvblankdepthcell, .filemanager
+.ygtvtn{background:url('/theme/image.php/simbuild/core/1383584031/y/tn') 0px 0px no-repeat;width:17px;height:22px}.dir-rtl .file-picker
+.ygtvtn{background:url('/theme/image.php/simbuild/core/1383584031/y/tn_rtl') 0px 0px no-repeat;width:17px;height:22px}.file-picker .ygtvtm, .filemanager
+.ygtvtm{background:url('/theme/image.php/simbuild/core/1383584031/y/tm') 0px 10px no-repeat;width:13px;height:12px;cursor:pointer}.file-picker .ygtvtmh, .filemanager
+.ygtvtmh{background:url('/theme/image.php/simbuild/core/1383584031/y/tm') 0px 10px no-repeat;width:13px;height:12px;cursor:pointer}.file-picker .ygtvtp, .filemanager
+.ygtvtp{background:url('/theme/image.php/simbuild/core/1383584031/y/tp') 0px 10px no-repeat;width:13px;height:12px;cursor:pointer}.dir-rtl .file-picker
+.ygtvtp{background:url('/theme/image.php/simbuild/core/1383584031/y/tp_rtl') 0px 10px no-repeat;width:13px;height:12px;cursor:pointer}.file-picker .ygtvtph, .filemanager
+.ygtvtph{background:url('/theme/image.php/simbuild/core/1383584031/y/tp') 0px 10px no-repeat;width:13px;height:22px;cursor:pointer}.dir-rtl .file-picker
+.ygtvtph{background:url('/theme/image.php/simbuild/core/1383584031/y/tp_rtl') 0px 10px no-repeat;width:13px;height:22px;cursor:pointer}.file-picker .ygtvln, .filemanager
+.ygtvln{background:url('/theme/image.php/simbuild/core/1383584031/y/ln') 0px 0px no-repeat;width:17px;height:22px}.dir-rtl .file-picker
+.ygtvln{background:url('/theme/image.php/simbuild/core/1383584031/y/ln_rtl') 0px 0px no-repeat;width:17px;height:22px}.file-picker .ygtvlm, .filemanager
+.ygtvlm{background:url('/theme/image.php/simbuild/core/1383584031/y/lm') 0px 10px no-repeat;width:13px;height:12px;cursor:pointer}.file-picker .ygtvlmh, .filemanager
+.ygtvlmh{background:url('/theme/image.php/simbuild/core/1383584031/y/lm') 0px 10px no-repeat;width:13px;height:12px;cursor:pointer}.file-picker .ygtvlp, .filemanager
+.ygtvlp{background:url('/theme/image.php/simbuild/core/1383584031/y/lp') 0px 10px no-repeat;width:13px;height:12px;cursor:pointer}.dir-rtl .file-picker
+.ygtvlp{background:url('/theme/image.php/simbuild/core/1383584031/y/lp_rtl') 0px 10px no-repeat;width:13px;height:12px;cursor:pointer}.file-picker .ygtvlph, .filemanager
+.ygtvlph{background:url('/theme/image.php/simbuild/core/1383584031/y/lp') 0px 10px no-repeat;width:13px;height:12px;cursor:pointer}.dir-rtl .file-picker
+.ygtvlph{background:url('/theme/image.php/simbuild/core/1383584031/y/lp_rtl') 0px 10px no-repeat;width:13px;height:12px;cursor:pointer}.file-picker .ygtvloading, .filemanager
+.ygtvloading{background:transparent url('/theme/image.php/simbuild/core/1383584031/y/loading') 0 0 no-repeat;width:16px;height:22px}.file-picker .ygtvdepthcell, .filemanager
+.ygtvdepthcell{background:url('/theme/image.php/simbuild/core/1383584031/y/vline') 0 0 no-repeat;width:17px;height:32px}.file-picker .ygtvblankdepthcell, .filemanager
 .ygtvblankdepthcell{width:17px;height:22px}a.ygtvspacer:hover{color:transparent;text-decoration:none}.ygtvlabel,.ygtvlabel:link,.ygtvlabel:visited,.ygtvlabel:hover{background-color:transparent;cursor:pointer;margin-left:2px;text-decoration:none}.file-picker .ygtvfocus, .filemanager
 .ygtvfocus{background-color:#EEE}.fp-filename-icon{margin-top:10px;display:block;position:relative}.fp-icon{float:left;margin-top:-7px;width:24px;height:24px;margin-right:10px;text-align:center;line-height:24px}.dir-rtl .fp-icon{float:right}.fp-icon
 img{max-height:24px;max-width:24px;vertical-align:middle}.fp-filename{padding-right:10px}.dir-rtl .fp-filename{padding-left:10px}.file-picker .fp-login-form{height:100%;width:100%;display:table}.file-picker .fp-login-form
@@ -1416,17 +1416,17 @@ form{display:none}.fp-select .fp-dimensions.fp-unknown{display:none}.filemanager
 .fitem.disabled .filemanager .fm-content-wrapper{display:none}.fp-restrictions{text-align:right}.filemanager .fp-navbar{background:#F2F2F2;border-top:1px solid #BBB;border-left:1px solid #BBB;border-right:1px solid #BBB}.filemanager-toolbar{padding:5px
 8px;min-height:22px}.fp-pathbar{border-top:1px solid #BBB;padding:5px
 8px 1px;min-height:20px}.filemanager .fp-pathbar.empty{display:none}.filepicker-filelist,.filemanager-container{background:#FFF;clear:both;overflow:auto;border:1px
-solid #BBB;min-height:140px;position:relative}.filemanager .fp-content{overflow:auto;max-height:472px;min-height:157px}.filemanager-container,.filepicker-filelist{overflow:hidden}.fitem.disabled .filepicker-filelist, .fitem.disabled .filemanager-container{background-color:#EBEBE4}.fitem.disabled .fp-btn-choose{color:graytext}.fitem.disabled .filepicker-filelist .filepicker-filename{display:none}.fp-iconview .fp-reficons1{position:absolute;height:100%;width:100%;top:0;left:0;z-index:1000}.fp-iconview .fp-reficons2{position:absolute;height:100%;width:100%;top:0;left:0;z-index:1001}.fp-iconview .fp-file.fp-hasreferences .fp-reficons1{background:url('/theme/image.php/simbuild/theme/1378476616/fp/link') no-repeat;background-position:bottom right}.fp-iconview .fp-file.fp-isreference .fp-reficons2{background:url('/theme/image.php/simbuild/theme/1378476616/fp/alias') no-repeat;background-position:bottom left}.filemanager .fp-iconview .fp-file.fp-originalmissing .fp-thumbnail
-img{display:none}.filemanager .fp-iconview .fp-file.fp-originalmissing .fp-thumbnail{background:url(/theme/image.php/simbuild/core/1378476616/s/dead) no-repeat;background-position:center center}.filemanager .yui3-datatable
+solid #BBB;min-height:140px;position:relative}.filemanager .fp-content{overflow:auto;max-height:472px;min-height:157px}.filemanager-container,.filepicker-filelist{overflow:hidden}.fitem.disabled .filepicker-filelist, .fitem.disabled .filemanager-container{background-color:#EBEBE4}.fitem.disabled .fp-btn-choose{color:graytext}.fitem.disabled .filepicker-filelist .filepicker-filename{display:none}.fp-iconview .fp-reficons1{position:absolute;height:100%;width:100%;top:0;left:0;z-index:1000}.fp-iconview .fp-reficons2{position:absolute;height:100%;width:100%;top:0;left:0;z-index:1001}.fp-iconview .fp-file.fp-hasreferences .fp-reficons1{background:url('/theme/image.php/simbuild/theme/1383584031/fp/link') no-repeat;background-position:bottom right}.fp-iconview .fp-file.fp-isreference .fp-reficons2{background:url('/theme/image.php/simbuild/theme/1383584031/fp/alias') no-repeat;background-position:bottom left}.filemanager .fp-iconview .fp-file.fp-originalmissing .fp-thumbnail
+img{display:none}.filemanager .fp-iconview .fp-file.fp-originalmissing .fp-thumbnail{background:url(/theme/image.php/simbuild/core/1383584031/s/dead) no-repeat;background-position:center center}.filemanager .yui3-datatable
 table{border:0px
-solid #BBB;width:100%}.filemanager .yui3-datatable-header{background:#FFFFFF!important;border-bottom:1px solid #CCCCCC!important;border-left:0 solid #FFFFFF!important;color:#555555!important}.filemanager .yui3-datatable-odd .yui3-datatable-cell{background-color:#F6F6F6!important;border-left:0px solid #F6F6F6}.filemanager .yui3-datatable-even .yui3-datatable-cell{background-color:#FFFFFF!important;border-left:0px solid #FFF}.filemanager .fp-filename-icon.fp-hasreferences .fp-reficons1{background:url('/theme/image.php/simbuild/theme/1378476616/fp/link_sm') no-repeat 0 0;height:100%;width:100%;position:absolute;top:8px;left:17px;z-index:1000}.filemanager .fp-filename-icon.fp-isreference .fp-reficons2{background:url('/theme/image.php/simbuild/theme/1378476616/fp/alias_sm') no-repeat 0 0;height:100%;width:100%;position:absolute;top:9px;left:-6px;z-index:1001}.filemanager .fp-contextmenu{display:none}.filemanager .fp-iconview .fp-folder.fp-hascontextmenu .fp-contextmenu{display:block;position:absolute;right:7px;bottom:5px;z-index:2000}.filemanager .fp-treeview .fp-folder.fp-hascontextmenu .fp-contextmenu,
+solid #BBB;width:100%}.filemanager .yui3-datatable-header{background:#FFFFFF!important;border-bottom:1px solid #CCCCCC!important;border-left:0 solid #FFFFFF!important;color:#555555!important}.filemanager .yui3-datatable-odd .yui3-datatable-cell{background-color:#F6F6F6!important;border-left:0px solid #F6F6F6}.filemanager .yui3-datatable-even .yui3-datatable-cell{background-color:#FFFFFF!important;border-left:0px solid #FFF}.filemanager .fp-filename-icon.fp-hasreferences .fp-reficons1{background:url('/theme/image.php/simbuild/theme/1383584031/fp/link_sm') no-repeat 0 0;height:100%;width:100%;position:absolute;top:8px;left:17px;z-index:1000}.filemanager .fp-filename-icon.fp-isreference .fp-reficons2{background:url('/theme/image.php/simbuild/theme/1383584031/fp/alias_sm') no-repeat 0 0;height:100%;width:100%;position:absolute;top:9px;left:-6px;z-index:1001}.filemanager .fp-contextmenu{display:none}.filemanager .fp-iconview .fp-folder.fp-hascontextmenu .fp-contextmenu{display:block;position:absolute;right:7px;bottom:5px;z-index:2000}.filemanager .fp-treeview .fp-folder.fp-hascontextmenu .fp-contextmenu,
 .filemanager .fp-tableview .fp-folder.fp-hascontextmenu .fp-contextmenu{display:inline;position:absolute;left:14px;margin-right:-20px;top:6px}.filepicker-filelist .filepicker-container,
 .filemanager.fm-noitems .fm-empty-container{display:block;position:absolute;top:10px;bottom:10px;left:10px;right:10px;border:2px
 dashed #BBB;padding-top:85px;text-align:center;z-index:3000}.filepicker-filelist .dndupload-target,
 .filemanager-container .dndupload-target{background:#FFF;position:absolute;top:10px;bottom:10px;left:10px;right:10px;border:2px
 dashed #fb7979;padding-top:85px;text-align:center;z-index:3000;-webkit-box-shadow:0px 0px 0px 10px #FFF;-moz-box-shadow:0px 0px 0px 10px #FFF;box-shadow:0px 0px 0px 10px #FFF}.filepicker-filelist.dndupload-over .dndupload-target,
 .filemanager-container.dndupload-over .dndupload-target{background:#FFF;position:absolute;top:10px;bottom:10px;left:10px;right:10px;border:2px
-dashed #6c8cd3;padding-top:85px;text-align:center;z-index:3000}.dndupload-message{display:none}.dndsupported .dndupload-message{display:inline}.dnduploadnotsupported-message{display:none}.dndnotsupported .dnduploadnotsupported-message{display:inline}.dndupload-target{display:none}.dndsupported .dndupload-ready .dndupload-target{display:block}.dndupload-uploadinprogress{display:none;text-align:center}.dndupload-uploading .dndupload-uploadinprogress{display:block}.dndupload-arrow{background:url(/theme/image.php/simbuild/theme/1378476616/fp/dnd_arrow) center no-repeat;width:100%;height:80px;position:absolute;margin-left:-28px;top:5px}.fitem.disabled .filepicker-container, .fitem.disabled .fm-empty-container{display:none}.filemanager.fp-select .fp-select-loading{display:none}.filemanager.fp-select.loading .fp-select-loading{display:block}.filemanager.fp-select.loading
+dashed #6c8cd3;padding-top:85px;text-align:center;z-index:3000}.dndupload-message{display:none}.dndsupported .dndupload-message{display:inline}.dnduploadnotsupported-message{display:none}.dndnotsupported .dnduploadnotsupported-message{display:inline}.dndupload-target{display:none}.dndsupported .dndupload-ready .dndupload-target{display:block}.dndupload-uploadinprogress{display:none;text-align:center}.dndupload-uploading .dndupload-uploadinprogress{display:block}.dndupload-arrow{background:url(/theme/image.php/simbuild/theme/1383584031/fp/dnd_arrow) center no-repeat;width:100%;height:80px;position:absolute;margin-left:-28px;top:5px}.fitem.disabled .filepicker-container, .fitem.disabled .fm-empty-container{display:none}.filemanager.fp-select .fp-select-loading{display:none}.filemanager.fp-select.loading .fp-select-loading{display:block}.filemanager.fp-select.loading
 form{display:none}.filemanager.fp-select.fp-folder .fp-license, .filemanager.fp-select.fp-folder .fp-author,
 .filemanager.fp-select.fp-file .fp-file-unzip,
 .filemanager.fp-select.fp-folder .fp-file-unzip,

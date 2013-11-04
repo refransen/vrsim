@@ -938,3 +938,28 @@ Error code: invalidqueryparam
 [31-Oct-2013 12:12:48 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/local/simbuild/lib.php on line 11
 [31-Oct-2013 14:20:58 America/Denver] PHP Parse error:  syntax error, unexpected '}' in /home/vrsimlms/public_html/local/simbuild/lib.php on line 496
 [31-Oct-2013 14:21:40 America/Denver] PHP Warning:  Illegal string offset 'value' in /home/vrsimlms/public_html/local/simbuild/lib.php on line 444
+[04-Nov-2013 04:13:42 America/Denver] PHP Warning:  require_once(/siteoverview.php): failed to open stream: No such file or directory in /home/vrsimlms/public_html/local/simbuild/student/progressreport.php on line 9
+[04-Nov-2013 04:13:42 America/Denver] PHP Fatal error:  require_once(): Failed opening required '/siteoverview.php' (include_path='/home/vrsimlms/public_html/lib/zend:/home/vrsimlms/public_html/lib/pear:.:/usr/lib/php:/usr/local/lib/php') in /home/vrsimlms/public_html/local/simbuild/student/progressreport.php on line 9
+[04-Nov-2013 07:17:37 America/Denver] PHP Notice:  Undefined variable: worksite in /home/vrsimlms/public_html/blocks/sbc_resources/block_sbc_resources.php on line 36
+[04-Nov-2013 07:18:58 America/Denver] PHP Notice:  Undefined variable: worksite in /home/vrsimlms/public_html/blocks/sbc_resources/block_sbc_resources.php on line 46
+[04-Nov-2013 07:19:58 America/Denver] PHP Notice:  Undefined variable: worksite in /home/vrsimlms/public_html/blocks/sbc_resources/block_sbc_resources.php on line 46
+[04-Nov-2013 07:19:58 America/Denver] PHP Fatal error:  Cannot access empty property in /home/vrsimlms/public_html/blocks/sbc_resources/block_sbc_resources.php on line 46
+[04-Nov-2013 07:20:16 America/Denver] PHP Parse error:  syntax error, unexpected '$worksite' (T_VARIABLE), expecting function (T_FUNCTION) in /home/vrsimlms/public_html/blocks/sbc_resources/block_sbc_resources.php on line 18
+[04-Nov-2013 07:20:28 America/Denver] PHP Parse error:  syntax error, unexpected '$worksite' (T_VARIABLE), expecting function (T_FUNCTION) in /home/vrsimlms/public_html/blocks/sbc_resources/block_sbc_resources.php on line 18
+[04-Nov-2013 07:20:44 America/Denver] PHP Parse error:  syntax error, unexpected '$worksite' (T_VARIABLE), expecting function (T_FUNCTION) in /home/vrsimlms/public_html/blocks/sbc_resources/block_sbc_resources.php on line 18
+[04-Nov-2013 07:21:09 America/Denver] PHP Parse error:  syntax error, unexpected '$worksite' (T_VARIABLE), expecting function (T_FUNCTION) in /home/vrsimlms/public_html/blocks/sbc_resources/block_sbc_resources.php on line 18
+[04-Nov-2013 07:21:21 America/Denver] PHP Notice:  Undefined property: block_sbc_resources::$worksite in /home/vrsimlms/public_html/blocks/sbc_resources/block_sbc_resources.php on line 48
+[04-Nov-2013 07:21:38 America/Denver] PHP Parse error:  syntax error, unexpected '$worksite' (T_VARIABLE), expecting function (T_FUNCTION) in /home/vrsimlms/public_html/blocks/sbc_resources/block_sbc_resources.php on line 19
+[04-Nov-2013 07:22:10 America/Denver] PHP Notice:  Undefined property: block_sbc_resources::$worksite in /home/vrsimlms/public_html/blocks/sbc_resources/block_sbc_resources.php on line 47
+[04-Nov-2013 07:24:12 America/Denver] PHP Parse error:  syntax error, unexpected '$myworksite' (T_VARIABLE), expecting function (T_FUNCTION) in /home/vrsimlms/public_html/blocks/sbc_resources/block_sbc_resources.php on line 22
+[04-Nov-2013 07:24:37 America/Denver] PHP Notice:  Undefined variable: worksite in /home/vrsimlms/public_html/blocks/sbc_resources/block_sbc_resources.php on line 7
+[04-Nov-2013 08:18:02 America/Denver] PHP Warning:  Invalid argument supplied for foreach() in /home/vrsimlms/public_html/blocks/sbc_resources/block_sbc_resources.php on line 104
+[04-Nov-2013 08:18:02 America/Denver] PHP Warning:  Invalid argument supplied for foreach() in /home/vrsimlms/public_html/blocks/sbc_resources/block_sbc_resources.php on line 104
+[04-Nov-2013 08:18:02 America/Denver] PHP Warning:  Invalid argument supplied for foreach() in /home/vrsimlms/public_html/blocks/sbc_resources/block_sbc_resources.php on line 104
+[04-Nov-2013 08:18:02 America/Denver] PHP Warning:  Invalid argument supplied for foreach() in /home/vrsimlms/public_html/blocks/sbc_resources/block_sbc_resources.php on line 104
+[04-Nov-2013 08:18:02 America/Denver] PHP Warning:  Invalid argument supplied for foreach() in /home/vrsimlms/public_html/blocks/sbc_resources/block_sbc_resources.php on line 104
+[04-Nov-2013 08:18:02 America/Denver] PHP Warning:  Invalid argument supplied for foreach() in /home/vrsimlms/public_html/blocks/sbc_resources/block_sbc_resources.php on line 104
+[04-Nov-2013 08:18:02 America/Denver] PHP Warning:  Invalid argument supplied for foreach() in /home/vrsimlms/public_html/blocks/sbc_resources/block_sbc_resources.php on line 104
+[04-Nov-2013 08:18:02 America/Denver] PHP Warning:  Invalid argument supplied for foreach() in /home/vrsimlms/public_html/blocks/sbc_resources/block_sbc_resources.php on line 104
+[04-Nov-2013 09:31:55 America/Denver] PHP Notice:  Undefined variable: userid in /home/vrsimlms/public_html/local/simbuild/student/activities.php on line 63
+[04-Nov-2013 09:31:55 America/Denver] PHP Notice:  Undefined variable: userid in /home/vrsimlms/public_html/local/simbuild/student/activities.php on line 63

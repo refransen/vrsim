@@ -2,7 +2,22 @@
 
 require_once($CFG->dirroot.'/course/lib.php');
 
-$worksite = optional_param('worksite', 'shed', PARAM_ALPHA);
+function get_worksite() {
+    $worksite = optional_param('worksite', 0, PARAM_INT);
+    $siteName = '';
+    switch($worksite) {
+    case 0:
+        $siteName = 'shed';
+    break;
+    case 1:
+        $siteName = 'ranch';
+    break;
+    case 2:
+        $siteName = 'multilevel';
+    break;
+    }
+    return $siteName;
+}
 
 function in_array_r($needle, $haystack, $strict = false) {
 	foreach ($haystack as $item) {
@@ -10,12 +25,11 @@ function in_array_r($needle, $haystack, $strict = false) {
 	            return true;
 	    }
 	}
-	
 	return false;
-}
-    
+}   
     
 class block_sbc_resources extends block_base {
+    
     function init() {
         $this->title = get_string('displayname', 'block_sbc_resources');
     }
@@ -32,7 +46,7 @@ class block_sbc_resources extends block_base {
             $this->content = '';
             return $this->content;
         }
-
+       
         $this->content = new stdClass;
         $this->content->text = '';
         $this->content->footer = '';
@@ -50,18 +64,22 @@ class block_sbc_resources extends block_base {
                    
                    foreach($glossMods as $singleMod)
                    {
-                       $concept = 'floor';
+                       $concept = get_worksite();
                        $singleGloss = $DB->get_record("glossary", array('id'=>$singleMod->instance));    
                        $glossaryArr[$singleMod->id] = $singleGloss;      
                    }
                }//end course foreach
+           } else {
+               // If the user has no courses, they can't see any resources
+		$this->content->text = '<p>You must be enrolled to see resources</p>';
+               return $this->content;
            }
            
             //-----------------------
             // Search all glossaries for information based on the concept
             // and record their rating
             //-----------------------
-            $concept = 'floor';   //$worksite;  Right now it's easiest to choose resources per site
+            $concept = get_worksite();            
             $entryRatingArr = array();
             
             foreach($glossaryArr as $singleGloss)  
@@ -73,18 +91,32 @@ class block_sbc_resources extends block_base {
                     $conceptArr[] = $singleEntry->concept;
                     $conceptArr[] = $singleEntry->definition;
                     $conceptArr[] = $keywords->alias;
-                    
+                                        
                     // TODO: When more entries are there, then put this code back
                     // Right now it's commented out to make the list longer
-                    /*$isFound = false;
+                    $isFound = false;
                     foreach($conceptArr as $singleConcept) {
-                        $pos = strpos($singleConcept, $concept);
-                        if($pos !== false) {
-                            $isFound = true;
+                        $myStrArr = explode(" ", $singleConcept);
+                        foreach($myStrArr as $singleWord) {
+                            $pos = strpos($singleWord, $concept);
+	                    if($pos !== false) {
+	                        $isFound = true;
+	                        break;
+	                    }
                         }
-                    }         
+                    }       
+                     
+                    $myStrArr = explode(",", $keywords->alias);
+                    foreach($myStrArr  as $singleKey) {
+                       $singleKey = trim($singleKey);
+                       $pos = strpos($singleKey, $concept);
+	               if($pos !== false) {
+	                  $isFound = true;
+	                  break;
+	                }
+                    } 
                     if(!$isFound)
-                    { continue;  }   */        
+                    { continue;  }          
                                     
                     $myRating = $DB->get_records('rating', array('component'=>'mod_glossary','itemid'=>$singleEntry->id));
                     $sumRatings = 0;
@@ -124,13 +156,13 @@ class block_sbc_resources extends block_base {
 	                 switch($singleGloss->name)
 	                 {
 		             case 'Vocabulary':{
-		                 $imageUrl = '<img src="/theme/simbuild/pix/activityblock/glossary_Icon_here.png" />';
+		                 $imageUrl = '<img src="'.$CFG->wwwroot.'/theme/simbuild/pix/activityblock/glossary_Icon_here.png" />';
 		             }break;
 		             case 'Materials':  {
-		                 $imageUrl = '<img src="/theme/simbuild/pix/activityblock/Wood-icon.png" />';
+		                 $imageUrl = '<img src="'.$CFG->wwwroot.'/theme/simbuild/pix/activityblock/Wood-icon.png" />';
 		             }  break;
 		             case 'Skill Videos': {
-		                 $imageUrl = '<img src="/theme/simbuild/pix/activityblock/video-icon.png" />';
+		                 $imageUrl = '<img src="'.$CFG->wwwroot.'/theme/simbuild/pix/activityblock/video-icon.png" />';
 		             }break;
 	                 }
 	                 // Start the html

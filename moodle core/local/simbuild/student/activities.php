@@ -58,7 +58,9 @@ if($activities = $SBC_DB->get_records('activity', array('WorkOrder_idWorkOrder' 
                 {
                     $badgeID = $badge->idaward;
                     $badgeName = get_string($badge->desc, 'theme_simbuild');
-	                $badgeIcon = $homeUrl.'/theme/simbuild/pix/badgeicons/'.$badge->iconfilename.'.png';
+	            $badgeIcon = $homeUrl.'/theme/simbuild/pix/badgeicons/'.$badge->iconfilename.'.png';
+	            
+	            //echo "Badge ID: ".$badgeID.", User: ".$sbcID."<br />";
 
 	            // Badge is earned if it's entry exists
 	            $sql = "SELECT * FROM {awardstatus} award WHERE award.Award_idAward = ? AND award.People_idPeople=?";

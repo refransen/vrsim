@@ -410,7 +410,7 @@ solid #bbb;background:#ddd;text-align:center;vertical-align:middle;line-height:1
 .qnbutton.thispage{border-color:#666}.path-mod-quiz .qnbutton.thispage
 .thispageholder{border:1px
 solid #666}.path-mod-quiz .qnbutton.flagged
-.trafficlight{background:url(/theme/image.php/simbuild/quiz/1378476616/navflagged) no-repeat top right}.path-mod-quiz .qnbutton.notyetanswered,
+.trafficlight{background:url(/theme/image.php/simbuild/quiz/1383584031/navflagged) no-repeat top right}.path-mod-quiz .qnbutton.notyetanswered,
 .path-mod-quiz .qnbutton.requiresgrading,
 .path-mod-quiz
 .qnbutton.invalidanswer{background-color:white}.path-mod-quiz
@@ -881,10 +881,10 @@ td{width:20%;vertical-align:top;border-right:1px solid #ddd;background-color:#f5
 td.lastcol{border-right:0}.path-mod-workshop .userplan
 td.active{border-left:1px solid #ddd;border-right:1px solid #ddd;background-color:#e7f1c3}.path-mod-workshop .userplan th
 .actions{display:inline}.path-mod-workshop .userplan tr.phasetasks
-li{background-image:url(/theme/image.php/simbuild/mod_workshop/1378476616/userplan/task-todo);background-position:top left;background-repeat:no-repeat;list-style-type:none;min-height:16px;margin: .3em 0}.path-mod-workshop .userplan tr.phasetasks
-li.completed{background-image:url(/theme/image.php/simbuild/mod_workshop/1378476616/userplan/task-done)}.path-mod-workshop .userplan tr.phasetasks
-li.fail{background-image:url(/theme/image.php/simbuild/mod_workshop/1378476616/userplan/task-fail)}.path-mod-workshop .userplan tr.phasetasks
-li.info{background-image:url(/theme/image.php/simbuild/mod_workshop/1378476616/userplan/task-info)}.path-mod-workshop .userplan tr.phasetasks
+li{background-image:url(/theme/image.php/simbuild/mod_workshop/1383584031/userplan/task-todo);background-position:top left;background-repeat:no-repeat;list-style-type:none;min-height:16px;margin: .3em 0}.path-mod-workshop .userplan tr.phasetasks
+li.completed{background-image:url(/theme/image.php/simbuild/mod_workshop/1383584031/userplan/task-done)}.path-mod-workshop .userplan tr.phasetasks
+li.fail{background-image:url(/theme/image.php/simbuild/mod_workshop/1383584031/userplan/task-fail)}.path-mod-workshop .userplan tr.phasetasks
+li.info{background-image:url(/theme/image.php/simbuild/mod_workshop/1383584031/userplan/task-info)}.path-mod-workshop .userplan tr.phasetasks
 .tasks{list-style:none;margin:3px;padding:0px}.path-mod-workshop .userplan tr.phasetasks
 .title{padding:0px
 10px 0px 20px}.path-mod-workshop .userplan tr.phasetasks
@@ -1012,8 +1012,8 @@ auto 0;z-index:90;width:95%;padding:10px
 li{background-color:#FFFAFA !important;-moz-border-radius:6px;-webkit-border-radius:6px;padding-right:4px;padding-bottom:2px}#page-blocks-community-communitycourse
 .ratingcount{color:#8B8989;font-size:80%;vertical-align:top}#page-blocks-community-communitycourse
 .norating{font-weight:bold;color:#8B8989;font-size:80%}#page-blocks-community-communitycourse .star-rating{list-style:none;margin:4px
-0 4px;padding:0px;width:100px;height:20px;position:relative;background:url(/theme/image.php/simbuild/core/1378476616/i/star-rating) top left repeat-x;float:left}#page-blocks-community-communitycourse .star-rating
-li{padding:0px;margin:0px;height:20px;width:20px;float:left}#page-blocks-community-communitycourse .star-rating li.current-rating{background:url(/theme/image.php/simbuild/core/1378476616/i/star-rating) left bottom;position:absolute;height:20px;display:block;text-indent:-9000px;z-index:1}#page-blocks-community-communitycourse
+0 4px;padding:0px;width:100px;height:20px;position:relative;background:url(/theme/image.php/simbuild/core/1383584031/i/star-rating) top left repeat-x;float:left}#page-blocks-community-communitycourse .star-rating
+li{padding:0px;margin:0px;height:20px;width:20px;float:left}#page-blocks-community-communitycourse .star-rating li.current-rating{background:url(/theme/image.php/simbuild/core/1383584031/i/star-rating) left bottom;position:absolute;height:20px;display:block;text-indent:-9000px;z-index:1}#page-blocks-community-communitycourse
 .nocomments{font-weight:bold;color:#8B8989;font-size:80%}#page-blocks-community-communitycourse
 .hubcommentator{float:left;font-weight:bold}#page-blocks-community-communitycourse
 .hubcommentdate{font-weight:bold}#page-blocks-community-communitycourse
@@ -1121,7 +1121,7 @@ ul{padding-left:16px;margin:0}.block_navigation .block_tree .type_activity > p.t
 .block_navigation .block_tree
 .tree_item{padding-left:21px;margin:3px
 0px;text-align:left}.block_navigation .block_tree
-.tree_item.branch{background-image:url(/theme/image.php/simbuild/core/1378476616/t/expanded);background-position:0 0;background-repeat:no-repeat}.block_navigation .block_tree
+.tree_item.branch{background-image:url(/theme/image.php/simbuild/core/1383584031/t/expanded);background-position:0 0;background-repeat:no-repeat}.block_navigation .block_tree
 .tree_item.branch.navigation_node{background-image:none;padding-left:0}.block_navigation .block_tree .type_activity > .tree_item.emptybranch,
 .block_navigation .block_tree .type_activity>.tree_item.branch{background-image:none;position:relative}.block_navigation .block_tree .type_activity > .tree_item.hasicon.emptybranch img,
 .block_navigation .block_tree .type_activity > .tree_item.branch
@@ -1131,10 +1131,10 @@ img{left:16px}.block_navigation .block_tree
 ul{font-weight:normal}.dock .block_navigation
 .tree_item{white-space:nowrap}.jsenabled .block_navigation .block_tree
 .tree_item.branch{cursor:pointer}.jsenabled .block_navigation .block_tree
-.tree_item.emptybranch{background-image:url(/theme/image.php/simbuild/core/1378476616/t/collapsed_empty);background-position:0 0;background-repeat:no-repeat}.jsenabled .block_navigation .block_tree .collapsed
-ul{display:none}.jsenabled .block_navigation .block_tree .type_activity>.tree_item.branch{background-image:url(/theme/image.php/simbuild/core/1378476616/t/expanded)}.jsenabled .block_navigation .block_tree .collapsed
-.tree_item.branch{background-image:url(/theme/image.php/simbuild/core/1378476616/t/collapsed)}.jsenabled .block_navigation .block_tree
-.tree_item.branch.loadingbranch{background-image:url(/theme/image.php/simbuild/core/1378476616/i/loading_small)}.jsenabled .block_navigation.dock_on_load,
+.tree_item.emptybranch{background-image:url(/theme/image.php/simbuild/core/1383584031/t/collapsed_empty);background-position:0 0;background-repeat:no-repeat}.jsenabled .block_navigation .block_tree .collapsed
+ul{display:none}.jsenabled .block_navigation .block_tree .type_activity>.tree_item.branch{background-image:url(/theme/image.php/simbuild/core/1383584031/t/expanded)}.jsenabled .block_navigation .block_tree .collapsed
+.tree_item.branch{background-image:url(/theme/image.php/simbuild/core/1383584031/t/collapsed)}.jsenabled .block_navigation .block_tree
+.tree_item.branch.loadingbranch{background-image:url(/theme/image.php/simbuild/core/1383584031/i/loading_small)}.jsenabled .block_navigation.dock_on_load,
 .block_navigation .block_tree_box
 .requiresjs{display:none}.jsenabled .block_navigation .block_tree_box
 .requiresjs{display:inline}.ie6 .block_navigation .block_tree
@@ -1153,8 +1153,8 @@ img{left:auto;right:0}.dir-rtl .block_navigation .block_tree li.item_with_icon.c
 img{left:auto;right:16px}.dir-rtl .block_navigation .block_tree .type_activity > p.branch.hasicon,
 .dir-rtl .block_navigation .block_tree li.item_with_icon.contains_branch>.tree_item{padding-right:37px;padding-left:0}.dir-rtl .block_navigation .block_tree .type_activity > .tree_item.branch
 img{right:16px;left:auto}.jsenabled.dir-rtl .block_navigation .block_tree
-.tree_item.emptybranch{background-image:url(/theme/image.php/simbuild/core/1378476616/t/collapsed_empty_rtl);background-position:center right}.jsenabled.dir-rtl .block_navigation .block_tree .collapsed
-.tree_item.branch{background-image:url(/theme/image.php/simbuild/core/1378476616/t/collapsed_rtl)}.block_online_users .content .list
+.tree_item.emptybranch{background-image:url(/theme/image.php/simbuild/core/1383584031/t/collapsed_empty_rtl);background-position:center right}.jsenabled.dir-rtl .block_navigation .block_tree .collapsed
+.tree_item.branch{background-image:url(/theme/image.php/simbuild/core/1383584031/t/collapsed_rtl)}.block_online_users .content .list
 li.listentry{clear:both}.block_online_users .content .list li.listentry
 .user{float:left;position:relative}.block_online_users .content .list li.listentry .user
 .userpicture{vertical-align:text-bottom}.block_online_users .content .list li.listentry
@@ -1183,11 +1183,45 @@ h3{text-align:right}.block_sbc_activity
 .activitySection{width:33%;display:inline-block;vertical-align:top}.block_sbc_activity
 .toptitle{padding-bottom:0.5em}.block_sbc_activity .toptitle
 span{font-weight:bold}.block_sbc_activity .toptitle
+img{height:30px;vertical-align:middle;display:inline-block;margin-right:0.8em}.block_sbc_badges .activitydate,
+.block_sbc_badges
+.activityhead{text-align:center}.block_sbc_badges .unlist
+li{margin-bottom:1em}.block_sbc_badges li .head
+.date{float:right}.dir-rtl .block_sbc_badges .content
+h3{text-align:right}.block_sbc_badges
+.badgesContent{position:relative;padding:1em
+0.5em 0em 0.5em}.block_sbc_badges .progress-bar{width:100%}.block_sbc_badges .progress-bar span
+p{color:black;font-weight:normal;font-size:11px;width:275px;text-align:center}.block_sbc_badges
+.toptitle{padding-bottom:0.5em}.block_sbc_badges .toptitle
+span{font-weight:bold}.block_sbc_badges .icons
+img{display:inline-block;vertical-algin:text-top;width:50px;height:50px}.block_sbc_resources .activitydate,
+.block_sbc_resources
+.activityhead{text-align:center}.block_sbc_resources .unlist
+li{margin-bottom:1em}.block_sbc_resources li .head
+.date{float:right}.dir-rtl .block_sbc_resources .content
+h3{text-align:right}.block_sbc_resources
+.activitycontent{position:relative;display:block;padding:1em
+0.5em 0em 0.5em}.block_sbc_resources .activitySection:hover{background:#210772}.block_sbc_resources .activitySection:hover a,
+.block_sbc_resources .activitySection:hover p,
+.block_sbc_resources .activitySection:hover
+.bluestar{color:white}.block_sbc_resources .activitySection
+a{color:#210772;text-decoration:underline}.block_sbc_resources
+.starrating{display:inline-block;vertical-align:top;margin-left:2em}.block_sbc_resources
+.yellowstar{color:#ffc701}.block_sbc_resources
+.bluestar{color:#210772}.block_sbc_resources
+.numviews{display:inline-block;vertical-align:top;margin-left:4em}.block_sbc_resources .numviews
+p{margin-bottom:0}.block_sbc_resources
+span{font-weight:bold}.block_sbc_resources
 img{height:30px;vertical-align:middle;display:inline-block;margin-right:0.8em}.block_sbcprofile a:hover{text-decoration:underline}.block_sbcprofile .header
 h2{display:none}div.block_sbcprofile.hidden div.header
 h2{display:block}.block_sbcprofile
-img.profilepicture{height:70px;width:70px;vertical-align:text-top;float:right;margin-right:5px;border:2px
-solid #dadada}.block_sbcprofile
+.profilepicture{float:right}.block_sbcprofile .profilepicture img,
+.block_sbcprofile
+.sbcavatar{position:relative;height:70px !important;width:70px !important;vertical-align:text-top;float:right;margin-right:5px;border:2px
+solid #dadada;z-index:1}.block_sbcprofile .teacherpicture
+img{height:50px;width:50px;vertical-align:text-top;margin-right:5px;border:2px
+solid #dadada}.block_sbcprofile .sbcavatar
+.avatarimg{display:inline-block;width:288px;height:inherit;background-position:100% 6%}.block_sbcprofile
 .myprofileitem.fullname{font-size:1.2em;font-weight:bold}.block_sbcprofile .myprofileitem.location,
 .block_sbcprofile
 .myprofileitem.description{font-size:12px;color:#999}.block_sbcprofile
@@ -1201,7 +1235,16 @@ a{display:inline}.block_sbcprofile .myprofileitem.profileicon a:hover,
 .block_sbcprofile .myprofileitem.messageicon a:hover{color:#210772}.block_sbcprofile
 .myprofileitem.logoutbttn{position:relative;margin:1em
 0em 1em 0em;text-align:center}.block_sbcprofile .myprofileitem.logoutbttn
-a{background:#210772;color:#ced0cf;padding:0.5em 1em 0.5em 1em}.block_sbcprofile .myprofileitem.logoutbttn a:hover{color:white}.block_search_forums
+a{background:#210772;color:#ced0cf;padding:0.5em 1em 0.5em 1em}.block_sbcprofile .myprofileitem.logoutbttn a:hover{color:white}.block_sbcprofile
+.loginasinfo{width:95%;margin-top:1em;margin-bottom:2em}.block_sbcprofile .teacherpicture,
+.block_sbcprofile
+.loginasinfo{display:inline-block;text-align:center}.block_sbcprofile .teacherpicture,
+.block_sbcprofile
+.logintitle{vertical-align:text-top}.block_sbcprofile
+.logintitle{display:inline-block;text-align:left}.block_sbcprofile .logintitle
+p{margin-bottom:0}.block_sbcprofile .logintitle
+h3{padding-top:0}.block_sbcprofile .logintitle
+a{font-size:12px;color:#2e1094;text-decoration:underline}.block_search_forums
 .searchform{text-align:center}.block_search_forums .searchform
 img{vertical-align:middle}.block_search_forums .searchform
 img.resize{width:1em;height:1.1em}.block_search_forums
@@ -1215,13 +1258,13 @@ ul{padding-left:18px;margin:0}.block_settings .block_tree li.item_with_icon>p{po
 img{vertical-align:middle;position:absolute;left:0;top:-1px;width:16px;height:16px}.block_settings .block_tree
 .tree_item{padding-left:21px;margin:3px
 0px;text-align:left}.block_settings .block_tree
-.tree_item.branch{background-image:url(/theme/image.php/simbuild/core/1378476616/t/expanded);background-position:0 10%;background-repeat:no-repeat}.block_settings .block_tree
+.tree_item.branch{background-image:url(/theme/image.php/simbuild/core/1383584031/t/expanded);background-position:0 10%;background-repeat:no-repeat}.block_settings .block_tree
 .root_node.leaf{padding-left:0px}.block_settings .block_tree
 .active_tree_node{font-weight:bold}.jsenabled .block_settings .block_tree
 .tree_item.branch{cursor:pointer}.jsenabled .block_settings .block_tree
-.tree_item.emptybranch{background-image:url(/theme/image.php/simbuild/core/1378476616/t/collapsed_empty);background-position:0 10%;background-repeat:no-repeat}.jsenabled .block_settings .block_tree .collapsed
+.tree_item.emptybranch{background-image:url(/theme/image.php/simbuild/core/1383584031/t/collapsed_empty);background-position:0 10%;background-repeat:no-repeat}.jsenabled .block_settings .block_tree .collapsed
 ul{display:none}.jsenabled .block_settings .block_tree .collapsed
-.tree_item.branch{background-image:url(/theme/image.php/simbuild/core/1378476616/t/collapsed)}.ie6 .block_settings .block_tree
+.tree_item.branch{background-image:url(/theme/image.php/simbuild/core/1383584031/t/collapsed)}.ie6 .block_settings .block_tree
 .tree_item{width:100%}.dir-rtl .block_settings
 .block_tree{padding-right:0px}.dir-rtl .block_settings .block_tree li
 ul{padding-left:0;padding-right:18px}.dir-rtl .block_settings .block_tree
@@ -1229,8 +1272,8 @@ ul{padding-left:0;padding-right:18px}.dir-rtl .block_settings .block_tree
 .tree_item.branch{background-position:center right}.dir-rtl .block_settings .block_tree
 .root_node.leaf{padding-right:0px}.dir-rtl .block_settings .block_tree li.item_with_icon > p
 img{right:0;left:auto}.jsenabled.dir-rtl .block_settings .block_tree
-.tree_item.emptybranch{background-image:url(/theme/image.php/simbuild/core/1378476616/t/collapsed_empty_rtl);background-position:center right}.jsenabled.dir-rtl .block_settings .block_tree .collapsed
-.tree_item.branch{background-image:url(/theme/image.php/simbuild/core/1378476616/t/collapsed_rtl)}.block_site_main_menu
+.tree_item.emptybranch{background-image:url(/theme/image.php/simbuild/core/1383584031/t/collapsed_empty_rtl);background-position:center right}.jsenabled.dir-rtl .block_settings .block_tree .collapsed
+.tree_item.branch{background-image:url(/theme/image.php/simbuild/core/1383584031/t/collapsed_rtl)}.block_site_main_menu
 li{clear:both}.block_site_main_menu li
 .column{width:100%}.block_site_main_menu li
 .buttons{float:right;margin-top:3px}.dir-rtl .block_site_main_menu li
@@ -1270,21 +1313,21 @@ img.activityicon{margin-top:0em}.course-content ul.ctopics li.section .content .
 h3.sectionname{margin:4px}#toggle-all .content h4
 a{background-position:0px 45%;background-repeat:no-repeat;background-color:transparent}.course-content ul.ctopics li.section .content .toggle
 a{background-position:5px 45%;background-repeat:no-repeat;background-color:transparent}.course-content ul.ctopics li.section .content .toggle-arrow a.toggle_closed, .course-content ul.ctopics li.section .content .toggle
-a.toggle_open{background-image:url(/theme/image.php/simbuild/format_topcoll/1378476616/arrow_right)}body.jsenabled .course-content ul.ctopics li.section .content .toggle-arrow
-a.toggle_closed{background-image:url(/theme/image.php/simbuild/format_topcoll/1378476616/arrow_right)}body.jsenabled .course-content ul.ctopics li.section .content .toggle-arrow
-a.toggle_open{background-image:url(/theme/image.php/simbuild/format_topcoll/1378476616/arrow_down)}#toggle-all .content .toggle-arrow h4
-a.off{background-image:url(/theme/image.php/simbuild/format_topcoll/1378476616/arrow_down)}#toggle-all .content .toggle-arrow-hover h4 a.off:hover{background-image:url(/theme/image.php/simbuild/format_topcoll/1378476616/arrow_right_glow)}#toggle-all .content .toggle-arrow h4
-a.on{background-image:url(/theme/image.php/simbuild/format_topcoll/1378476616/arrow_right)}#toggle-all .content .toggle-arrow-hover h4 a.on:hover{background-image:url(/theme/image.php/simbuild/format_topcoll/1378476616/arrow_down_glow)}.course-content ul.ctopics li.section .content .toggle-point a.toggle_closed, .course-content ul.ctopics li.section .content .toggle
-a.toggle_open{background-image:url(/theme/image.php/simbuild/format_topcoll/1378476616/point_right)}body.jsenabled .course-content ul.ctopics li.section .content .toggle-point
-a.toggle_closed{background-image:url(/theme/image.php/simbuild/format_topcoll/1378476616/point_right)}body.jsenabled .course-content ul.ctopics li.section .content .toggle-point
-a.toggle_open{background-image:url(/theme/image.php/simbuild/format_topcoll/1378476616/point_down)}#toggle-all .content .toggle-point h4
-a.off{background-image:url(/theme/image.php/simbuild/format_topcoll/1378476616/point_down)}#toggle-all .content .toggle-point-hover h4 a.off:hover{background-image:url(/theme/image.php/simbuild/format_topcoll/1378476616/point_right_glow)}#toggle-all .content .toggle-point h4
-a.on{background-image:url(/theme/image.php/simbuild/format_topcoll/1378476616/point_right)}#toggle-all .content .toggle-point-hover h4 a.on:hover{background-image:url(/theme/image.php/simbuild/format_topcoll/1378476616/point_down_glow)}.course-content ul.ctopics li.section .content .toggle-power a.toggle_closed, .course-content ul.ctopics li.section .content .toggle
-a.toggle_open{background-image:url(/theme/image.php/simbuild/format_topcoll/1378476616/toggle_minus)}body.jsenabled .course-content ul.ctopics li.section .content .toggle-power
-a.toggle_closed{background-image:url(/theme/image.php/simbuild/format_topcoll/1378476616/toggle_minus)}body.jsenabled .course-content ul.ctopics li.section .content .toggle-power
-a.toggle_open{background-image:url(/theme/image.php/simbuild/format_topcoll/1378476616/toggle_plus)}#toggle-all .content .toggle-power h4
-a.off{background-image:url(/theme/image.php/simbuild/format_topcoll/1378476616/toggle_plus)}#toggle-all .content .toggle-power-hover h4 a.off:hover{background-image:url(/theme/image.php/simbuild/format_topcoll/1378476616/toggle_minus_glow)}#toggle-all .content .toggle-power h4
-a.on{background-image:url(/theme/image.php/simbuild/format_topcoll/1378476616/toggle_minus)}#toggle-all .content .toggle-power-hover h4 a.on:hover{background-image:url(/theme/image.php/simbuild/format_topcoll/1378476616/toggle_plus_glow)}body#page-admin-setting-formatsettingtopcoll select#id_s_format_topcoll_defaulttoggleiconset option[value="arrow"], body.format-topcoll select#id_toggleiconset option[value="arrow"]{background-image:url(/theme/image.php/simbuild/format_topcoll/1378476616/arrow_right)}body#page-admin-setting-formatsettingtopcoll select#id_s_format_topcoll_defaulttoggleiconset option[value="point"], body.format-topcoll select#id_toggleiconset option[value="point"]{background-image:url(/theme/image.php/simbuild/format_topcoll/1378476616/point_right)}body#page-admin-setting-formatsettingtopcoll select#id_s_format_topcoll_defaulttoggleiconset option[value="power"], body.format-topcoll select#id_toggleiconset option[value="power"]{background-image:url(/theme/image.php/simbuild/format_topcoll/1378476616/toggle_minus)}body#page-admin-setting-formatsettingtopcoll select#id_s_format_topcoll_defaulttoggleiconset option, body.format-topcoll select#id_toggleiconset
+a.toggle_open{background-image:url(/theme/image.php/simbuild/format_topcoll/1383584031/arrow_right)}body.jsenabled .course-content ul.ctopics li.section .content .toggle-arrow
+a.toggle_closed{background-image:url(/theme/image.php/simbuild/format_topcoll/1383584031/arrow_right)}body.jsenabled .course-content ul.ctopics li.section .content .toggle-arrow
+a.toggle_open{background-image:url(/theme/image.php/simbuild/format_topcoll/1383584031/arrow_down)}#toggle-all .content .toggle-arrow h4
+a.off{background-image:url(/theme/image.php/simbuild/format_topcoll/1383584031/arrow_down)}#toggle-all .content .toggle-arrow-hover h4 a.off:hover{background-image:url(/theme/image.php/simbuild/format_topcoll/1383584031/arrow_right_glow)}#toggle-all .content .toggle-arrow h4
+a.on{background-image:url(/theme/image.php/simbuild/format_topcoll/1383584031/arrow_right)}#toggle-all .content .toggle-arrow-hover h4 a.on:hover{background-image:url(/theme/image.php/simbuild/format_topcoll/1383584031/arrow_down_glow)}.course-content ul.ctopics li.section .content .toggle-point a.toggle_closed, .course-content ul.ctopics li.section .content .toggle
+a.toggle_open{background-image:url(/theme/image.php/simbuild/format_topcoll/1383584031/point_right)}body.jsenabled .course-content ul.ctopics li.section .content .toggle-point
+a.toggle_closed{background-image:url(/theme/image.php/simbuild/format_topcoll/1383584031/point_right)}body.jsenabled .course-content ul.ctopics li.section .content .toggle-point
+a.toggle_open{background-image:url(/theme/image.php/simbuild/format_topcoll/1383584031/point_down)}#toggle-all .content .toggle-point h4
+a.off{background-image:url(/theme/image.php/simbuild/format_topcoll/1383584031/point_down)}#toggle-all .content .toggle-point-hover h4 a.off:hover{background-image:url(/theme/image.php/simbuild/format_topcoll/1383584031/point_right_glow)}#toggle-all .content .toggle-point h4
+a.on{background-image:url(/theme/image.php/simbuild/format_topcoll/1383584031/point_right)}#toggle-all .content .toggle-point-hover h4 a.on:hover{background-image:url(/theme/image.php/simbuild/format_topcoll/1383584031/point_down_glow)}.course-content ul.ctopics li.section .content .toggle-power a.toggle_closed, .course-content ul.ctopics li.section .content .toggle
+a.toggle_open{background-image:url(/theme/image.php/simbuild/format_topcoll/1383584031/toggle_minus)}body.jsenabled .course-content ul.ctopics li.section .content .toggle-power
+a.toggle_closed{background-image:url(/theme/image.php/simbuild/format_topcoll/1383584031/toggle_minus)}body.jsenabled .course-content ul.ctopics li.section .content .toggle-power
+a.toggle_open{background-image:url(/theme/image.php/simbuild/format_topcoll/1383584031/toggle_plus)}#toggle-all .content .toggle-power h4
+a.off{background-image:url(/theme/image.php/simbuild/format_topcoll/1383584031/toggle_plus)}#toggle-all .content .toggle-power-hover h4 a.off:hover{background-image:url(/theme/image.php/simbuild/format_topcoll/1383584031/toggle_minus_glow)}#toggle-all .content .toggle-power h4
+a.on{background-image:url(/theme/image.php/simbuild/format_topcoll/1383584031/toggle_minus)}#toggle-all .content .toggle-power-hover h4 a.on:hover{background-image:url(/theme/image.php/simbuild/format_topcoll/1383584031/toggle_plus_glow)}body#page-admin-setting-formatsettingtopcoll select#id_s_format_topcoll_defaulttoggleiconset option[value="arrow"], body.format-topcoll select#id_toggleiconset option[value="arrow"]{background-image:url(/theme/image.php/simbuild/format_topcoll/1383584031/arrow_right)}body#page-admin-setting-formatsettingtopcoll select#id_s_format_topcoll_defaulttoggleiconset option[value="point"], body.format-topcoll select#id_toggleiconset option[value="point"]{background-image:url(/theme/image.php/simbuild/format_topcoll/1383584031/point_right)}body#page-admin-setting-formatsettingtopcoll select#id_s_format_topcoll_defaulttoggleiconset option[value="power"], body.format-topcoll select#id_toggleiconset option[value="power"]{background-image:url(/theme/image.php/simbuild/format_topcoll/1383584031/toggle_minus)}body#page-admin-setting-formatsettingtopcoll select#id_s_format_topcoll_defaulttoggleiconset option, body.format-topcoll select#id_toggleiconset
 option{background-color:transparent;background-repeat:no-repeat;background-position:45px 45%;padding:3px
 20px 3px 3px}body#page-admin-setting-formatsettingtopcoll.lang-en_ar select#id_s_format_topcoll_defaulttoggleiconset option, body.format-topcoll.lang-en_ar select#id_toggleiconset
 option{background-position:220px 45%}#mymobile .course-content ul.ctopics li.tcsection .content, #mymobile .course-content ul.ctopics li.section.main
@@ -1628,11 +1671,11 @@ input{display:none}.gradingform_guide.editor .delete input,
 .gradingform_guide.editor .moveup input,
 .gradingform_guide.editor .movedown
 input{text-indent:-1000em;cursor:pointer;border:none}.gradingform_guide.editor .criterion .controls .delete
-input{width:20px;height:16px;background:transparent url(/theme/image.php/simbuild/core/1378476616/t/delete) no-repeat center top;margin-top:4px}.gradingform_guide.editor .moveup
-input{width:20px;height:15px;background:transparent url(/theme/image.php/simbuild/core/1378476616/t/up) no-repeat center top;margin-top:4px}.gradingform_guide.editor .movedown
-input{width:20px;height:15px;background:transparent url(/theme/image.php/simbuild/core/1378476616/t/down) no-repeat center top;margin-top:4px}.gradingform_guide.editor .addcriterion input,
+input{width:20px;height:16px;background:transparent url(/theme/image.php/simbuild/core/1383584031/t/delete) no-repeat center top;margin-top:4px}.gradingform_guide.editor .moveup
+input{width:20px;height:15px;background:transparent url(/theme/image.php/simbuild/core/1383584031/t/up) no-repeat center top;margin-top:4px}.gradingform_guide.editor .movedown
+input{width:20px;height:15px;background:transparent url(/theme/image.php/simbuild/core/1383584031/t/down) no-repeat center top;margin-top:4px}.gradingform_guide.editor .addcriterion input,
 .gradingform_guide.editor .addcomment
-input{background:transparent url(/theme/image.php/simbuild/core/1378476616/t/add) no-repeat;display:block;color:#555;font-weight:bold;text-decoration:none}.gradingform_guide.editor .addcriterion input,
+input{background:transparent url(/theme/image.php/simbuild/core/1383584031/t/add) no-repeat;display:block;color:#555;font-weight:bold;text-decoration:none}.gradingform_guide.editor .addcriterion input,
 .gradingform_guide.editor .addcomment
 input{background-position:5px 8px;height:30px;line-height:29px;margin-bottom:14px;padding-left:20px;padding-right:10px}.gradingform_guide .options
 .optionsheading{font-weight:bold;font-size:1.1em;padding-bottom:5px}.gradingform_guide .options
@@ -1643,7 +1686,7 @@ label{margin-left:5px}.gradingform_guide .options .option
 .hiddenelement{display:none}.gradingform_guide.editor
 .pseudotablink{background-color:transparent;border:0
 solid;height:1px;width:1px;color:transparent;padding:0;margin:0;position:relative;float:right}.gradingform_guide
-.markingguidecomment{cursor:pointer}.jsenabled .gradingform_guide .markingguidecomment:before{content:url(/theme/image.php/simbuild/core/1378476616/t/add);padding-right:2px}.gradingform_guide
+.markingguidecomment{cursor:pointer}.jsenabled .gradingform_guide .markingguidecomment:before{content:url(/theme/image.php/simbuild/core/1383584031/t/add);padding-right:2px}.gradingform_guide
 .commentheader{font-weight:bold;font-size:1.1em;padding-bottom:5px}.jsenabled .gradingform_guide
 .criterionnamelabel{display:none}.jsenabled .gradingform_guide
 .criterionshortname{font-weight:bold}.gradingform_guide
@@ -1689,13 +1732,13 @@ solid #555}.gradingform_rubric.evaluate .criterion .levels .level:hover{backgrou
 .gradingform_rubric.editor .moveup input,
 .gradingform_rubric.editor .movedown
 input{text-indent:-1000em;cursor:pointer;border:none}.gradingform_rubric.editor .criterion .controls .delete
-input{width:12px;height:12px;background:transparent url(/theme/image.php/simbuild/core/1378476616/t/delete) no-repeat center top;margin: .3em .3em 0 .3em}.gradingform_rubric.editor .levels .level .delete
-input{width:12px;height:16px;background:transparent url(/theme/image.php/simbuild/core/1378476616/t/delete) no-repeat center center}.dir-rtl .gradingform_rubric.editor .levels .level .delete
+input{width:12px;height:12px;background:transparent url(/theme/image.php/simbuild/core/1383584031/t/delete) no-repeat center top;margin: .3em .3em 0 .3em}.gradingform_rubric.editor .levels .level .delete
+input{width:12px;height:16px;background:transparent url(/theme/image.php/simbuild/core/1383584031/t/delete) no-repeat center center}.dir-rtl .gradingform_rubric.editor .levels .level .delete
 input{margin-right: .45em;margin-left:0}.gradingform_rubric.editor .moveup
-input{width:12px;height:12px;background:transparent url(/theme/image.php/simbuild/core/1378476616/t/up) no-repeat center top;margin: .3em .3em 0 .3em}.gradingform_rubric.editor .movedown
-input{width:12px;height:12px;background:transparent url(/theme/image.php/simbuild/core/1378476616/t/down) no-repeat center top;margin: .3em .3em 0 .3em}.gradingform_rubric.editor .addcriterion input,
+input{width:12px;height:12px;background:transparent url(/theme/image.php/simbuild/core/1383584031/t/up) no-repeat center top;margin: .3em .3em 0 .3em}.gradingform_rubric.editor .movedown
+input{width:12px;height:12px;background:transparent url(/theme/image.php/simbuild/core/1383584031/t/down) no-repeat center top;margin: .3em .3em 0 .3em}.gradingform_rubric.editor .addcriterion input,
 .gradingform_rubric.editor .addlevel
-input{background:transparent url(/theme/image.php/simbuild/core/1378476616/t/add) no-repeat top left;display:block;color:#555;font-weight:bold;text-decoration:none}.gradingform_rubric.editor .addcriterion
+input{background:transparent url(/theme/image.php/simbuild/core/1383584031/t/add) no-repeat top left;display:block;color:#555;font-weight:bold;text-decoration:none}.gradingform_rubric.editor .addcriterion
 input{background-position:5px 8px;height:30px;line-height:29px;margin-bottom:14px;padding-left:20px;padding-right:10px}.gradingform_rubric.editor .addlevel
 input{background-position:5px 5px;height:25px;line-height:24px;margin-bottom:10px;padding-left:18px;padding-right:8px}.gradingform_rubric .options
 .optionsheading{font-weight:bold;font-size:1.1em;padding-bottom:5px}.gradingform_rubric .options

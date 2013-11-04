@@ -58,9 +58,13 @@ class block_sbc_badges extends block_base {
 			            $uniqueBadges[] = $badge->desc;
 			            // Customize the badge title to show the number of similar badges earned
 			            $sameBadgeCount = 1;
-			            $sql = "SELECT Award_idAward FROM {awardstatus} award WHERE award.Comment=? AND award.People_idPeople=?";
-			            if($uniqueBadgeCount = $SBC_DB->get_records_sql($sql, array($badgeExists->comment, $sbcID)) ){
-			                 $sameBadgeCount = count($uniqueBadgeCount);
+			            $sql = "SELECT * FROM {award} award WHERE award.desc=? AND award.Type=?";
+			            $otherBadges = $SBC_DB->get_records_sql($sql, array($badge->desc, $type));
+			            foreach($otherBadges as $singleBadge) {
+			                $sql = "SELECT * FROM {awardstatus} award WHERE award.Comment=? AND award.People_idPeople=?";
+			                if($SBC_DB->record_exists_sql($sql, array($badge->desc, $sbcID)) ) {
+			                   $sameBadgeCount++;
+			                }
 			            }
 			            $badgeEarned += $sameBadgeCount;
 			            $badgeName .= '('.$sameBadgeCount.')';

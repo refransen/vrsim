@@ -27,3 +27,4 @@ defined('MOODLE_INTERNAL') || die();
 $string['city'] = 'City';
 $string['group'] = 'Class';
 $string['groups'] = 'Classes';
+$string['institution'] = 'Customer';

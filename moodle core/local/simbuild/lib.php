@@ -1092,7 +1092,7 @@ function createActSkillReport($userid, $skillid)  {
     $progressBarLabels = array();
     $graphData = array();
     $graphLabels = array();
-    $activityGroupnames = array();
+    $activityGroupnames = array();	
     $currentActivities = array();
     
     $activitiesWithSkill = $SBC_DB->get_records_sql("SELECT * FROM {activity_has_skill} activity WHERE activity.Skill_idSkill = ?",
@@ -1103,20 +1103,21 @@ function createActSkillReport($userid, $skillid)  {
      		
         // Get the activty group name
         $currentActivities[] = $activity;
-	    if(!in_array($activity->type, $activityGroupnames)) {
-	        $activityGroupnames[] = $activity->type;
-	    }
+        $displayName = get_string($activity->type, 'theme_simbuild');
+	if(!in_array($displayName , $activityGroupnames)) {
+	   $activityGroupnames[$activity->type] = $displayName;
+	}
     }
     natcasesort($activityGroupnames);
     
     // Gather data based on activity groups
-    foreach($activityGroupnames as $singleGroup)
+    foreach($activityGroupnames as $key=>$value)
     {
         // Look through current activities and 
         // only use those that belong to this group
         $groupActivities = array();
         foreach($currentActivities as $currentAct)  {
-            if($currentAct->type == $singleGroup)  {
+            if($currentAct->type == $key)  {
                 $groupActivities[] = $currentAct;
             }
         }
@@ -1128,7 +1129,7 @@ function createActSkillReport($userid, $skillid)  {
         $learningMom = 0;
         $actPassCount = 0;
         $actMastered = 0;
-	    foreach($groupActivities as $singleActivity)  {    
+	foreach($groupActivities as $singleActivity)  {    
             // Check for passed, used for total skill progress calc
             $numAttempts = getActivityAttempts($userid, $singleActivity->guid);
             $activityAttempts += $numAttempts;
@@ -1141,7 +1142,7 @@ function createActSkillReport($userid, $skillid)  {
             if(getSingleActMastery($singleActivity, $userid)) {
                 $actMastered++;
             }
-	    } 
+	} 
 	
 	    // Get the learning momentum for this work order
         if($activityAttempts > 0) {
@@ -1174,7 +1175,7 @@ function createActSkillReport($userid, $skillid)  {
     
     // Prepare activity group names for display  
     foreach($activityGroupnames as $singleName) {
-        $graphLabels[] = get_string($singleName, "theme_simbuild"); 
+        $graphLabels[] = $singleName; 
     }
     
     // Calculate total progress for this skill

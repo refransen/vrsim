@@ -55,6 +55,9 @@ class block_sbc_activity extends block_base {
                    }//end modules foreach
 
                }//end course foreach
+           } else {
+		$this->content->text = '<p>You must be enrolled to track activity</p>';
+        	return $this->content;
            }
            
             //-----------------------

@@ -74,4 +74,8 @@ $strloggedinas = get_string('loggedinas', '', $newfullname);
 $PAGE->set_title($strloggedinas);
 $PAGE->set_heading($course->fullname);
 $PAGE->navbar->add($strloggedinas);
-notice($strloggedinas, "$CFG->wwwroot/course/view.php?id=$course->id");
+$buttonUrl = "$CFG->wwwroot/course/view.php?id=$course->id";
+if($USER->theme == "simbuild" && !is_siteAdmin()) {
+    $buttonUrl = "$CFG->wwwroot";
+}
+notice($strloggedinas, $buttonUrl);

@@ -172,12 +172,12 @@ class block_sbcprofile extends block_base {
         }
         
         $this->content->text .= '<div class="myprofileitem profileicon">';
-        $this->content->text .= '<img src="'.$CFG->wwwroot.'/theme/simbuild/pix/profile/profile_new.png" title="'.get_string('viewprofile','block_sbcprofile').'" />';
+        $this->content->text .= '<img src="/theme/simbuild/pix/profile/profile_new.png" title="'.get_string('viewprofile','block_sbcprofile').'" />';
         $this->content->text .= '<a href="/user/profile.php" >'.get_string('viewprofile','block_sbcprofile').'</a>';
         $this->content->text .= '</div>';
         
         $this->content->text .= '<div class="myprofileitem messageicon">';
-        $this->content->text .= '<img src="'.$CFG->wwwroot.'/theme/simbuild/pix/profile/email_new.png" title="'.get_string('viewmessages','block_sbcprofile').'" />';
+        $this->content->text .= '<img src="/theme/simbuild/pix/profile/email_new.png" title="'.get_string('viewmessages','block_sbcprofile').'" />';
         $this->content->text .= '<a href="/message/index.php">'.get_string('viewmessages', 'block_sbcprofile').'</a>';
         $this->content->text .= '</div>';
         
