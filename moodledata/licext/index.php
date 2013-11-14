@@ -15,7 +15,7 @@ echo(md5($data));
 ?>
 <br/>
 <br/>
-<?php $file="52527d2971a98.lic";?>
+<?php $file="5278d678e4e57.lic";?>
 <menu>
 <li>Tool configuration: <?php echo validate_tools() ? "OK" : "Not ok";?>
 <li>Exec available: <?php echo exec_enabled() ? "OK" : "Not ok";?>
@@ -24,10 +24,13 @@ echo(md5($data));
 <li>License date: <?php echo lic_LicenseDate($file)?>
 <li>License ID: <?php echo lic_LicenseID($file);?>
 <li>Application ID: <?php echo lic_ApplicationID($file);?>
+<li>User ID: <?php echo lic_UserID($file);?>
 <li>License expiration date: <?php echo lic_LimitDate($file);?>
+<li>License has expired? : <?php echo lic_hasExpired($file) ? "Yes" : "No"; ?>
 <li>License max client: <?php echo lic_NbMaxClient($file);?>
 <li>License max class: <?php echo lic_NbMaxClass($file);?>
-<li>License SBC feature:
+<li>File for user 5278d4eb9fb29: <?php echo lic_getFile("5278d4eb9fb29");?>
+<li>License LMS feature:
 <menu>
 <?php 
 $feat = lic_SBCFeature($file);
