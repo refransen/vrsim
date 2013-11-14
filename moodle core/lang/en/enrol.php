@@ -28,6 +28,13 @@ $string['actenrolshhdr'] = 'Available course enrolment plugins';
 $string['addinstance'] = 'Add method';
 $string['ajaxoneuserfound'] = '1 user found';
 $string['ajaxxusersfound'] = '{$a} users found';
+
+// Rachel Fransen - Nov.8, 2013
+// Added strings for licensing
+$string['ajaxlicenseinvalid'] = 'Cannot add users to invalid license';
+$string['ajaxlicenseexpire'] = 'Cannot add users to expired license';
+$string['ajaxlicenseuserlimit'] = 'User limit reached for this license';
+
 $string['ajaxnext25'] = 'Next 25...';
 $string['assignnotpermitted'] = 'You do not have permission or can not assign roles in this course.';
 $string['bulkuseroperation'] = 'Bulk user operation';
@@ -84,6 +91,10 @@ $string['nochange'] = 'No change';
 $string['noexistingparticipants'] = 'No existing participants';
 $string['noguestaccess'] = 'Guests can not access this course, please try to log in.';
 $string['none'] = 'None';
+
+//Rachel Fransen - Nov.8, 2013
+$string['nolicenseusers'] = 'No users found for this license';
+
 $string['notenrollable'] = 'You can not enrol yourself in this course.';
 $string['notenrolledusers'] = 'Other users';
 $string['otheruserdesc'] = 'The following users are not enrolled in this course but do have roles, inherited or assigned within it.';

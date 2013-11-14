@@ -26,6 +26,9 @@
 
 require('../config.php');
 
+// Need the licensing API
+require_once($CFG->dirroot.'/licapi/lic_api.php');
+
 redirect_if_major_upgrade_required();
 
 $testsession = optional_param('testsession', 0, PARAM_INT); // test session works properly
@@ -82,7 +85,6 @@ foreach($authsequence as $authname) {
     $authplugin->loginpage_hook();
 }
 
-
 /// Define variables used in page
 $site = get_site();
 
@@ -108,6 +110,9 @@ if ($user !== false or $frm !== false or $errormsg !== '') {
 } else {
     $frm = data_submitted();
 }
+
+
+        
 
 /// Check if the user has actually submitted login data to us
 
@@ -171,6 +176,36 @@ if ($frm and isset($frm->username)) {                             // Login WITH 
             echo $OUTPUT->footer();
             die;
         }
+        
+        // Rachel Fransen - Nov.14, 2013
+	// Added a license check for SimBuild
+	if($user->theme == 'simbuild' && !is_siteadmin($user)) {
+	     $custID = $user->institution;
+	     $file = lic_getFile($custID); 
+	     $title = "";
+	     $desc = "";
+	 
+	     if(!lic_IsValid($file)) {
+	     	$title = get_string("invalidlictitle");
+	     	$desc = get_string("invaliclicdesc");
+	     	$desc .= '<div class="returnbtn"><a href="'.$CFG->wwwroot.'">Return</a></div>';
+	     }
+	     else if(lic_hasExpired($file)) {
+	     	$title = get_string("expiredlictitle");     	
+	     	$desc = get_string("expiredlicdesc", "", lic_LimitDate($file));
+	     	$desc .= '<div class="returnbtn"><a href="'.$CFG->wwwroot.'">Return</a></div>';
+	     } 
+	     if($title !== "")
+	     {
+	        $PAGE->set_title($title);
+	        $PAGE->set_heading($site->fullname);
+	        echo $OUTPUT->header();
+	        echo $OUTPUT->heading($title);
+	        echo $OUTPUT->box($desc, "generalbox boxaligncenter");
+	        echo $OUTPUT->footer();
+	        die;
+	     }
+	}
 
     /// Let's get them all set up.
         add_to_log(SITEID, 'user', 'login', "view.php?id=$USER->id&course=".SITEID,
@@ -254,6 +289,7 @@ if ($frm and isset($frm->username)) {                             // Login WITH 
                 }
             } 
         }
+        
 
     /// check if user password has expired
     /// Currently supported only for ldap-authentication module

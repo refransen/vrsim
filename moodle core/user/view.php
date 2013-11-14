@@ -170,7 +170,7 @@ echo $OUTPUT->header();
 
 // Rachel Fransen -Added these icons to all user profile pages
 //------------------------------
-if($currentuser && $USER->theme !== 'simbuild')
+if($currentuser && has_capability('moodle/user:create', $usercontext))
 {
     $hardcodedtext = '<table id="profilelinks" align="center" cellpadding="20">
     <tbody>

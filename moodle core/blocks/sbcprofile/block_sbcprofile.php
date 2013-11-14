@@ -123,64 +123,25 @@ class block_sbcprofile extends block_base {
             $this->content->text .= '</div>';
         }
 
-        if(!isset($this->config->display_email) || $this->config->display_email == 1) {
-            $this->content->text .= '<div class="myprofileitem email">';
-            $this->content->text .= obfuscate_mailto($USER->email, '');
-            $this->content->text .= '</div>';
-        }
-
-        if(!empty($this->config->display_skype) && !empty($USER->skype)) {
-            $this->content->text .= '<div class="myprofileitem skype">';
-            $this->content->text .= 'Skype: ' . s($USER->skype);
-            $this->content->text .= '</div>';
-        }
-
-        if(!empty($this->config->display_phone1) && !empty($USER->phone1)) {
-            $this->content->text .= '<div class="myprofileitem phone1">';
-            $this->content->text .= get_string('phone').': ' . s($USER->phone1);
-            $this->content->text .= '</div>';
-        }
-
-        if(!empty($this->config->display_phone2) && !empty($USER->phone2)) {
-            $this->content->text .= '<div class="myprofileitem phone2">';
-            $this->content->text .= get_string('phone').': ' . s($USER->phone2);
-            $this->content->text .= '</div>';
-        }
-
-        if(!empty($this->config->display_institution) && !empty($USER->institution)) {
-            $this->content->text .= '<div class="myprofileitem institution">';
-            $this->content->text .= format_string($USER->institution);
-            $this->content->text .= '</div>';
-        }
-
-        if(!empty($this->config->display_firstaccess) && !empty($USER->firstaccess)) {
-            $this->content->text .= '<div class="myprofileitem firstaccess">';
-            $this->content->text .= get_string('firstaccess').': ' . userdate($USER->firstaccess);
-            $this->content->text .= '</div>';
-        }
-
-        if(!empty($this->config->display_lastaccess) && !empty($USER->lastaccess)) {
-            $this->content->text .= '<div class="myprofileitem lastaccess">';
-            $this->content->text .= get_string('lastaccess').': ' . userdate($USER->lastaccess);
-            $this->content->text .= '</div>';
-        }
-
-        if(!empty($this->config->display_currentlogin) && !empty($USER->currentlogin)) {
-            $this->content->text .= '<div class="myprofileitem currentlogin">';
-            $this->content->text .= get_string('login').': ' . userdate($USER->currentlogin);
-            $this->content->text .= '</div>';
-        }
-        
         $this->content->text .= '<div class="myprofileitem profileicon">';
-        $this->content->text .= '<img src="/theme/simbuild/pix/profile/profile_new.png" title="'.get_string('viewprofile','block_sbcprofile').'" />';
-        $this->content->text .= '<a href="/user/profile.php" >'.get_string('viewprofile','block_sbcprofile').'</a>';
+        $this->content->text .= '<img src="'.$CFG->wwwroot.'/theme/simbuild/pix/profile/profile_new.png" title="'.get_string('viewprofile','block_sbcprofile').'" />';
+        $this->content->text .= '<a href="'.$CFG->wwwroot.'/user/profile.php" >'.get_string('viewprofile','block_sbcprofile').'</a>';
         $this->content->text .= '</div>';
         
         $this->content->text .= '<div class="myprofileitem messageicon">';
-        $this->content->text .= '<img src="/theme/simbuild/pix/profile/email_new.png" title="'.get_string('viewmessages','block_sbcprofile').'" />';
-        $this->content->text .= '<a href="/message/index.php">'.get_string('viewmessages', 'block_sbcprofile').'</a>';
+        $this->content->text .= '<img src="'.$CFG->wwwroot.'/theme/simbuild/pix/profile/email_new.png" title="'.get_string('viewmessages','block_sbcprofile').'" />';
+        $this->content->text .= '<a href="'.$CFG->wwwroot.'/message/index.php">'.get_string('viewmessages', 'block_sbcprofile').'</a>';
         $this->content->text .= '</div>';
         
+        $context = $this->page->context;
+        $databaseCap = has_capability('enrol/database:unenrol', $context);
+        if($databaseCap) {
+            $this->content->text .= '<div class="myprofileitem databaseicon">';
+            $this->content->text .= '<img src="'.$CFG->wwwroot.'/theme/simbuild/pix/profile/databaseIcon_gray.png" title="'.get_string('viewdatabase','block_sbcprofile').'" />';
+            $this->content->text .= '<a href="'.$CFG->wwwroot.'/admin/auth_config.php?auth=db">'.get_string('viewdatabase', 'block_sbcprofile').'</a>';
+            $this->content->text .= '</div>';
+        }
+                
         $delimiter = '<a href="';
         $newLoginArr = explode($delimiter,$OUTPUT->login_info());
         $finalUrlArr = array();
@@ -214,16 +175,19 @@ class block_sbcprofile extends block_base {
                //$siteID = 1; 
                //$sessionKey = explode("sesskey=",$returnUrl);
                //$returnUrl = $CFG->wwwroot.'/course/loginas.php?id='.$siteID.'&amp;user='.$oldUser->id.'&amp;sesskey='.$sessionKey[1];
+               $returnUrl = new moodle_url($CFG->wwwroot.'/login/logout.php', array('sesskey'=>sesskey()));
            }
 	        
            $this->content->text .= '<div class="logintitle" ><p>Logged in as: </p><h3>'.fullname($USER).'</h3>';
            $this->content->text .= '<a href="'.$returnUrl.'" >Return to your own profile?</a></div></div>';
         }
-        
-        $this->content->text .= '<div class="myprofileitem logoutbttn">';
-        $logouturl = new moodle_url('/login/logout.php', array('sesskey'=>sesskey()));
-        $this->content->text .= '<a href="'.$logouturl.'">'.get_string('logout').'</a>';
-        $this->content->text .= '</div>';
+        else {
+            /// Print the standard logout button instead
+            $this->content->text .= '<div class="myprofileitem logoutbttn">';
+            $logouturl = new moodle_url('/login/logout.php', array('sesskey'=>sesskey()));
+            $this->content->text .= '<a href="'.$logouturl.'">'.get_string('logout').'</a>';
+            $this->content->text .= '</div>';
+        }
 
         return $this->content;
     }

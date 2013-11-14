@@ -63,11 +63,14 @@ div.block_sbcprofile.hidden div.header h2
 }
 .block_sbcprofile .myprofileitem.messageicon
 {
-    padding-bottom:0.5em;
+   /* padding-bottom:0.5em;*/
 }
-
+.block_sbcprofile .myprofileitem.databaseicon {
+   padding-bottom:0.5em;
+}
 .block_sbcprofile .myprofileitem.profileicon img,
-.block_sbcprofile .myprofileitem.messageicon img
+.block_sbcprofile .myprofileitem.messageicon img,
+.block_sbcprofile .myprofileitem.databaseicon img
 {
     vertical-align: middle;
     width:25px;

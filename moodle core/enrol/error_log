@@ -1,2 +1,48 @@
 [29-Oct-2013 11:55:15 America/Denver] PHP Warning:  mysqli::mysqli(): (HY000/1040): Too many connections in /home/vrsimlms/public_html/lib/dml/mysqli_native_moodle_database.php on line 381
 [29-Oct-2013 11:55:15 America/Denver] PHP Warning:  mysqli::mysqli(): (08004/1040): Too many connections in /home/vrsimlms/public_html/lib/dml/mysqli_native_moodle_database.php on line 381
+[07-Nov-2013 03:03:28 America/Denver] PHP Warning:  require_once(): http:// wrapper is disabled in the server configuration by allow_url_include=0 in /home/vrsimlms/public_html/enrol/locallib.php on line 32
+[07-Nov-2013 03:03:28 America/Denver] PHP Warning:  require_once(http://vrsimlms.com/licapi/lic_api.php): failed to open stream: no suitable wrapper could be found in /home/vrsimlms/public_html/enrol/locallib.php on line 32
+[07-Nov-2013 03:03:28 America/Denver] PHP Fatal error:  require_once(): Failed opening required 'http://vrsimlms.com/licapi/lic_api.php' (include_path='/home/vrsimlms/public_html/lib/zend:/home/vrsimlms/public_html/lib/pear:.:/usr/lib/php:/usr/local/lib/php') in /home/vrsimlms/public_html/enrol/locallib.php on line 32
+[07-Nov-2013 03:04:06 America/Denver] PHP Warning:  file_get_contents(tools/getid): failed to open stream: No such file or directory in /home/vrsimlms/public_html/licapi/lic_api.php on line 10
+[07-Nov-2013 03:04:48 America/Denver] PHP Warning:  require_once(): http:// wrapper is disabled in the server configuration by allow_url_include=0 in /home/vrsimlms/public_html/enrol/locallib.php on line 32
+[07-Nov-2013 03:04:48 America/Denver] PHP Warning:  require_once(http://vrsimlms.com/licapi/lic_api.php): failed to open stream: no suitable wrapper could be found in /home/vrsimlms/public_html/enrol/locallib.php on line 32
+[07-Nov-2013 03:04:48 America/Denver] PHP Fatal error:  require_once(): Failed opening required 'http://vrsimlms.com/licapi/lic_api.php' (include_path='/home/vrsimlms/public_html/lib/zend:/home/vrsimlms/public_html/lib/pear:.:/usr/lib/php:/usr/local/lib/php') in /home/vrsimlms/public_html/enrol/locallib.php on line 32
+[07-Nov-2013 03:05:31 America/Denver] PHP Warning:  file_get_contents(tools/getid): failed to open stream: No such file or directory in /home/vrsimlms/public_html/licapi/lic_api.php on line 10
+[07-Nov-2013 03:05:57 America/Denver] PHP Warning:  require_once(/licapi/lic_api.php): failed to open stream: No such file or directory in /home/vrsimlms/public_html/enrol/locallib.php on line 32
+[07-Nov-2013 03:05:57 America/Denver] PHP Fatal error:  require_once(): Failed opening required '/licapi/lic_api.php' (include_path='/home/vrsimlms/public_html/lib/zend:/home/vrsimlms/public_html/lib/pear:.:/usr/lib/php:/usr/local/lib/php') in /home/vrsimlms/public_html/enrol/locallib.php on line 32
+[07-Nov-2013 03:06:11 America/Denver] PHP Warning:  file_get_contents(tools/getid): failed to open stream: No such file or directory in /home/vrsimlms/public_html/licapi/lic_api.php on line 10
+[07-Nov-2013 03:10:21 America/Denver] PHP Warning:  file_get_contents(tools/getid): failed to open stream: No such file or directory in /home/vrsimlms/public_html/licapi/lic_api.php on line 10
+[07-Nov-2013 03:11:47 America/Denver] PHP Warning:  require_once(): http:// wrapper is disabled in the server configuration by allow_url_include=0 in /home/vrsimlms/public_html/enrol/locallib.php on line 33
+[07-Nov-2013 03:11:47 America/Denver] PHP Warning:  require_once(http://vrsimlms.com/licapi/lic_api.php): failed to open stream: no suitable wrapper could be found in /home/vrsimlms/public_html/enrol/locallib.php on line 33
+[07-Nov-2013 03:11:47 America/Denver] PHP Fatal error:  require_once(): Failed opening required 'http://vrsimlms.com/licapi/lic_api.php' (include_path='/home/vrsimlms/public_html/lib/zend:/home/vrsimlms/public_html/lib/pear:.:/usr/lib/php:/usr/local/lib/php') in /home/vrsimlms/public_html/enrol/locallib.php on line 33
+[07-Nov-2013 03:12:06 America/Denver] PHP Warning:  file_get_contents(tools/getid): failed to open stream: No such file or directory in /home/vrsimlms/public_html/licapi/lic_api.php on line 10
+[07-Nov-2013 03:14:52 America/Denver] PHP Warning:  file_get_contents(/tools/getid): failed to open stream: No such file or directory in /home/vrsimlms/public_html/licapi/lic_api.php on line 10
+[07-Nov-2013 03:15:04 America/Denver] PHP Warning:  file_get_contents(tools/getid): failed to open stream: No such file or directory in /home/vrsimlms/public_html/licapi/lic_api.php on line 10
+[07-Nov-2013 03:16:06 America/Denver] PHP Warning:  file_get_contents(tools/getid): failed to open stream: No such file or directory in /home/vrsimlms/public_html/licapi/lic_api.php on line 10
+[08-Nov-2013 03:42:23 America/Denver] PHP Notice:  Undefined variable: USER in /home/vrsimlms/public_html/enrol/manual/lib.php on line 259
+[08-Nov-2013 03:42:23 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/enrol/manual/lib.php on line 259
+[08-Nov-2013 04:46:19 America/Denver] PHP Notice:  Undefined variable: file in /home/vrsimlms/public_html/enrol/manual/lib.php on line 228
+[08-Nov-2013 04:56:27 America/Denver] PHP Notice:  Undefined variable: totalusers in /home/vrsimlms/public_html/enrol/manual/lib.php on line 234
+[08-Nov-2013 05:03:51 America/Denver] Default exception handler: Coding error detected, it must be fixed by a programmer: PHP catchable fatal error Debug: Argument 1 passed to get_enrolled_users() must be an instance of context, string given, called in /home/vrsimlms/public_html/enrol/manual/lib.php on line 229 and defined
+Error code: codingerror
+* line 397 of /lib/setuplib.php: coding_exception thrown
+* line 2312 of /lib/accesslib.php: call to default_error_handler()
+* line 229 of /enrol/manual/lib.php: call to get_enrolled_users()
+* line 1000 of /enrol/locallib.php: call to enrol_manual_plugin->get_manual_enrol_button()
+* line 470 of /enrol/renderer.php: call to course_enrolment_manager->get_manual_enrol_buttons()
+* line 51 of /enrol/renderer.php: call to course_enrolment_table->get_manual_enrol_buttons()
+* line 215 of /lib/outputrenderers.php: call to core_enrol_renderer->render_course_enrolment_users_table()
+* line 216 of /enrol/users.php: call to plugin_renderer_base->render()
+
+[08-Nov-2013 05:06:08 America/Denver] Default exception handler: Coding error detected, it must be fixed by a programmer: PHP catchable fatal error Debug: Argument 1 passed to get_enrolled_users() must be an instance of context, integer given, called in /home/vrsimlms/public_html/enrol/manual/lib.php on line 230 and defined
+Error code: codingerror
+* line 397 of /lib/setuplib.php: coding_exception thrown
+* line 2312 of /lib/accesslib.php: call to default_error_handler()
+* line 230 of /enrol/manual/lib.php: call to get_enrolled_users()
+* line 1000 of /enrol/locallib.php: call to enrol_manual_plugin->get_manual_enrol_button()
+* line 470 of /enrol/renderer.php: call to course_enrolment_manager->get_manual_enrol_buttons()
+* line 51 of /enrol/renderer.php: call to course_enrolment_table->get_manual_enrol_buttons()
+* line 215 of /lib/outputrenderers.php: call to core_enrol_renderer->render_course_enrolment_users_table()
+* line 216 of /enrol/users.php: call to plugin_renderer_base->render()
+
+[11-Nov-2013 13:12:46 America/Denver] PHP Notice:  Undefined variable: totalusers in /home/vrsimlms/public_html/enrol/manual/lib.php on line 242

@@ -21,6 +21,8 @@
  * @copyright  2010 Petr Skoda {@link http://skodak.org}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+// Need the licensing API
+require_once($CFG->dirroot.'/licapi/lic_api.php');
 
 defined('MOODLE_INTERNAL') || die();
 
@@ -45,7 +47,7 @@ class enrol_manual_potential_participant extends user_selector_base {
      * @return array
      */
     public function find_users($search) {
-        global $DB;
+        global $DB, $USER;
         // By default wherecondition retrieves all users except the deleted, not confirmed and guest.
         list($wherecondition, $params) = $this->search_sql($search, 'u');
         $params['enrolid'] = $this->enrolid;
@@ -57,6 +59,26 @@ class enrol_manual_potential_participant extends user_selector_base {
             LEFT JOIN {user_enrolments} ue ON (ue.userid = u.id AND ue.enrolid = :enrolid)
                 WHERE $wherecondition
                       AND ue.id IS NULL";
+
+        // Rachel Fransen - Oct 30, 2013
+        // You can only enroll users that belong to your theme AND 
+        // your institution (license number)
+        if(!is_siteadmin($USER)) {
+             $sql .= " AND u.theme=:utheme";
+             $params['utheme'] = $USER->theme;
+
+             //Check if the license is valid
+             if($USER->theme == 'simbuild') {
+                 $custID = $USER->institution;
+                 $file = lic_getFile($custID); //$custID.".lic";
+                 if(!lic_IsValid($file) || lic_hasExpired($file)) {
+                     $custID = 0;
+                 }
+
+                 $sql .= " AND u.institution=:uinstitution";
+                 $params['uinstitution'] = $custID;
+             }
+        }
 
         list($sort, $sortparams) = users_order_by_sql('u', $search, $this->accesscontext);
         $order = ' ORDER BY ' . $sort;

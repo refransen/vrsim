@@ -306,26 +306,29 @@ function useredit_shared_definition(&$mform, $editoroptions = null, $filemanager
     }
 
     /// Moodle optional fields
-    if(is_siteadmin()) {
+    $usercontext  = context_user::instance($user->id, MUST_EXIST);
+    if(has_capability('moodle/user:create', $usercontext)) {
         $mform->addElement('header', 'moodle_optional', get_string('optional', 'form'));
 
-        $mform->addElement('text', 'url', get_string('webpage'), 'maxlength="255" size="50"');
-        $mform->setType('url', PARAM_URL);
+	if(is_siteadmin()) {
+            $mform->addElement('text', 'url', get_string('webpage'), 'maxlength="255" size="50"');
+            $mform->setType('url', PARAM_URL);
 
-        $mform->addElement('text', 'icq', get_string('icqnumber'), 'maxlength="15" size="25"');
-        $mform->setType('icq', PARAM_NOTAGS);
+           $mform->addElement('text', 'icq', get_string('icqnumber'), 'maxlength="15" size="25"');
+            $mform->setType('icq', PARAM_NOTAGS);
 
-        $mform->addElement('text', 'skype', get_string('skypeid'), 'maxlength="50" size="25"');
-        $mform->setType('skype', PARAM_NOTAGS);
+            $mform->addElement('text', 'skype', get_string('skypeid'), 'maxlength="50" size="25"');
+            $mform->setType('skype', PARAM_NOTAGS);
 
-        $mform->addElement('text', 'aim', get_string('aimid'), 'maxlength="50" size="25"');
-        $mform->setType('aim', PARAM_NOTAGS);
+            $mform->addElement('text', 'aim', get_string('aimid'), 'maxlength="50" size="25"');
+            $mform->setType('aim', PARAM_NOTAGS);
 
-        $mform->addElement('text', 'yahoo', get_string('yahooid'), 'maxlength="50" size="25"');
-        $mform->setType('yahoo', PARAM_NOTAGS);
+            $mform->addElement('text', 'yahoo', get_string('yahooid'), 'maxlength="50" size="25"');
+            $mform->setType('yahoo', PARAM_NOTAGS);
 
-        $mform->addElement('text', 'msn', get_string('msnid'), 'maxlength="50" size="25"');
-        $mform->setType('msn', PARAM_NOTAGS);
+            $mform->addElement('text', 'msn', get_string('msnid'), 'maxlength="50" size="25"');
+            $mform->setType('msn', PARAM_NOTAGS);
+        }
 
         $mform->addElement('text', 'idnumber', get_string('idnumber'), 'maxlength="255" size="25"');
         $mform->setType('idnumber', PARAM_NOTAGS);
@@ -333,17 +336,19 @@ function useredit_shared_definition(&$mform, $editoroptions = null, $filemanager
         $mform->addElement('text', 'institution', get_string('institution'), 'maxlength="40" size="25"');
         $mform->setType('institution', PARAM_TEXT);
 
-        $mform->addElement('text', 'department', get_string('department'), 'maxlength="30" size="25"');
-        $mform->setType('department', PARAM_TEXT);
+	if(is_siteadmin()) {
+            $mform->addElement('text', 'department', get_string('department'), 'maxlength="30" size="25"');
+            $mform->setType('department', PARAM_TEXT);
 
-        $mform->addElement('text', 'phone1', get_string('phone'), 'maxlength="20" size="25"');
-        $mform->setType('phone1', PARAM_NOTAGS);
+            $mform->addElement('text', 'phone1', get_string('phone'), 'maxlength="20" size="25"');
+            $mform->setType('phone1', PARAM_NOTAGS);
 
-        $mform->addElement('text', 'phone2', get_string('phone2'), 'maxlength="20" size="25"');
-        $mform->setType('phone2', PARAM_NOTAGS);
+            $mform->addElement('text', 'phone2', get_string('phone2'), 'maxlength="20" size="25"');
+            $mform->setType('phone2', PARAM_NOTAGS);
 
-        $mform->addElement('text', 'address', get_string('address'), 'maxlength="70" size="25"');
-        $mform->setType('address', PARAM_TEXT);
+            $mform->addElement('text', 'address', get_string('address'), 'maxlength="70" size="25"');
+            $mform->setType('address', PARAM_TEXT);
+        }
     }
 
 

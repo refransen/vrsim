@@ -30,6 +30,12 @@
  * @copyright 2010 Sam Hemelryk
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+ 
+ // Rachel Fransen - Nov.8, 2013
+ // Added file for licensing
+ // Need the licensing API
+require_once($CFG->dirroot.'/licapi/lic_api.php');
+
 class core_enrol_renderer extends plugin_renderer_base {
 
     /**
@@ -154,13 +160,13 @@ class core_enrol_renderer extends plugin_renderer_base {
      * @return string
      */
     protected function render_course_enrolment_other_users_table(course_enrolment_other_users_table $table) {
-
+	global $USER;
         $table->initialise_javascript();
 
         $content = '';
         $searchbutton = $table->get_user_search_button();
         if ($searchbutton) {
-            $content .= $this->output->render($searchbutton);
+            $content .=  $this->output->render($searchbutton);
         }
         $content .= html_writer::tag('div', get_string('otheruserdesc', 'enrol'), array('class'=>'otherusersdesc'));
         $content .= $this->output->render($table->get_paging_bar());
@@ -754,10 +760,12 @@ class course_enrolment_other_users_table extends course_enrolment_table {
         if (!has_capability('moodle/role:assign', $this->manager->get_context())) {
             return false;
         }
+        
         $count++;
         $url = new moodle_url('/admin/roles/assign.php', array('contextid'=>$this->manager->get_context()->id, 'sesskey'=>sesskey()));
         $control = new single_button($url, get_string('assignroles', 'role'), 'get');
-        $control->class = 'singlebutton assignuserrole instance'.$count;
+        $control->class = 'singlebutton assignuserrole instance'.$count;     
+        
         if ($count == 1) {
             $this->manager->get_moodlepage()->requires->strings_for_js(array(
                     'ajaxoneuserfound',

@@ -54,5 +54,5 @@ $string['pluginname'] = 'SBC Profile';
 // Custom elements
 $string['viewprofile'] = 'View Profile';
 $string['viewmessages'] = 'View Messages';
+$string['viewdatabase'] = 'View Database settings';
 $string['logout'] = 'Logout';
-

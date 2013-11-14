@@ -28,8 +28,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 // Need the licensing API
-//$licenseUrl = new moodle_url($CFG->dataroot.'/licext/lic_api.php');
-//require_once($licenseUrl); 
+require_once($CFG->dirroot.'/licapi/lic_api.php');
 
 /**
  * This class provides a targeted tied together means of interfacing the enrolment
@@ -364,13 +363,23 @@ class course_enrolment_manager {
         $params['enrolid'] = $enrolid;
 
         // Rachel Fransen - Oct 30, 2013
-        // You can only enroll users that belong to your theme
+        // You can only enroll users that belong to your theme AND 
+        // your institution (license number)
         if(!is_siteadmin($USER)) {
              $sql .= " AND u.theme=:utheme";
              $params['utheme'] = $USER->theme;
-             
-             // Get the customerID number
-             // 
+
+             //Check if the license is valid
+             if($USER->theme == 'simbuild') {
+                 $custID = $USER->institution;
+                 $file = lic_getFile($custID); //$custID.".lic";
+                 if(!lic_IsValid($file) || lic_hasExpired($file)) {
+                     $custID = 0;
+                 }
+
+                 $sql .= " AND u.institution=:uinstitution";
+                 $params['uinstitution'] = $custID;
+             }
         }
 
         return $this->execute_search_queries($search, $fields, $countfields, $sql, $params, $page, $perpage);

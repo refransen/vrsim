@@ -254,12 +254,18 @@
 <!-- Rachel Fransen - Adding usertheme  to the external database -->
 <?php
     //getting the themes defined in the site
+    // ONLY SIMBUILD IS USING THIS PLUGIN
     $choices = array();
-    $choices[''] = get_string('default');
+    if(is_siteadmin()) {
+        $choices[''] = get_string('default');
+    }
+    
     $themes = get_list_of_themes();
     foreach ($themes as $key=>$theme) {
         if (empty($theme->hidefromselector)) {
-           $choices[$key] = get_string('pluginname', 'theme_'.$theme->name);
+           if(!is_siteadmin() && $theme->name == $config->usertheme) {
+           	$choices[$key] = get_string('pluginname', 'theme_'.$theme->name);
+           }
         }
     }  
 ?>

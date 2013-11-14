@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/vrsimlic/!svn/ver/24/webapi/licext
+END
+deployment.xml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/vrsimlic/!svn/ver/6/webapi/licext/deployment.xml
+END
+phpunit.phar
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/vrsimlic/!svn/ver/7/webapi/licext/phpunit.phar
+END
+ion.iep
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/vrsimlic/!svn/ver/8/webapi/licext/ion.iep
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/vrsimlic/!svn/ver/6/webapi/licext/.project
+END
+test.php
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/vrsimlic/!svn/ver/7/webapi/licext/test.php
+END
+lic_api.php
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/vrsimlic/!svn/ver/24/webapi/licext/lic_api.php
+END
+config_win.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/vrsimlic/!svn/ver/17/webapi/licext/config_win.php
+END
+.buildpath
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/vrsimlic/!svn/ver/6/webapi/licext/.buildpath
+END
+config_linux.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/vrsimlic/!svn/ver/21/webapi/licext/config_linux.php
+END
+deployment.properties
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/vrsimlic/!svn/ver/23/webapi/licext/deployment.properties
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/vrsimlic/!svn/ver/22/webapi/licext/index.php
+END
+5278d678e4e57.lic
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/vrsimlic/!svn/ver/19/webapi/licext/5278d678e4e57.lic
+END

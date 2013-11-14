@@ -198,7 +198,7 @@ class enrol_manual_plugin extends enrol_plugin {
      * @return enrol_user_button
      */
     public function get_manual_enrol_button(course_enrolment_manager $manager) {
-        global $CFG;
+        global $CFG, $USER;
 
         $instance = null;
         $instances = array();
@@ -216,6 +216,31 @@ class enrol_manual_plugin extends enrol_plugin {
 
         if (!$manuallink = $this->get_manual_enrol_link($instance)) {
             return false;
+        }
+  
+        //Rachel Fransen - Nov.8, 2013
+        // Add code for licensing
+        if(!is_siteadmin() && $USER->theme == 'simbuild') {
+           $custID = $USER->institution;
+           $licenseFile = lic_getFile($custID); //$custID.".lic";
+                      
+           //Find total users
+           $context = context_course::instance($instance->courseid);
+           $totalUsers = count(get_enrolled_users($context)) - 1;	// Don't count the teacher as a user
+           
+           if(!lic_IsValid($licenseFile)) { 
+                   echo '<div class="licensetext">'.get_string("ajaxlicenseinvalid", "enrol").'</div>'; 
+                   return false;
+           }
+              
+           if(lic_hasExpired($licenseFile)) {
+                  echo '<div class="licensetext">'.get_string("ajaxlicenseexpire", "enrol").'</div>'; 
+                  return false; 
+           }
+           else if($totalUsers >= lic_NbMaxClient($licenseFile)){
+               echo '<div class="licensetext">'.get_string("ajaxlicenseuserlimit", "enrol").'</div>'; 
+               return false; 
+           }            
         }
 
         $button = new enrol_user_button($manuallink, get_string('enrolusers', 'enrol_manual'), 'get');
@@ -247,8 +272,8 @@ class enrol_manual_plugin extends enrol_plugin {
 
         if ($CFG->recovergradesdefault) {
             $arguments['recoverGradesDefault'] = ' checked="checked"';
-        }
-
+        }  
+        
         $function = 'M.enrol_manual.quickenrolment.init';
         $button->require_yui_module($modules, $function, array($arguments));
         $button->strings_for_js(array(

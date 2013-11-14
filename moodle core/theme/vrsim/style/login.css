@@ -49,6 +49,7 @@
 }
 
 .loginbox .loginform .form-input #loginbtn,
+#page-login-index .returnbtn,
 .loginbox .signuppanel .subcontent .signupform #signup input
 {
     position: relative;
@@ -68,18 +69,40 @@
     background-color:#a60000;
 
     border:1px solid #d83526;
-    color:#ffffff;
+    color:#ffffff !important;
     font-family: Verdana, Geneva, sans-serif; 
     text-shadow:1px 1px 0px #b23e35;
 }
 
 .loginbox .loginform .form-input #loginbtn:hover,
+#page-login-index .returnbtn:hover,
 .loginbox .signuppanel .subcontent .signupform #signup input:hover
 {
     background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f21429), color-stop(1, #a60000) );
     background:-moz-linear-gradient( center top, #f21429 5%, #a60000 100% );
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f21429', endColorstr='#a60000');
     background-color:#fe1a00;
+}
+
+/** Returnbtn is used for custom error screens for licensing **/
+#page-login-index .returnbtn {
+   position:relative;
+   width:80px;
+   margin-top:1.5em;
+}
+#page-login-index .returnbtn a {
+   color:#fff !important;
+}
+#page-login-index .returnbtn:hover a {
+    text-decoration:underline;
+}
+#page-login-index h2,
+#page-login-index .boxaligncenter {
+    text-align:center;
+    font-family: Verdana, Geneva, sans-serif !important; 
+}
+#page-login-index .boxaligncenter {
+    margin-bottom:2em;
 }
 
 div.rememberpass

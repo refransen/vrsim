@@ -354,3 +354,50 @@ Error code: notlocalisederrormessage
 [04-Nov-2013 08:54:54 America/Denver] [client 66.65.111.75]  http://vrsimlms.com  Failed Login:  sbcteacher  Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36
 [04-Nov-2013 08:55:12 America/Denver] [client 72.10.110.109]  http://vrsimlms.com  Unknown user, can not create new accounts:  ddristy  Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36
 [04-Nov-2013 08:55:14 America/Denver] [client 66.65.111.75]  http://vrsimlms.com  Failed Login:  sbcteacher  Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36
+[08-Nov-2013 01:14:15 America/Denver] [client 84.105.235.76]  http://vrsimlms.com  Failed Login:  sbcadmin  Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36
+[13-Nov-2013 07:53:02 America/Denver] [client 72.10.110.109]  http://vrsimlms.com  Unknown user, can not create new accounts:  sbcteacer  Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36
+[13-Nov-2013 07:53:18 America/Denver] [client 72.10.110.109]  http://vrsimlms.com  Unknown user, can not create new accounts:  sbcteacer  Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36
+[14-Nov-2013 02:52:21 America/Denver] PHP Parse error:  syntax error, unexpected ')' in /home/vrsimlms/public_html/login/index.php on line 120
+[14-Nov-2013 03:25:41 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/login/index.php on line 97
+[14-Nov-2013 03:26:54 America/Denver] PHP Parse error:  syntax error, unexpected '$string' (T_VARIABLE) in /home/vrsimlms/public_html/lang/en/moodle.php on line 1860
+[14-Nov-2013 03:27:26 America/Denver] PHP Parse error:  syntax error, unexpected '$string' (T_VARIABLE) in /home/vrsimlms/public_html/lang/en/moodle.php on line 1860
+[14-Nov-2013 03:27:36 America/Denver] PHP Parse error:  syntax error, unexpected '$string' (T_VARIABLE) in /home/vrsimlms/public_html/lang/en/moodle.php on line 1860
+[14-Nov-2013 03:27:58 America/Denver] PHP Parse error:  syntax error, unexpected '$string' (T_VARIABLE) in /home/vrsimlms/public_html/lang/en/moodle.php on line 1860
+[14-Nov-2013 03:28:45 America/Denver] PHP Notice:  Undefined variable: a in /home/vrsimlms/public_html/lang/en/moodle.php on line 1861
+[14-Nov-2013 03:29:19 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/login/index.php on line 117
+[14-Nov-2013 03:29:36 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/login/index.php on line 117
+[14-Nov-2013 03:29:48 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/login/index.php on line 117
+[14-Nov-2013 03:29:48 America/Denver] PHP Warning:  session_regenerate_id(): Cannot regenerate session id - headers already sent in /home/vrsimlms/public_html/lib/moodlelib.php on line 4254
+[14-Nov-2013 03:29:48 America/Denver] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vrsimlms/public_html/login/index.php:117) in /home/vrsimlms/public_html/lib/sessionlib.php on line 1075
+[14-Nov-2013 03:29:48 America/Denver] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vrsimlms/public_html/login/index.php:117) in /home/vrsimlms/public_html/lib/sessionlib.php on line 1079
+[14-Nov-2013 03:30:47 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/login/index.php on line 90
+[14-Nov-2013 03:30:52 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/login/index.php on line 90
+[14-Nov-2013 03:31:04 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/login/index.php on line 90
+[14-Nov-2013 03:31:14 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/login/index.php on line 90
+[14-Nov-2013 03:31:14 America/Denver] PHP Warning:  session_regenerate_id(): Cannot regenerate session id - headers already sent in /home/vrsimlms/public_html/lib/moodlelib.php on line 4254
+[14-Nov-2013 03:31:14 America/Denver] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vrsimlms/public_html/login/index.php:90) in /home/vrsimlms/public_html/lib/sessionlib.php on line 1075
+[14-Nov-2013 03:31:14 America/Denver] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vrsimlms/public_html/login/index.php:90) in /home/vrsimlms/public_html/lib/sessionlib.php on line 1079
+[14-Nov-2013 03:31:29 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/login/index.php on line 90
+[14-Nov-2013 03:32:24 America/Denver] PHP Notice:  Use of undefined constant dir - assumed 'dir' in /home/vrsimlms/public_html/licapi/lic_api.php on line 139
+[14-Nov-2013 03:32:49 America/Denver] PHP Notice:  Use of undefined constant dir - assumed 'dir' in /home/vrsimlms/public_html/licapi/lic_api.php on line 139
+[14-Nov-2013 03:38:38 America/Denver] PHP Notice:  Use of undefined constant dir - assumed 'dir' in /home/vrsimlms/public_html/licapi/lic_api.php on line 139
+[14-Nov-2013 03:38:53 America/Denver] PHP Notice:  Use of undefined constant dir - assumed 'dir' in /home/vrsimlms/public_html/licapi/lic_api.php on line 139
+[14-Nov-2013 03:39:09 America/Denver] PHP Notice:  Use of undefined constant dir - assumed 'dir' in /home/vrsimlms/public_html/licapi/lic_api.php on line 139
+[14-Nov-2013 03:39:21 America/Denver] PHP Notice:  Use of undefined constant dir - assumed 'dir' in /home/vrsimlms/public_html/licapi/lic_api.php on line 139
+[14-Nov-2013 03:42:07 America/Denver] PHP Notice:  Use of undefined constant dir - assumed 'dir' in /home/vrsimlms/public_html/licapi/lic_api.php on line 139
+[14-Nov-2013 03:46:44 America/Denver] PHP Notice:  Use of undefined constant dir - assumed 'dir' in /home/vrsimlms/public_html/licapi/lic_api.php on line 139
+[14-Nov-2013 03:48:04 America/Denver] PHP Notice:  Use of undefined constant dir - assumed 'dir' in /home/vrsimlms/public_html/licapi/lic_api.php on line 139
+[14-Nov-2013 03:50:33 America/Denver] PHP Notice:  Use of undefined constant dir - assumed 'dir' in /home/vrsimlms/public_html/licapi/lic_api.php on line 139
+[14-Nov-2013 03:52:30 America/Denver] PHP Notice:  Use of undefined constant dir - assumed 'dir' in /home/vrsimlms/public_html/licapi/lic_api.php on line 139
+[14-Nov-2013 03:54:28 America/Denver] PHP Notice:  Use of undefined constant dir - assumed 'dir' in /home/vrsimlms/public_html/licapi/lic_api.php on line 139
+[14-Nov-2013 03:55:03 America/Denver] PHP Notice:  Use of undefined constant dir - assumed 'dir' in /home/vrsimlms/public_html/licapi/lic_api.php on line 139
+[14-Nov-2013 03:56:54 America/Denver] PHP Notice:  Use of undefined constant dir - assumed 'dir' in /home/vrsimlms/public_html/licapi/lic_api.php on line 139
+[14-Nov-2013 03:58:09 America/Denver] PHP Notice:  Use of undefined constant dir - assumed 'dir' in /home/vrsimlms/public_html/licapi/lic_api.php on line 139
+[14-Nov-2013 03:59:15 America/Denver] Default exception handler: Sorry, you have exceeded the allowed number of login attempts. Restart your browser. Debug: 
+Error code: errortoomanylogins
+* line 467 of /lib/setuplib.php: moodle_exception thrown
+* line 3494 of /lib/moodlelib.php: call to print_error()
+* line 156 of /login/index.php: call to update_login_count()
+
+[14-Nov-2013 04:03:22 America/Denver] [client 84.105.235.76]  http://vrsimlms.com  Unknown user, can not create new accounts:  sbcstudent2  Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.48 Safari/537.36
+[14-Nov-2013 04:03:36 America/Denver] [client 84.105.235.76]  http://vrsimlms.com  Unknown user, can not create new accounts:  sbcstudent2  Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.48 Safari/537.36

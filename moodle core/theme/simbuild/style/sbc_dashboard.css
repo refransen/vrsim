@@ -304,7 +304,7 @@
     position: relative;
     overflow-x: auto;
     overflow-y: hidden;
-    text-align:center;
+    /*text-align:center;*/
 }
 .sbcAcademicProgress .chartkey  {
     display:inline-block;

@@ -1,0 +1,378 @@
+[29-Mar-2013 02:14:07 America/Denver] PHP Warning:  require_once(/home/vrsimlms/public_html/mod/vrlesson/reports/../../config.php): failed to open stream: No such file or directory in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 2
+[29-Mar-2013 02:14:07 America/Denver] PHP Fatal error:  require_once(): Failed opening required '/home/vrsimlms/public_html/mod/vrlesson/reports/../../config.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 2
+[03-Apr-2013 12:26:07 America/Denver] PHP Warning:  Attempt to modify property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 336
+[03-Apr-2013 12:26:07 America/Denver] PHP Warning:  Attempt to modify property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 336
+[05-Apr-2013 06:42:04 America/Denver] Default exception handler: Table "vrlresson_fields" does not exist Debug: 
+Error code: ddltablenotexist
+* line 538 of /lib/dml/moodle_database.php: dml_exception thrown
+* line 1332 of /lib/dml/moodle_database.php: call to moodle_database->where_clause()
+* line 335 of /mod/vrlesson/reports/dbreport.php: call to moodle_database->get_record()
+
+[05-Apr-2013 06:43:09 America/Denver] PHP Notice:  Undefined variable: cell_menu0 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 385
+[05-Apr-2013 06:43:09 America/Denver] PHP Notice:  Undefined variable: cell_menu1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 386
+[05-Apr-2013 06:43:09 America/Denver] PHP Notice:  Undefined variable: cell_menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 387
+[05-Apr-2013 06:43:09 America/Denver] PHP Notice:  Undefined variable: cell_menu0 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 385
+[05-Apr-2013 06:43:09 America/Denver] PHP Notice:  Undefined variable: cell_menu1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 386
+[05-Apr-2013 06:43:09 America/Denver] PHP Notice:  Undefined variable: cell_menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 387
+[05-Apr-2013 06:43:09 America/Denver] PHP Notice:  Undefined variable: cell_menu0 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 385
+[05-Apr-2013 06:43:09 America/Denver] PHP Notice:  Undefined variable: cell_menu1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 386
+[05-Apr-2013 06:43:09 America/Denver] PHP Notice:  Undefined variable: cell_menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 387
+[05-Apr-2013 06:47:02 America/Denver] PHP Notice:  Undefined variable: menu0 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 208
+[05-Apr-2013 06:47:02 America/Denver] PHP Notice:  Undefined variable: menu1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 211
+[05-Apr-2013 06:47:02 America/Denver] PHP Notice:  Undefined variable: menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 214
+[05-Apr-2013 06:47:02 America/Denver] PHP Notice:  Undefined variable: cell_menu0 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 386
+[05-Apr-2013 06:47:02 America/Denver] PHP Notice:  Undefined variable: cell_menu1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 387
+[05-Apr-2013 06:47:02 America/Denver] PHP Notice:  Undefined variable: cell_menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 388
+[05-Apr-2013 06:47:02 America/Denver] PHP Notice:  Undefined variable: cell_menu0 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 386
+[05-Apr-2013 06:47:02 America/Denver] PHP Notice:  Undefined variable: cell_menu1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 387
+[05-Apr-2013 06:47:02 America/Denver] PHP Notice:  Undefined variable: cell_menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 388
+[05-Apr-2013 06:47:02 America/Denver] PHP Notice:  Undefined variable: cell_menu0 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 386
+[05-Apr-2013 06:47:02 America/Denver] PHP Notice:  Undefined variable: cell_menu1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 387
+[05-Apr-2013 06:47:02 America/Denver] PHP Notice:  Undefined variable: cell_menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 388
+[05-Apr-2013 06:50:59 America/Denver] PHP Notice:  Undefined variable: menu0 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 209
+[05-Apr-2013 06:50:59 America/Denver] PHP Notice:  Undefined variable: menu1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 212
+[05-Apr-2013 06:50:59 America/Denver] PHP Notice:  Undefined variable: menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 215
+[05-Apr-2013 06:50:59 America/Denver] PHP Notice:  Undefined variable: cell_menu0 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 387
+[05-Apr-2013 06:50:59 America/Denver] PHP Notice:  Undefined variable: cell_menu1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 388
+[05-Apr-2013 06:50:59 America/Denver] PHP Notice:  Undefined variable: cell_menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 389
+[05-Apr-2013 06:50:59 America/Denver] PHP Notice:  Undefined variable: cell_menu0 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 387
+[05-Apr-2013 06:50:59 America/Denver] PHP Notice:  Undefined variable: cell_menu1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 388
+[05-Apr-2013 06:50:59 America/Denver] PHP Notice:  Undefined variable: cell_menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 389
+[05-Apr-2013 06:50:59 America/Denver] PHP Notice:  Undefined variable: cell_menu0 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 387
+[05-Apr-2013 06:50:59 America/Denver] PHP Notice:  Undefined variable: cell_menu1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 388
+[05-Apr-2013 06:50:59 America/Denver] PHP Notice:  Undefined variable: cell_menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 389
+[05-Apr-2013 06:55:39 America/Denver] PHP Notice:  Undefined variable: cell_menu0 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 387
+[05-Apr-2013 06:55:39 America/Denver] PHP Notice:  Undefined variable: cell_menu1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 388
+[05-Apr-2013 06:55:39 America/Denver] PHP Notice:  Undefined variable: cell_menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 389
+[05-Apr-2013 06:55:39 America/Denver] PHP Notice:  Undefined variable: cell_menu0 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 387
+[05-Apr-2013 06:55:39 America/Denver] PHP Notice:  Undefined variable: cell_menu1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 388
+[05-Apr-2013 06:55:39 America/Denver] PHP Notice:  Undefined variable: cell_menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 389
+[05-Apr-2013 06:55:39 America/Denver] PHP Notice:  Undefined variable: cell_menu0 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 387
+[05-Apr-2013 06:55:39 America/Denver] PHP Notice:  Undefined variable: cell_menu1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 388
+[05-Apr-2013 06:55:39 America/Denver] PHP Notice:  Undefined variable: cell_menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 389
+[05-Apr-2013 07:06:17 America/Denver] PHP Notice:  Undefined variable: cell_menu0 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 382
+[05-Apr-2013 07:06:17 America/Denver] PHP Notice:  Undefined variable: cell_menu1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 383
+[05-Apr-2013 07:06:17 America/Denver] PHP Notice:  Undefined variable: cell_menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 384
+[05-Apr-2013 07:06:17 America/Denver] PHP Notice:  Undefined variable: cell_menu0 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 382
+[05-Apr-2013 07:06:17 America/Denver] PHP Notice:  Undefined variable: cell_menu1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 383
+[05-Apr-2013 07:06:17 America/Denver] PHP Notice:  Undefined variable: cell_menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 384
+[05-Apr-2013 07:06:17 America/Denver] PHP Notice:  Undefined variable: cell_menu0 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 382
+[05-Apr-2013 07:06:17 America/Denver] PHP Notice:  Undefined variable: cell_menu1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 383
+[05-Apr-2013 07:06:17 America/Denver] PHP Notice:  Undefined variable: cell_menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 384
+[05-Apr-2013 07:09:52 America/Denver] PHP Notice:  Undefined variable: cell_menu0 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 382
+[05-Apr-2013 07:09:52 America/Denver] PHP Notice:  Undefined variable: cell_menu1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 383
+[05-Apr-2013 07:09:52 America/Denver] PHP Notice:  Undefined variable: cell_menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 384
+[05-Apr-2013 07:09:52 America/Denver] PHP Notice:  Undefined variable: cell_menu0 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 382
+[05-Apr-2013 07:09:52 America/Denver] PHP Notice:  Undefined variable: cell_menu1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 383
+[05-Apr-2013 07:09:52 America/Denver] PHP Notice:  Undefined variable: cell_menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 384
+[05-Apr-2013 07:09:52 America/Denver] PHP Notice:  Undefined variable: cell_menu0 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 382
+[05-Apr-2013 07:09:52 America/Denver] PHP Notice:  Undefined variable: cell_menu1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 383
+[05-Apr-2013 07:09:52 America/Denver] PHP Notice:  Undefined variable: cell_menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 384
+[05-Apr-2013 07:32:44 America/Denver] PHP Parse error:  syntax error, unexpected '$score' (T_VARIABLE) in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 345
+[05-Apr-2013 07:33:02 America/Denver] PHP Parse error:  syntax error, unexpected '$score' (T_VARIABLE) in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 345
+[05-Apr-2013 07:35:17 America/Denver] PHP Parse error:  syntax error, unexpected '$score' (T_VARIABLE) in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 345
+[05-Apr-2013 09:33:45 America/Denver] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 610
+[05-Apr-2013 09:36:39 America/Denver] PHP Parse error:  syntax error, unexpected ')' in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 608
+[06-Apr-2013 01:11:25 America/Denver] PHP Parse error:  syntax error, unexpected 'yellow' (T_STRING), expecting ',' or ';' in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 634
+[06-Apr-2013 06:57:07 America/Denver] PHP Parse error:  syntax error, unexpected 'chart' (T_STRING), expecting ',' or ';' in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 221
+[07-Apr-2013 02:06:28 America/Denver] PHP Parse error:  syntax error, unexpected 'var_dump' (T_STRING) in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 241
+[07-Apr-2013 02:06:45 America/Denver] PHP Parse error:  syntax error, unexpected '>' in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 253
+[07-Apr-2013 02:13:53 America/Denver] PHP Warning:  explode() expects parameter 2 to be string, object given in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 239
+[07-Apr-2013 02:29:52 America/Denver] PHP Parse error:  syntax error, unexpected '/' in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 296
+[07-Apr-2013 02:30:23 America/Denver] PHP Fatal error:  Call to undefined function exploded() in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 249
+[07-Apr-2013 02:48:50 America/Denver] PHP Parse error:  syntax error, unexpected ';' in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 221
+[07-Apr-2013 03:03:43 America/Denver] PHP Notice:  Undefined variable: worstTechScore in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 322
+[07-Apr-2013 03:03:43 America/Denver] PHP Notice:  Undefined variable: worstTechScore in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 322
+[07-Apr-2013 03:25:18 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 244
+[07-Apr-2013 03:25:18 America/Denver] PHP Notice:  Undefined index:  in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 286
+[07-Apr-2013 03:25:18 America/Denver] PHP Notice:  Undefined index:  in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 290
+[07-Apr-2013 03:25:18 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 298
+[07-Apr-2013 03:29:34 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 306
+[07-Apr-2013 03:29:34 America/Denver] PHP Notice:  Undefined variable: myDate in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 319
+[07-Apr-2013 03:29:34 America/Denver] PHP Notice:  Undefined variable: myTime in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 320
+[07-Apr-2013 03:30:35 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 305
+[07-Apr-2013 04:08:40 America/Denver] PHP Notice:  Undefined variable: projName in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 242
+[07-Apr-2013 04:08:40 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 242
+[07-Apr-2013 04:08:40 America/Denver] PHP Notice:  Undefined variable: projName in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 341
+[07-Apr-2013 04:08:40 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 341
+[07-Apr-2013 04:12:38 America/Denver] PHP Notice:  Undefined offset: 0 in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 154
+[07-Apr-2013 04:32:59 America/Denver] PHP Notice:  Undefined offset: 0 in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 151
+[07-Apr-2013 04:33:12 America/Denver] PHP Notice:  Undefined offset: 0 in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 151
+[07-Apr-2013 04:34:48 America/Denver] PHP Notice:  Undefined offset: 25 in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 154
+[07-Apr-2013 04:36:58 America/Denver] PHP Notice:  Undefined index:  in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 318
+[07-Apr-2013 04:36:58 America/Denver] PHP Notice:  Undefined index:  in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 322
+[07-Apr-2013 04:40:35 America/Denver] PHP Parse error:  syntax error, unexpected '{' in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 317
+[07-Apr-2013 07:16:41 America/Denver] PHP Notice:  Undefined index: Position in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 436
+[07-Apr-2013 07:16:41 America/Denver] PHP Notice:  Undefined index: CTWD in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 440
+[07-Apr-2013 07:16:41 America/Denver] PHP Notice:  Undefined index: Travel Angle in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 444
+[07-Apr-2013 07:16:41 America/Denver] PHP Notice:  Undefined index: Work Angle in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 448
+[07-Apr-2013 07:16:41 America/Denver] PHP Notice:  Undefined index: Speed in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 452
+[07-Apr-2013 07:16:41 America/Denver] PHP Notice:  Undefined index: Position in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 436
+[07-Apr-2013 07:16:41 America/Denver] PHP Notice:  Undefined index: CTWD in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 440
+[07-Apr-2013 07:16:41 America/Denver] PHP Notice:  Undefined index: Travel Angle in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 444
+[07-Apr-2013 07:16:41 America/Denver] PHP Notice:  Undefined index: Work Angle in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 448
+[07-Apr-2013 07:16:41 America/Denver] PHP Notice:  Undefined index: Speed in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 452
+[07-Apr-2013 07:17:39 America/Denver] PHP Notice:  Undefined index: Position in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 436
+[07-Apr-2013 07:17:39 America/Denver] PHP Notice:  Undefined index: CTWD in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 440
+[07-Apr-2013 07:17:39 America/Denver] PHP Notice:  Undefined index: Travel Angle in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 444
+[07-Apr-2013 07:17:39 America/Denver] PHP Notice:  Undefined index: Work Angle in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 448
+[07-Apr-2013 07:17:39 America/Denver] PHP Notice:  Undefined index: Speed in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 452
+[07-Apr-2013 07:20:02 America/Denver] PHP Notice:  Undefined index: Position in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 438
+[07-Apr-2013 07:20:02 America/Denver] PHP Notice:  Undefined index: CTWD in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 442
+[07-Apr-2013 07:20:02 America/Denver] PHP Notice:  Undefined index: Travel Angle in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 446
+[07-Apr-2013 07:20:02 America/Denver] PHP Notice:  Undefined index: Work Angle in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 450
+[07-Apr-2013 07:20:02 America/Denver] PHP Notice:  Undefined index: Speed in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 454
+[07-Apr-2013 07:21:18 America/Denver] PHP Notice:  Undefined index: Position in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 440
+[07-Apr-2013 07:21:18 America/Denver] PHP Notice:  Undefined index: CTWD in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 444
+[07-Apr-2013 07:21:18 America/Denver] PHP Notice:  Undefined index: Travel Angle in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 448
+[07-Apr-2013 07:21:18 America/Denver] PHP Notice:  Undefined index: Work Angle in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 452
+[07-Apr-2013 07:21:18 America/Denver] PHP Notice:  Undefined index: Speed in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 456
+[07-Apr-2013 07:33:22 America/Denver] PHP Notice:  Undefined variable: userUploadStr in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 491
+[07-Apr-2013 07:40:15 America/Denver] PHP Parse error:  syntax error, unexpected '<' in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 492
+[10-Apr-2013 04:00:57 America/Denver] PHP Parse error:  syntax error, unexpected '{' in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 332
+[10-Apr-2013 04:01:12 America/Denver] PHP Notice:  Undefined variable: cell_menu0 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 380
+[10-Apr-2013 04:01:12 America/Denver] PHP Notice:  Undefined variable: cell_menu1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 381
+[10-Apr-2013 04:01:12 America/Denver] PHP Notice:  Undefined variable: cell_menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 382
+[10-Apr-2013 04:01:12 America/Denver] PHP Notice:  Undefined variable: cell_menu0 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 380
+[10-Apr-2013 04:01:12 America/Denver] PHP Notice:  Undefined variable: cell_menu1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 381
+[10-Apr-2013 04:01:12 America/Denver] PHP Notice:  Undefined variable: cell_menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 382
+[10-Apr-2013 04:01:12 America/Denver] PHP Notice:  Undefined variable: cell_menu0 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 380
+[10-Apr-2013 04:01:12 America/Denver] PHP Notice:  Undefined variable: cell_menu1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 381
+[10-Apr-2013 04:01:12 America/Denver] PHP Notice:  Undefined variable: cell_menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 382
+[10-Apr-2013 04:03:32 America/Denver] PHP Notice:  Undefined variable: cell_menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 382
+[10-Apr-2013 04:03:32 America/Denver] PHP Notice:  Undefined variable: cell_menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 382
+[10-Apr-2013 04:03:32 America/Denver] PHP Notice:  Undefined variable: cell_menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 382
+[10-Apr-2013 04:17:31 America/Denver] PHP Notice:  Undefined offset: 1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 227
+[10-Apr-2013 04:17:31 America/Denver] PHP Notice:  Undefined offset: 2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 227
+[10-Apr-2013 04:17:31 America/Denver] PHP Notice:  Undefined variable: myRecordID in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 344
+[10-Apr-2013 04:17:31 America/Denver] PHP Notice:  Undefined offset: 1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 340
+[10-Apr-2013 04:17:31 America/Denver] PHP Notice:  Undefined variable: myRecordID in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 344
+[10-Apr-2013 04:17:31 America/Denver] PHP Notice:  Undefined offset: 2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 340
+[10-Apr-2013 04:17:31 America/Denver] PHP Notice:  Undefined variable: myRecordID in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 344
+[10-Apr-2013 04:17:31 America/Denver] PHP Notice:  Undefined variable: myRecordID in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 344
+[10-Apr-2013 04:17:31 America/Denver] PHP Notice:  Undefined offset: 1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 340
+[10-Apr-2013 04:17:31 America/Denver] PHP Notice:  Undefined variable: myRecordID in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 344
+[10-Apr-2013 04:17:31 America/Denver] PHP Notice:  Undefined offset: 2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 340
+[10-Apr-2013 04:17:31 America/Denver] PHP Notice:  Undefined variable: myRecordID in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 344
+[10-Apr-2013 04:17:31 America/Denver] PHP Notice:  Undefined variable: myRecordID in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 344
+[10-Apr-2013 04:17:31 America/Denver] PHP Notice:  Undefined offset: 1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 340
+[10-Apr-2013 04:17:31 America/Denver] PHP Notice:  Undefined variable: myRecordID in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 344
+[10-Apr-2013 04:17:31 America/Denver] PHP Notice:  Undefined offset: 2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 340
+[10-Apr-2013 04:17:31 America/Denver] PHP Notice:  Undefined variable: myRecordID in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 344
+[10-Apr-2013 04:18:59 America/Denver] PHP Notice:  Undefined offset: 1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 227
+[10-Apr-2013 04:18:59 America/Denver] PHP Notice:  Undefined offset: 2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 227
+[10-Apr-2013 04:18:59 America/Denver] PHP Notice:  Undefined variable: myRecordID in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 344
+[10-Apr-2013 04:18:59 America/Denver] PHP Notice:  Undefined offset: 1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 340
+[10-Apr-2013 04:18:59 America/Denver] PHP Notice:  Undefined variable: myRecordID in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 344
+[10-Apr-2013 04:18:59 America/Denver] PHP Notice:  Undefined offset: 2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 340
+[10-Apr-2013 04:18:59 America/Denver] PHP Notice:  Undefined variable: myRecordID in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 344
+[10-Apr-2013 04:18:59 America/Denver] PHP Notice:  Undefined variable: myRecordID in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 344
+[10-Apr-2013 04:18:59 America/Denver] PHP Notice:  Undefined offset: 1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 340
+[10-Apr-2013 04:18:59 America/Denver] PHP Notice:  Undefined variable: myRecordID in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 344
+[10-Apr-2013 04:18:59 America/Denver] PHP Notice:  Undefined offset: 2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 340
+[10-Apr-2013 04:18:59 America/Denver] PHP Notice:  Undefined variable: myRecordID in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 344
+[10-Apr-2013 04:18:59 America/Denver] PHP Notice:  Undefined variable: myRecordID in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 344
+[10-Apr-2013 04:18:59 America/Denver] PHP Notice:  Undefined offset: 1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 340
+[10-Apr-2013 04:18:59 America/Denver] PHP Notice:  Undefined variable: myRecordID in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 344
+[10-Apr-2013 04:18:59 America/Denver] PHP Notice:  Undefined offset: 2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 340
+[10-Apr-2013 04:18:59 America/Denver] PHP Notice:  Undefined variable: myRecordID in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 344
+[10-Apr-2013 04:19:28 America/Denver] PHP Notice:  Undefined offset: 1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 227
+[10-Apr-2013 04:19:28 America/Denver] PHP Notice:  Undefined offset: 2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 227
+[10-Apr-2013 04:19:28 America/Denver] PHP Notice:  Undefined property: stdClass::$recordid in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 347
+[10-Apr-2013 04:19:28 America/Denver] PHP Notice:  Undefined offset: 1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 340
+[10-Apr-2013 04:19:28 America/Denver] PHP Notice:  Undefined offset: 2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 340
+[10-Apr-2013 04:19:28 America/Denver] PHP Notice:  Undefined offset: 1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 340
+[10-Apr-2013 04:19:29 America/Denver] PHP Notice:  Undefined offset: 2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 340
+[10-Apr-2013 04:19:29 America/Denver] PHP Notice:  Undefined property: stdClass::$recordid in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 347
+[10-Apr-2013 04:19:29 America/Denver] PHP Notice:  Undefined offset: 1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 340
+[10-Apr-2013 04:19:29 America/Denver] PHP Notice:  Undefined offset: 2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 340
+[10-Apr-2013 04:20:59 America/Denver] PHP Parse error:  syntax error, unexpected '}' in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 407
+[10-Apr-2013 04:21:52 America/Denver] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 409
+[10-Apr-2013 04:24:07 America/Denver] PHP Notice:  Undefined property: stdClass::$recordid in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 352
+[10-Apr-2013 04:24:07 America/Denver] PHP Notice:  Undefined offset: 1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 345
+[10-Apr-2013 04:24:07 America/Denver] PHP Notice:  Undefined offset: 2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 345
+[10-Apr-2013 04:24:07 America/Denver] PHP Notice:  Undefined offset: 1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 345
+[10-Apr-2013 04:24:07 America/Denver] PHP Notice:  Undefined offset: 2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 345
+[10-Apr-2013 04:24:07 America/Denver] PHP Notice:  Undefined property: stdClass::$recordid in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 352
+[10-Apr-2013 04:24:07 America/Denver] PHP Notice:  Undefined offset: 1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 345
+[10-Apr-2013 04:24:07 America/Denver] PHP Notice:  Undefined offset: 2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 345
+[10-Apr-2013 04:24:50 America/Denver] PHP Notice:  Undefined offset: 1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 345
+[10-Apr-2013 04:24:50 America/Denver] PHP Notice:  Undefined offset: 2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 345
+[10-Apr-2013 04:24:50 America/Denver] PHP Notice:  Undefined offset: 1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 345
+[10-Apr-2013 04:24:50 America/Denver] PHP Notice:  Undefined offset: 2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 345
+[10-Apr-2013 04:24:50 America/Denver] PHP Notice:  Undefined offset: 1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 345
+[10-Apr-2013 04:24:50 America/Denver] PHP Notice:  Undefined offset: 2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 345
+[10-Apr-2013 04:30:39 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 391
+[10-Apr-2013 04:30:39 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 391
+[10-Apr-2013 04:30:39 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 391
+[10-Apr-2013 04:32:09 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 351
+[10-Apr-2013 05:25:53 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 394
+[10-Apr-2013 05:25:53 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 394
+[10-Apr-2013 05:25:53 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 394
+[10-Apr-2013 05:26:31 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 395
+[10-Apr-2013 05:26:31 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 395
+[10-Apr-2013 05:26:31 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 395
+[10-Apr-2013 05:27:26 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 393
+[10-Apr-2013 05:27:26 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 393
+[10-Apr-2013 05:27:26 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 393
+[10-Apr-2013 05:27:54 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 394
+[10-Apr-2013 05:27:54 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 394
+[10-Apr-2013 05:27:54 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 394
+[10-Apr-2013 05:28:34 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 392
+[10-Apr-2013 05:28:34 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 394
+[10-Apr-2013 05:28:34 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 392
+[10-Apr-2013 05:28:34 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 394
+[10-Apr-2013 05:28:34 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 392
+[10-Apr-2013 05:28:34 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 394
+[10-Apr-2013 05:29:32 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 393
+[10-Apr-2013 05:29:32 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 393
+[10-Apr-2013 05:29:33 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 393
+[10-Apr-2013 06:09:30 America/Denver] PHP Notice:  Undefined variable: i in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 521
+[10-Apr-2013 06:09:30 America/Denver] PHP Notice:  Undefined index:  in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 521
+[10-Apr-2013 06:09:30 America/Denver] PHP Notice:  Undefined variable: i in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 521
+[10-Apr-2013 06:09:30 America/Denver] PHP Notice:  Undefined index:  in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 521
+[10-Apr-2013 06:09:30 America/Denver] PHP Notice:  Undefined variable: i in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 521
+[10-Apr-2013 06:09:30 America/Denver] PHP Notice:  Undefined index:  in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 521
+[10-Apr-2013 06:39:22 America/Denver] PHP Notice:  Undefined offset: 1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 529
+[10-Apr-2013 06:39:22 America/Denver] PHP Notice:  Undefined offset: 1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 529
+[10-Apr-2013 06:39:22 America/Denver] PHP Notice:  Undefined offset: 1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 529
+[10-Apr-2013 06:41:58 America/Denver] PHP Notice:  Undefined variable: key in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 226
+[10-Apr-2013 06:41:58 America/Denver] PHP Notice:  Undefined offset: 1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 228
+[10-Apr-2013 06:41:58 America/Denver] PHP Notice:  Undefined variable: key in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 226
+[10-Apr-2013 06:41:58 America/Denver] PHP Notice:  Undefined offset: 1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 228
+[10-Apr-2013 06:41:58 America/Denver] PHP Notice:  Undefined variable: key in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 226
+[10-Apr-2013 06:41:58 America/Denver] PHP Notice:  Undefined offset: 1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 228
+[24-Apr-2013 07:04:22 America/Denver] PHP Parse error:  syntax error, unexpected 'foreach' (T_FOREACH) in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 355
+[29-Aug-2013 08:28:19 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 527
+[29-Aug-2013 08:28:19 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 527
+[29-Aug-2013 08:28:19 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 527
+[29-Aug-2013 08:28:29 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 527
+[29-Aug-2013 08:28:29 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 527
+[29-Aug-2013 08:28:36 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 527
+[29-Aug-2013 08:28:36 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 527
+[29-Aug-2013 08:28:36 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 527
+[29-Aug-2013 08:28:42 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 527
+[29-Aug-2013 08:28:42 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 527
+[29-Aug-2013 08:28:42 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 527
+[29-Aug-2013 08:29:15 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 527
+[29-Aug-2013 08:29:15 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 527
+[29-Aug-2013 08:29:15 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 527
+[29-Aug-2013 08:30:08 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 525
+[29-Aug-2013 08:30:08 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 525
+[29-Aug-2013 08:30:08 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 525
+[29-Aug-2013 08:30:17 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 525
+[29-Aug-2013 08:30:17 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 525
+[29-Aug-2013 08:30:17 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 525
+[29-Aug-2013 08:30:40 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 525
+[29-Aug-2013 08:30:40 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 525
+[29-Aug-2013 08:30:40 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 525
+[29-Aug-2013 08:45:49 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 361
+[29-Aug-2013 08:46:20 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 362
+[29-Aug-2013 08:46:59 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 362
+[29-Aug-2013 08:48:09 America/Denver] Default exception handler: Coding error detected, it must be fixed by a programmer: Invalid database query parameter value Debug: Objects are are not allowed: stdClass
+Error code: codingerror
+* line 735 of /lib/dml/moodle_database.php: coding_exception thrown
+* line 754 of /lib/dml/moodle_database.php: call to moodle_database->detect_objects()
+* line 1018 of /lib/dml/mysqli_native_moodle_database.php: call to moodle_database->fix_sql_params()
+* line 1382 of /lib/dml/moodle_database.php: call to mysqli_native_moodle_database->get_records_sql()
+* line 1354 of /lib/dml/moodle_database.php: call to moodle_database->get_record_sql()
+* line 1333 of /lib/dml/moodle_database.php: call to moodle_database->get_record_select()
+* line 360 of /mod/vrlesson/reports/dbreport.php: call to moodle_database->get_record()
+
+[29-Aug-2013 08:48:54 America/Denver] Default exception handler: Coding error detected, it must be fixed by a programmer: Invalid database query parameter value Debug: Objects are are not allowed: stdClass
+Error code: codingerror
+* line 735 of /lib/dml/moodle_database.php: coding_exception thrown
+* line 754 of /lib/dml/moodle_database.php: call to moodle_database->detect_objects()
+* line 1018 of /lib/dml/mysqli_native_moodle_database.php: call to moodle_database->fix_sql_params()
+* line 1382 of /lib/dml/moodle_database.php: call to mysqli_native_moodle_database->get_records_sql()
+* line 1354 of /lib/dml/moodle_database.php: call to moodle_database->get_record_sql()
+* line 1333 of /lib/dml/moodle_database.php: call to moodle_database->get_record_select()
+* line 361 of /mod/vrlesson/reports/dbreport.php: call to moodle_database->get_record()
+
+[29-Aug-2013 09:29:07 America/Denver] PHP Parse error:  syntax error, unexpected '$tempContext' (T_VARIABLE) in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 353
+[29-Aug-2013 09:29:30 America/Denver] PHP Parse error:  syntax error, unexpected '$tempContext' (T_VARIABLE) in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 353
+[29-Aug-2013 09:30:16 America/Denver] PHP Notice:  Trying to get property of non-object in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 353
+[29-Aug-2013 09:30:16 America/Denver] Default exception handler: Can not find data record in database table course_modules. Debug: SELECT id,course FROM {course_modules} WHERE id IS NULL
+[array (
+)]
+Error code: invalidrecord
+* line 1357 of /lib/dml/moodle_database.php: dml_missing_record_exception thrown
+* line 1333 of /lib/dml/moodle_database.php: call to moodle_database->get_record_select()
+* line 6799 of /lib/accesslib.php: call to moodle_database->get_record()
+* line 353 of /mod/vrlesson/reports/dbreport.php: call to context_module::instance()
+
+[29-Aug-2013 09:31:32 America/Denver] PHP Parse error:  syntax error, unexpected ')' in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 352
+[29-Aug-2013 09:32:19 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 531
+[29-Aug-2013 09:32:19 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 531
+[29-Aug-2013 09:32:27 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 531
+[29-Aug-2013 09:32:27 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 531
+[29-Aug-2013 09:33:18 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 469
+[29-Aug-2013 09:33:18 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 470
+[29-Aug-2013 09:33:18 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 471
+[29-Aug-2013 09:33:18 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 472
+[29-Aug-2013 09:33:18 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 473
+[29-Aug-2013 09:33:31 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 469
+[29-Aug-2013 09:33:31 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 470
+[29-Aug-2013 09:33:31 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 471
+[29-Aug-2013 09:33:31 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 472
+[29-Aug-2013 09:33:31 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 473
+[29-Aug-2013 09:36:36 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 469
+[29-Aug-2013 09:36:36 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 470
+[29-Aug-2013 09:36:36 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 471
+[29-Aug-2013 09:36:36 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 472
+[29-Aug-2013 09:36:36 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 473
+[29-Aug-2013 09:37:25 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 469
+[29-Aug-2013 09:37:25 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 470
+[29-Aug-2013 09:37:25 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 471
+[29-Aug-2013 09:37:25 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 472
+[29-Aug-2013 09:37:25 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 473
+[29-Aug-2013 09:37:51 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 469
+[29-Aug-2013 09:37:51 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 470
+[29-Aug-2013 09:37:51 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 471
+[29-Aug-2013 09:37:51 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 472
+[29-Aug-2013 09:37:51 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 473
+[29-Aug-2013 09:38:13 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 469
+[29-Aug-2013 09:38:13 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 470
+[29-Aug-2013 09:38:13 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 471
+[29-Aug-2013 09:38:13 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 472
+[29-Aug-2013 09:38:13 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/projectreport.php on line 473
+[30-Aug-2013 02:25:07 America/Denver] PHP Notice:  Undefined variable: menu0 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 243
+[30-Aug-2013 02:25:07 America/Denver] PHP Notice:  Undefined variable: menu1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 246
+[30-Aug-2013 02:25:07 America/Denver] PHP Notice:  Undefined variable: menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 249
+[30-Aug-2013 02:25:07 America/Denver] PHP Notice:  Undefined variable: cell_menu0 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 418
+[30-Aug-2013 02:25:07 America/Denver] PHP Notice:  Undefined variable: cell_menu1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 419
+[30-Aug-2013 02:25:07 America/Denver] PHP Notice:  Undefined variable: cell_menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 420
+[30-Aug-2013 02:25:07 America/Denver] PHP Notice:  Undefined variable: cell_menu0 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 418
+[30-Aug-2013 02:25:07 America/Denver] PHP Notice:  Undefined variable: cell_menu1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 419
+[30-Aug-2013 02:25:07 America/Denver] PHP Notice:  Undefined variable: cell_menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 420
+[30-Aug-2013 02:25:07 America/Denver] PHP Notice:  Undefined variable: cell_menu0 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 418
+[30-Aug-2013 02:25:07 America/Denver] PHP Notice:  Undefined variable: cell_menu1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 419
+[30-Aug-2013 02:25:07 America/Denver] PHP Notice:  Undefined variable: cell_menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 420
+[30-Aug-2013 02:25:07 America/Denver] PHP Notice:  Undefined variable: cell_menu0 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 418
+[30-Aug-2013 02:25:07 America/Denver] PHP Notice:  Undefined variable: cell_menu1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 419
+[30-Aug-2013 02:25:07 America/Denver] PHP Notice:  Undefined variable: cell_menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 420
+[30-Aug-2013 02:25:07 America/Denver] PHP Notice:  Undefined variable: cell_menu0 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 418
+[30-Aug-2013 02:25:07 America/Denver] PHP Notice:  Undefined variable: cell_menu1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 419
+[30-Aug-2013 02:25:07 America/Denver] PHP Notice:  Undefined variable: cell_menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 420
+[30-Aug-2013 02:25:31 America/Denver] PHP Notice:  Undefined variable: menu0 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 243
+[30-Aug-2013 02:25:31 America/Denver] PHP Notice:  Undefined variable: menu1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 246
+[30-Aug-2013 02:25:31 America/Denver] PHP Notice:  Undefined variable: menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 249
+[30-Aug-2013 02:25:31 America/Denver] PHP Notice:  Undefined variable: cell_menu0 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 418
+[30-Aug-2013 02:25:31 America/Denver] PHP Notice:  Undefined variable: cell_menu1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 419
+[30-Aug-2013 02:25:31 America/Denver] PHP Notice:  Undefined variable: cell_menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 420
+[30-Aug-2013 02:25:31 America/Denver] PHP Notice:  Undefined variable: cell_menu0 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 418
+[30-Aug-2013 02:25:31 America/Denver] PHP Notice:  Undefined variable: cell_menu1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 419
+[30-Aug-2013 02:25:31 America/Denver] PHP Notice:  Undefined variable: cell_menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 420
+[30-Aug-2013 02:25:31 America/Denver] PHP Notice:  Undefined variable: cell_menu0 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 418
+[30-Aug-2013 02:25:31 America/Denver] PHP Notice:  Undefined variable: cell_menu1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 419
+[30-Aug-2013 02:25:31 America/Denver] PHP Notice:  Undefined variable: cell_menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 420
+[30-Aug-2013 02:25:31 America/Denver] PHP Notice:  Undefined variable: cell_menu0 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 418
+[30-Aug-2013 02:25:31 America/Denver] PHP Notice:  Undefined variable: cell_menu1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 419
+[30-Aug-2013 02:25:31 America/Denver] PHP Notice:  Undefined variable: cell_menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 420
+[30-Aug-2013 02:25:31 America/Denver] PHP Notice:  Undefined variable: cell_menu0 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 418
+[30-Aug-2013 02:25:31 America/Denver] PHP Notice:  Undefined variable: cell_menu1 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 419
+[30-Aug-2013 02:25:31 America/Denver] PHP Notice:  Undefined variable: cell_menu2 in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 420
+[04-Sep-2013 17:07:34 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 531
+[04-Sep-2013 17:07:34 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 531
+[04-Sep-2013 17:08:52 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 531
+[04-Sep-2013 17:08:53 America/Denver] PHP Warning:  Division by zero in /home/vrsimlms/public_html/mod/vrlesson/reports/dbreport.php on line 531
