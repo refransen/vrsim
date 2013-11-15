@@ -29,6 +29,7 @@
 define('USER_SELECTOR_DEFAULT_ROWS', 20);
 
 // Need the licensing API
+require_once($CFG->dirroot.'/licapi/config.php');
 require_once($CFG->dirroot.'/licapi/lic_api.php');
 
 /**

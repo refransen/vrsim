@@ -1,5 +1,7 @@
 <?php
-
+require_once($CFG->dirroot.'/licapi/config.php');
+require_once($CFG->dirroot.'/licapi/lic_api.php');
+	
 class block_sbc_manageusers  extends block_base {
     function init() {
         $this->title = get_string('displayname', 'block_sbc_manageusers');
@@ -21,6 +23,15 @@ class block_sbc_manageusers  extends block_base {
         $this->content = new stdClass;
         $this->content->text = '';
         $this->content->footer = '';
+        
+        if(!is_siteadmin() && $USER->theme == 'simbuild') {
+             $custID = $USER->institution;
+             $licenseFile = lic_getFile($custID); 
+             if(!lic_IsValid($licenseFile)) { 
+                $this->content->text = "Cannot manage users with an invalid Simbuild LMS license.";
+                return $this->content;
+             }
+        }
 
         if($USER->theme == "simbuild")
         {

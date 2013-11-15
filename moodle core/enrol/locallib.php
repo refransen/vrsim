@@ -28,6 +28,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 // Need the licensing API
+require_once($CFG->dirroot.'/licapi/config.php');
 require_once($CFG->dirroot.'/licapi/lic_api.php');
 
 /**

@@ -220,7 +220,8 @@ class enrol_manual_plugin extends enrol_plugin {
   
         //Rachel Fransen - Nov.8, 2013
         // Add code for licensing
-	//require_once($CFG->dirroot.'/licapi/lic_api.php');
+	require_once($CFG->dirroot.'/licapi/config.php');
+	require_once($CFG->dirroot.'/licapi/lic_api.php');
         if(!is_siteadmin() && $USER->theme == 'simbuild') {
            $custID = $USER->institution;
            $licenseFile = lic_getFile($custID); //$custID.".lic";
@@ -238,10 +239,11 @@ class enrol_manual_plugin extends enrol_plugin {
                   echo '<div class="licensetext">'.get_string("ajaxlicenseexpire", "enrol").'</div>'; 
                   return false; 
            }
-           else if($totalUsers >= lic_NbMaxClient($licenseFile)){
+           // User limit has been removed since Nov. 15, 2013
+           /*else if($totalUsers >= lic_NbMaxClient($licenseFile)){
                echo '<div class="licensetext">'.get_string("ajaxlicenseuserlimit", "enrol").'</div>'; 
                return false; 
-           }            
+           }  */          
         }
 
         $button = new enrol_user_button($manuallink, get_string('enrolusers', 'enrol_manual'), 'get');

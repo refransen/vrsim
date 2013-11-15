@@ -39,6 +39,7 @@
  * member of the group, false otherwise.
  */
 // Need the licensing API
+require_once($CFG->dirroot.'/licapi/config.php');
 require_once($CFG->dirroot.'/licapi/lic_api.php');
 
 function groups_add_member($grouporid, $userorid, $component=null, $itemid=0) {
