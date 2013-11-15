@@ -1,4 +1,5 @@
 <?php 
+require_once("config.php");
 require_once("lic_api.php")
 ?>
 <head>
@@ -15,7 +16,7 @@ echo(md5($data));
 ?>
 <br/>
 <br/>
-<?php $file="5278d678e4e57.lic";?>
+<?php $file="528550fd89e19.lic";?>
 <menu>
 <li>Tool configuration: <?php echo validate_tools() ? "OK" : "Not ok";?>
 <li>Exec available: <?php echo exec_enabled() ? "OK" : "Not ok";?>
