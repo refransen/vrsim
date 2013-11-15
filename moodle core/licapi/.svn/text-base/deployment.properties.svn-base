@@ -1,9 +1,0 @@
-appdir.includes = index.php,\
-		lic_api.php,\
-		tools,\
-		config_win.php,\
-		test.php,\
-		phpunit.phar,\
-		ion.iep,\
-		config_linux.php,\
-		5278d678e4e57.lic
