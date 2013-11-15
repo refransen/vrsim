@@ -271,13 +271,9 @@ function useredit_shared_definition(&$mform, $editoroptions = null, $filemanager
         }
     }
 
-    // Rachel Fransen - Sept 30, 2013
-    // Hide description box from normal users
-    if(is_siteadmin()) {
-        $mform->addElement('editor', 'description_editor', get_string('userdescription'), null, $editoroptions);
-        $mform->setType('description_editor', PARAM_CLEANHTML);
-        $mform->addHelpButton('description_editor', 'userdescription');
-    }
+    $mform->addElement('editor', 'description_editor', get_string('userdescription'), null, $editoroptions);
+    $mform->setType('description_editor', PARAM_CLEANHTML);
+    $mform->addHelpButton('description_editor', 'userdescription');
 
     if (!empty($CFG->gdversion) and empty($USER->newadminuser)) {
         $mform->addElement('header', 'moodle_picture', get_string('pictureofuser'));

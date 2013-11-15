@@ -192,7 +192,9 @@ if ($frm and isset($frm->username)) {                             // Login WITH 
 	     }
 	     else if(lic_hasExpired($file)) {
 	     	$title = get_string("expiredlictitle");     	
-	     	$desc = get_string("expiredlicdesc", "", lic_LimitDate($file));
+	     	$expired = lic_LimitDate($file);  
+	     	$desc = "Your license expired on ".$expired." .";	
+	     	$desc .= get_string("expiredlicdesc");
 	     	$desc .= '<div class="returnbtn"><a href="'.$CFG->wwwroot.'">Return</a></div>';
 	     } 
 	     if($title !== "")
@@ -207,7 +209,7 @@ if ($frm and isset($frm->username)) {                             // Login WITH 
 	     }
 	}
 
-    /// Let's get them all set up.
+        /// Let's get them all set up.
         add_to_log(SITEID, 'user', 'login', "view.php?id=$USER->id&course=".SITEID,
                    $user->id, 0, $user->id);
         complete_user_login($user);

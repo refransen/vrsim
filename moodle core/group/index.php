@@ -202,6 +202,7 @@ if ($groups) {
         $select = '';
         $usercount = $DB->count_records('groups_members', array('groupid'=>$group->id));
         $groupname = format_string($group->name).' ('.$usercount.')';
+                
         if (in_array($group->id,$groupids)) {
             $select = ' selected="selected"';
             if ($singlegroup) {
@@ -212,8 +213,23 @@ if ($groups) {
         if (!empty($group->idnumber) && !has_capability('moodle/course:changeidnumber', $context)) {
             $preventgroupremoval[$group->id] = true;
         }
+        
+        // Rachel Fransen - Nov. 15, 2013
+        // Only show groups that contain users from that license
+        $showSBCGroup = true;
+        if(!is_siteadmin($USER)) {  
+             //Check if the license is valid
+             if($USER->theme == 'simbuild') {
+                 $custID = $USER->institution;
+                 if($group->enrolmentkey !== $custID) {
+                     $showSBCGroup = false;
+                 }
+             }
+        }
+        if($showSBCGroup) {
+            echo "<option value=\"{$group->id}\"$select title=\"$groupname\">$groupname</option>\n";
+        }
 
-        echo "<option value=\"{$group->id}\"$select title=\"$groupname\">$groupname</option>\n";
     }
 } else {
     // Print an empty option to avoid the XHTML error of having an empty select element

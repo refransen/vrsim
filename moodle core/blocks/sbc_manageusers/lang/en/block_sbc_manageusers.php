@@ -25,4 +25,4 @@
 
 $string['pluginname'] 			= 'SBC Manage Users';
 $string['displayname'] 			= 'Manage Users';
-$string['sbc_activity:addinstance'] 	= 'Add a new SBC Manage Users Block';
+$string['sbc_manageusers:addinstance'] 	= 'Add a new SBC Manage Users Block';

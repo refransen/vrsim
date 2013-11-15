@@ -92,7 +92,7 @@ class group_form extends moodleform {
      * @return array $errors An array of errors
      */
     function validation($data, $files) {
-        global $COURSE, $DB, $CFG;
+        global $COURSE, $DB, $CFG, $USER;
 
         $errors = parent::validation($data, $files);
 
@@ -102,6 +102,7 @@ class group_form extends moodleform {
         } else {
             $idnumber = '';
         }
+        
         if ($data['id'] and $group = $DB->get_record('groups', array('id'=>$data['id']))) {
             if (textlib::strtolower($group->name) != textlib::strtolower($name)) {
                 if (groups_get_group_by_name($COURSE->id,  $name)) {

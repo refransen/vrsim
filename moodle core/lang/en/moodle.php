@@ -1856,6 +1856,7 @@ $string['zippingbackup'] = 'Zipping backup';
 // Rachel Fransen - Nov.14, 2013
 // Added strings for displaying invalid licenses for SimBuild Users
 $string['invalidlictitle'] = "Your SimBuild LMS license is not valid";
-$string['invaliclicdesc'] = "A valid license file cannot be found for this website. The license must be updated or replaced before you can login.";
+$string['invaliclicdesc'] = "<p>A valid license file cannot be found for this website. The license must be updated or replaced before you can login.</p><p>Please contact VRSim Technical Support at (860) 893-0080 or simbuildsupport@vrsim.net for assistance.</p>";
 $string['expiredlictitle'] = "Your SimBuild LMS license has expired";
-$string['expiredlicdesc'] = "Your license file expired on {$a}. The license must be updated or replaced before you can login.";
+$string['expiredlicdesc'] = "The license must be updated or replaced before you can login.";
+$string['supportemail'] = "simbuildsupport@vrsim.net";

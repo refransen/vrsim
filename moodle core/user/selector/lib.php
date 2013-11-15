@@ -28,6 +28,9 @@
  */
 define('USER_SELECTOR_DEFAULT_ROWS', 20);
 
+// Need the licensing API
+require_once($CFG->dirroot.'/licapi/lic_api.php');
+
 /**
  * Base class for user selectors.
  *
@@ -781,7 +784,7 @@ class group_non_members_selector extends groups_user_selector_base {
      * @param int $courseid
      */
     public function print_user_summaries($courseid) {
-        global $DB, $PAGE;
+        global $DB, $PAGE, $USER;
 
         $usersummaries = array();
 
@@ -795,6 +798,7 @@ class group_non_members_selector extends groups_user_selector_base {
                     JOIN {groups_members} gm ON u.id = gm.userid
                     JOIN {groups} g ON gm.groupid = g.id
                     WHERE u.id $membersidsclause AND g.courseid = :courseid ";
+                    
             $params['courseid'] = $courseid;
             $rs = $DB->get_recordset_sql($sql, $params);
             foreach ($rs as $usergroup) {
@@ -820,7 +824,7 @@ class group_non_members_selector extends groups_user_selector_base {
     }
 
     public function find_users($search) {
-        global $DB;
+        global $DB, $USER;
 
         // Get list of allowed roles.
         $context = context_course::instance($this->courseid);
@@ -850,13 +854,32 @@ class group_non_members_selector extends groups_user_selector_base {
                   WHERE u.deleted = 0
                         AND gm.id IS NULL
                         AND $searchcondition";
-
+                        
         list($sort, $sortparams) = users_order_by_sql('u', $search, $this->accesscontext);
         $orderby = ' ORDER BY ' . $sort;
 
         $params = array_merge($searchparams, $roleparams, $enrolparams);
         $params['courseid'] = $this->courseid;
         $params['groupid']  = $this->groupid;
+        
+        // Rachel Fransen - Oct 30, 2013
+        // You can only enroll users that belong to your theme AND 
+        // your institution (license number)
+        if(!is_siteadmin($USER)) {
+            $sql .= " AND u.theme=:utheme";
+            $params['utheme'] = $USER->theme;
+            
+            //Check if the license is valid
+            if($USER->theme == 'simbuild') {
+                $custID = $USER->institution;
+                $file = lic_getFile($custID); //$custID.".lic";
+                if(!lic_IsValid($file) || lic_hasExpired($file)) {
+                    $custID = 0;
+                }
+                $sql .= " AND u.institution=:uinstitution";
+                $params['uinstitution'] = $custID;
+            }
+        }    
 
         if (!$this->is_validating()) {
             $potentialmemberscount = $DB->count_records_sql("SELECT COUNT(DISTINCT u.id) $sql", $params);

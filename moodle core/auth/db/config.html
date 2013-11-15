@@ -263,7 +263,10 @@
     $themes = get_list_of_themes();
     foreach ($themes as $key=>$theme) {
         if (empty($theme->hidefromselector)) {
-           if(!is_siteadmin() && $theme->name == $config->usertheme) {
+            if(is_siteadmin()) {
+           	$choices[$key] = get_string('pluginname', 'theme_'.$theme->name);
+           }
+           else if($theme->name == $config->usertheme) {
            	$choices[$key] = get_string('pluginname', 'theme_'.$theme->name);
            }
         }

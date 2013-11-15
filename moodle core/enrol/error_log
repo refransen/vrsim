@@ -46,3 +46,4 @@ Error code: codingerror
 * line 216 of /enrol/users.php: call to plugin_renderer_base->render()
 
 [11-Nov-2013 13:12:46 America/Denver] PHP Notice:  Undefined variable: totalusers in /home/vrsimlms/public_html/enrol/manual/lib.php on line 242
+[15-Nov-2013 03:13:26 America/Denver] PHP Notice:  Undefined variable: USER in /home/vrsimlms/public_html/enrol/locallib.php on line 218

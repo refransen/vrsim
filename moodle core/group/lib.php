@@ -38,6 +38,9 @@
  * @return bool True if user added successfully or the user is already a
  * member of the group, false otherwise.
  */
+// Need the licensing API
+require_once($CFG->dirroot.'/licapi/lic_api.php');
+
 function groups_add_member($grouporid, $userorid, $component=null, $itemid=0) {
     global $DB;
 
@@ -215,7 +218,7 @@ function groups_remove_member($grouporid, $userorid) {
  * @return id of group or false if error
  */
 function groups_create_group($data, $editform = false, $editoroptions = false) {
-    global $CFG, $DB;
+    global $CFG, $DB, $USER;
 
     //check that courseid exists
     $course = $DB->get_record('course', array('id' => $data->courseid), '*', MUST_EXIST);
@@ -224,6 +227,17 @@ function groups_create_group($data, $editform = false, $editoroptions = false) {
     $data->timecreated  = time();
     $data->timemodified = $data->timecreated;
     $data->name         = trim($data->name);
+    
+    // Rachel Fransen - Nov. 15, 2014
+    // For Simbuild, I attached the enrollment key to the custermerid of the license
+    if(!is_siteadmin() && $USER->theme == "simbuild") 
+    {
+        $custID = $USER->institution;
+        if(!empty($custID) & $custID !== 0 && $custID !== '0') {
+           $data->enrolmentkey = $custID;
+        }
+    }
+
     if (isset($data->idnumber)) {
         $data->idnumber = trim($data->idnumber);
         if (groups_get_group_by_idnumber($course->id, $data->idnumber)) {
@@ -669,6 +683,32 @@ function groups_get_potential_members($courseid, $roleid = null, $cohortid = nul
     } else {
         $where = "";
     }
+    
+    // Rachel Fransen - Oct 30, 2013
+    // You can only enroll users that belong to your theme AND 
+    // your institution (license number)
+    if(!is_siteadmin($USER)) {
+        if($where == "") {
+           $where = " WHERE ";
+        }
+        else {
+            $where .= " AND ";
+        }
+       
+        $where .= "u.theme=:utheme";
+        $params['utheme'] = $USER->theme;
+         //Check if the license is valid
+         if($USER->theme == 'simbuild') {
+             $custID = $USER->institution;
+             $file = lic_getFile($custID); //$custID.".lic";
+             if(!lic_IsValid($file) || lic_hasExpired($file)) {
+                 $custID = 0;
+             }
+
+             $sql .= " AND u.institution=:uinstitution";
+             $params['uinstitution'] = $custID;
+         }
+    }    
 
     if ($cohortid) {
         $cohortjoin = "JOIN {cohort_members} cm ON (cm.userid = u.id AND cm.cohortid = :cohortid)";

@@ -114,3 +114,158 @@ Error code: ddltablenotexist
 [31-Oct-2013 16:55:57 America/Denver] PHP Notice:  Undefined variable: SBC_DB in /home/vrsimlms/public_html/blocks/sbcprofile/block_sbcprofile.php on line 75
 [31-Oct-2013 16:55:57 America/Denver] PHP Fatal error:  Call to a member function get_record_sql() on a non-object in /home/vrsimlms/public_html/blocks/sbcprofile/block_sbcprofile.php on line 75
 [31-Oct-2013 17:01:46 America/Denver] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home/vrsimlms/public_html/blocks/sbcprofile/block_sbcprofile.php on line 89
+[14-Nov-2013 16:18:39 America/Denver] PHP Notice:  Undefined property: stdClass::$description_editor in /home/vrsimlms/public_html/lib/filelib.php on line 222
+[14-Nov-2013 16:18:39 America/Denver] Default exception handler: Error writing to database Debug: Column 'descriptionformat' cannot be null
+INSERT INTO mdl_user (username,auth,suspended,firstname,lastname,email,maildisplay,timezone,lang,theme,imagealt,idnumber,institution,timemodified,description,descriptionformat,mnethostid,confirmed,timecreated,password) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+[array (
+  0 => 'schoolateacher1',
+  1 => 'manual',
+  2 => '0',
+  3 => 'SchoolA',
+  4 => 'TeacherOne',
+  5 => 'rebecca.mcknight@vrsim.net',
+  6 => '2',
+  7 => '99',
+  8 => 'en',
+  9 => 'simbuild',
+  10 => '',
+  11 => '',
+  12 => '52852b8ff3922',
+  13 => 1384471119,
+  14 => NULL,
+  15 => NULL,
+  16 => '1',
+  17 => 1,
+  18 => 1384471119,
+  19 => '93ee3fdbe1c36e8505db9b42e5e7a91a',
+)]
+Error code: dmlwriteexception
+* line 429 of /lib/dml/moodle_database.php: dml_write_exception thrown
+* line 1107 of /lib/dml/mysqli_native_moodle_database.php: call to moodle_database->query_end()
+* line 1149 of /lib/dml/mysqli_native_moodle_database.php: call to mysqli_native_moodle_database->insert_record_raw()
+* line 181 of /user/editadvanced.php: call to mysqli_native_moodle_database->insert_record()
+
+[14-Nov-2013 16:26:13 America/Denver] PHP Notice:  Undefined property: stdClass::$description_editor in /home/vrsimlms/public_html/lib/filelib.php on line 222
+[14-Nov-2013 16:26:13 America/Denver] Default exception handler: Error writing to database Debug: Column 'descriptionformat' cannot be null
+INSERT INTO mdl_user (username,auth,suspended,firstname,lastname,email,maildisplay,timezone,lang,theme,imagealt,idnumber,institution,timemodified,description,descriptionformat,mnethostid,confirmed,timecreated,password) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+[array (
+  0 => 'schoolateacher1',
+  1 => 'manual',
+  2 => '0',
+  3 => 'SchoolA',
+  4 => 'TeacherOne',
+  5 => 'rebecca.mcknight@vrsim.net',
+  6 => '2',
+  7 => '99',
+  8 => 'en',
+  9 => 'simbuild',
+  10 => '',
+  11 => '',
+  12 => '52852b8ff3922',
+  13 => 1384471573,
+  14 => NULL,
+  15 => NULL,
+  16 => '1',
+  17 => 1,
+  18 => 1384471573,
+  19 => '93ee3fdbe1c36e8505db9b42e5e7a91a',
+)]
+Error code: dmlwriteexception
+* line 429 of /lib/dml/moodle_database.php: dml_write_exception thrown
+* line 1107 of /lib/dml/mysqli_native_moodle_database.php: call to moodle_database->query_end()
+* line 1149 of /lib/dml/mysqli_native_moodle_database.php: call to mysqli_native_moodle_database->insert_record_raw()
+* line 181 of /user/editadvanced.php: call to mysqli_native_moodle_database->insert_record()
+
+[14-Nov-2013 16:30:09 America/Denver] PHP Notice:  Undefined property: stdClass::$description_editor in /home/vrsimlms/public_html/lib/filelib.php on line 222
+[14-Nov-2013 16:30:09 America/Denver] Default exception handler: Error writing to database Debug: Column 'descriptionformat' cannot be null
+INSERT INTO mdl_user (username,auth,suspended,firstname,lastname,email,maildisplay,timezone,lang,theme,imagealt,idnumber,institution,timemodified,description,descriptionformat,mnethostid,confirmed,timecreated,password) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+[array (
+  0 => 'schoolateacher1',
+  1 => 'manual',
+  2 => '0',
+  3 => 'Schoola',
+  4 => 'Teacherone',
+  5 => 'rebecca.mcknight@vrsim.net',
+  6 => '2',
+  7 => '99',
+  8 => 'en',
+  9 => 'simbuild',
+  10 => 'DZ',
+  11 => 'NA',
+  12 => '52852b8ff3922',
+  13 => 1384471809,
+  14 => NULL,
+  15 => NULL,
+  16 => '1',
+  17 => 1,
+  18 => 1384471809,
+  19 => '93ee3fdbe1c36e8505db9b42e5e7a91a',
+)]
+Error code: dmlwriteexception
+* line 429 of /lib/dml/moodle_database.php: dml_write_exception thrown
+* line 1107 of /lib/dml/mysqli_native_moodle_database.php: call to moodle_database->query_end()
+* line 1149 of /lib/dml/mysqli_native_moodle_database.php: call to mysqli_native_moodle_database->insert_record_raw()
+* line 181 of /user/editadvanced.php: call to mysqli_native_moodle_database->insert_record()
+
+[14-Nov-2013 16:47:12 America/Denver] PHP Notice:  Undefined property: stdClass::$description_editor in /home/vrsimlms/public_html/lib/filelib.php on line 222
+[14-Nov-2013 16:47:12 America/Denver] Default exception handler: Error writing to database Debug: Column 'descriptionformat' cannot be null
+INSERT INTO mdl_user (username,auth,suspended,firstname,lastname,email,maildisplay,timezone,lang,theme,imagealt,idnumber,institution,timemodified,description,descriptionformat,mnethostid,confirmed,timecreated,password) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+[array (
+  0 => 'teachertest',
+  1 => 'manual',
+  2 => '0',
+  3 => 'Teacher',
+  4 => 'TestForClientAdmin',
+  5 => 'something@something.com',
+  6 => '2',
+  7 => '99',
+  8 => 'en',
+  9 => 'simbuild',
+  10 => 'test',
+  11 => '5278d4eb9fb29',
+  12 => '5278d4eb9fb29',
+  13 => 1384472832,
+  14 => NULL,
+  15 => NULL,
+  16 => '1',
+  17 => 1,
+  18 => 1384472832,
+  19 => '93ee3fdbe1c36e8505db9b42e5e7a91a',
+)]
+Error code: dmlwriteexception
+* line 429 of /lib/dml/moodle_database.php: dml_write_exception thrown
+* line 1107 of /lib/dml/mysqli_native_moodle_database.php: call to moodle_database->query_end()
+* line 1149 of /lib/dml/mysqli_native_moodle_database.php: call to mysqli_native_moodle_database->insert_record_raw()
+* line 181 of /user/editadvanced.php: call to mysqli_native_moodle_database->insert_record()
+
+[15-Nov-2013 02:33:07 America/Denver] PHP Notice:  Undefined property: stdClass::$description_editor in /home/vrsimlms/public_html/lib/filelib.php on line 222
+[15-Nov-2013 02:33:07 America/Denver] Default exception handler: Error writing to database Debug: Column 'descriptionformat' cannot be null
+INSERT INTO mdl_user (username,auth,suspended,firstname,lastname,email,maildisplay,timezone,lang,theme,imagealt,idnumber,institution,timemodified,description,descriptionformat,mnethostid,confirmed,timecreated,password) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+[array (
+  0 => 'testteacher',
+  1 => 'manual',
+  2 => '0',
+  3 => 'Test',
+  4 => 'Teacher',
+  5 => 'testteacher@nomail.com',
+  6 => '2',
+  7 => '99',
+  8 => 'en',
+  9 => 'simbuild',
+  10 => '',
+  11 => '',
+  12 => '',
+  13 => 1384507987,
+  14 => NULL,
+  15 => NULL,
+  16 => '1',
+  17 => 1,
+  18 => 1384507987,
+  19 => 'ccdb98acdd2855afaba0e70453a1d59d',
+)]
+Error code: dmlwriteexception
+* line 429 of /lib/dml/moodle_database.php: dml_write_exception thrown
+* line 1107 of /lib/dml/mysqli_native_moodle_database.php: call to moodle_database->query_end()
+* line 1149 of /lib/dml/mysqli_native_moodle_database.php: call to mysqli_native_moodle_database->insert_record_raw()
+* line 181 of /user/editadvanced.php: call to mysqli_native_moodle_database->insert_record()
+

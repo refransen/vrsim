@@ -220,6 +220,7 @@ class enrol_manual_plugin extends enrol_plugin {
   
         //Rachel Fransen - Nov.8, 2013
         // Add code for licensing
+	//require_once($CFG->dirroot.'/licapi/lic_api.php');
         if(!is_siteadmin() && $USER->theme == 'simbuild') {
            $custID = $USER->institution;
            $licenseFile = lic_getFile($custID); //$custID.".lic";

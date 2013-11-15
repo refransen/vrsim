@@ -196,7 +196,7 @@ class course_enrolment_manager {
      * @return array
      */
     public function get_users($sort, $direction='ASC', $page=0, $perpage=25) {
-        global $DB;
+        global $DB, $USER;
         if ($direction !== 'ASC') {
             $direction = 'DESC';
         }
@@ -211,6 +211,27 @@ class course_enrolment_manager {
                       JOIN {user_enrolments} ue ON (ue.userid = u.id  AND ue.enrolid $instancessql)
                       JOIN {enrol} e ON (e.id = ue.enrolid)
                  LEFT JOIN {user_lastaccess} ul ON (ul.courseid = e.courseid AND ul.userid = u.id)";
+                 
+            // Rachel Fransen - Oct 30, 2013
+	    // You can only enroll users that belong to your theme AND 
+	    // your institution (license number)
+	    if(!is_siteadmin($USER)) {
+	             $sql .= " WHERE u.theme=:utheme";
+	             $params['utheme'] = $USER->theme;
+	
+	             //Check if the license is valid
+	             if($USER->theme == 'simbuild') {
+	                 $custID = $USER->institution;
+	                 $file = lic_getFile($custID); //$custID.".lic";
+	                 if(!lic_IsValid($file) || lic_hasExpired($file)) {
+	                     $custID = 0;
+	                 }
+	
+	                 $sql .= " AND u.institution=:uinstitution";
+	                 $params['uinstitution'] = $custID;
+	             }
+	    }     
+	    
             if ($sort === 'firstname') {
                 $sql .= " ORDER BY u.firstname $direction, u.lastname $direction";
             } else if ($sort === 'lastname') {

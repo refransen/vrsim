@@ -30,11 +30,6 @@
  * @copyright 2010 Sam Hemelryk
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
- 
- // Rachel Fransen - Nov.8, 2013
- // Added file for licensing
- // Need the licensing API
-require_once($CFG->dirroot.'/licapi/lic_api.php');
 
 class core_enrol_renderer extends plugin_renderer_base {
 

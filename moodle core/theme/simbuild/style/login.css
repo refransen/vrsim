@@ -1,0 +1,122 @@
+#page-content 
+{
+    background:white !important;
+}
+
+.loginbox.onecolumn
+{
+    width:400px;
+    margin: 0 auto;
+    margin-bottom: 3em;
+    padding: 1em 0em 1em 0em;
+    border: 1px solid black;
+}
+
+.loginbox.onecolumn .clearer
+{
+    clear:right;
+}
+
+.loginbox .loginpanel h2,
+.loginbox .signuppanel h2,
+.loginbox .subcontent,
+.loginbox .subcontent p
+{
+    text-align:center;
+    font-family: Verdana, Geneva, sans-serif; 
+}
+
+.loginbox .loginform .form-label 
+{
+    position:relative;
+    width:38% !important;
+    float: none !important;
+    text-align: left;
+    display: inline-block !important;
+    width: 5em;
+    padding-bottom:1em;
+}
+
+.loginbox .loginform .form-input 
+{
+    float: none !important;
+    display: inline !important;
+}
+
+.loginbox .loginform .form-input input
+{
+    width:10em !important;
+}
+
+.loginbox .loginform .form-input #loginbtn,
+#page-login-index .returnbtn,
+.loginbox .signuppanel .subcontent .signupform #signup input
+{
+    position: relative;
+    vertical-align:middle;
+    text-align:center;
+    display:block !important;
+    margin: 0 auto;
+    padding:6px 24px;
+
+    -moz-box-shadow:inset 0px 1px 0px 0px #422d81;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #422d81;
+    box-shadow:inset 0px 1px 0px 0px #422d81;
+
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #7262a6), color-stop(1, #422d81) );
+    background:-moz-linear-gradient( center top, #7262a6 5%, #422d81 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7262a6', endColorstr='#422d81');     
+    background-color:#7262a6;
+
+    border:1px solid #422d81;
+    color:#ffffff !important;
+    font-family: Verdana, Geneva, sans-serif; 
+    text-shadow:1px 1px 0px #7262a6;
+}
+
+.loginbox .loginform .form-input #loginbtn:hover,
+#page-login-index .returnbtn:hover,
+.loginbox .signuppanel .subcontent .signupform #signup input:hover
+{
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #7262a6), color-stop(1, #422d81) );
+    background:-moz-linear-gradient( center top, #7262a6 5%, #422d81 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7262a6', endColorstr='#422d81');
+    background-color:#422d81;
+}
+
+/** Returnbtn is used for custom error screens for licensing **/
+#page-login-index .returnbtn {
+   position:relative;
+   width:80px;
+   margin-top:1.5em;
+}
+#page-login-index .returnbtn a {
+   color:#fff !important;
+}
+#page-login-index .returnbtn:hover a {
+    text-decoration:underline;
+}
+#page-login-index h2,
+#page-login-index .boxaligncenter {
+    text-align:center;
+    font-family: Verdana, Geneva, sans-serif !important; 
+}
+#page-login-index .boxaligncenter {
+    margin-bottom:2em;
+}
+
+div.rememberpass
+{
+   margin-top: 1em;
+   margin-bottom: 0.5em;
+}
+
+div.forgetpass, 
+div.centeredcookies 
+{
+   text-align:center;
+}
+div.forgetpass a 
+{
+    text-decoration:underline;
+}
