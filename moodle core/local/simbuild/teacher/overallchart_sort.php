@@ -19,30 +19,7 @@ $SBC_DB->connect($CFG->sbc_dbhost, $CFG->sbc_dbUser, $CFG->sbc_dbPass, $CFG->sbc
 //--------------------
 // Get the students for this course
 //--------------------
-$studentArr = array();
-if ($classID == 0) 
-{ 
-	$sqlUsers = "SELECT ra.userid as id 
-	               FROM {$CFG->prefix}role_assignments AS ra 
-	         INNER JOIN {$CFG->prefix}context AS ctx 
-	                 ON ra.contextid = ctx.id 
-	              WHERE ra.roleid = 5 
-	                AND ctx.instanceid = ".$courseID." 
-	                AND ctx.contextlevel = 50";
-	                
-	if ($dataUsers = $DB->get_records_sql($sqlUsers)) {
-	    foreach($dataUsers as $singleUser) {
-	       $studentArr[$singleUser->id] = $DB->get_record('user', array('id'=>$singleUser->id));
-	   }
-	}
-}
-else {
-    if ($dataUsers  = groups_get_members($classID, 'u.id', 'lastname ASC, firstname ASC')) {
-        foreach($dataUsers as $singleUser) {
-            $studentArr[$singleUser->id] = $DB->get_record('user', array('id'=>$singleUser->id));
-        }
-    }
-}	
+$studentArr = getStudents($classID, $courseID, false); //array();	
 
 $studentProgArr = array();
 $studentTimeArr = array();
@@ -190,7 +167,7 @@ foreach($finalStudentArr as $singleStudent)
         }
         
         echo '
-        <td><img src="/theme/simbuild/pix/progressreport/orange_arrow_up.png" style="margin-left:'.$arrowProgress.'%;" />
+        <td><img src="'.$CFG->wwwroot.'/theme/simbuild/pix/progressreport/orange_arrow_up.png" style="margin-left:'.$arrowProgress.'%;" />
         <div class="chartbox" >
             <div class="learnprogress" style="width:'.$learnProgress.'%;background-color:'.$learnColor.';"></div>
             <div class="learnstripes" ></div>

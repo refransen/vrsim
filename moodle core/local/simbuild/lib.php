@@ -6,13 +6,120 @@
 ///////////////////////////////////////////////////////
 function getSBCID($userid){
     global $DB;
+    
+    $sbcID = $userid;
     $sql = "SELECT * FROM {user} WHERE id=? OR idnumber=?";
-    $sbcStudent = $DB->get_records_sql($sql, array($userid, $userid));
-    $sbcID = current($sbcStudent)->idnumber; 
-    if($sbcID == "") {
-       $sbcID = $userid;
+    if($sbcStudent = $DB->get_records_sql($sql, array($userid, $userid)) ){
+        $sbcID = current($sbcStudent)->idnumber; 
     }
+
     return $sbcID;
+}
+///////////////////////////////////////////////////////
+// Find all students for this class or course, based
+// on current logged-in user's license id
+//
+// params: the group/class name, the course id, 
+// if function should return an array of names or user objects
+// return:  array of eligible students
+///////////////////////////////////////////////////////
+function getStudents($className, $courseid, $retStudName=true) {
+    global $CFG, $DB, $USER;
+
+    // Need the licensing API
+    require_once($CFG->dirroot.'/licapi/config.php');
+    require_once($CFG->dirroot.'/licapi/lic_api.php');
+
+    //--------------------
+    // Get the students for this course
+    //--------------------
+    $studentOptions = array();
+    if ($className == 0) 
+    { 
+        $sqlUsers = "SELECT ra.userid as id 
+    	     FROM {$CFG->prefix}role_assignments AS ra 
+    	     INNER JOIN {$CFG->prefix}context AS ctx 
+             JOIN {user} u
+                 ON ra.contextid = ctx.id 
+              WHERE ra.roleid = 5 
+                AND u.id = ra.userid 
+                AND ctx.instanceid = ".$courseid." 
+                AND ctx.contextlevel = 50";
+
+        // Rachel Fransen - Oct 30, 2013
+	// You can only enroll users that belong to your theme AND 
+	// your institution (license number)
+        $params = array();
+	if(!is_siteadmin($USER)) {
+	      $sqlUsers .= " AND u.theme=:utheme";
+	      $params['utheme'] = $USER->theme;
+	
+	       //Check if the license is valid
+	       if($USER->theme == 'simbuild') {
+	           $custID = $USER->institution;
+	           $file = lic_getFile($custID); //$custID.".lic";
+	           if(!lic_IsValid($file) || lic_hasExpired($file)) {
+	               $custID = 0;
+	           }
+	
+	           $sqlUsers .= " AND u.institution=:uinstitution";
+	           $params['uinstitution'] = $custID;
+	        }
+	}  
+                
+        if ($dataUsers = $DB->get_records_sql($sqlUsers, $params)) {
+            foreach($dataUsers as $singleUser) {
+                $student = $DB->get_record('user', array('id'=>$singleUser->id));
+                if($retStudName) {
+                    $studentOptions[$singleUser->id] = $student->firstname.' '.$student->lastname;
+                }
+                else {
+                    $studentOptions[$singleUser->id] = $student;
+                }
+            }
+        }
+    } 
+    else  
+    {
+        if ($dataUsers  = groups_get_members($className, 'u.id', 'lastname ASC, firstname ASC')) {
+            foreach($dataUsers as $singleUser) {
+                $student = $DB->get_record('user', array('id'=>$singleUser->id));
+                if($retStudName) {
+                    $studentOptions[$singleUser->id] = $student->firstname.' '.$student->lastname;
+                } 
+                else {
+                    $studentOptions[$singleUser->id] = $student;
+                }
+            }
+        }            
+    } 
+    return $studentOptions;
+}
+
+///////////////////////////////////////////////////////
+// Get all the classes for the current logged-in user
+// depending on their SimBuild license
+// return:  array of eligible classes
+///////////////////////////////////////////////////////
+function getClasses($courseid) {
+    global $DB, $USER;
+
+    $classOptions = array();
+    $classOptions[0] = 'All';
+    $groups = array();
+
+    if(is_siteadmin()) {
+        $groups = $DB->get_records('groups', array('courseid'=>$courseid));
+    }
+    else {
+        $groups = $DB->get_records('groups', array('courseid'=>$courseid, 'enrolmentkey'=>$USER->institution));
+    }
+    if ($groups){
+       foreach ($groups as $cgroup) {
+            $classOptions[$cgroup->id] = $cgroup->name;
+       }        
+    }
+    return $classOptions;
 }
 
 ///////////////////////////////////////////////////////

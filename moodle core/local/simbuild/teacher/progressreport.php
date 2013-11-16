@@ -55,33 +55,7 @@ $worksite = optional_param('worksite', 'shed', PARAM_ALPHA);
 //--------------------
 // Get the students for this course
 //--------------------
-$studentOptions = array();
-if ($className == 0) 
-{ 
-    $sqlUsers = "SELECT ra.userid as id 
-    	     FROM {$CFG->prefix}role_assignments AS ra 
-    	     INNER JOIN {$CFG->prefix}context AS ctx 
-                 ON ra.contextid = ctx.id 
-              WHERE ra.roleid = 5 
-                AND ctx.instanceid = ".$course->id." 
-                AND ctx.contextlevel = 50";
-                
-    if ($dataUsers = $DB->get_records_sql($sqlUsers)) {
-        foreach($dataUsers as $singleUser) {
-            $student = $DB->get_record('user', array('id'=>$singleUser->id));
-            $studentOptions[$singleUser->id] = $student->firstname.' '.$student->lastname;
-        }
-    }
-} 
-else  
-{
-    if ($dataUsers  = groups_get_members($className, 'u.id', 'lastname ASC, firstname ASC')) {
-        foreach($dataUsers as $singleUser) {
-            $student = $DB->get_record('user', array('id'=>$singleUser->id));
-            $studentOptions[$singleUser->id] = $student->firstname.' '.$student->lastname;
-        }
-    }            
-}    
+$studentOptions = getStudents($className, $course->id);
 
 //--------------------
 // Create last filter option for single student
@@ -92,10 +66,10 @@ $selectedStudentID = $firstID;
 $studentID = optional_param('student', $firstID, PARAM_INT);        // which student to display
 
 // Find the actual selected student id
-foreach($studentOptions as $key=>$value)
-{
-     if($key == $studentID)
-     {    $selectedStudentID = $key; break; }
+foreach($studentOptions as $key=>$value) {
+     if($key == $studentID) {    
+         $selectedStudentID = $key; break; 
+     }
 }
 
 //--------------------
@@ -124,8 +98,8 @@ else if($reportType !== 'overview')
 
 $reportOptions = array(
    'overview' => 'Overview',
-   'skills' => 'Class Skills', 
-   'construction' => 'Construction Skills',
+   'skills' => 'Class Skills',
+   'construction' =>'Construction Skills',
    'academic' => 'Academic Skills'
 );
 $reportForm = 'Choose Report: ' . $OUTPUT->single_select(new moodle_url('/local/simbuild/teacher/progressreport.php', 
@@ -162,6 +136,7 @@ if($results = $SBC_DB->get_records_sql("SELECT * FROM {skill} myskill WHERE mysk
         $academicIDs[] = $singleResult->idskill; 
     }
 }
+
 $academicForm = 'Choose Skill: '.$OUTPUT->single_select(new moodle_url('/local/simbuild/teacher/progressreport.php',
 	array('id'=>$id, 'academic'=>$academicType, 'report'=>$reportType, 'class'=>$className, 'student'=>$studentID)), 'academic', 
 	$academicOptions, $selected=$academicType, '', $formid='fnacademic');
@@ -169,13 +144,7 @@ $academicForm = 'Choose Skill: '.$OUTPUT->single_select(new moodle_url('/local/s
 //--------------------
 // Get all the classes (groups)
 //--------------------
-$classOptions = array();
-$classOptions[0] = 'All';
-if ($groups = $DB->get_records('groups', array('courseid'=>$course->id))){
-    foreach ($groups as $cgroup) {
-        $classOptions[$cgroup->id] = $cgroup->name;
-    }        
-}
+$classOptions = getClasses($course->id); //array();
 $classForm = 'Choose Class: ' . $OUTPUT->single_select(new moodle_url('/local/simbuild/teacher/progressreport.php', 
           array('id'=>$id, 'report'=>$reportType, 'student'=>$studentID)), 'class', 
           $classOptions, $selected = $className, '', $formid = 'fnclass');
@@ -333,10 +302,11 @@ echo
 	        // Get our single student
 	        $student = $DB->get_record('user', array('id'=>$selectedStudentID));
 	        
-	        // Get User enrollmenut
-	        $studentEnroll = $DB->get_record('user_enrolments', array('userid'=>$selectedStudentID));
-            	$enrollmentDate = date('F d, Y', $studentEnroll->timestart);
-            	if(empty($enrollmentDate)) {$enrollmentDate = '--';}
+            	// Get User enrollment
+	    	$enrollmentDate = '--';
+	    	if($studentEnroll = $DB->get_record('user_enrolments', array('userid'=>$selectedStudentID)) ){
+                    $enrollmentDate = date('F d, Y', $studentEnroll->timestart);
+            	}
 
                 // Create data for the daily report
                 $finalDailyData = createDailyOverall($selectedStudentID);
@@ -668,11 +638,16 @@ echo
 	    
 	    // Get our single student
 	    $student = $DB->get_record('user', array('id'=>$selectedStudentID));
-	        
-	    // Get User enrollmenut
-	    $studentEnroll = $DB->get_record('user_enrolments', array('userid'=>$selectedStudentID));
-            $enrollmentDate = date('F d, Y', $studentEnroll->timestart);
-            if(empty($enrollmentDate)) {$enrollmentDate = '--';}
+	    if(!$student) {
+	        echo '<p>There are no students available.</p>';
+	        break;
+	    }
+            
+            // Get User enrollment
+	    $enrollmentDate = '--';
+	    if($studentEnroll = $DB->get_record('user_enrolments', array('userid'=>$selectedStudentID)) ){
+                $enrollmentDate = date('F d, Y', $studentEnroll->timestart);
+            }
 	    	    
 	    $finalDataArr = createConSkillReport($selectedStudentID, $currSkillID);
 	    $studentData = $finalDataArr['graphdata'];
@@ -796,11 +771,16 @@ echo
 	    
 	    // Get our single student
 	    $student = $DB->get_record('user', array('id'=>$selectedStudentID));
+	    if(!$student) {
+	        echo '<p>There are no students available.</p>';
+	        break;
+	    }
 	        
-	    // Get User enrollmenut
-	    $studentEnroll = $DB->get_record('user_enrolments', array('userid'=>$selectedStudentID));
-            $enrollmentDate = date('F d, Y', $studentEnroll->timestart);
-            if(empty($enrollmentDate)) {$enrollmentDate = '--';}	
+	    // Get User enrollment
+	    $enrollmentDate = '--';
+	    if($studentEnroll = $DB->get_record('user_enrolments', array('userid'=>$selectedStudentID)) ){
+                $enrollmentDate = date('F d, Y', $studentEnroll->timestart);
+            }
             
             // Get the data for this chart
             $finalDataArr = createActSkillReport($selectedStudentID, $currSkillID );
