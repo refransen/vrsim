@@ -521,6 +521,10 @@ td.picture.left img {
 #page-footer .helplink {
     margin: 1em 0;
 }
+#page-footer .copyright {
+    text-align: left;
+    margin: 1em 0em 0em 1em;
+}
 
 /* Dock */
 
