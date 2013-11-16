@@ -24528,3 +24528,5 @@
 [14-Nov-2013 06:20:01 America/Denver] PHP Warning:  chdir(): No such file or directory (errno 2) in /home/vrsimlms/public_html/lib/setup.php on line 117
 [14-Nov-2013 06:25:01 America/Denver] PHP Warning:  chdir(): No such file or directory (errno 2) in /home/vrsimlms/public_html/lib/setup.php on line 117
 [14-Nov-2013 06:30:01 America/Denver] PHP Warning:  chdir(): No such file or directory (errno 2) in /home/vrsimlms/public_html/lib/setup.php on line 117
+[16-Nov-2013 05:15:01 America/Denver] PHP Warning:  require(/home/vrsimlms/public_html/vrsim.git/trunk/moodle core/config.php): failed to open stream: No such file or directory in /home/vrsimlms/public_html/vrsim.git/trunk/moodle core/auth/db/cli/sync_users.php on line 48
+[16-Nov-2013 05:15:01 America/Denver] PHP Fatal error:  require(): Failed opening required '/home/vrsimlms/public_html/vrsim.git/trunk/moodle core/config.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/vrsimlms/public_html/vrsim.git/trunk/moodle core/auth/db/cli/sync_users.php on line 48
