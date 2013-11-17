@@ -90,7 +90,9 @@ class block_sbc_resources extends block_base {
                     $keywords = $DB->get_record('glossary_alias', array('entryid'=>$singleEntry->id));
                     $conceptArr[] = $singleEntry->concept;
                     $conceptArr[] = $singleEntry->definition;
-                    $conceptArr[] = $keywords->alias;
+                    if($keywords) {
+                        $conceptArr[] = $keywords->alias;
+                    }
                                         
                     // TODO: When more entries are there, then put this code back
                     // Right now it's commented out to make the list longer
@@ -99,22 +101,24 @@ class block_sbc_resources extends block_base {
                         $myStrArr = explode(" ", $singleConcept);
                         foreach($myStrArr as $singleWord) {
                             $pos = strpos($singleWord, $concept);
-	                    if($pos !== false) {
-	                        $isFound = true;
-	                        break;
-	                    }
+	                        if($pos !== false) {
+	                            $isFound = true;
+	                            break;
+	                        }
                         }
                     }       
                      
-                    $myStrArr = explode(",", $keywords->alias);
-                    foreach($myStrArr  as $singleKey) {
-                       $singleKey = trim($singleKey);
-                       $pos = strpos($singleKey, $concept);
-	               if($pos !== false) {
-	                  $isFound = true;
-	                  break;
-	                }
-                    } 
+                    if($keywords) { 
+                        $myStrArr = explode(",", $keywords->alias);
+                        foreach($myStrArr  as $singleKey) {
+                           $singleKey = trim($singleKey);
+                           $pos = strpos($singleKey, $concept);
+                           if($pos !== false) {
+                              $isFound = true;
+                              break;
+                            }
+                        } 
+                    }
                     if(!$isFound)
                     { continue;  }          
                                     

@@ -180,46 +180,34 @@ if ($frm and isset($frm->username)) {                             // Login WITH 
         
         // Rachel Fransen - Nov.15, 2013
 	// Added a license check for SimBuild
-	if($user->theme == 'simbuild' && !is_siteadmin($user)) {
-	    $syscontext = context_system::instance();
-            $roles = get_roles_with_capability('moodle/user:create', CAP_ALLOW, $syscontext);
-            $isClientAdmin = false;
-            foreach($roles as $singleRole) {
-                if($singleRole->shortname == 'simbuildadmin'){
-                    $isClientAdmin = true;
-                    break;
-                }
-            }
-            
-            if(!$isClientAdmin) {
-		     $custID = $user->institution;
-		     $file = lic_getFile($custID); 
-		     $title = "";
-		     $desc = "";
-		 
-		     if(!lic_IsValid($file)) {
-		     	$title = get_string("invalidlictitle");
-		     	$desc = get_string("invaliclicdesc");
-		     	$desc .= '<div class="returnbtn"><a href="'.$CFG->wwwroot.'">Return</a></div>';
-		     }
-		     else if(lic_hasExpired($file)) {
-		     	$title = get_string("expiredlictitle");     	
-		     	$expired = lic_LimitDate($file);  
-		     	$desc = "Your license expired on ".$expired." .";	
-		     	$desc .= get_string("expiredlicdesc");
-		     	$desc .= '<div class="returnbtn"><a href="'.$CFG->wwwroot.'">Return</a></div>';
-		     } 
-		     if($title !== "")
-		     {
-		        $PAGE->set_title($title);
-		        $PAGE->set_heading($site->fullname);
-		        echo $OUTPUT->header();
-		        echo $OUTPUT->heading($title);
-		        echo $OUTPUT->box($desc, "generalbox boxaligncenter");
-		        echo $OUTPUT->footer();
-		        die;
-		     }
-	     }
+    if($user->theme == 'simbuild' && !is_siteadmin($user) && !has_capability('moodle/site:config', $context, $user->id) ) {
+		 $custID = $user->institution;
+		 $file = lic_getFile($custID); 
+		 $title = "";
+		 $desc = "";
+	 
+		 if(!lic_IsValid($file)) {
+		    $title = get_string("invalidlictitle");
+		    $desc = get_string("invaliclicdesc");
+		    $desc .= '<div class="returnbtn"><a href="'.$CFG->wwwroot.'">Return</a></div>';
+		 }
+		 else if(lic_hasExpired($file)) {
+		    $title = get_string("expiredlictitle");     	
+		    $expired = lic_LimitDate($file);  
+		    $desc = "Your license expired on ".$expired." .";	
+		    $desc .= get_string("expiredlicdesc");
+		    $desc .= '<div class="returnbtn"><a href="'.$CFG->wwwroot.'">Return</a></div>';
+		 } 
+		 if($title !== "")
+		 {
+		    $PAGE->set_title($title);
+		    $PAGE->set_heading($site->fullname);
+		    echo $OUTPUT->header();
+		    echo $OUTPUT->heading($title);
+		    echo $OUTPUT->box($desc, "generalbox boxaligncenter");
+		    echo $OUTPUT->footer();
+		    die;
+		 }
 	}
 
         /// Let's get them all set up.
