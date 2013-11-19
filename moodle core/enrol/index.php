@@ -85,7 +85,9 @@ echo $OUTPUT->header();
 echo $OUTPUT->heading(get_string('enrolmentoptions','enrol'));
 
 $courserenderer = $PAGE->get_renderer('core', 'course');
-echo $courserenderer->course_info_box($course);
+// Rachel Fransen - Nov 19, 2013
+// Commented this out so users don't see the different teachers
+// echo $courserenderer->course_info_box($course);
 
 //TODO: find if future enrolments present and display some info
 

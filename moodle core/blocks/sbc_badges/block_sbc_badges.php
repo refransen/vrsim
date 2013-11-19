@@ -50,7 +50,7 @@ class block_sbc_badges extends block_base {
                 // Badge is earned if it's entry exists
                 $sql = "SELECT * FROM {awardstatus} WHERE People_idPeople=? AND Award_idAward=?";
                 $badgeExists = $SBC_DB->get_record_sql($sql, array($sbcID, $badge->idaward));
-                if($badgeExists && $badgeExists->comment != "")  {
+                if($badgeExists)  {
                     $badgeEarned++;
                     
                     $uniqueBadges[$badge->idaward] = $badge->desc;
@@ -69,10 +69,14 @@ class block_sbc_badges extends block_base {
                $badgeIcon = $CFG->wwwroot.'/theme/simbuild/pix/badgeicons/'.$finalAward->iconfilename.'.png';
 
                $sameBadgeCount = 1;
-                $sql = "SELECT * FROM {awardstatus} sameaw WHERE sameaw.Comment=? AND sameaw.People_idPeople=?";
-                if($sameBadges = $SBC_DB->get_records_sql($sql, array($value, $sbcID)) ){
-                     $sameBadgeCount = count($sameBadges);
-                }
+               // FIX: sometimes $value is empty in awardstatus and causes problems 
+               // with counting badges of the same name
+               if($value !== "") {
+                    $sql = "SELECT * FROM {awardstatus} sameaw WHERE sameaw.Comment=? AND sameaw.People_idPeople=?";
+                    if($sameBadges = $SBC_DB->get_records_sql($sql, array($value, $sbcID)) ){
+                         $sameBadgeCount = count($sameBadges);
+                    }
+               }
 
                 $badgeName .= '('.$sameBadgeCount.')';
                 $actualBadges .= '<img src="'.$badgeIcon.'" title="'.$badgeName.'" />';
