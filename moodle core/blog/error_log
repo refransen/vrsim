@@ -1,5 +1,0 @@
-[13-Sep-2013 17:44:05 America/Denver] Default exception handler: Blogging is disabled! Debug: 
-Error code: blogdisable
-* line 467 of /lib/setuplib.php: moodle_exception thrown
-* line 38 of /blog/index.php: call to print_error()
-

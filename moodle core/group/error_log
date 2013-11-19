@@ -1,2 +1,0 @@
-[15-Nov-2013 14:09:26 America/Denver] PHP Fatal error:  Call to undefined function lic_getFile() in /home/vrsimlms/public_html/user/selector/lib.php on line 876
-[15-Nov-2013 14:10:02 America/Denver] PHP Fatal error:  Call to undefined function lic_getFile() in /home/vrsimlms/public_html/user/selector/lib.php on line 876
