@@ -8,11 +8,12 @@ function getSBCID($userid){
     global $DB;
     
     $sbcID = $userid;
-    $sql = "SELECT * FROM {user} WHERE id=? OR idnumber=?";
-    if($sbcStudent = $DB->get_records_sql($sql, array($userid, $userid)) ){
-        $sbcID = current($sbcStudent)->idnumber; 
+    $sql = "SELECT * FROM {user} WHERE id=? OR idnumber=? LIMIT 1";
+    if($sbcStudent = $DB->get_record_sql($sql, array($userid, $userid)) ){
+        if($sbcStudent->idnumber !== "") {
+            $sbcID = $sbcStudent->idnumber; 
+        }    
     }
-
     return $sbcID;
 }
 ///////////////////////////////////////////////////////
