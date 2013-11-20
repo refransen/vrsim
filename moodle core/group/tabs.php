@@ -25,14 +25,18 @@
     $row[] = new tabobject('groups',
                            $CFG->wwwroot.'/group/index.php?id='.$courseid,
                            get_string('groups'));
-
-    $row[] = new tabobject('groupings',
+    // Rachel Fransen - Nov 20, 2013
+    // Disabled users from seeing these
+    if(is_siteadmin()) {
+        $row[] = new tabobject('groupings',
                            $CFG->wwwroot.'/group/groupings.php?id='.$courseid,
                            get_string('groupings', 'group'));
 
-    $row[] = new tabobject('overview',
+        $row[] = new tabobject('overview',
                            $CFG->wwwroot.'/group/overview.php?id='.$courseid,
                            get_string('overview', 'group'));
+    }
+    
     $tabs[] = $row;
     echo '<div class="groupdisplay">';
     print_tabs($tabs, $currenttab);
