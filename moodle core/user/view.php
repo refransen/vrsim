@@ -237,7 +237,7 @@ if($result = $SBC_DB->get_record_sql($sql, array($user->idnumber)) ) {
        echo $OUTPUT->user_picture($user, array('size'=>100));
    }
    else if(!is_siteadmin($user)) {
-       $img = $CFG->wwwroot.'/vrsim/dbapi.php?getAvatar&id='.$user->idnumber;
+       $img = $CFG->sbcroot.'/vrsim/dbapi.php?getAvatar&id='.$user->idnumber;
         echo '<div class="sbcavatar" ><div class="avatarimg" style="background-image: url('.$img.');"></div>';
        // echo '<img src="'.$img.'" /> ';
     }
