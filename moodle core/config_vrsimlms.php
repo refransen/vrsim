@@ -22,6 +22,7 @@ $CFG->sbc_dbName = "vrsimlms_sbc";
 $CFG->sbc_dbUser = "vrsimlms_sbc";
 $CFG->sbc_dbPass = "vrsimsbc2013";
 
+$CFG->sbcroot   = 'http://vrsimlms.com';
 $CFG->wwwroot   = 'http://vrsimlms.com';
 $CFG->dataroot  = '/home/vrsimlms/moodledata';
 $CFG->admin     = 'admin';
