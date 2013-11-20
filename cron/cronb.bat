@@ -1,0 +1,1 @@
+C:\SBCServ\php\php.exe C:\SBCServ\htdocs\moodle\auth\db\cli\sync_users.php	

@@ -7,7 +7,7 @@ $CFG = new stdClass();
 $CFG->dbtype    = 'mysqli';
 $CFG->dblibrary = 'native';
 $CFG->dbhost    = 'localhost:3316';
-$CFG->dbname    = 'vrsimlms_moodle';
+$CFG->dbname    = 'local_lms';
 $CFG->dbuser    = 'root';
 $CFG->dbpass    = 'odessa0102;';
 $CFG->prefix    = 'mdl_';
@@ -22,6 +22,7 @@ $CFG->sbc_dbName = "mydb";
 $CFG->sbc_dbUser = "root";
 $CFG->sbc_dbPass = "odessa0102;";
 
+$CFG->sbcroot   = 'http://localhost:81/';
 $CFG->wwwroot   = 'http://localhost:81/moodle';
 $CFG->dataroot  = 'c:/sbcserv/htdocs/moodledata';
 $CFG->admin     = 'admin';
