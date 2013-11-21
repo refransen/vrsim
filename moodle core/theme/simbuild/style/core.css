@@ -6,7 +6,7 @@
     font-family: ArchitectsDaughter;
     src: url('simbuild/fonts/ArchitectsDaughter.eot'); /* IE8-9 */
     src: url('simbuild/fonts/ArchitectsDaughter.eot?#iefix') format('embedded-opentype'),  
-         url('http://vrsimlms.com/theme/simbuild/fonts/ArchitectsDaughter.ttf') format('truetype');
+         url('simbuild/fonts/ArchitectsDaughter.ttf') format('truetype');
 }
 
 html, body {
