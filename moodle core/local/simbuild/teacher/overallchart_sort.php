@@ -108,6 +108,11 @@ $finalTimeSort = htmlspecialchars(json_encode('time'), ENT_COMPAT);
 $finalLearnSort = htmlspecialchars(json_encode('learn'), ENT_COMPAT);
 $finalClassName = htmlspecialchars(json_encode($classID), ENT_COMPAT);
 
+// Imges for the reports
+$shedUrl =  $CFG->wwwroot.'/theme/simbuild/pix/charts/ShedIcon.png';
+$ranchUrl = $CFG->wwwroot.'/theme/simbuild/pix/charts/HouseIcon.png';
+$multiUrl = $CFG->wwwroot.'/theme/simbuild/pix/charts/MultiLevelHouseIcon.png';
+
 $className = "downarrow";
 echo '<tr><th>Student Name <div class="';
     if($sortType == 'student' && $sortDirection == 'high') 
@@ -120,9 +125,9 @@ echo '<tr><th>Student Name <div class="';
     {$className = "uparrow"; }
     echo $className.'" onclick="sortStudents(this,'.$finalProgSort.','.$finalClassName.')"></div>
             <div class="siteimages" >   
-                <div class="shed"></div>
-                <div class="ranch"></div>
-                <div class="multilevel"></div>
+                 <div class="shed" style="background-image:url('.$shedUrl.');" ></div>
+                 <div class="ranch" style="background-image:url('.$ranchUrl.');" ></div>
+                 <div class="multilevel" style="background-image:url('.$multiUrl.');" ></div>
             </div>
         </th>
         <th>Time Spent  <div class="';

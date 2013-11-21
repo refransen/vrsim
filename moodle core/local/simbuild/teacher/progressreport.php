@@ -5,13 +5,14 @@
 // This is the main file that displays the progress report within
 // the SBC TEACHER page 
 /////////////////////////////////////////////////////////////////////
-require_once('../../../config.php');
+require_once(dirname(__FILE__) . '/../../../config.php');
 require_once('../lib.php');
 
 //CSS
 $PAGE->requires->css('/local/simbuild/teacher/progressreport.css');
 $PAGE->requires->js('/local/simbuild/teacher/progressreport.js');
 $PAGE->requires->js('/local/spin.js');
+
 
 //--------------------
 //   CREATE LOGIN
@@ -107,7 +108,7 @@ $reportForm = 'Choose Report: ' . $OUTPUT->single_select(new moodle_url('/local/
           $selected = $reportType, '', $formid = 'fnreport');
 
 //--------------------
-// Get the Construct skill options
+// Get the skills
 //--------------------
 $constructOptions = array();
 $constructIDs = array();
@@ -122,9 +123,7 @@ if($results = $SBC_DB->get_records_sql("SELECT * FROM {skill} myskill WHERE mysk
         }
     }
 }
-//--------------------
-// Get the Acadmic skill options
-//--------------------
+
 $academicOptions = array();
 $academicIDs = array();
 $myType = "Academic";
@@ -151,6 +150,9 @@ $viewOptions = array(
 /*$viewForm = 'Choose View: ' . $OUTPUT->single_select(new moodle_url('/local/simbuild/teacher/progressreport.php', 
           array('id'=>$id, 'report'=>$reportType, 'class'=>$className, 'student'=>$studentID)), 'view', 
           $viewOptions, $selected = $viewType, '', $formid = 'fnview');*/
+
+
+
 
 ////////////////////////////////////////
 // Print the filter boxes
@@ -214,6 +216,11 @@ switch($reportType)
     }break;
 }
 
+// Imges for the reports
+$shedUrl =  $CFG->wwwroot.'/theme/simbuild/pix/charts/ShedIcon.png';
+$ranchUrl = $CFG->wwwroot.'/theme/simbuild/pix/charts/HouseIcon.png';
+$multiUrl = $CFG->wwwroot.'/theme/simbuild/pix/charts/MultiLevelHouseIcon.png';
+                    
 ////////////////////////////////////////
 // Create the html of the content
 ////////////////////////////////////////
@@ -223,9 +230,9 @@ echo
         <div class="title">
             <div class="block_action" onclick="toggleBlock()">
                 <img class="block-hider-hide" id="hideblock" tabindex="0" alt="Hide Report" title="Hide Report" 
-                    src="/theme/simbuild/pix_core/t/switch_minus.png" />
+                    src="'.$CFG->wwwroot.'/theme/simbuild/pix_core/t/switch_minus.png" />
                 <img class="block-hider-show" id="showblock" tabindex="0" alt="Show Report" title="Show Report" 
-                    src="/theme/simbuild/pix_core/t/switch_plus.png" />
+                    src="'.$CFG->wwwroot.'/theme/simbuild/pix_core/t/switch_plus.png" />
             </div>
             <h2>'.$blockTitle.'</h2>
         </div>
@@ -248,16 +255,16 @@ echo
                     $finalTimeSort = htmlspecialchars(json_encode('time'), ENT_COMPAT);
                     $finalLearnSort = htmlspecialchars(json_encode('learn'), ENT_COMPAT);
                     $finalClassName = htmlspecialchars(json_encode($className), ENT_COMPAT);
-                 
+
             echo '<table class="overviewtable" id="overviewtable">
             <tr>
                 <th>Student Name <div class="downarrow" onclick="sortStudents(this,'.$finalSort.','.$finalClassName.')" ></div></th>
                 <th class="progressth" >Worksite Progress
                 <div class="downarrow" onclick="sortStudents(this,'.$finalProgSort.','.$finalClassName.')"></div>
                     <div class="siteimages" >   
-                        <div class="shed"></div>
-                        <div class="ranch"></div>
-                        <div class="multilevel"></div>
+                        <div class="shed" style="background-image:url('.$shedUrl.');" ></div>
+                        <div class="ranch" style="background-image:url('.$ranchUrl.');" ></div>
+                        <div class="multilevel" style="background-image:url('.$multiUrl.');" ></div>
                     </div>
                 </th>
                 <th>Time Spent  <div class="downarrow" onclick="sortStudents(this,'.$finalTimeSort.','.$finalClassName.')"></div></th>
@@ -294,7 +301,7 @@ echo
                 
                 echo '
                 <td><div class="chartbox" >
-                    <img src="/theme/simbuild/pix/progressreport/orange_arrow_up.png" style="left:'.$arrowProgress.'%;" />
+                    <img src="'.$CFG->wwwroot.'/theme/simbuild/pix/progressreport/orange_arrow_up.png" style="left:'.$arrowProgress.'%;" />
                     <div class="learnprogress" style="width:'.$learnProgress.'%;background-color:'.$learnColor.';"></div>
                     <div class="learnstripes" ></div>
             </div></td></tr>';
@@ -721,21 +728,33 @@ echo
                     $findRanch = false;
                     $findMulti = false;
                 foreach($orderNames as $singleName)  {
+                    $divContent = "";
                     if($singleName[0] == 'S' )  {
-                        $className = "shed";
-                        if(!$findShed) {$findShed = true; }
-                        else { $className .= " hidden";  }
-                        echo  '<div class="'.$className.'"></div>';
+                        if(!$findShed) {
+                            $findShed = true; 
+                             echo  '<div class="shed" style="background-image:url('.$shedUrl.');"></div>';
+                        }
+                        else { 
+                            $className .= " hidden";  
+                             echo  '<div class="shed hidden" ></div>';
+                        }
                     } else if($singleName[0] == 'R' )  {
-                        $className = "ranch";
-                        if(!$findRanch) { $findRanch= true; }
-                        else { $className .= " hidden";  }
-                        echo  '<div class="'.$className.'"></div>';
+                        if(!$findRanch) { 
+                            $findRanch= true; 
+                             echo  '<div class="ranch" style="background-image:url('.$ranchUrl.');"></div>';
+                        }
+                        else { 
+                             echo  '<div class="ranch hidden" ></div>';
+                        }
                     }else if($singleName[0] == 'M' )  {
                         $className = "multilevel";
-                        if(!$findMulti) { $findMulti = true; }
-                        else { $className .= " hidden";  }
-                        echo  '<div class="'.$className.'"></div>';
+                        if(!$findMulti) { 
+                           $findMulti = true; 
+                            echo  '<div class="multilevel" style="background-image:url('.$multiUrl.');"></div>';
+                        }
+                        else { 
+                             echo  '<div class="multilevel hidden" ></div>';
+                        }
                     }
                     echo '<p>'.$singleName.'</p><br />';
                 }
