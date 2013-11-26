@@ -297,7 +297,7 @@ if (!isset($hiddenfields['lastaccess'])) {
 
 // Show roles in this course
 if ($rolestring = get_user_roles_in_course($id, $course->id)) {
-    print_row(get_string('roles').':', $rolestring);
+    print_row(get_string('roles').':', strip_tags($rolestring));
 }
 
 // Show groups this user is in

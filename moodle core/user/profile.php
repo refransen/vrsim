@@ -311,7 +311,7 @@ else if ($mycourses = enrol_get_all_users_courses($user->id, true, NULL, 'visibl
              }  
          }
          if ($myrole = get_user_roles_in_course($user->id, $mycourse->id)) {
-             $myroleString .= $myrole.', '; 
+             $myroleString .= strip_tags($myrole).", "; 
          }
       }
       print_row(get_string('roles').':', $myroleString);            
