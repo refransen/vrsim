@@ -208,12 +208,24 @@ function groups_get_all_groups($courseid, $userid=0, $groupingid=0, $fields='g.*
         $groupingfrom  = "";
         $groupingwhere = "";
     }
+    
+    // Rachel Fransen - Nov. 15, 2014
+    // For Simbuild, I attached the enrollment key to the custermerid of the license
+    $simBuildGroup = "";
+    if(!is_siteadmin() && $USER->theme == "simbuild") 
+    {
+        $custID = $USER->institution;
+        if(!empty($custID) & $custID !== 0 && $custID !== '0') {
+            $simBuildGroup = "AND g.enrolmentkey = ?";
+            $params[] = $custID;
+        }
+    }
 
     array_unshift($params, $courseid);
 
     return $DB->get_records_sql("SELECT $fields
                                    FROM {groups} g $userfrom $groupingfrom
-                                  WHERE g.courseid = ? $userwhere $groupingwhere
+                                  WHERE g.courseid = ? $userwhere $groupingwhere $simBuildGroup
                                ORDER BY name ASC", $params);
 }
 
