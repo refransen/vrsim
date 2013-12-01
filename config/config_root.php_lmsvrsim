@@ -1,0 +1,4 @@
+<?php
+global $CFG;
+$CFG->sbcroot   = 'http://sbc.vrsim.com';
+$CFG->wwwroot   = 'http://lms.vrsim.com';

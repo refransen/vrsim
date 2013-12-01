@@ -6,10 +6,10 @@ $CFG = new stdClass();
 
 $CFG->dbtype    = 'mysqli';
 $CFG->dblibrary = 'native';
-$CFG->dbhost    = 'localhost:3316';
-$CFG->dbname    = 'local_lms';
-$CFG->dbuser    = 'root';
-$CFG->dbpass    = 'odessa0102;';
+$CFG->dbhost    = 'localhost';
+$CFG->dbname    = 'vrsimlms_moodle';
+$CFG->dbuser    = 'vrsimlms_lmsuser';
+$CFG->dbpass    = 'lmst3st3r';
 $CFG->prefix    = 'mdl_';
 $CFG->dboptions = array (
   'dbpersist' => 0,
@@ -17,19 +17,20 @@ $CFG->dboptions = array (
 );
 
 // Information for the SBC database
-$CFG->sbc_dbhost = 'localhost:3316';
-$CFG->sbc_dbName = "mydb";
-$CFG->sbc_dbUser = "root";
-$CFG->sbc_dbPass = "odessa0102;";
+$CFG->sbc_dbhost = 'localhost';
+$CFG->sbc_dbName = "vrsimlms_sbc";
+$CFG->sbc_dbUser = "vrsimlms_sbc";
+$CFG->sbc_dbPass = "vrsimsbc2013";
 
-$CFG->sbcroot   = 'http://localhost:81/';
-$CFG->wwwroot   = 'http://localhost:81/moodle';
-$CFG->dataroot  = 'c:/sbcserv/htdocs/moodledata';
+$CFG->dataroot  = '/home/vrsimlms/moodledata';
 $CFG->admin     = 'admin';
 
 $CFG->directorypermissions = 0777;
 
 $CFG->passwordsaltmain = 'lc[WckCv7ym@6>b7^*&&re:@}G=';
+
+// To export some settings
+require_once(dirname(__FILE__) . '/config_root.php');
 
 require_once(dirname(__FILE__) . '/lib/setup.php');
 

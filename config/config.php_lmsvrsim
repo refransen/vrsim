@@ -22,14 +22,15 @@ $CFG->sbc_dbName = 'sbcvrsim_sbc';
 $CFG->sbc_dbUser = 'sbcvrsim_sbc';
 $CFG->sbc_dbPass = 'odessa0102;';
 
-$CFG->sbcroot   = 'http://sbc.vrsim.com';
-$CFG->wwwroot   = 'http://lms.vrsim.com';
 $CFG->dataroot  = '/home/lmsvrsim/public_html/moodledata';
 $CFG->admin     = 'admin';
 
 $CFG->directorypermissions = 0777;
 
 $CFG->passwordsaltmain = 'lc[WckCv7ym@6>b7^*&&re:@}G=';
+
+// To export some settings
+require_once(dirname(__FILE__) . '/config_root.php');
 
 require_once(dirname(__FILE__) . '/lib/setup.php');
 
