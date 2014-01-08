@@ -1,5 +1,5 @@
 <?php
-
+global $CFG;
 
 defined('MOODLE_INTERNAL') || die;
 
@@ -7,7 +7,7 @@ if ($ADMIN->fulltree) {
 	
 // Fullscreen Toggle
 $name = 'theme_vrsim/width';
-$title = get_string('width','theme_vrsim');
+$title = $CFG->wwwroot."/".get_string('width','theme_vrsim');
 $description = get_string('widthdesc', 'theme_vrsim');
 $default = 960;
 $choices = array(960=>get_string('fixedwidth','theme_vrsim'), 97=>get_string('variablewidth','theme_vrsim'));

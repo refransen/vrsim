@@ -1,4 +1,4 @@
 <?php
 global $CFG;
 $CFG->sbcroot = 'http://localhost:81';
-$CFG->wwwroot = 'http://localhost:81/moodle';
+$CFG->wwwroot = 'http://localhost:81';

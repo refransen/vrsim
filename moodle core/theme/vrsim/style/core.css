@@ -3,7 +3,7 @@
     font-family: promethean;
     src: url('vrsim/pix/fonts/promethean.eot'); /* IE8-9 */
     src: url('vrsim/pix/fonts/promethean.eot?#iefix') format('embedded-opentype'),  
-         url('http://vrsimlms.com/theme/vrsim/pix/fonts/promethean.ttf') format('truetype');
+         url('vrsim/pix/fonts/promethean.ttf') format('truetype');
 }
 
 html,body {

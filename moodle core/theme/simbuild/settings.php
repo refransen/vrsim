@@ -1,4 +1,5 @@
 <?php
+global $CFG;
 
 defined('MOODLE_INTERNAL') || die;
 
@@ -7,7 +8,7 @@ if ($ADMIN->fulltree) {
 // Background image setting
 // logo image setting
 $name = 'theme_simbuild/logo';
-$title = get_string('logo','theme_simbuild');
+$title = $CFG->wwwroot."/".get_string('logo','theme_simbuild');
 $description = get_string('logodesc', 'theme_simbuild');
 $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_URL);
 $settings->add($setting);
